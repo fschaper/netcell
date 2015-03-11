@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="profile_suite_server|Win32">
+      <Configuration>profile_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="test_suite_server|Win32">
+      <Configuration>test_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D367EE69-B5E7-47FD-B6EF-41B7B8C8F0E2}</ProjectGuid>
+    <RootNamespace>test</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectName)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\extlibs\astyle\bin\windows\i386\astyle --options=$(ProjectDir)..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\test\*.cpp $(ProjectDir)..\test\*.hpp $(ProjectDir)..\test\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\extlibs\atomic\include;..\..\extlibs\boost\include;..\..\extlibs\uuid\include;..\..\extlibs\icu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WSS_UNIT_TESTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core_d.lib;psapi.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);..\..\extlibs\boost\lib\windows\i386;..\..\extlibs\perftools\lib\windows\i386;..\..\extlibs\icu\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(ProjectDir)..\bin\deploy_test.bat $(SolutionDir).. extlibs</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\extlibs\astyle\bin\windows\i386\astyle --options=$(ProjectDir)..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\test\*.cpp $(ProjectDir)..\test\*.hpp $(ProjectDir)..\test\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\src;..\include;..\..\extlibs\atomic\include;..\..\extlibs\boost\include;..\..\extlibs\uuid\include;..\..\extlibs\icu\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_NDEBUG;_CONSOLE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WSS_UNIT_TESTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;psapi.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);..\..\extlibs\boost\lib\windows\i386;..\..\extlibs\perftools\lib\windows\i386;..\..\extlibs\icu\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OptimizeReferences>true</OptimizeReferences>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(ProjectDir)..\bin\deploy_profile.bat $(SolutionDir).. extlibs</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\test\regression_9051.cpp" />
+    <ClCompile Include="..\test\test_a1_conversion.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_array_formula.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_border.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_cell_array.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_cell_copy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_cell_format.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_cell_move.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_conditional_format.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_content_type.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_dependency_handling.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_functions.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_insert_from_temporary.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_interpreter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_locked_cells.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_memory_consumtion.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_merged_cells.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_named_formula.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_node.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_performance.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_persistence.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_references.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_sandbox_for_testing_small_stuff.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_sheet_copy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_sheet_point.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_sparse_vector.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_styles.cpp" />
+    <ClCompile Include="..\test\test_translation_table.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_undo_redo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_used_range.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_utf-8_conversion.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_volatile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_worksheet_elements.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\test\test_suite.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\test\high_resolution_timer.hpp" />
+    <ClInclude Include="..\test\utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\extensions\persistence\vs\persistence.vcxproj">
+      <Project>{eee720c7-628e-4ab6-9826-8df5f32de727}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="wss.vcxproj">
+      <Project>{949cfc6b-e44f-4b9e-8229-84c00a33866f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

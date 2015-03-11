@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://schemas.openxmlformats.org/package/2006/relationships" elementFormDefault="qualified" xmlns="http://schemas.openxmlformats.org/package/2006/relationships" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="CT_Relationship">
+    <xsd:sequence />
+    <xsd:attribute name="Id" type="xsd:string" />
+    <xsd:attribute name="Type" type="xsd:string" />
+    <xsd:attribute name="Target" type="xsd:string" />
+    <xsd:attribute name="TargetMode" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:complexType name="CT_Relationships">
+    <xsd:sequence>
+      <xsd:element name="Relationship" type="CT_Relationship" minOccurs="0" maxOccurs="unbounded">
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="Relationships" type="CT_Relationships">
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,775 @@
+<!--setColors - Change the colors in the palette.-->
+<setColors type="method">
+  <args>
+<!--An array of colors to change to.-->
+    <arg name="colors" mandatory="true">
+      <map>
+			<adapter class="LookupValue" method="getColorPalette"/>
+      </map>
+    </arg>
+  </args>
+</setColors>
+
+<!--addExtraField - Adds an array of text to be used as an extra field in various places.-->
+<addExtraField applicable="false" type="method" skip="true">
+  <args>
+<!--An array of text to be stored inside the chart object.-->
+    <arg name="texts" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</addExtraField>
+
+<!--addExtraField2 - Adds an array of numbers/dates to be used as an extra field in various places.-->
+<addExtraField2 applicable="false" type="method" skip="true">
+  <args>
+<!--An array of numbers/dates to be stored inside the chart object.-->
+    <arg name="numbers" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</addExtraField2>
+
+<!--addLegend - Adds a legend box to the chart.-->
+<var_addLegend type="function" result="LegendBox" init="addLegend" context="Legend">
+  <args>
+<!--The x coordinate of the reference point of the legend box. By default, the reference point is the top-left corner of the box, but can be configured by using TextBox.setAlignment.-->
+	<arg name="x" mandatory="true">
+		<map path="Chart.Legend.Left">&adapter_UnitConvertor_pointToPixel;</map>
+	</arg>
+<!--The y coordinate of the reference point of the legend box. By default, the reference point is the top-left corner of the box, but can be configured by using TextBox.setAlignment.-->
+	<arg name="y" mandatory="true">
+		<map path="Chart.Legend.Top">&adapter_UnitConvertor_pointToPixel;</map>
+	</arg>
+<!--A true (non-zero) value means the legend keys are laid out vertically (one line per entry). A false (zero) value means the legend keys are laid out horizontal and flow like text (from left to right, top to bottom).-->
+    <arg name="vertical" default="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The font name of the font for drawing the legend text. The default is "normal". See Font Specification for details on various font attributes.-->
+    <arg name="font" default="CALIBRIB.TTF" chart="true">
+      <map path="Chart.Legend.Font.Name">&adapter_FormatConvertor_fontFileName;</map>
+    </arg>
+<!--The font size of the legend text.-->
+    <arg name="fontSize" default="10">
+      <map path="Chart.Legend.Font.Size"/>
+    </arg>
+  </args>
+  <execadapter class="LookupValue" method="hasBranch" path="Chart.HasLegend"/>
+
+  &LegendBox;
+</var_addLegend>
+
+<!--addLegend2 - Adds a legend box to the chart with grid layout.-->
+<var_addLegend2 type="function" result="LegendBox" init="addLegend2" context="Legend" skip="true">
+  <args>
+<!--The x coordinate of the reference point of the legend box. By default, the reference point is the top-left corner of the box, but can be configured by using TextBox.setAlignment.-->
+    <arg name="x" mandatory="true">
+		<map path="Chart.Legend.Left">&adapter_UnitConvertor_pointToPixel;</map>
+    </arg>
+<!--The y coordinate of the reference point of the legend box. By default, the reference point is the top-left corner of the box, but can be configured by using TextBox.setAlignment.-->
+    <arg name="y" mandatory="true">
+		<map path="Chart.Legend.Top">&adapter_UnitConvertor_pointToPixel;</map>
+    </arg>
+<!--The number of columns in the legend box. The special value AutoGrid (= -2) means the number of columns is automatically determined. If this argument is 0, the legend box will use a flow layout (from left to right and then top to bottom, in which the entries may not be vertically aligned).-->
+    <arg name="noOfCols"  mandatory="true" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+<!--The font name of the font for drawing the legend text. The default is "normal". See Font Specification for details on various font attributes.-->
+    <arg name="font" default="CALIBRI.TTF">
+      <map path="Chart.Legend.Font.Name">&adapter_FormatConvertor_fontFileName;</map>
+    </arg>
+<!--The font size of the legend text.-->
+    <arg name="fontSize" default="10">
+      <map path="Chart.Legend.Font.Size"/>
+    </arg>
+  </args>
+  <execadapter class="LookupValue" method="hasBranch" path="Chart.HasLegend"/>
+
+  &LegendBox;
+</var_addLegend2>
+
+<!--addLine - Adds a line to the chart.-->
+<var_addLine applicable="false" type="function" skip="true" result="Line" init="addLine">
+  <args>
+<!--The x coordinate of the first endpoint of the line.-->
+    <arg name="x1" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the first endpoint of the line.-->
+    <arg name="y1" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The x coordinate of the second endpoint of the line.-->
+    <arg name="x2" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the second endpoint of the line.-->
+    <arg name="y2" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color of the line.-->
+    <arg name="color" default="LineColor">
+      <map path=""/>
+    </arg>
+<!--The width of the line.-->
+    <arg name="lineWidth" default="1">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addLine>
+
+<!--addText - Adds a text box to the chart.-->
+<var_addText applicable="false" type="function" skip="true" result="TextBox" init="addText">
+  <args>
+<!--The x coordinate of the left of the text box.-->
+    <arg name="x" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the top of the text box.-->
+    <arg name="y" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The text to shown in the text box. See ChartDirector Mark Up Language on how to embed special tags in the text for sophisticated formatting.-->
+    <arg name="text" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The font used to draw the text. See Font Specification for details on various font attributes.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size used to draw the text.-->
+    <arg name="fontSize" default="8">
+      <map path=""/>
+    </arg>
+<!--The color used to draw the text.-->
+    <arg name="fontColor" default="TextColor">
+      <map path=""/>
+    </arg>
+<!--The alignment of the text within the text box. See Alignment Specification for supported alignment types.-->
+    <arg name="alignment" default="TopLeft">
+      <map path=""/>
+    </arg>
+<!--The rotation angle of the text within the text box.-->
+    <arg name="angle" default="0">
+      <map path=""/>
+    </arg>
+<!--Indicate whether the text should be laid out vertically (from top to bottom) or horizontally (from left to right).-->
+    <arg name="vertical" default="false">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addText>
+
+<!--addTitle - Adds a title at the top center of the chart.-->
+<var_addTitle type="function" result="TextBox" init="addTitle" context="ChartTitle">
+  <args>
+<!--The text for the title. See ChartDirector Mark Up Language on how to embed special tags in the text for sophisticated formatting.-->
+	<arg name="text" mandatory="true">
+		<map path="Chart.ChartTitle"><superadapter class="FormatConvertor" method="textObject"/></map>
+	</arg>
+<!--The font used to draw the title text. The default is "bold". See Font Specification for details on various font attributes.-->
+    <arg name="font" default="CALIBRIB.TTF" string="true">
+      <!--<map path="Chart.ChartTitle.Font.Name">&adapter_FormatConvertor_fontFileName;</map>-->
+    </arg>
+<!--The font size in points for the title text.-->
+    <arg name="fontSize" default="18">
+      <!--<map path="Chart.ChartTitle.Font.Size"/>-->
+    </arg>
+<!--The color of the title text.-->
+	<arg name="fontColor" default="TextColor">
+		<!--<map path="Chart.ChartTitle.Font.Color">&adapter_FormatConvertor_hexColor;</map>-->
+	</arg>
+<!--The background color of the title box.-->
+	<arg name="bgColor" default="Transparent">
+		<!--<map path="Chart.ChartTitle.Fill.BackColor">&adapter_FormatConvertor_colorObject;</map>-->
+	</arg>
+<!--The border color of the title box.-->
+	<arg name="edgeColor" default="Transparent">
+		<!--<map path="Chart.ChartTitle.Border.Color">&adapter_FormatConvertor_hexColor;</map>-->
+	</arg>
+  </args>
+  <execadapter class="LookupValue" method="hasBranch" path="Chart.HasTitle"/>
+
+  &TextBox;
+</var_addTitle>
+
+<!--addTitle2 - Adds a title to the chart.-->
+<var_addTitle2 type="function" skip="true" result="TextBox" init="addTitle2">
+  <args>
+<!--The position on the title on the chart. See Alignment Specification for supported alignment types.-->
+    <arg name="alignment" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The text for the title. See ChartDirector Mark Up Language on how to embed special tags in the text for sophisticated formatting.-->
+    <arg name="text" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The font used to draw the title text. The default is "bold". See Font Specification for details on various font attributes.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size in points for the title text.-->
+    <arg name="fontSize" default="12">
+      <map path=""/>
+    </arg>
+<!--The color of the title text.-->
+    <arg name="fontColor" default="TextColor">
+      <map path=""/>
+    </arg>
+<!--The background color of the title box.-->
+    <arg name="bgColor" default="Transparent">
+      <map path=""/>
+    </arg>
+<!--The border color of the title box.-->
+    <arg name="edgeColor" default="Transparent">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addTitle2>
+
+<!--dashLineColor - Creates a dash line color.-->
+<var_dashLineColor applicable="false" type="function" skip="true" result="integer" init="dashLineColor">
+  <args>
+<!--The color to draw the dash line.-->
+    <arg name="color" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A 4-byte integer representing the style of the dash line.-->
+    <arg name="patternCode" default="DashLine">
+      <map path=""/>
+    </arg>
+  </args>
+</var_dashLineColor>
+
+<!--formatValue - Formats a number/date using the ChartDirector formatting syntax as is in Parameter Substitution and Formatting.-->
+<formatValue applicable="false" type="method" skip="true">
+  <args>
+<!--The value to be formatted.-->
+    <arg name="value" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The format string, using {value} to denote the value. For example, ${value|2,} can be used to format the value to 2 decimal points, using "," as the thousand separator, and with a '$' sign in front.-->
+    <arg name="formatString" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</formatValue>
+
+<!--gradientColor - Creates a two-point linear gradient color.-->
+<var_gradientColor applicable="false" type="function" skip="true" result="integer" init="gradientColor">
+  <args>
+<!--The x coordinate of the starting point of the reference gradient line segment.-->
+    <arg name="startX" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the starting point of the reference gradient line segment.-->
+    <arg name="startY" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The x coordinate of the ending point of the reference gradient line segment.-->
+    <arg name="endX" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the ending point of the reference gradient line segment.-->
+    <arg name="endY" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color at the starting point of the reference gradient line segment.-->
+    <arg name="startColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color at the ending point of the reference gradient line segment.-->
+    <arg name="endColor" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</var_gradientColor>
+
+<!--gradientColor2 - Creates a multi-point linear gradient color.-->
+<var_gradientColor2 applicable="false" type="function" skip="true" result="integer" init="gradientColor2">
+  <args>
+<!--An array defining the positions and colors of the pixels along the reference gradient line segment.-->
+    <arg name="colorArray" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The direction of the reference gradient line segment in degrees, measured clockwise, with 0 degree as the upward pointing direction. The default direction is horizontal from left to right (90 degrees).-->
+    <arg name="angle" default="90">
+      <map path=""/>
+    </arg>
+<!--The scaling factor for the reference gradient line segment. By default, the reference gradient line segment is 256 pixels in length. The scaling factor can be use to stretch or compress the gradient line segment.-->
+    <arg name="scale" default="1.0">
+      <map path=""/>
+    </arg>
+<!--The x coordinate of the starting point of the reference gradient line segment.-->
+    <arg name="startX" default="0">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the starting point of the reference gradient line segment.-->
+    <arg name="startY" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</var_gradientColor2>
+
+<!--halfColor - Creates a color that is half the intensity of the given color.-->
+<var_halfColor applicable="false" type="function" skip="true" result="integer" init="halfColor">
+  <args>
+<!--The given color.-->
+    <arg name="c" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</var_halfColor>
+
+<!--layout - Perform auto-scaling of the axis and compute the positions of the various objects in the chart.-->
+<layout applicable="false" type="method" skip="true"/>
+
+<!--layoutLegend - Lays out and gets the LegendBox object representing the legend box in the chart.-->
+<var_layoutLegend applicable="false" type="function" skip="true" result="LegendBox" init="layoutLegend"/>
+
+<!--linearGradientColor - Creates a two-point linear gradient color.-->
+<var_linearGradientColor applicable="false" type="function" skip="true" result="integer" init="linearGradientColor">
+  <args>
+<!--The x coordinate of the starting point of the reference gradient line segment.-->
+    <arg name="startX" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the starting point of the reference gradient line segment.-->
+    <arg name="startY" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The x coordinate of the ending point of the reference gradient line segment.-->
+    <arg name="endX" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the ending point of the reference gradient line segment.-->
+    <arg name="endY" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color at the starting point of the reference gradient line segment.-->
+    <arg name="startColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color at the ending point of the reference gradient line segment.-->
+    <arg name="endColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--Specifies whether the gradient will repeat itself periodically. If the gradient does not repeat itself, the points that lie beyond the end points of the gradient line segment will assume the colors of the end points.-->
+    <arg name="periodic" default="false">
+      <map path=""/>
+    </arg>
+  </args>
+</var_linearGradientColor>
+
+<!--linearGradientColor2 - Creates a multi-point linear gradient color.-->
+<var_linearGradientColor2 applicable="false" type="function" skip="true" result="integer" init="linearGradientColor2">
+  <args>
+<!--The x coordinate of the starting point of the reference gradient line segment.-->
+    <arg name="startX" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the starting point of the reference gradient line segment.-->
+    <arg name="startY" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The x coordinate of the ending point of the reference gradient line segment.-->
+    <arg name="endX" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the ending point of the reference gradient line segment.-->
+    <arg name="endY" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array defining the positions and colors of the pixels along the reference gradient line segment.-->
+    <arg name="colorArray" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--Specifies whether the gradient will repeat itself periodically. If the gradient does not repeat itself, the points that lie beyond the end points of the gradient line segment will assume the colors of the end points.-->
+    <arg name="periodic" default="false">
+      <map path=""/>
+    </arg>
+  </args>
+</var_linearGradientColor2>
+
+<!--makeChart - Generates the chart image and save it into a file.-->
+<var_makeChart applicable="false" type="function" skip="true" result="boolean" init="makeChart">
+  <args>
+<!--The name of the file to save the image.-->
+    <arg name="filename" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</var_makeChart>
+
+<!--makeChart2 - Generates the chart as an image in memory.-->
+<var_makeChart2 applicable="false" type="function" skip="true" result="string" init="makeChart2">
+  <args>
+<!--A constant representing the format of the image.-->
+    <arg name="format" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</var_makeChart2>
+
+<!--makeChart3 - Generates the chart in internal format and return a DrawArea object to allow adding custom drawings on top of the chart.-->
+<var_makeChart3 applicable="false" type="function" skip="true" result="DrawArea" init="makeChart3"/>
+
+<!--makeSession - Generates the chart as an image and save it to a session variable.-->
+<var_makeSession applicable="false" type="function" skip="true" result="string" init="makeSession">
+  <args>
+<!--The name of the session variable used to store the chart image. If there are multiple chart images in the same web page, each image must use a different name.-->
+    <arg name="name" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A constant representing the format of the image. Must be one of the predefined constants PNG, JPG, GIF, BMP or WMP.-->
+    <arg name="imageFormat" default="PNG">
+      <map path=""/>
+    </arg>
+  </args>
+</var_makeSession>
+
+<!--patternColor - Creates a pattern color using an array of colors as the bitmap pattern.-->
+<var_patternColor applicable="false" type="function" skip="true" result="integer" init="patternColor">
+  <args>
+<!--An array of colors representing the colors of the bitmap pixels. The color of the pixel at (x, y) should correspond to index (x + y * width - 1) of the array.-->
+    <arg name="colorArray" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The height of the bitmap in pixels. (The width is automatically computed as the size of the color array divided by the height.)-->
+    <arg name="height" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The x coordinate of a reference point to align with the top-left corner the pattern.-->
+    <arg name="startX" default="0">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of a reference point to align with the top-left corner the pattern.-->
+    <arg name="startY" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</var_patternColor>
+
+<!--patternColor2 - Creates a pattern color by loading the pattern from an image file.-->
+<var_patternColor2 applicable="false" type="function" skip="true" result="integer" init="patternColor2">
+  <args>
+<!--An image file providing the pattern.-->
+    <arg name="filename" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The x coordinate of a reference point to align with the top-left corner the pattern.-->
+    <arg name="startX" default="0">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of a reference point to align with the top-left corner the pattern.-->
+    <arg name="startY" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</var_patternColor2>
+
+<!--radialGradientColor - Creates a two-point radial gradient color.-->
+<var_radialGradientColor applicable="false" type="function" skip="true" result="integer" init="radialGradientColor">
+  <args>
+<!--The x coordinate of the center of the radial gradient.-->
+    <arg name="cx" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the center of the radial gradient.-->
+    <arg name="cy" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The horizontal radius of the radial gradient defining ellipse.-->
+    <arg name="rx" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The vertical radius of the radial gradient defining ellipse.-->
+    <arg name="ry" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color at the center of the gradient defining ellipse.-->
+    <arg name="startColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color at the perimeter of the gradient defining ellipse.-->
+    <arg name="endColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--Specifies whether the gradient will repeat itself periodically. If the gradient does not repeat itself, the points that lie outside the gradient defining ellipse will assume the color at the perimeter of the gradient defining ellipse.-->
+    <arg name="periodic" default="false">
+      <map path=""/>
+    </arg>
+  </args>
+</var_radialGradientColor>
+
+<!--radialGradientColor2 - Creates a multi-point radial gradient color.-->
+<var_radialGradientColor2 applicable="false" type="function" skip="true" result="integer" init="radialGradientColor2">
+  <args>
+<!--The x coordinate of the center of the radial gradient.-->
+    <arg name="cx" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the center of the radial gradient.-->
+    <arg name="cy" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The horizontal radius of the radial gradient defining ellipse.-->
+    <arg name="rx" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The vertical radius of the radial gradient defining ellipse.-->
+    <arg name="ry" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array defining the radial distances and colors.-->
+    <arg name="colorArray" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--Specifies whether the gradient will repeat itself periodically. If the gradient does not repeat itself, the points that lie outside the gradient defining ellipse will assume the color at the perimeter of the gradient defining ellipse.-->
+    <arg name="periodic" default="false">
+      <map path=""/>
+    </arg>
+  </args>
+</var_radialGradientColor2>
+
+<!--setAMPM - Sets the names to be used to denote morning and afternoon.-->
+<setAMPM applicable="false" type="method" skip="true">
+  <args>
+<!--The name used to denote morning.-->
+    <arg name="am" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The name used to denote afternoon.-->
+    <arg name="pm" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setAMPM>
+
+<!--setAntiAlias - Controls whether anti-alias is used when drawing lines, shapes and text.-->
+<setAntiAlias applicable="false" type="method">
+  <args>
+<!--A true (non-zero) value enables anti-alias when drawing lines and shapes. A false (zero) value disables anti-alias when drawing lines and shapes-->
+    <arg name="shapeAntiAlias" default="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The text anti-alias mode, which must be one of AutoAntiAlias, AntiAlias or NoAntiAlias.-->
+    <arg name="textAntiAlias" default="AutoAntiAlias">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setAntiAlias>
+
+<!--setBackground - Sets the background color, border color and 3D border effect of the chart.-->
+<setBackground type="method">
+  <args>
+<!--The background color of the chart.-->
+    <arg name="color" mandatory="true">
+    	<map path="Chart.ChartArea.Fill.BackColor">&adapter_FormatConvertor_colorObject;</map>
+    </arg>
+<!--The border color of the chart.-->
+    <arg name="edgeColor" default="Transparent">
+		<map path="Chart.ChartArea.Border.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+    </arg>
+<!--The 3D border width. For positive values, the border will appear raised. For negative values, the border will appear depressed. A zero value means the border will appear flat.-->
+    <arg name="raisedEffect" default="0">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+</setBackground>
+
+<!--setBgImage - Uses the image from the specified file as the background image of the chart.-->
+<setBgImage applicable="false" type="method" skip="true">
+  <args>
+<!--The image file that is used as the background image of the chart.-->
+    <arg name="img" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The alignment of the background image relative to the chart. See Alignment Specification for supported alignment types.-->
+    <arg name="align" default="Center">
+      <map path=""/>
+    </arg>
+  </args>
+</setBgImage>
+
+<!--setBorder - Sets the border color of the chart.-->
+<setBorder type="method" skip="true">
+  <args>
+<!--The border color of the chart.-->
+	<arg name="color" default="0xFFFFFF" mandatory="true">
+		<map path="Chart.ChartArea.Border.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+	</arg>
+  </args>
+</setBorder>
+
+<!--setColor - Change the color at the specified position in the palette.-->
+<setColor applicable="false" type="method" skip="true">
+  <args>
+<!--An index to the palette.-->
+    <arg name="paletteEntry" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to change to.-->
+    <arg name="color" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setColor>
+
+<!--setColors2 - Change the colors in the palette, starting from the specified position in the palette.-->
+<setColors2 applicable="false" type="method" skip="true">
+  <args>
+<!--An index to the palette to start changing the colors.-->
+    <arg name="paletteEntry" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of colors to change to.-->
+    <arg name="colors" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setColors2>
+
+<!--setDefaultFonts - Sets the defaults for normal, bold, italic and bold-italic fonts.-->
+<setDefaultFonts type="method" skip="true">
+  <args>
+<!--The default normal font. This is the same as the first font in the font table.-->
+    <arg name="normal" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The default bold font. This is the same as the second font in the font table. An empty string means the default is unchanged.-->
+    <arg name="bold">
+      <map path=""/>
+    </arg>
+<!--The default italic font. This is the same as the third font in the font table. An empty string means the default is unchanged.-->
+    <arg name="italic">
+      <map path=""/>
+    </arg>
+<!--The default bold-italic font. This is the same as the fourth font in the font table. An empty string means the default is unchanged.-->
+    <arg name="boldItalic">
+      <map path=""/>
+    </arg>
+  </args>
+</setDefaultFonts>
+
+<!--setFontTable - Sets an entry in the font table to the specified font name.-->
+<setFontTable applicable="false" type="method" skip="true">
+  <args>
+<!--An index to the font table, starting from 0.-->
+    <arg name="index" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The font name to be put into the font table.-->
+    <arg name="font" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setFontTable>
+
+<!--setMonthNames - Sets the names of the months for date/time formatting purposes.-->
+<setMonthNames applicable="false" type="method" skip="true">
+  <args>
+<!--An array of 12 text strings to be used as the month names.-->
+    <arg name="names" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setMonthNames>
+
+<!--setNumberFormat - Sets the characters used for thousand separator, decimal point, and negative sign.-->
+<setNumberFormat type="method" skip="true">
+  <args>
+<!--The thousand separator. Use '~' to mean no thousand separator.-->
+    <arg name="thousandSeparator" default="'~'">
+      <map path=""/>
+    </arg>
+<!--The decimal point character.-->
+    <arg name="decimalPointChar" default="'.'">
+      <map path=""/>
+    </arg>
+<!--The negative sign character.-->
+    <arg name="signChar" default="'-'">
+      <map path=""/>
+    </arg>
+  </args>
+</setNumberFormat>
+
+<!--setRoundedFrame - Sets the border style of the chart to rounded corners.-->
+<setRoundedFrame type="method" skip="true">
+  <args>
+<!--The exterior background color.-->
+    <arg name="extColor" default="FFFFFF">
+      <map path=""/>
+    </arg>
+<!--The radius of the top-left rounded corner in pixels.-->
+    <arg name="r1" default="10">
+      <map path=""/>
+    </arg>
+<!--The radius of the top-right rounded corner in pixels. The default value of -1 means it is the same as the radius of the top-left corner.-->
+    <arg name="r2" default="-1">
+      <map path=""/>
+    </arg>
+<!--The radius of the bottom-right rounded corner in pixels. The default value of -1 means it is the same as the radius of the top-left corner.-->
+    <arg name="r3" default="-1">
+      <map path=""/>
+    </arg>
+<!--The radius of the bottom-left rounded corner in pixels. The default value of -1 means it is the same as the radius of the top-left corner.-->
+    <arg name="r4" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setRoundedFrame>
+
+<!--setSearchPath - Sets the file system search path for loading image files.-->
+<setSearchPath type="method" skip="true">
+  <args>
+<!--A list of directories, separated with  the path separator of your operating system (";" for Windows, ":" for Linux/UNIX).-->
+    <arg name="path" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setSearchPath>
+
+<!--setSize - Sets the size of the chart.-->
+<setSize type="method" skip="true">
+  <args>
+<!--The width of the chart in pixels.-->
+    <arg name="width" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The height of the chart in pixels.-->
+    <arg name="height" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setSize>
+
+<!--setTransparentColor - Specifies a certain color to mean transparent when creating the image output, or to include alpha transparency channel in the output.-->
+<setTransparentColor type="method">
+  <args>
+<!--The color that is designated as the transparent color. If -1 is used, the full alpha transparency channel will be included in the final output.-->
+    <arg name="c" mandatory="true" default="0x000100">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+</setTransparentColor>
+
+<!--setWallpaper - Uses the image from the specified file as the wallpaper to repetitively fill the background of the chart.-->
+<setWallpaper type="method" skip="true">
+  <args>
+<!--The image file that is used as the background wallpaper of the chart.-->
+    <arg name="img" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setWallpaper>
+
+<!--setWeekDayNames - Sets the names of the week days for date/time formatting purposes.-->
+<setWeekDayNames applicable="false" type="method" skip="true">
+  <args>
+<!--An array of 7 text strings to be used as the week day names.-->
+    <arg name="names" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setWeekDayNames>

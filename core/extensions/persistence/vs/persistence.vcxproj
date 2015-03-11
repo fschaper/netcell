@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile_suite_server|Win32">
+      <Configuration>profile_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="test_suite_server|Win32">
+      <Configuration>test_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EEE720C7-628E-4AB6-9826-8DF5F32DE727}</ProjectGuid>
+    <RootNamespace>persistence</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\..\..\server\vs\xsd2cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectName)_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectName)</TargetName>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\atomic\include;..\..\..\extlibs\boost\include;..\..\..\extlibs\zlib\include;..\..\..\extlibs\lib_oxml\src;..\..\..\extlibs\xio\include;..\..\..\extlibs\xerces\include;..\..\..\libraries\oxml\include;..\..\..\extlibs\xsd2cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BOOST_FILESYSTEM_VERSION=2;WIN32;_DEBUG;_WINDOWS;_USRDLL;PERSISTENCE_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libminizip_d.lib;core_d.lib;oxml_d.lib;xerces-c_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\libraries\oxml\lib\Windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;..\..\..\extlibs\zlib\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>persistence.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40xcopy /D /Y /E $(SolutionDir)..\extlibs\xerces\bin\Windows\i386\*.dll  $(SolutionDir)$(Configuration)
+%40copy ..\xml\persistence_settings.xml $(SolutionDir)$(Configuration)\
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\atomic\include;..\..\..\extlibs\boost\include;..\..\..\extlibs\zlib\include;..\..\..\extlibs\lib_oxml\src;..\..\..\extlibs\xio\include;..\..\..\extlibs\xerces\include;..\..\..\libraries\oxml\include;..\..\..\extlibs\xsd2cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BOOST_FILESYSTEM_VERSION=2;WIN32;NDEBUG;_WINDOWS;_USRDLL;PERSISTENCE_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;oxml.lib;libminizip.lib;xerces-c_3.lib;libtcmalloc_minimal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\zlib\lib\Windows\i386;..\..\..\libraries\oxml\lib\Windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;..\..\..\extlibs\perftools\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>persistence.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>__tcmalloc;%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40xcopy /D /Y /E $(SolutionDir)..\extlibs\xerces\bin\Windows\i386\*.dll  $(SolutionDir)$(Configuration)
+%40copy ..\xml\persistence_settings.xml $(SolutionDir)$(Configuration)\
+%40copy ..\xml\persistence_settings.xml $(SolutionDir)$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle" --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\atomic\include;..\..\..\extlibs\boost\include;..\..\..\extlibs\zlib\include;..\..\..\extlibs\lib_oxml\src;..\..\..\extlibs\xio\include;..\..\..\extlibs\xerces\include;..\..\..\libraries\oxml\include;..\..\..\extlibs\xsd2cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BOOST_FILESYSTEM_VERSION=2;WIN32;_DEBUG;_WINDOWS;_USRDLL;PERSISTENCE_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core_d.lib;oxml_d.lib;libminizip_d.lib;xerces-c_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\zlib\lib\Windows\i386;..\..\..\libraries\oxml\lib\Windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>persistence.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40xcopy /D /Y /E $(SolutionDir)..\extlibs\xerces\bin\Windows\i386\*.dll  $(SolutionDir)$(Configuration)
+%40copy ..\xml\persistence_settings.xml $(SolutionDir)$(Configuration)\
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle" --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\atomic\include;..\..\..\extlibs\boost\include;..\..\..\extlibs\zlib\include;..\..\..\extlibs\lib_oxml\src;..\..\..\extlibs\xio\include;..\..\..\extlibs\xerces\include;..\..\..\libraries\oxml\include;..\..\..\extlibs\xsd2cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BOOST_FILESYSTEM_VERSION=2;WIN32;_NDEBUG;_WINDOWS;_USRDLL;PERSISTENCE_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;oxml.lib;libminizip.lib;xerces-c_3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\zlib\lib\Windows\i386;..\..\..\libraries\oxml\lib\Windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>persistence.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40xcopy /D /Y /E $(SolutionDir)..\extlibs\xerces\bin\Windows\i386\*.dll  $(SolutionDir)$(Configuration)
+%40copy ..\xml\persistence_settings.xml $(SolutionDir)$(Configuration)\
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\export_wrapper.hpp" />
+    <ClInclude Include="..\src\hyperlink_adapter.hpp" />
+    <ClInclude Include="..\src\import_wrapper.hpp" />
+    <ClInclude Include="..\src\logging.hpp" />
+    <ClInclude Include="..\src\paste_view_adapter.hpp" />
+    <ClInclude Include="..\src\pattern_translate.hpp" />
+    <ClInclude Include="..\src\persistence_config.hpp" />
+    <ClInclude Include="..\src\persistence_config_literals.hpp" />
+    <ClInclude Include="..\src\persistence_config_parser.hpp" />
+    <ClInclude Include="..\src\persistence_config_readers.hpp" />
+    <ClInclude Include="..\src\persistence_config_serializer.hpp" />
+    <ClInclude Include="..\src\persistence_config_writers.hpp" />
+    <ClInclude Include="..\src\persistent_color_table.hpp" />
+    <ClInclude Include="..\src\persistent_version_info.hpp" />
+    <ClInclude Include="..\src\row_agregator.hpp" />
+    <ClInclude Include="..\src\xlsx_export_filter.hpp" />
+    <ClInclude Include="..\src\xlsx_import_filter.hpp" />
+    <ClInclude Include="..\src\package.hpp" />
+    <ClInclude Include="..\src\zpackage.hpp" />
+    <ClInclude Include="..\src\zstream.hpp" />
+    <ClInclude Include="..\src\css_utils.hpp" />
+    <ClInclude Include="..\src\gen_utils.hpp" />
+    <ClInclude Include="..\src\optional.hpp" />
+    <ClInclude Include="..\src\oxml_utils.hpp" />
+    <ClInclude Include="..\src\string_utils.hpp" />
+    <ClInclude Include="..\src\content_types.hpp" />
+    <ClInclude Include="..\src\persistent_alignment.hpp" />
+    <ClInclude Include="..\src\persistent_alignments.hpp" />
+    <ClInclude Include="..\src\persistent_border.hpp" />
+    <ClInclude Include="..\src\persistent_border_side.hpp" />
+    <ClInclude Include="..\src\persistent_borders.hpp" />
+    <ClInclude Include="..\src\persistent_color.hpp" />
+    <ClInclude Include="..\src\persistent_conditional_format.hpp" />
+    <ClInclude Include="..\src\persistent_conditional_formats.hpp" />
+    <ClInclude Include="..\src\persistent_defined_name.hpp" />
+    <ClInclude Include="..\src\persistent_defined_names.hpp" />
+    <ClInclude Include="..\src\persistent_drawing.hpp" />
+    <ClInclude Include="..\src\persistent_dxf.hpp" />
+    <ClInclude Include="..\src\persistent_fill.hpp" />
+    <ClInclude Include="..\src\persistent_fills.hpp" />
+    <ClInclude Include="..\src\persistent_font.hpp" />
+    <ClInclude Include="..\src\persistent_fonts.hpp" />
+    <ClInclude Include="..\src\persistent_nfmt.hpp" />
+    <ClInclude Include="..\src\persistent_nfmts.hpp" />
+    <ClInclude Include="..\src\persistent_protection.hpp" />
+    <ClInclude Include="..\src\persistent_style.hpp" />
+    <ClInclude Include="..\src\persistent_styles.hpp" />
+    <ClInclude Include="..\src\persistent_theme.hpp" />
+    <ClInclude Include="..\src\persistent_xf.hpp" />
+    <ClInclude Include="..\src\persistent_xfs.hpp" />
+    <ClInclude Include="..\src\relations.hpp" />
+    <ClInclude Include="..\src\shared_strings.hpp" />
+    <ClInclude Include="..\src\simple_types.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\hyperlink_adapter.cpp" />
+    <ClCompile Include="..\src\paste_view_adapter.cpp" />
+    <ClCompile Include="..\src\pattern_translate.cpp" />
+    <ClCompile Include="..\src\persistence_config_parser.cpp" />
+    <ClCompile Include="..\src\persistence_config_readers.cpp" />
+    <ClCompile Include="..\src\persistence_config_serializer.cpp" />
+    <ClCompile Include="..\src\persistence_config_writers.cpp" />
+    <ClCompile Include="..\src\persistent_color_table.cpp" />
+    <ClCompile Include="..\src\row_agregator.cpp" />
+    <ClCompile Include="..\src\xlsx_export_filter.cpp" />
+    <ClCompile Include="..\src\xlsx_import_filter.cpp" />
+    <ClCompile Include="..\src\package.cpp" />
+    <ClCompile Include="..\src\zpackage.cpp" />
+    <ClCompile Include="..\src\zstream.cpp" />
+    <ClCompile Include="..\src\css_utils.cpp" />
+    <ClCompile Include="..\src\gen_utils.cpp" />
+    <ClCompile Include="..\src\oxml_utils.cpp" />
+    <ClCompile Include="..\src\string_utils.cpp" />
+    <ClCompile Include="..\src\content_types.cpp" />
+    <ClCompile Include="..\src\persistent_alignment.cpp" />
+    <ClCompile Include="..\src\persistent_alignments.cpp" />
+    <ClCompile Include="..\src\persistent_border.cpp" />
+    <ClCompile Include="..\src\persistent_border_side.cpp" />
+    <ClCompile Include="..\src\persistent_borders.cpp" />
+    <ClCompile Include="..\src\persistent_color.cpp" />
+    <ClCompile Include="..\src\persistent_conditional_format.cpp" />
+    <ClCompile Include="..\src\persistent_conditional_formats.cpp" />
+    <ClCompile Include="..\src\persistent_defined_name.cpp" />
+    <ClCompile Include="..\src\persistent_defined_names.cpp" />
+    <ClCompile Include="..\src\persistent_drawing.cpp" />
+    <ClCompile Include="..\src\persistent_dxf.cpp" />
+    <ClCompile Include="..\src\persistent_fill.cpp" />
+    <ClCompile Include="..\src\persistent_fills.cpp" />
+    <ClCompile Include="..\src\persistent_font.cpp" />
+    <ClCompile Include="..\src\persistent_fonts.cpp" />
+    <ClCompile Include="..\src\persistent_nfmts.cpp" />
+    <ClCompile Include="..\src\persistent_protection.cpp" />
+    <ClCompile Include="..\src\persistent_style.cpp" />
+    <ClCompile Include="..\src\persistent_styles.cpp" />
+    <ClCompile Include="..\src\persistent_theme.cpp" />
+    <ClCompile Include="..\src\persistent_xf.cpp" />
+    <ClCompile Include="..\src\persistent_xfs.cpp" />
+    <ClCompile Include="..\src\relations.cpp" />
+    <ClCompile Include="..\src\shared_strings.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="persistence.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\server\vs\wss.vcxproj">
+      <Project>{949cfc6b-e44f-4b9e-8229-84c00a33866f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <xsd2cpp Include="..\xml\schema\persistence_config.xsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\src</sourcedir>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\..\..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectDir)..\..\..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\..\..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\src</sourcedir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectDir)..\src</sourcedir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\src</sourcedir>
+      <settingsfile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\xml\schema\settings.txt</settingsfile>
+      <settingsfile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\xml\schema\settings.txt</settingsfile>
+      <settingsfile Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectDir)..\xml\schema\settings.txt</settingsfile>
+      <settingsfile Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\xml\schema\settings.txt</settingsfile>
+      <SubType>Designer</SubType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </xsd2cpp>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\..\..\server\vs\xsd2cpp.targets" />
+  </ImportGroup>
+</Project>

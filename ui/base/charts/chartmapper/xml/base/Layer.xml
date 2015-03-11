@@ -1,0 +1,419 @@
+<!--addCustomAggregateLabel - Adds a custom aggregate label to an aggregated object.-->
+<var_addCustomAggregateLabel applicable="false" type="function" skip="true" result="TextBox" init="addCustomAggregateLabel">
+  <args>
+<!--The index of the aggregated object. The first aggregated object is 0, while the nth aggregated object is (n - 1).-->
+    <arg name="dataItem" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A text string representing the custom aggregate label. Parameter Substitution and Formatting is supported.-->
+    <arg name="label" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The font used to draw the labels.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size used to draw the labels.-->
+    <arg name="fontSize" default="8">
+      <map path=""/>
+    </arg>
+<!--The color used to draw the labels.-->
+    <arg name="fontColor" default="TextColor">
+      <map path=""/>
+    </arg>
+<!--The rotation angle of the labels.-->
+    <arg name="fontAngle" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addCustomAggregateLabel>
+
+<!--addCustomDataLabel - Adds a custom data label to a data point.-->
+<var_addCustomDataLabel applicable="false" type="function" skip="true" result="TextBox" init="addCustomDataLabel">
+  <args>
+<!--The data set number for the data point. The first data set is 0, while the nth data set is (n - 1).-->
+    <arg name="dataSet" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The data point number for the data point within the data set. The first data point is 0, while the nth data point is (n - 1).-->
+    <arg name="dataItem" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A text string representing the data label. Parameter Substitution and Formatting is supported.-->
+    <arg name="label" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The font used to draw the label.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size used to draw the label.-->
+    <arg name="fontSize" default="8">
+      <map path=""/>
+    </arg>
+<!--The color used to draw the label.-->
+    <arg name="fontColor" default="TextColor">
+      <map path=""/>
+    </arg>
+<!--The rotation angle of the label.-->
+    <arg name="fontAngle" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addCustomDataLabel>
+
+<!--addCustomGroupLabel - Adds a custom data group label to object representing the group.-->
+<var_addCustomGroupLabel applicable="false" type="function" skip="true" result="TextBox" init="addCustomGroupLabel">
+  <args>
+<!--The data group number for the data point. The first data group is 0, while the nth data group is (n - 1).-->
+    <arg name="dataGroup" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The data point number for the data point within the data group. The first data point is 0, while the nth data point is (n - 1).-->
+    <arg name="dataItem" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A text string representing the data label. Parameter Substitution and Formatting is supported.-->
+    <arg name="label" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The font used to draw the label.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size used to draw the label.-->
+    <arg name="fontSize" default="8">
+      <map path=""/>
+    </arg>
+<!--The color used to draw the label.-->
+    <arg name="fontColor" default="TextColor">
+      <map path=""/>
+    </arg>
+<!--The rotation angle of the label.-->
+    <arg name="fontAngle" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addCustomGroupLabel>
+
+<!--addDataGroup - Open a new data group.-->
+<addDataGroup applicable="false" type="method" skip="true">
+  <args>
+<!--Name of the data group.-->
+    <arg name="name">
+      <map path=""/>
+    </arg>
+  </args>
+</addDataGroup>
+
+<!--addDataSet - Adds a data set to the chart layer.-->
+<var_addDataSet type="eval" result="DataSet" init="addDataSet">
+  <args>
+<!--An array of numbers representing the data set.-->
+    <arg name="data" default="" mandatory="true" string="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The color to draw the data item. -1 means that the color is automatically selected from the palette.-->
+    <arg name="color" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+<!--The name of the data set. The name will be used in the legend box, if one is available. An empty string means the data set has no name.-->
+    <arg name="name" default="" string="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="addDataSets"/>
+</var_addDataSet>
+
+<!--addExtraField - Adds an array of text to be used as an extra field in various places.-->
+<addExtraField applicable="false" type="method" skip="true">
+  <args>
+<!--An array of text to be stored inside the layer object.-->
+    <arg name="texts" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</addExtraField>
+
+<!--addExtraField2 - Adds an array of numbers/dates to be used as an extra field in various places.-->
+<addExtraField2 applicable="false" type="method" skip="true">
+  <args>
+<!--An array of numbers/dates to be stored inside the layer object.-->
+    <arg name="numbers" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</addExtraField2>
+
+<!--alignLayer - Aligns the layer with a data set of another bar chart layer in Side layout.-->
+<alignLayer applicable="false" type="method" skip="true">
+  <args>
+<!--The BarLayer which contains the bars to synchronize with.-->
+    <arg name="layer" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The data set of the bars to synchronize with.-->
+    <arg name="dataSet" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</alignLayer>
+
+<!--set3D - Sets the 3D depth of the layer, and the 3D gap between the current layer and the next layer.-->
+<!--#MLADEN# ovo moze da se preskoci, jer se za sada odmah kod dodavanja layer-a definise 3D depth-->
+<set3D applicable="false" type="method" skip="true">
+  <args>
+<!--The 3D depth of the layer in pixels. -1 means the 3D depth is automatically calculated.-->
+<!--#MLADEN# - default="0" cini da je po default-u setovan 2D graf-->
+    <arg name="d" default="0">
+      <!--<map path=""/>-->
+    </arg>
+<!--The 3D gap between the current layer and the next layer in pixels.-->
+    <arg name="zGap" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</set3D>
+
+<!--setAggregateLabelFormat - Sets the aggregate label format.-->
+<setAggregateLabelFormat type="method">
+  <args>
+<!--The format string.-->
+    <arg name="formatString" default="{value}" mandatory="true" string="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setAggregateLabelFormat>
+
+<!--setAggregateLabelStyle - Enables aggregate labels and sets their styles.-->
+<var_setAggregateLabelStyle type="function" result="TextBox" init="setAggregateLabelStyle">
+  <args>
+<!--The font used to draw the labels.-->
+    <arg name="font" default="CALIBRIB.TTF" string="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The font size used to draw the labels.-->
+    <arg name="fontSize" default="0">
+      <!--<map path=""/>-->
+    </arg>
+<!--The color used to draw the labels.-->
+    <arg name="fontColor" default="TextColor">
+      <!--<map path=""/>-->
+    </arg>
+<!--The rotation angle of the labels.-->
+    <arg name="fontAngle" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</var_setAggregateLabelStyle>
+
+<!--setBorderColor - Sets the default border color and 3D raised effect when drawing data sets on the layer.-->
+<setBorderColor type="method">
+  <args>
+<!--The border color.-->
+    <arg name="color" default="Transparent" mandatory="true">
+<!--      <map path="Chart.PlotArea.Border">
+      	<superadapter class="FormatConvertor" method="getBorderColor"/>
+      </map>-->
+    </arg>
+<!--The 3D border width. For positive values, the border will appear raised. For negative values, the border will appear depressed. A zero value means the border will appear flat. This argument is also used to support glassEffect and softLighting effects.-->
+    <arg name="raisedEffect" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setBorderColor>
+
+<!--setDataCombineMethod - Sets the method used to combine multiple data sets in a layer.-->
+<setDataCombineMethod applicable="false" type="method" skip="true">
+  <args>
+<!--one of the predefined constants representing the data combine method to use.-->
+    <arg name="m" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataCombineMethod>
+
+<!--setDataLabelFormat - Sets the data label format.-->
+<setDataLabelFormat type="method">
+  <args>
+<!--The format string.-->
+    <arg name="formatString" default="{value}" mandatory="true" string="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setDataLabelFormat>
+
+<!--setDataLabelStyle - Enables data labels and sets their styles.-->
+<var_setDataLabelStyle type="function" result="TextBox" init="setDataLabelStyle">
+  <args>
+<!--The font used to draw the labels.-->
+    <arg name="font" default="CALIBRIB.TTF" string="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The font size used to draw the labels. #MLADEN# default bi trebao biti 8, ali sa 0 se ne iscrtava label -->
+    <arg name="fontSize" default="0">
+<!--      <map path="Chart.SeriesCollection(1).HasDataLabels">
+      	<adapter class="UnConventional" method="getDefaultFontSizeForLabel" static="true"/>
+      </map>-->
+    </arg>
+<!--The color used to draw the labels.-->
+    <arg name="fontColor" default="TextColor">
+      <!--<map path=""/>-->
+    </arg>
+<!--The rotation angle of the labels.-->
+    <arg name="fontAngle" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</var_setDataLabelStyle>
+
+<!--setHTMLImageMap - Override the default arguments used when generating HTML image map for the layer.-->
+<setHTMLImageMap applicable="false" type="method" skip="true">
+  <args>
+<!--The URL to be used in the "href" attribute of the image map. Parameter Substitution and Formatting is supported.
+The special keyword "{default}" represents the global URL as specified in BaseChart.getHTMLImageMap. This field is useful for specifying appending to the global URL.
+Note that an empty string also means to use the global URL. To specify no URL, use the special keyword "{none}".
+To disable the entire image map, use the special keyword "{disable}".-->
+    <arg name="url" mandatory="true" default="http://www.lightningsafety.noaa.gov/images/Bolt_blue_Prentice1.jpg" string="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--A text string representing the template of the query parameters to be appended to the URL. Parameter Substitution and Formatting is supported.
+The special keyword "{default}" represents the global query parameters as specified in BaseChart.getHTMLImageMap. This field is useful for specifying appending to the global query parameters.
+Note that an empty string also means to use the global query parameters. To specify no query parameters, use the special keyword "{none}".-->
+    <arg name="queryFormat" default="" string="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--A text string to specify additional attributes to add to the area tag. Parameter Substitution and Formatting is supported.
+The special keyword "{default}" represents the global additional attributes as specified in BaseChart.getHTMLImageMap. This field is useful for specifying appending to the global additional attributes.
+Note that an empty string also means to use the global additional attributes. To specify no additional attributes, use the special keyword "{none}".-->
+    <arg name="extraAttr" default="" string="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setHTMLImageMap>
+
+<!--setLegend - Sets the order of the data set names as appeared in the legend box.-->
+<!-- #MLADEN# - It is equivalent to Layer.setLegendOrder(m). -->
+<setLegend applicable="false" type="method" skip="true">
+  <args>
+<!--One of the predefined constants representing the legend entry ordering method for data sets within the layer.-->
+    <arg name="m" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLegend>
+
+<!--setLegendOrder - Sets the order of the data set names as appeared in the legend box.-->
+<setLegendOrder type="method">
+  <args>
+<!--One of the predefined constants representing the legend entry ordering method for data sets within the layer.-->
+    <arg name="dataSetOrder" default="1" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The base legend entry priority of the layer. The default value of -1 means the priority is 10000 x (layer_index + 1).-->
+    <arg name="layerOrder" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setLegendOrder>
+
+<!--setLineWidth - Sets the default line width of lines when drawing data sets on the layer.-->
+<setLineWidth type="method">
+  <args>
+<!--The width of the line in pixels.-->
+    <arg name="w" default="3" mandatory="true">
+      <!--<map path="Chart.SeriesCollection(1).Format.Line.Weight">&adapter_UnitConvertor_pointToPixel;</map>-->
+      <!--I dalje nije instanciran SeriesCollection-->
+    </arg>
+  </args>
+
+  <execadapter class="LookupValue" method="hasLine" path=""/>
+</setLineWidth>
+
+<!--setUseYAxis - Determine the y-axis to use when drawing the data sets.-->
+<setUseYAxis applicable="false" type="method" skip="true">
+  <args>
+<!--The y-axis to use when drawing the data sets.-->
+    <arg name="a" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setUseYAxis>
+
+<!--setUseYAxis2 - Determine if the primary or secondary y-axis should be used when drawing the data sets.-->
+<setUseYAxis2 applicable="false" type="method" skip="true">
+  <args>
+<!--A true (non-zero) value means the secondary y-axis will be used. A false (zero) value means the primary y-axis will be used.-->
+    <arg name="b" default="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setUseYAxis2>
+
+<!--setXData - Sets the x values of the data points in the data sets.-->
+<setXData type="eval" init="setXData">
+  <args>
+<!--An array of numbers representing the x value series.-->
+    <arg name="xData" default="" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="setXDataValues" />
+</setXData>
+
+<!--setXData2 - Sets the x values of the data points in the data sets as evenly distributed in a range.-->
+<setXData2 applicable="false" type="method" skip="true">
+  <args>
+<!--The x value of the first point in a data set.-->
+    <arg name="minValue" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The x value of the last point in the data set.-->
+    <arg name="maxValue" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setXData2>
+
+<!--xZoneColor - Creates a x-zone color. A x-zone will change from one color to another depending on a threshold value on the x-axis.-->
+<var_xZoneColor applicable="false" type="function" skip="true" result="integer" init="xZoneColor">
+  <args>
+<!--The x value serving as the threshold for switching between two colors.-->
+    <arg name="threshold" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to use when the x-axis value of the pixel is smaller than the threshold.-->
+    <arg name="belowColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to use when the x-axis value of the pixel is greater than the threshold.-->
+    <arg name="aboveColor" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</var_xZoneColor>
+
+<!--yZoneColor - Creates a y-zone color. A y-zone will change from one color to another depending on a threshold value on the y-axis.-->
+<var_yZoneColor applicable="false" type="function" skip="true" result="integer" init="yZoneColor">
+  <args>
+<!--The y value serving as the threshold for switching between two colors.-->
+    <arg name="threshold" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to use when the y-axis value of the pixel is smaller than the threshold.-->
+    <arg name="belowColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to use when the y-axis value of the pixel is greater than the threshold.-->
+    <arg name="aboveColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y-axis to use to determine the pixel coordinates of data values. The y-axis may be obtained using XYChart.yAxis, XYChart.yAxis2 or XYChart.addAxis. The default is to use the primary y-axis.
+For backward compatibility, the axis argument can also be a boolean value. A true (non-zero) value means the primary y-axis. A false (zero) value means the secondary y-axis.-->
+    <arg name="yAxis">
+      <map path=""/>
+    </arg>
+  </args>
+</var_yZoneColor>

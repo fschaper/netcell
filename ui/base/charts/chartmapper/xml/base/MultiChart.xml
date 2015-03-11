@@ -1,0 +1,51 @@
+<!--MultiChart - Creates a new MultiChart object.-->
+<args>
+<!--The width of the chart in pixels.-->
+    <arg name="width" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The height of the chart in pixels.-->
+    <arg name="height" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The background color of the chart.-->
+    <arg name="bgColor" default="BackgroundColor">
+      <map path=""/>
+    </arg>
+<!--The edge color of the chart.-->
+    <arg name="edgeColor" default="Transparent">
+      <map path=""/>
+    </arg>
+<!--The 3D border width. For positive values, the border will appear raised. For negative values, the border will appear depressed. A zero value means the border will appear flat.-->
+    <arg name="raisedEffect" default="0">
+      <map path=""/>
+    </arg>
+</args>
+
+<!--addChart - Adds a BaseChart object (or its subclass such as PieChart, XYChart, PolarChart, AngularMeter or LinearMeter) into the multi-chart.-->
+<addChart type="method" skip="true">
+  <args>
+<!--The x coordinate of a point in the multi-chart that is to align with the top-left corner of the added BaseChart.-->
+    <arg name="x" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of a point in the multi-chart that is to align with the top-left corner of the added BaseChart.-->
+    <arg name="y" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The BaseChart object to be added to the multi-chart.-->
+    <arg name="c" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</addChart>
+
+<!--setMainChart - Sets the chart that receives view port mouse actions (for zooming and scrolling support).-->
+<setMainChart type="method" skip="true">
+  <args>
+<!--The chart that is to receive view port mouse actions.-->
+    <arg name="c" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setMainChart>

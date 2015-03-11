@@ -1,0 +1,146 @@
+&TextBox;
+
+<!--addKey - Adds a custom entry to the legend box.-->
+<addKey applicable="false" type="method" skip="true">
+  <args>
+<!--The text of the legend entry.-->
+    <arg name="text" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The icon color of the legend entry.-->
+    <arg name="color" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The line width for legend entry that represents lines in line charts.-->
+    <arg name="lineWidth" default="0">
+      <map path=""/>
+    </arg>
+<!--A DrawArea containing the data symbol represents the legend entry. This is primarily used for legend entries in line charts with data symbols, or in scatter charts.-->
+    <arg name="drawarea">
+      <map path=""/>
+    </arg>
+  </args>
+</addKey>
+
+<!--addKey2 - Adds a custom entry to the legend box with a given legend entry priority.-->
+<addKey2 applicable="false" type="method" skip="true">
+  <args>
+<!--The legend entry priority-->
+    <arg name="pos" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The text of the legend entry.-->
+    <arg name="text" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The icon color of the legend entry.-->
+    <arg name="color" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The line width for legend entry that represents lines in line charts.-->
+    <arg name="lineWidth" default="0">
+      <map path=""/>
+    </arg>
+<!--A DrawArea containing the data symbol represents the legend entry. This is primarily used for legend entries in line charts with data symbols, or in scatter charts.-->
+    <arg name="drawarea">
+      <map path=""/>
+    </arg>
+  </args>
+</addKey2>
+
+<!-- mladent .. this means that values are ordered one under another. Seams like excel doing same order. -->
+<!--setCols - Sets the number of columns in the legend box.-->
+<setCols type="method">
+  <args>
+<!--The number of columns in the legend box. The special value AutoGrid (= -2) means the number of columns is automatically determined. If this argument is 0, the legend box will use a flow layout (from left to right and then top to bottom, in which the entries may not be vertically aligned).-->
+    <arg name="noOfCols" default="1" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setCols>
+
+<!-- mladent .. Excel have diferent borders for every DataSet. Chart.Legend.LegendEntries(1).LegendKey.Border.Color -->
+<!--setKeyBorder - Sets the default border color of the legend icon.-->
+<setKeyBorder type="method">
+  <args>
+<!--The border color.-->
+    <arg name="edgeColor" default="Transparent" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The 3D border width. For positive values, the border will appear raised. For negative values, the border will appear depressed. A zero value means the border will appear flat. This argument is also used to support glassEffect and softLighting effects.-->
+    <arg name="raisedEffect" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setKeyBorder>
+
+<!--setKeySize - Sets the size of the legend icon and its distance from the legend text.-->
+<setKeySize type="eval">
+  <args>
+<!--The width of the legend icon in pixels.-->
+    <arg name="width" default="9" mandatory="true">
+      <!--<map path="Chart.Legend.LegendEntries(0).LegendKey.Width"/>-->
+    </arg>
+<!--The height of the legend icon in pixels. -1 means the height is automatically determined.-->
+    <arg name="height" default="9">
+      <!--<map path=""/> default="7.333" 24-->
+    </arg>
+<!--The distance between the legend icon and the legend text in pixels. -1 means the distance is automatically determined.-->
+    <arg name="gap" default="2">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="setKeySize"/>
+</setKeySize>
+
+<!--setKeySpacing - Sets the distance between two legend entries.-->
+<setKeySpacing type="method">
+  <args>
+<!--The horizontal gap between two legend entries for horizontal legend layout, expressed in pixels.-->
+    <arg name="keySpacing" default="5" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The line spacing between two lines in the legend box, expressed in pixels. -1 means the line spacing is automatically determined.-->
+    <arg name="lineSpacing" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setKeySpacing>
+
+<!--setReverse - Reverses the ordering of the legend entries.-->
+<setReverse type="method">
+  <args>
+<!--A true (non-zero) value means the legend entries are ordered based on descending legend entry priority number. false (zero) value means the legend entries are ordered based on ascending legend entry priority number.-->
+    <arg name="b" default="false">
+      <map path="">
+      	<superadapter class="UnConventional" method="getLegendOrder"/>
+      </map>
+    </arg>
+  </args>
+</setReverse>
+
+<!--setText - Sets the template of the legend text.-->
+<setText type="method" skip="true">
+  <args>
+<!--The legend text template.-->
+    <arg name="text" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setText>
+
+<!-- Addition Method from Text Box class -->
+<!--setTruncate - Sets the maximum number of lines in the text box, and truncate the text if it exceeds the line count.-->
+<setTruncate type="method">
+  <args>
+<!--The maximum width of the text box in pixels.-->
+    <arg name="maxWidth" mandatory="true" default="-1">
+      <map path="Chart.Legend.Width">&adapter_UnitConvertor_pointToPixel;</map>
+    </arg>
+<!--The maximum number of lines that the text box can have. The text will be truncated if it exceeds the maximum number of lines.-->
+    <arg name="maxLines" default="1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setTruncate>

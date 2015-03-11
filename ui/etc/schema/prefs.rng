@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element name="prefs" xmlns="http://relaxng.org/ns/structure/1.0">
+  <interleave>
+    <optional>
+      <element name="general">
+        <interleave>
+          <optional>
+            <element name="l10n">
+              <choice>
+                <value>en_US</value>
+                <value>de_DE</value>
+                <value>fr_FR</value>
+              </choice>
+            </element>
+          </optional>
+          <optional>
+            <element name="theme">
+              <choice>
+                <value>default</value>
+                <value>blue</value>
+                <value>gray</value>
+                <value>slate</value>
+              </choice>
+            </element>
+          </optional>
+          <optional>
+            <element name="updatecheck">
+              <choice>
+                <value>yes</value>
+                <value>no</value>
+              </choice>
+            </element>
+          </optional>
+        </interleave>
+      </element>
+    </optional>
+    <optional>
+      <element name="studio">
+        <interleave>
+          <optional>
+            <element name="panel">
+              <optional>
+                <element name="visibility">
+                  <choice>
+                    <value>open</value>
+                    <value>closed</value>
+                  </choice>
+                </element>
+              </optional>
+            </element>
+          </optional>
+          <optional>
+            <element name="default">
+              <interleave>
+                <optional>
+                  <element name="files">
+                    <element name="group">
+                      <text/>
+                    </element>
+                    <optional>
+                      <element name="hierarchy">
+                        <text/>
+                      </element>
+                    </optional>
+                  </element>
+                </optional>
+                <optional>
+                  <element name="reports">
+                    <element name="group">
+                      <text/>
+                    </element>
+                    <optional>
+                      <choice>
+                        <element name="hierarchy">
+                          <text/>
+                        </element>
+                        <group>
+                          <element name="hierarchy">
+                            <text/>
+                          </element>
+                          <element name="node">
+                            <text/>
+                          </element>
+                          <optional>
+                            <element name="type">
+                              <choice>
+                                <value>spreadsheet</value>
+                                <value>frameset</value>
+                              </choice>
+                            </element>
+                          </optional>
+                          <element name="path">
+                            <text/>
+                          </element>
+                          <zeroOrMore>
+                            <element name="var">
+                              <element name="type">
+                                <text/>
+                              </element>
+                              <element name="name">
+                                <text/>
+                              </element>
+                              <element name="val">
+                                <text/>
+                              </element>
+                            </element>
+                          </zeroOrMore>
+                        </group>
+                      </choice>
+                    </optional>
+                  </element>
+                </optional>
+                <optional>
+                  <element name="view">
+                    <choice>
+                      <value>icons</value>
+                      <value>list</value>
+                      <value>details</value>
+                    </choice>
+                  </element>
+                </optional>
+              </interleave>
+            </element>
+          </optional>
+          <optional>
+            <element name="users">
+              <optional>
+                <element name="layout">
+                  <choice>
+                    <value>horizontal</value>
+                    <value>vertical</value>
+                    <value>tabbed</value>
+                  </choice>
+                </element>
+              </optional>
+            </element>
+          </optional>
+        </interleave>
+      </element>
+    </optional>
+    <optional>
+      <element name="wss">
+        <interleave>
+          <optional>
+            <element name="interface">
+              <choice>
+                <value>toolbar</value>
+                <value>ribbon</value>
+              </choice>
+            </element>
+          </optional>
+          <optional>
+            <element name="designer">
+              <interleave>
+                <optional>
+                  <element name="toolbar">
+                    <choice>
+                      <value>yes</value>
+                      <value>no</value>
+                    </choice>
+                  </element>
+                </optional>
+                <optional>
+                  <element name="formulabar">
+                    <choice>
+                      <value>yes</value>
+                      <value>no</value>
+                    </choice>
+                  </element>
+                </optional>
+                <optional>
+                  <element name="status">
+                    <choice>
+                      <value>yes</value>
+                      <value>no</value>
+                    </choice>
+                  </element>
+                </optional>
+              </interleave>
+            </element>
+          </optional>
+          <optional>
+            <element name="viewer">
+              <interleave>
+                <optional>
+                  <element name="toolbar">
+                    <choice>
+                      <value>yes</value>
+                      <value>no</value>
+                    </choice>
+                  </element>
+                </optional>
+                <optional>
+                  <element name="status">
+                    <choice>
+                      <value>yes</value>
+                      <value>no</value>
+                    </choice>
+                  </element>
+                </optional>
+              </interleave>
+            </element>
+          </optional>
+        </interleave>
+      </element>
+    </optional>
+    <optional>
+      <element name="etl">
+        <empty/>
+      </element>
+    </optional>
+    <optional>
+      <element name="palo">
+        <empty/>
+      </element>
+    </optional>
+    <optional>
+      <element name="mypalo">
+        <element name="username">
+          <text/>
+        </element>
+        <element name="password">
+          <text/>
+        </element>
+      </element>
+    </optional>
+  </interleave>
+</element>

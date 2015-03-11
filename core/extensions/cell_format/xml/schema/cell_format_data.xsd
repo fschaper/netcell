@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="cell_format_data" targetNamespace="http://tempuri.org/cell_format_data.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/cell_format_data.xsd" xmlns:mstns="http://tempuri.org/cell_format_data.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CT_Month">
+    <xs:sequence />
+    <xs:attribute name="short_name" type="xs:string" use="required" />
+    <xs:attribute name="long_name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CT_DayOfWeek">
+    <xs:sequence />
+    <xs:attribute name="short_name" type="xs:string" use="required" />
+    <xs:attribute name="long_name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CT_FormatCodes">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="second" type="Char" use="required" />
+    <xs:attribute name="minute" type="Char" use="required" />
+    <xs:attribute name="hour" type="Char" use="required" />
+    <xs:attribute name="day" type="Char" use="required" />
+    <xs:attribute name="month" type="Char" use="required" />
+    <xs:attribute name="year" type="Char" use="required" />
+    <xs:attribute name="decimal_sep" type="Char" use="required" />
+    <xs:attribute name="thousand_sep" type="Char" use="required" />
+    <xs:attribute name="list_sep" type="Char" use="required" />
+    <xs:attribute name="date_sep" type="xs:string" use="required" />
+    <xs:attribute name="time_sep" type="xs:string" use="required" />
+    <xs:attribute name="currency" type="xs:string" use="required" />
+    <xs:attribute name="general" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="Char">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CT_Colors">
+    <xs:sequence>
+      <xs:element name="Red" type="CT_Color" />
+      <xs:element name="Black" type="CT_Color" />
+      <xs:element name="Cyan" type="CT_Color" />
+      <xs:element name="Magenta" type="CT_Color" />
+      <xs:element name="White" type="CT_Color" />
+      <xs:element name="Blue" type="CT_Color" />
+      <xs:element name="Green" type="CT_Color" />
+      <xs:element name="Yellow" type="CT_Color" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ST_DateOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DMY" />
+      <xs:enumeration value="MDY" />
+      <xs:enumeration value="YMD" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CT_MonthList">
+    <xs:sequence>
+      <xs:element name="Month" type="CT_Month" minOccurs="12" maxOccurs="12" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_DaysOfWeek">
+    <xs:sequence>
+      <xs:element name="DayOfWeek" type="CT_DayOfWeek" maxOccurs="7" minOccurs="7" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_Locale">
+    <xs:sequence>
+      <xs:element name="Months" type="CT_MonthList" maxOccurs="1" minOccurs="1" />
+      <xs:element name="DaysOfWeek" type="CT_DaysOfWeek" minOccurs="1" maxOccurs="1" />
+      <xs:element name="FormatCodes" type="CT_FormatCodes" />
+      <xs:element name="Colors" type="CT_Colors" />
+      <xs:element name="DateOrder" type="ST_DateOrder" />
+      <xs:element name="YearLimit" type="xs:unsignedShort" />
+      <xs:element name="Boolean" type="CT_Boolean" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:language" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CT_LocaleDiversion">
+    <xs:sequence>
+      <xs:element name="Months" type="CT_MonthList" maxOccurs="1" minOccurs="0" />
+      <xs:element name="DaysOfWeek" type="CT_DaysOfWeek" minOccurs="0" maxOccurs="1" />
+      <xs:element name="FormatCodesOverlay" type="CT_FormatCodesOverlay" minOccurs="0" maxOccurs="1" />
+      <xs:element name="Colors" type="CT_Colors" minOccurs="0" maxOccurs="1" />
+      <xs:element name="year_limit" type="xs:unsignedShort" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:language" use="required" />
+    <xs:attribute name="base_id" type="xs:language" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CT_Color">
+    <xs:sequence />
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CT_Boolean">
+    <xs:sequence />
+    <xs:attribute name="true_name" type="xs:string" use="required" />
+    <xs:attribute name="false_name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CT_FormatCodesOverlay">
+    <xs:sequence />
+    <xs:attribute name="second" type="Char" use="optional" />
+    <xs:attribute name="minute" type="Char" use="optional" />
+    <xs:attribute name="hour" type="Char" use="optional" />
+    <xs:attribute name="day" type="Char" use="optional" />
+    <xs:attribute name="month" type="Char" use="optional" />
+    <xs:attribute name="year" type="Char" use="optional" />
+    <xs:attribute name="decimal_sep" type="Char" use="optional" />
+    <xs:attribute name="thousand_sep" type="Char" use="optional" />
+    <xs:attribute name="list_sep" type="Char" use="optional" />
+    <xs:attribute name="date_sep" type="xs:string" use="optional" />
+    <xs:attribute name="time_sep" type="xs:string" use="optional" />
+    <xs:attribute name="currency" type="xs:string" use="optional" />
+    <xs:attribute name="general" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:element name="Root" type="CT_Root">
+  </xs:element>
+  <xs:complexType name="CT_Format">
+    <xs:sequence />
+    <xs:attribute name="locale_pattern" type="xs:string" use="required" />
+    <xs:attribute name="code" type="xs:string" use="required" />
+    <xs:attribute name="parse_locale" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="CT_DefaultFormat">
+    <xs:sequence>
+      <xs:element name="Format" type="CT_Format" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:unsignedInt" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CT_Locales">
+    <xs:sequence>
+      <xs:element name="LocaleTemplate" type="CT_Locale" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="LocaleDiversion" type="CT_LocaleDiversion" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_Formats">
+    <xs:sequence>
+      <xs:element name="DefaultFormat" type="CT_DefaultFormat" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_Root">
+    <xs:sequence>
+      <xs:element name="Locales" type="CT_Locales" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Formats" type="CT_Formats" minOccurs="1" maxOccurs="1" />
+      <xs:element name="ReverseFormats" type="CT_ReverseFormats" minOccurs="1" maxOccurs="1">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_ReverseFormat">
+    <xs:sequence />
+    <xs:attribute name="rule" type="xs:string" use="required" />
+    <xs:attribute name="format" type="xs:string" use="required" />
+    <xs:attribute name="type" type="ST_FormatClass" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CT_ReverseFormats">
+    <xs:sequence>
+      <xs:element name="ReverseFormat" type="CT_ReverseFormat" minOccurs="0" maxOccurs="unbounded">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ST_FormatClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="number" />
+      <xs:enumeration value="bool" />
+      <xs:enumeration value="date" />
+      <xs:enumeration value="time" />
+      <xs:enumeration value="date_time" />
+      <xs:enumeration value="currency" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

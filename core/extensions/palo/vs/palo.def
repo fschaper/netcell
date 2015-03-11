@@ -1,0 +1,3 @@
+LIBRARY	"palo"
+EXPORTS
+	initialize_extension @1

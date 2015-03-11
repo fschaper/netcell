@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+	<element>LUN</element>
+	<element>MAR</element>
+	<element>MER</element>
+	<element>JEU</element>
+	<element>VEN</element>
+	<element>SAM</element>
+	<element>DIM</element>
+</autofill_list>

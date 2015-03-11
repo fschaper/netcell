@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+	<element>jan</element>
+	<element>feb</element>
+	<element>mrz</element>
+	<element>apr</element>
+	<element>mai</element>
+	<element>jun</element>
+	<element>jul</element>
+	<element>aug</element>
+	<element>sep</element>
+	<element>okt</element>
+	<element>nov</element>
+	<element>dez</element>
+</autofill_list>

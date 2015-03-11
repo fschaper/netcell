@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+	<element>Monday</element>
+	<element>Tuesday</element>
+	<element>Wednesday</element>
+	<element>Thursday</element>
+	<element>Friday</element>
+	<element>Saturday</element>
+	<element>Sunday</element>
+</autofill_list>

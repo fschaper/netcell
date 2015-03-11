@@ -1,0 +1,220 @@
+&BaseChart;
+
+<!--addPointer - Adds a pointer to the meter.-->
+<addPointer type="eval" init="addPointer">
+  <args>
+<!--The value that the pointer will point to.-->
+    <arg name="value" default="0" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The fill color of the pointer.-->
+    <arg name="fillColor" default="LineColor">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The edge color of the pointer. The default value of -1 means the edge color is the same as the fill color.-->
+    <arg name="edgeColor" default="-1">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="addPointers"/>
+</addPointer>
+
+<!--setLabelFormat - Sets the format of the labels computed by ChartDirector.-->
+<setLabelFormat type="method" skip="true">
+  <args>
+<!--The format string.-->
+    <arg name="formatString" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelFormat>
+
+<!--setLabelPos - Sets the positions of the meter scale labels.-->
+<setLabelPos type="method" skip="true">
+  <args>
+<!--A true (non-zero) value means that the labels are on the 'inward' side of the meter scale. A false (zero) value means the labels are on the 'outward' side of the meter scale.
+For an angular meter, the default is for the labels on the 'inward' side. For a linear meter, the default is for the labels on the 'outward' side.-->
+    <arg name="labelInside" default="true" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The offset, in pixels, of the labels position relative to the standard position. If the major tick is at the same side as the label, the standard starting position of the label is at the end point of the major tick. Otherwise, the standard starting position is on the meter scale.
+A positive labelOffset means the labels should move more towards the 'inward' or 'outward' side, depending on the first parameter. A negative labelOffset means moving the labels towards the opposite direction.-->
+    <arg name="labelOffset" default="8">
+       <!-- <map path=""/> -->
+    </arg>
+  </args>
+</setLabelPos>
+
+<!--setLabelStyle - Sets the font style used to for the meter labels.-->
+<var_setLabelStyle type="function" result="TextBox" init="setLabelStyle">
+  <args>
+<!--The font used to draw the labels.-->
+    <arg name="font" default="Calibri">
+      <map path="Chart.Axes(1).TickLabels.Font.Name">&adapter_FormatConvertor_fontFileName;</map>
+    </arg>
+<!--The font size used to draw the labels in points. A value of -1 means the font size is not changed. The default font size is 10 points for angular meters, and 8 points for linear meters.-->
+    <arg name="fontSize" default="8">
+        <map path="Chart.Axes(1).TickLabels.Font.Size"></map>
+    </arg>
+<!--The color used to draw the labels.-->
+    <arg name="fontColor" default="TextColor">
+        <map path="Chart.Axes(1).TickLabels.Font.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+    </arg>
+<!--The rotation angle of the labels.-->
+    <arg name="fontAngle" default="0">
+		<map path="Chart.Axes(1).TickLabels.Orientation"><adapter class="FormatConvertor" method="getTickLabelAngle" static="true"/></map>
+    </arg>
+  </args>
+</var_setLabelStyle>
+
+<!--setLineWidth - Sets the line widths of the scale line and the ticks on the meter.-->
+<setLineWidth type="method" skip="true">
+  <args>
+<!--The line width for drawing the meter scale line in pixels. For an angular meter, the default is 1 pixel. For a linear meter, the default is 2 pixels.-->
+    <arg name="axisWidth" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The line width of the major ticks in pixels. For a linear meter, if this method is not called, the initial major tick width is set to 2 pixels.-->
+    <arg name="majorTickWidth" default="1">
+      <map path=""/>
+    </arg>
+<!--The line width of the minor ticks in pixels.-->
+    <arg name="minorTickWidth" default="1">
+      <map path=""/>
+    </arg>
+<!--The line width of the micro ticks in pixels.-->
+    <arg name="microTickWidth" default="1">
+      <map path=""/>
+    </arg>
+  </args>
+</setLineWidth>
+
+<!--setMeterColors - Sets the colors of the meter scale line, scale label and tick.-->
+<setMeterColors type="method" skip="true">
+  <args>
+<!--The color for drawing the meter scale line. The default is LineColor.-->
+    <arg name="axisColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color for drawing the scale labels. Passing -1 in this argument means the label color is not changed. The default label color is TextColor.-->
+    <arg name="labelColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The color for drawing the ticks. Passing -1 in this argument means the tick color is not changed. The default tick color is LineColor.-->
+    <arg name="tickColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setMeterColors>
+
+<!--setScale - Sets the meter to use the given scale.-->
+<setScale type="method">
+  <args>
+<!--The lower limit of the meter scale.-->
+    <arg name="lowerLimit" default="0" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getOdometerStart"/>
+      </map>
+    </arg>
+<!--The upper limit of the meter scale.-->
+    <arg name="upperLimit" default="100" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getOdometerEnd"/>
+      </map>
+    </arg>
+<!--The interval between major ticks. For example, a value of 10 means a major tick every 10 units in the meter scale. Each major tick will have an associated label for the value at the tick. A value of 0 disables major ticks.-->
+    <arg name="majorTickInc" default="10">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getOdometerMajorTick"/>
+      </map>
+    </arg>
+<!--The interval between minor ticks. For example, a value of 5 means a minor tick every 5 units in the meter scale. A value of 0 disables minor ticks.-->
+    <arg name="minorTickInc" default="5">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getOdometerMinorTick"/>
+      </map>
+    </arg>
+<!--The interval between minor ticks. For example, a value of 1 means a minor tick every 1 units in the meter scale. A value of 0 disables micro ticks.-->
+    <arg name="microTickInc" default="1">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getOdometerMicroTick"/>
+      </map>
+    </arg>
+  </args>
+</setScale>
+
+<!--setScale2 - Sets the meter to use the given scale with the given text labels and tick positions.-->
+<setScale2 applicable="false" type="method" skip="true">
+  <args>
+<!--The lower limit of the meter scale.-->
+    <arg name="lowerLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The upper limit of the meter scale.-->
+    <arg name="upperLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of text strings to be used as the labels on the meter scale.-->
+    <arg name="labels" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setScale2>
+
+<!--setScale3 - Sets the meter to use the given scale with the given numeric labels and tick positions.-->
+<setScale3 applicable="false" type="method" skip="true">
+  <args>
+<!--The lower limit of the meter scale.-->
+    <arg name="lowerLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The upper limit of the meter scale.-->
+    <arg name="upperLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of numbers to be used as the labels on the meter scale.-->
+    <arg name="labels" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The format string for formatting the numbers. An empty string means the format will be automatically determined.-->
+    <arg name="formatString">
+      <map path=""/>
+    </arg>
+  </args>
+</setScale3>
+
+<!--setTickLength - Set the lengths of the ticks.-->
+<setTickLength applicable="false" type="method" skip="true">
+  <args>
+<!--The length of the major ticks in pixels. A positive value means the tick is at the 'outward' direction of the meter. A negative value means the tick is at the 'inward' direction.
+For an angular meter, the default is -10 (10 pixels at the inward direction). For a horizontal linear meter, the default is the same height as the meter scale region in the inward direction. For a vertical linear meter, the default is the same width as the meter scale region in the inward direction.-->
+    <arg name="majorLen" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The length of the minor ticks in pixels. The default is 60% of the length of the major ticks.-->
+    <arg name="minorLen" default="-7fffffff">
+      <map path=""/>
+    </arg>
+<!--The length of the micro ticks in pixels. The default is 50% of the length of the minor ticks.-->
+    <arg name="microLen" default="-7fffffff">
+      <map path=""/>
+    </arg>
+  </args>
+</setTickLength>
+
+<!--addLabel - Adds a label to a specific position on the meter scale.-->
+<addLabel type="eval" init="addLabel">
+  <args>
+<!--The position to add the label to in meter scale unit.-->
+    <arg name="pos" default="50" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The label to add to the meter scale.-->
+    <arg name="label" default="50%" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="addLabels"/>
+</addLabel>

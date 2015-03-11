@@ -1,0 +1,3 @@
+LIBRARY	"function"
+EXPORTS
+	initialize_extension @1

@@ -1,0 +1,1 @@
+﻿ns http://www.jedox.com/wss palo_cfg

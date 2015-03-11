@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+	<element>Mo</element>
+	<element>Di</element>
+	<element>Mi</element>
+	<element>Do</element>
+	<element>Fr</element>
+	<element>Sa</element>
+	<element>So</element>
+</autofill_list>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/jedox/wss/auto_fill" xmlns="http://tempuri.org/jedox/wss/auto_fill" xmlns:NS="http://tempuri.org/jedox/wss/auto_fill" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="autofill_list" type="CT_autofill_list">
+  </xs:element>
+  <xs:complexType name="CT_autofill_list">
+    <xs:sequence>
+      <xs:element name="element" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

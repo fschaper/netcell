@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translation_table xmlns="http://www.jedox.com/jedox/wss" lang="en_US">
+  <groups>
+    <group id="LOOKUP_REFERENCE" name="Lookup &amp; Reference">
+      <translation>Lookup &amp; Reference</translation>
+    </group>
+  </groups>
+  <function name="HYPERLINK" category="LOOKUP_REFERENCE">
+    <translation>HYPERLINK</translation>
+    <description>
+      <parameters>
+        <parameter name="link_location" type="text">
+          <![CDATA[Link_location is a document relative path in Resources consisting of /GROUP/HIERARCHY/FULL_PATH_TO_DOCUMENT or SELF when linking to the same (current) document. To open the link e.g. in Frame2 of a frameset, write behind the file name \"#Frame2\".<br>
+          Examples:<br>
+        	\"/Jedox/Financials/Accounting/Demo.wss\" - link to workbook Demo in group \"Jedox\", hierarchy \"Financials\", folder \"Accounting\".<br>
+        	\"/Jedox/Financials/Accounting/Demo.wss#Frame2\" - same link as above to open Demo.wss in Frame2 of the used frameset.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]Sheet2!A1\" - open workbook Demo and select A1 on Sheet2.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]'Some sheet'!A2:B3\" - open workbook Demo and select range A2:B3 on sheet 'Some sheet' (use singe quotes for sheet names with spaces).<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]A2\" - open workbook Demo and select A1 on the first sheet.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]SomeRange\" - open workbook Demo and select range that named range \"SomeRange\" with scope on the first sheet refers to.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]Sheet2!SomeRange\" - open workbook Demo and select range that named range \"SomeRange\" with scope on Sheet2 refers to.<br>
+			\"/Jedox/Financials/Documentation/Manual.pdf\" - link to PDF document Manual.pdf in group \"Jedox\", hierarchy \"Financials\", folder \"Documentation\".<br>
+			\"http://www.google.com/\" - link to URL.<br>
+			A5 or $A$5 - use content from another cell on the worksheet for link_location.<br><br>
+			\"SELF\" or \"self\" - link to the current workbook and select A1 on the current sheet.<br>
+			\"[SELF]Sheet2!A5\" or \"[self]Sheet2!A5\" - link to the current workbook and select A5 on Sheet2.]]>
+        </parameter>
+        <parameter name="friendly_name" type="text">
+          <![CDATA[Friendly_name is a content that is displayed in the cell.<br>
+          Examples:<br>
+			\"Some hyperlink caption\" - regular string.<br>
+			B5 or $B$5 - use content from another cell on the worksheet for friendly_name.<br>
+			CONCATENATE(B2,C2) - result from formula.]]>
+        </parameter>
+        <parameter name="screen_tip" type="text">
+          <![CDATA[Screen_tip is some hyperlink tip.<br>
+          Examples:<br>
+          	\"Some hyperlink tip\" - regular string.<br>
+			C5 or $C$5 - use content from another cell on the worksheet for screen_tip.<br>
+			CONCATENATE(B3,C3) - result from formula.]]>
+        </parameter>
+        <sequence from="1" to="13">
+          <parameter name="source" type="text">
+            <![CDATA[Source1, source2, ... are references to sources of transfered data.<br>
+            Examples:<br>
+            B7 - use content from cell B7 on active sheet.<br>
+			A2:B3 - use content from range A2:B3 on active sheet.<br>
+			Sheet2!A2:B3 - use content from range A2:B3 on sheet \"Sheet2\".<br>
+			SomeRange - use content from range that named range \"SomeRange\" with scope on active sheet refers to.<br>
+			Sheet2!named_range - use content from range that named range \"SomeRange\" with scope on Sheet2 refers to.<br>
+			@var1 - use content from variable \"var1\".<br>
+			\"Some text\" - constant value.<br>
+			{\"value1\",\"value2\",\"value3\"} - list of constant values.]]>
+          </parameter>
+          <parameter name="destination" type="text">
+            <![CDATA[Destination1, destination2, ... are references to destination of transfered data.<br>
+            Examples:<br>
+            \"B7\" - set cell B7 on active sheet.<br>
+			\"A2:B3\" - set range A2:B3 on active sheet.<br>
+			\"Sheet2!A2:B3\" - set range A2:B3 on sheet \"Sheet2\".<br>
+			\"SomeRange\" - set range that named range \"SomeRange\" with scope on active sheet refers to.<br>
+			\"Sheet2!named_range\" - set range that named range \"SomeRange\" with scope on Sheet2 refers to.<br>
+			\"@var1\" - set variable \"var1\".<br><br>
+			applicable only by URL link_location:<br>
+			\"Some text\" - constant value.<br>
+			{\"value1\",\"value2\",\"value3\"} - list of constant values.]]>
+          </parameter>
+        </sequence>
+      </parameters>
+      <syntax>
+        <![CDATA[HYPERLINK(link_location,friendly_name,screen_tip,source1,destination1[,source2,destination2,...])]]>
+      </syntax>
+      <short>
+        <![CDATA[Creates a shortcut or jump.]]>
+      </short>
+      <long><![CDATA[]]></long>
+    </description>
+    <comment><![CDATA[some text for the translator]]></comment>
+  </function>
+</translation_table>

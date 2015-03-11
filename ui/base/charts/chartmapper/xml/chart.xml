@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chart [
+	<!ENTITY BaseChart SYSTEM "../../../base/charts/chartmapper/xml/base/BaseChart.xml">
+	<!ENTITY XYChart SYSTEM "../../../base/charts/chartmapper/xml/base/XYChart.xml">
+	<!ENTITY Layer SYSTEM "../../../base/charts/chartmapper/xml/base/Layer.xml">
+	<!ENTITY BarLayer SYSTEM "../../../base/charts/chartmapper/xml/base/BarLayer.xml">
+	<!ENTITY Axis SYSTEM "../../../base/charts/chartmapper/xml/base/Axis.xml">
+	<!ENTITY AngularAxis SYSTEM "../../../base/charts/chartmapper/xml/base/AngularAxis.xml">
+	<!ENTITY Box SYSTEM "../../../base/charts/chartmapper/xml/base/Box.xml">
+	<!ENTITY BaseBoxLayer SYSTEM "../../../base/charts/chartmapper/xml/base/BaseBoxLayer.xml">
+	<!ENTITY TextBox SYSTEM "../../../base/charts/chartmapper/xml/base/TextBox.xml">
+	<!ENTITY LegendBox SYSTEM "../../../base/charts/chartmapper/xml/base/LegendBox.xml">
+	<!ENTITY PlotArea SYSTEM "../../../base/charts/chartmapper/xml/base/PlotArea.xml">
+	<!ENTITY PieChart SYSTEM "../../../base/charts/chartmapper/xml/base/PieChart.xml">
+	<!ENTITY PolarChart SYSTEM "../../../base/charts/chartmapper/xml/base/PolarChart.xml">
+	<!ENTITY LineLayer SYSTEM "../../../base/charts/chartmapper/xml/base/LineLayer.xml">
+	<!ENTITY PolarLayer SYSTEM "../../../base/charts/chartmapper/xml/base/PolarLayer.xml">
+	<!ENTITY BaseMeter SYSTEM "../../../base/charts/chartmapper/xml/base/BaseMeter.xml">
+	<!ENTITY AngularMeter SYSTEM "../../../base/charts/chartmapper/xml/base/AngularMeter.xml">
+	<!ENTITY LinearMeter SYSTEM "../../../base/charts/chartmapper/xml/base/LinearMeter.xml">
+
+	<!ENTITY adapter_FormatConvertor_hexColor SYSTEM "../../../base/charts/chartmapper/xml/adapters/FormatConvertor_hexColor.xml">
+	<!ENTITY adapter_FormatConvertor_colorObject SYSTEM "../../../base/charts/chartmapper/xml/adapters/FormatConvertor_colorObject.xml">
+	<!ENTITY adapter_FormatConvertor_fontFileName SYSTEM "../../../base/charts/chartmapper/xml/adapters/FormatConvertor_fontFileName.xml">
+	<!ENTITY adapter_UnitConvertor_pointToPixel SYSTEM "../../../base/charts/chartmapper/xml/adapters/UnitConvertor_pointToPixel.xml">
+
+	<!ENTITY packPlotArea SYSTEM "../../../base/charts/chartmapper/xml/misc/packPlotArea.xml">
+]>
+<chart type="object" class="@base_chart_type" context="Chart">
+	&@base_chart_type;
+	@chart_layers
+
+	<!-- Position of Legend Box - left/right/top/bottom/corner/custom -->
+	<positionLegend type="eval" result="LegendBox" init="positionLegend">
+		<evaladapter class="UnConventional" method="positionLegend" />
+	</positionLegend>
+</chart>

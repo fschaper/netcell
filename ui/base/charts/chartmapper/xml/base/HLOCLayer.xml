@@ -1,0 +1,23 @@
+
+<!--setColorMethod - Sets the coloring method for the HLOC symbols.-->
+<setColorMethod applicable="false" type="method" skip="true">
+  <args>
+<!--The method to color the HLOC layer. Please refer to XYChart.addHLOCLayer3 for the supported coloring methods.-->
+    <arg name="colorMethod" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to be used on an "up" day.-->
+    <arg name="riseColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to be used on a "down" day. The default value of -1 means it is the same as the riseColor.-->
+    <arg name="fallColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The lead value to act as the closing pricing before the first day, so as to determine if the first day is an "up" or "down" day.-->
+    <arg name="leadValue" default="[-Infinity]">
+      <map path=""/>
+    </arg>
+  </args>
+</setColorMethod>
+

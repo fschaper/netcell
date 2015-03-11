@@ -1,0 +1,2047 @@
+/*
+ * @brief wss file
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Srdjan Vukadinovic <srdjan.vukadinovic@develabs.com>
+ * Andrej Vrhovac <andrej.vrhovac@develabs.com>
+ *
+ * \version
+ * SVN: $Id: dialogs.css 4869 2011-04-19 11:15:47Z lukap $
+ *
+ */
+
+/** sprite: wss-dlg-sprite; sprite-image: url('/ui/wss/res/img/sprites/wss-dlg-sprite.png'); */
+.ext-el-mask {
+	filter: alpha(opacity=0);
+	-moz-opacity: 0.0;
+	opacity: 0;
+	}
+/*
+.ext-el-mask-suspend-win .ext-el-mask{
+z-index:20000;
+position:absolute;
+top:0;left:0;
+-moz-opacity:0.5;
+opacity:.50;
+filter:alpha(opacity=50);
+background-color:#CCC;
+width:100%;height:100%;
+zoom:1;
+}
+*/
+.x-form-file,textarea.x-form-field{padding:1px 3px;background:#fff url(/ui/lib/ext/resources/images/default/form/text-bg.gif) repeat-x 0 0;border:1px solid #B5B8C8;}
+.x-form-file{height:22px;line-height:18px;vertical-align:middle;}
+.ext-ie .x-form-file{margin-top:-1px;margin-bottom:-1px;height:22px;line-height:18px;}
+.ext-strict .x-form-file{height:22px;}
+.ext-webkit .x-form-file{height:20px;}
+.ext-gecko .x-form-file{padding-top:2px;padding-bottom:0;}
+.x-small-editor .x-form-file{height:20px;line-height:16px;vertical-align:middle;}
+.ext-ie .x-small-editor .x-form-file{margin-top:-1px!important;margin-bottom:-1px!important;height:20px!important;line-height:16px!important;}
+.ext-strict .x-small-editor .x-form-file{height:16px!important;}
+.ext-ie .x-small-editor .x-form-file{height:20px;line-height:16px;}
+.ext-border-box .x-small-editor .x-form-file{height:20px;}
+.ext-ie td .x-form-file{position:relative;top:-1px;}
+.ext-ie .x-grid3 .x-editor .x-form-file{position:relative;top:-1px;}
+
+.insfuncgrid .x-grid3-cell-inner, .insfuncgrid .x-grid3-hd-inner {
+	font-size: 12px;
+	padding: 2px 3px 2px 5px;
+}
+
+.x-form-field {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 12px;
+}
+
+/* Insert Chart Dialog */
+
+#chartcategoriespanel {
+	margin-right: 8px;
+}
+
+#chartcategoriespanel .thumb {
+	font-size: 8pt;
+	color: #15428B;
+	padding: 0px;
+}
+
+#chartcategoriespanel .thumb img {
+	height: 16px;
+	width: 16px;
+}
+
+#chartcategoriespanel .thumb-wrap {
+	float: left;
+	margin: 1px 0px 1px 1px;
+	margin-right: 0;
+	padding: 2px 2px 2px 4px;
+	width: 93%;
+	cursor: default;
+}
+
+#chartcategoriespanel .x-view-over {
+    border: 1px solid #dddddd;
+    background: #efefef url(/ui/wss/res/img/dialog/chart/row-over.png) repeat-x left top;
+	padding: 1px 1px 1px 3px;
+	cursor: default;
+}
+
+#chartcategoriespanel .x-view-selected {
+	background: #eff5fb url(/ui/wss/res/img/dialog/chart/row-over2.png) repeat-x left top;
+	border: 1px solid #A78E66;
+	padding: 1px 1px 1px 3px;
+}
+
+#chartcategoriespanel .x-view-selected .thumb {
+	background: transparent;
+}
+
+#charttypespanel .thumb {
+	padding: 0px;
+}
+
+#charttypespanel .thumb img {
+	height: 46px;
+	width: 46px;
+}
+
+#charttypespanel .thumb-wrap {
+	float: left;
+	margin: 1px 0px 1px 1px;
+	margin-right: 0;
+	padding: 4px 4px 2px;
+}
+
+#charttypespanel .x-view-over {
+    border: 1px solid #dddddd;
+    background: #efefef url(/ui/wss/res/img/dialog/chart/row-over.png) repeat-x left top;
+	padding: 3px 3px 1px;
+}
+
+#charttypespanel .x-view-selected {
+	background: #eff5fb url(/ui/wss/res/img/dialog/chart/item_selected2.png) repeat-x left top;
+	border: 1px solid #9F7559;
+	padding: 3px 3px 1px;
+}
+
+
+#charttypespanel .x-view-selected .thumb {
+	background: transparent;
+}
+
+.charttypes {
+	background: #D0DEF0;
+	padding: 2px 0px 2px 7px;
+	font-weight: bold;
+	color: #15428B;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 9pt;
+	border-bottom: 1px solid #DDDDDD;
+	margin: 1px;
+}
+
+#chartselectionpanel {
+	margin-bottom: 5px;
+}
+
+.chartdatasource .x-form-check-wrap {
+	line-height: 20px;
+}
+
+.chartdatasource .x-form-item label {
+	padding:2px 3px 1px 0pt;
+}
+
+
+.chart-axis-text-direction .thumb-wrap {
+	float: left;
+	padding: 2px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.chart-axis-text-direction .x-combo-selected {
+	border: 0 none !important;
+}
+
+
+/* Format Cells Dialog */
+
+#fcdlg-num-cat-sel .x-fieldset-header {
+	height: 0px;
+}
+
+.list-selector
+{
+	cursor: pointer;
+	line-height: 18px;
+}
+
+.borderr {
+	border: 1px solid #BCBCBC;
+	background-color: #FFFFFF;
+	height: 265px;
+}
+
+.border-neg{
+	border: 1px solid #BCBCBC;
+	background-color: #FFFFFF;
+	height: 148px;
+}
+
+.border-style{
+	border: 1px solid #BCBCBC;
+	background-color: #FFFFFF;
+	height: 123px;
+	margin-left: 0px;
+}
+
+.DVSelector
+{
+	cursor: pointer;
+	font-size: 11px;
+	line-height: 18px;
+	padding-left: 5px;
+}
+
+
+.listDataViewSelect .x-view-selected {
+	background: #D9E8FB;
+	margin: 0px;
+}
+
+.listDataViewSelect .x-view-over {
+	background: #EFEFEF;
+}
+
+.borderStyleSelect .x-view-over {
+	background: #EFEFEF;
+}
+
+.borderFieldSelect .x-view-selected {
+	background: #D9E8FB;
+}
+
+.borderStyleSelect .x-view-selected {
+	background: #D9E8FB;
+}
+
+.border-chooser
+{
+	cursor: pointer;
+	line-height: 18px;
+	padding: 10px;
+}
+
+.border-field-chooser
+{
+	cursor: pointer;
+	/*position: relative;*/
+	line-height: 18px;
+	padding: 0px;
+}
+
+
+.border-list {
+	background-color: #FFFFFF;
+}
+
+.x-title-f legend {
+	text-decoration: none;
+	color: #15428B;
+	font-weight: normal;
+}
+
+.border-choose-field{
+	position: relative;
+	border: 1px solid #BCBCBC;
+	background-color: #FFFFFF;
+	padding: 0px;
+	background: url(/ui/wss/res/img/dialog/format_cells/border-field-single.png) no-repeat;
+	height: 94px;
+	width: 146px;
+}
+
+.border-choose-field-2x2{
+	position: relative;
+	border: 1px solid #BCBCBC;
+	background-color: #FFFFFF;
+	padding: 0px;
+	background: url(/ui/wss/res/img/dialog/format_cells/border-field-multiple.png) no-repeat;
+	height: 94px;
+	width: 146px;
+}
+
+.border-choose-field-col{
+	position: relative;
+	border: 1px solid #BCBCBC;
+	background-color: #FFFFFF;
+	padding: 0px;
+	background: url(/ui/wss/res/img/dialog/format_cells/cells-col.png) no-repeat;
+	height: 94px;
+	width: 146px;
+}
+
+.border-choose-field-row{
+	position: relative;
+	border: 1px solid #BCBCBC;
+	background-color: #FFFFFF;
+	padding: 0px;
+	background: url(/ui/wss/res/img/dialog/format_cells/cells-row.png) no-repeat;
+	height: 94px;
+	width: 146px;
+}
+
+.x-form-field-wrap .x-form-color-trigger {
+	background:transparent url(/ui/wss/res/img/dialog/format_cells/color-trigger.png) no-repeat 0 0;
+    cursor:pointer;
+}
+
+.fill-sample{
+	background-color: transparent;
+	border: none;
+	width: 415px;
+	height: 50px;
+}
+
+.fill-sample-chooser
+{
+
+}
+
+.pattern_selector_field .x-view-over {
+background: #DFDFDF;
+cursor: pointer;
+padding: 5px 3px 0px 3px;
+vertical-align: middle;
+width: 16px;
+height: 16px;
+margin: 0px;
+}
+
+.pattern_selector_field .x-view-selected {
+background: #D9E8FB;
+cursor: pointer;
+padding: 5px 3px 0px 3px;
+width: 16px;
+height: 16px;
+vertical-align: middle;
+margin: 0px;
+}
+
+.pattern_selector_field {
+	padding: 5px;
+	border: 1px solid #BCBCBC;
+	background-color: #FFFFFF;
+	width: 112px;
+	height: 80px;
+}
+
+.font-sample-field{
+	display: table;
+	#position: relative;
+	overflow: hidden;
+	border: 0px solid #BCBCBC;
+	background-color: #FFFFFF;
+	padding: 0px;
+	background: url(/ui/wss/res/img/dialog/format_cells/font_sample.png) no-repeat;
+	width: 196px;
+	height: 54px;
+}
+
+.hyperlink-navigation {
+	border: 1px solid #BCBCBC;
+	background-color: #FFFFFF;
+	margin-left: 0px;
+	font-size: 9px;
+}
+
+.hyperlink-navigation .x-view-over {
+    border: 0px solid #dddddd;
+    background: #EFEFEF;
+	padding: 0px;
+	cursor: pointer;
+}
+
+.hyperlink-navigation .x-view-selected {
+    background: #D9E8FB;
+	border: 0px solid #9F7559;
+	padding: 0px;
+	cursor: pointer;
+}
+
+.hl-tr-grid-combo{
+	padding-top: 4px;
+}
+
+.main-panel-open {
+	background: transparent;
+}
+
+.toolbar-panel-hyperlink {
+	background:#CAD8EA;
+	padding:10px 0px 5px 0px;
+}
+
+.left-panel-hyperlink {
+	background:#FFFFFF;
+	border: 1px solid #99BBE8;
+}
+
+.top-left-bottom-panel-hyperlink {
+	background:#CAD8EA;
+	padding:10px 0px 5px 15px;
+}
+
+
+/*
+ Edit Chart Dialog
+*/
+
+.edit-chart-title {
+	font-size: 14pt;
+	font-style: bold;
+}
+
+.edit-chart-tab-panel {
+	background: transparent;
+	border: 1px solid #99BBE8;
+}
+
+.edit-chart-axis-options-labels {
+	margin-bottom: 8px;
+}
+
+#chart-type-navigation {
+	margin-right: 8px;
+	background-color: #FFFFFF;
+}
+
+#chart-type-navigation .thumb {
+	font-size: 8pt;
+		/*
+	color: #15428B;
+	*/
+	padding: 0px;
+}
+
+#chart-type-navigation .thumb img {
+	height: 27px;
+	width: 29px;
+	vertical-align:text-bottom;
+}
+
+#chart-type-navigation .thumb-wrap {
+	float: left;
+	margin: 1px 1px 1px 1px;
+	margin-right: 0;
+	padding: 2px 4px 2px 2px;
+	width: 95%;
+	cursor: pointer;
+}
+
+#chart-type-navigation .x-view-over {
+	border: 1px solid #9EBAE1;
+	background:#F9F8F3;
+	padding: 1px 1px 1px 1px;
+	cursor: pointer;
+}
+
+#chart-type-navigation .x-view-selected {
+	background: #eff5fb url(/ui/wss/res/img/dialog/open/row_selected.png) repeat-x left top;
+	border: 1px solid #A78E66;
+	padding: 1px 1px 1px 1px;
+}
+
+#chart-type-navigation .x-view-selected .thumb {
+	background: transparent;
+}
+
+/*
+ Open Dialog
+*/
+
+
+
+#folder-navigation {
+	margin-right: 8px;
+	background-color: #FFFFFF;
+}
+
+#folder-navigation .thumb {
+	font-size: 8pt;
+		/*
+	color: #15428B;
+	*/
+	padding: 0px;
+}
+
+#folder-navigation .thumb img {
+	height: 16px;
+	width: 16px;
+}
+
+#folder-navigation .thumb-wrap {
+	float: left;
+	margin: 1px 1px 1px 1px;
+	margin-right: 0;
+	padding: 2px 2px 2px 3px;
+	width: 93%;
+	cursor: pointer;
+}
+
+#folder-navigation .x-view-over {
+	border: 1px solid #9EBAE1;
+	background:#F9F8F3;
+	padding: 1px 1px 1px 2px;
+	cursor: pointer;
+}
+
+#folder-navigation .x-view-selected {
+	background: #eff5fb url(/ui/wss/res/img/dialog/open/row_selected.png) repeat-x left top;
+	border: 1px solid #A78E66;
+	padding: 1px 1px 1px 2px;
+}
+
+#folder-navigation .x-view-selected .thumb {
+	background: transparent;
+}
+
+#insert_hl .x-toolbar {
+	background:#CAD8EA repeat-x scroll left top;
+	border-style:solid;
+	border-width:0 0 0px;
+	display:block;
+	padding:2px;
+	position:relative;
+}
+
+
+
+#open-dlg .x-toolbar {
+	background:#CAD8EA repeat-x scroll left top;
+	border-style:solid;
+	border-width:0 0 0px;
+	display:block;
+	padding:2px;
+	position:relative;
+}
+
+.folder-up-icon {
+    background-image:url(/ui/wss/res/img/dialog/open/folder_up.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.new-folder-icon {
+    background-image:url(/ui/wss/res/img/dialog/open/folder_add.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.delete-folder-icon {
+    background-image:url(/ui/wss/res/img/dialog/open/folder_delete.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.delete-icon {
+    background-image:url(/ui/wss/res/img/dialog/open/delete.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.view-menu-icon {
+    background-image:url(/ui/wss/res/img/dialog/open/view.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.view-details-icon {
+    background-image:url(/ui/wss/res/img/dialog/open/view_details.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.view-thumbnails-icon {
+    background-image:url(/ui/wss/res/img/dialog/open/view_thumbnails.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.view-list-icon {
+    background-image:url(/ui/wss/res/img/dialog/open/view_list.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+#open-dlg .main-panel {
+	background:transparent;
+}
+
+
+#open-dlg .toolbar-panel {
+	background:transparent;
+	padding:10px 0px 5px 0px;
+}
+
+#insert-hyperlink .toolbar-panel {
+	background:transparent;
+	padding:10px 0px 5px 0px;
+}
+
+#open-dlg .top-left-bottom-panel {
+	background:transparent;
+	padding:10px 0px 5px 15px;
+}
+
+#open-dlg .left-panel {
+	background:transparent;
+	border: 1px solid #99BBE8;
+}
+
+/* New Insert hyperlink dialog - advanced features */
+.x-btn td.x-btn-left, .x-btn td.x-btn-right {
+	padding: 0;
+	font-size: 1px;
+	line-height: 1px;
+	}
+
+
+/*
+.x-btn td.x-btn-center {
+	padding:0 5px;
+	vertical-align: middle;
+	}
+*/
+
+
+.insertHyperlink-Grid .x-grid3-row td {
+	line-height: 20px;
+}
+
+/*.hl-tr-grid-brd {
+    border-left:  1px solid #DDDDDD;
+}*/
+
+.insertHyperlink-editorField {
+	width: 100px;
+}
+
+
+.x-form-field-wrap .hl-triggerFld-shSel {
+    background-image:url(/ui/wss/res/img/dialog/insert_hyperlink/trigger-shSelector.png) !important; /** sprite-ref: wss-dlg-sprite; */
+    cursor:pointer;
+}
+
+.x-form-field-wrap .hl-triggerFld-namedRange{
+	background-image:url(/ui/wss/res/img/dialog/insert_hyperlink/trigger-namedRange.png) !important; /** sprite-ref: wss-dlg-sprite; */
+	cursor: pointer;
+}
+
+.x-form-field-wrap .hl-triggerFld-atVar{
+	background-image:url(/ui/wss/res/img/dialog/insert_hyperlink/trigger-atVar.png) !important; /** sprite-ref: wss-dlg-sprite; */
+	cursor: pointer;
+}
+
+.x-form-field-wrap .hl-triggerFld-cList{
+	background-image:url(/ui/wss/res/img/dialog/insert_hyperlink/trigger-cList.png) !important; /** sprite-ref: wss-dlg-sprite; */
+	cursor: pointer;
+}
+
+.x-form-field-wrap .hl-triggerFld-cVal{
+	cursor: pointer;
+}
+
+/* ====EOHL=================================== */
+
+.my-workbook-documents {
+	background-image:url(/ui/wss/res/img/dialog/open/my_workbook_documents.png) ! important; /** sprite-ref: wss-dlg-sprite; */
+}
+.folder {
+    background-image:url(/ui/wss/res/img/dialog/open/folder.png) ! important; /** sprite-ref: wss-dlg-sprite; */
+	margin-left:5px;
+}
+
+
+/*
+.folder selected {
+    background-image:url(/ui/wss/res/img/dialog/open/folder.png) ! important;
+}
+
+*/
+
+.ux-icon-combo-icon {
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    width: 18px;
+    height: 14px;
+}
+
+/* X-BROWSER-WARNING: this is not being honored by Safari */
+.ux-icon-combo-input {
+    padding-left: 25px;
+}
+
+.x-form-field-wrap .ux-icon-combo-icon {
+    top: 3px;
+    left: 5px;
+}
+.ux-icon-combo-item {
+    background-repeat: no-repeat ! important;
+    background-position: 3px 50% ! important;
+    padding-left: 24px ! important;
+}
+
+
+#wFiles_mainList_dv {
+	margin-left: 2px;
+}
+
+#wFiles_mainList_dv .thumb {
+	padding: 0px;
+
+}
+
+#wFiles_mainList_dv span {
+	padding: 1px;
+	background: transparent;
+	border:1px solid transparent;
+/*
+	font: 11px Arial, Helvetica, sans-serif;
+*/
+}
+
+#wFiles_mainList_dv .thumb img {
+	height: 16px;
+	width: 16px;
+	/*padding-top:1px;*/
+	vertical-align:text-bottom;
+}
+
+#wFiles_mainList_dv .thumb-wrap {
+	float: left;
+	margin: 1px 0px 1px 1px;
+	margin-right: 0;
+	padding: 0px 0px 0px 2px;
+	width: 90%;
+	cursor: default;
+}
+
+
+#wFiles_mainList_dv .x-view-over {
+	padding: 0px 0px 0px 2px;
+	cursor: default;
+}
+
+
+#wFiles_mainList_dv .x-view-selected span {
+	background: #eff5fb;
+	border:1px solid #99bbe8;
+}
+
+
+#wFiles_mainList_dv .x-view-selected .thumb {
+background: transparent;
+}
+
+
+
+#main-thumbnails-view .x-panel-body{
+	background: white;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+#main-thumbnails-view .thumb{
+/*
+	background: #dddddd;
+*/
+	padding: 3px;
+	margin-left: 5px;
+	text-align:center;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+#main-thumbnails-view .thumb img{
+	height: 32px;
+	width: 32px;
+}
+#main-thumbnails-view .thumb-wrap{
+	float: left;
+	margin: 4px 0px 4px 4px;
+	padding: 5px;
+	width: 50px;
+	height:70px;
+}
+#main-thumbnails-view .thumb-wrap span{
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+#main-thumbnails-view .x-view-over{
+    border:1px solid #dddddd;
+    background: #efefef url(/ui/lib/ext/resources/images/default/grid/row-over.gif) repeat-x left top;
+	padding: 4px;
+}
+
+#main-thumbnails-view .x-view-selected{
+	background: #eff5fb url(/ui/wss/res/img/wt/selected.gif) no-repeat right bottom;
+	border:1px solid #99bbe8;
+	padding: 4px;
+}
+
+#main-thumbnails-view .x-view-selected .thumb{
+	background:transparent;
+}
+
+/*
+#main-thumbnails-view .x-view-selected span {
+	background: #eff5fb url(/ui/wss/res/img/wt/selected.gif) no-repeat right bottom;
+	border:1px solid #99bbe8;
+}
+*/
+
+#main-thumbnails-view .loading-indicator {
+	font-size:11px;
+	background-image:url(/ui/lib/ext/resources/images/default/grid/loading.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:20px;
+	margin:10px;
+}
+
+
+#main-details-view .x-grid3-row {
+	border-color:#FFFFFF !important;
+	height:20px;
+}
+
+#main-details-view .x-grid3-col {
+    border-right: 0px solid;
+    border-bottom: 0px solid;
+}
+
+
+.w3s_hierarchy {
+	background-image:url(/ui/wss/res/img/dialog/open/hierarchy.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.w3s_group {
+	background-image:url(/ui/wss/res/img/dialog/open/group.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.w3s_folder {
+	background-image:url(/ui/wss/res/img/dialog/open/folder.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.w3s_workbook {
+	background-image:url(/ui/wss/res/img/dialog/open/workbook.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+/*
+ * Conditional Formatting Dialog
+ */
+
+.x-btn td.x-btn-left, .x-btn td.x-btn-right {
+	padding: 0;
+	font-size: 1px;
+	line-height: 1px;
+	}
+
+#main-cond-menu .thumb-wrap {
+    border: 0px solid #dddddd;
+    background: #FFFFFF;
+	padding-left: 5px;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #DFDFDF;
+}
+
+#main-cond-menu .x-view-over {
+    border: 0px solid #dddddd;
+    background: #EFEFEF;
+	padding-left: 5px;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	cursor: pointer;
+	border-bottom: 1px solid #DFDFDF;
+}
+
+#main-cond-menu .x-view-selected {
+	background: #D9E8FB;
+	border: 0px solid #9F7559;
+	padding-left: 5px;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #DFDFDF;
+}
+
+.format-sample-preview{
+	display: table;
+	/*#position: relative;*/
+	overflow: hidden;
+	background: #FFFFFF;
+	border: 1px solid #000000;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	width: 220px;
+	height: 60px;
+}
+
+
+/*
+ Import Picture Dialog
+*/
+
+.x-form-file-wrap {
+    position: relative;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file {
+	position: absolute;
+	right: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file-btn {
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+.x-form-file-wrap .x-form-file-text {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    color: #777;
+}
+
+.split-line {
+	overflow:hidden;
+	background:transparent url(/ui/wss/res/img/dialog/border.png) repeat-x;
+}
+
+/*
+ Sheet Move or Copy Dialog
+*/
+
+#sheet-list {
+	/*
+margin-right: 8px;
+*/
+}
+
+#sheet-list .thumb {
+	padding: 0px;
+}
+
+#sheet-list .thumb img {
+	height: 16px;
+	width: 16px;
+}
+
+#sheet-list .thumb-wrap {
+	float: left;
+	margin: 1px 0px 1px 1px;
+	margin-right: 0;
+	padding: 0px 0px 0px 2px;
+	width: 98%;
+	cursor: default;
+}
+
+#sheet-list .x-view-over {
+	padding: 0px 0px 0px 2px;
+	cursor: default;
+}
+
+#sheet-list .x-view-selected {
+	background: #E6E7EB;
+	padding: 0px 0px 0px 2px;
+}
+
+#sheet-list .x-view-selected .thumb {
+	background: transparent;
+}
+
+.select-range-icon {
+	background-image: url(/ui/wss/res/img/dialog/ico_begin_select_range.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/*
+ Paste Special Dialog
+*/
+
+#paste-special-dlg .custom-title-fieldset {
+	overflow: hidden;
+	border:1px solid #B5B8C8;
+	display:block;
+	margin-bottom:5px;
+	padding:0px;
+	background:transparent;
+
+	border-left:0px none;
+	border-bottom:0px none;
+	border-right:0px none;
+
+}
+
+
+#paste-special-dlg .x-panel-body {
+	padding-top:2px;
+	padding-left:2px;
+	background: transparent;
+}
+
+
+/*
+ Page Setup Dialog
+*/
+
+#page-setup-dlg .x-panel-body {
+	padding-top:2px;
+	padding-left:2px;
+	background: transparent;
+}
+
+#page-setup-dlg .custom-title-fieldset {
+	overflow: hidden;
+	border:1px solid #B5B8C8;
+	display:block;
+	margin-bottom:5px;
+	padding:0px;
+
+
+padding-top:2px;
+
+	padding-bottom:10px;
+	background:transparent;
+
+	border-left:0px none;
+	border-bottom:0px none;
+	border-right:0px none;
+}
+
+/*
+.x-tab-panel-body {
+    background:transparent;
+    border:0 none;
+}
+
+.x-panel-btns-ct {
+	background-color: #DFE8F6;
+}
+
+*/
+
+
+/*
+ Name Manager Dialog
+*/
+
+
+/*
+.x-menu-item-checked .x-menu-group-item .x-menu-item-icon {
+	background: none;
+}
+
+
+.x-menu-item-checked {
+	background:#FFD58D repeat-x left bottom;
+	border:1px solid #F29638;
+	padding:0;
+}
+*/
+
+#page-setup-dlg .header {
+	display: table;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	padding: 2px;
+	background: url(/ui/wss/res/img/dialog/page_setup/header_bcg.png) no-repeat;
+	width: 447px;
+	height: 60px;
+}
+
+
+
+#page-setup-dlg .footer {
+	display: table;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	padding: 2px;
+	background: url(/ui/wss/res/img/dialog/page_setup/footer_bcg.png) no-repeat;
+	width: 447px;
+	height: 60px;
+}
+
+
+/*
+ IE compitability request
+*/
+
+#page-setup-dlg .x-tab-strip-spacer {
+	height:0px;
+}
+
+
+.ext-strict .ext-ie .ext-el-mask {
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+
+
+
+.ext-strict .ext-ie .formula-table {
+	border-collapse: collapse;
+	border-width: 0px;
+}
+
+
+/*
+ statusbar
+*/
+
+.ext-strict .ext-ie .formula-inner {
+	border-collapse: collapse;
+	border-width: 0px;
+}
+
+#conditional_formatting .main-panel-open-bc {
+	height:0px;
+}
+#ctc_main_container {
+	height:25px;
+}
+
+#top_bottom_holder {
+	height:25px;
+}
+
+#above_below_holder {
+	height:25px;
+}
+
+#duplicate_holder {
+	height:25px;
+}
+
+.view-menu .x-menu-item-checked .x-menu-group-item .x-menu-item-icon{
+    background: transparent url(/ui/wss/res/img/dialog/ico_checked.png) no-repeat center;
+
+}
+
+.view-menu .x-menu-item-checked .x-menu-group-item {
+    /*background: transparent url(/ui/lib/ext/resources/images/default/menu/group-checked.gif) no-repeat center;*/
+	background: #FFE7AE url(/ui/wss/res/img/dialog/item_checked_bcg.png) repeat-x left bottom;
+	border:1px solid #aaccf6;
+	padding:3px 21px 3px 27px;
+}
+
+/* extending grid - for displaying gridlines */
+
+.x-grid3-row {
+	border-width: 0px;
+}
+.x-grid3-col {
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+}
+
+.x-grid3-row.x-grid3-row-last .x-grid3-col {
+    border-bottom-width: 1px;
+}
+
+.x-grid3-row.x-grid3-cell-coloured .x-grid3-col {
+    background-color: #FEFEFE;
+}
+
+.x-grid3-hd-row td {
+	padding-right: 1px;
+}
+
+.ext-ie .x-grid3-hd-row td {
+	padding-right: 0px;
+}
+.x-grid3-hd-row td.x-grid3-cell-first {
+	border-left-width: 0px;
+}
+
+.tb-no-bg ul.x-tab-strip-top {
+	background: none;
+}
+
+/*
+.wss_macro_mdl {
+	background-image:url(/ui/wss/res/img/context_menu/ico_macro.png) !important;
+}
+*/
+
+.wss_macro_func {
+	background-image:url(/ui/wss/res/img/bar/ico_macro_editor.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+/*
+Edit Macro
+*/
+
+#edit-macro-dlg .x-toolbar{
+	background: transparent;
+	display:block;
+	position:relative;
+	border: none;
+}
+
+.wss_macro_mdl {
+    background-image:url(/ui/wss/res/img/dialog/macro/macro_mdl_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.delete-macro-mdl-icon {
+    background-image:url(/ui/wss/res/img/dialog/macro/delete_macro_mdl_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.new-macro-mdl-icon {
+    background-image:url(/ui/wss/res/img/dialog/macro/new_macro_mdl_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.rename-macro-mdl-icon {
+	background-image: url(/ui/wss/res/img/dialog/macro/rename_macro_mdl_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.save-macro-mdl-icon {
+	background-image: url(/ui/wss/res/img/bar/ico_save_document.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.cut-macro-icon {
+	background-image: url(/ui/wss/res/img/bar/ico_cut.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.copy-macro-icon {
+	background-image: url(/ui/wss/res/img/bar/ico_copy.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.paste-macro-icon {
+	background-image: url(/ui/wss/res/img/bar/ico_paste.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.find-in-module-icon {
+	background-image: url(/ui/wss/res/img/dialog/macro/find_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.undo-macro-icon {
+	background-image: url(/ui/wss/res/img/bar/ico_undo.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.redo-macro-icon {
+	background-image: url(/ui/wss/res/img/bar/ico_redo.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/*
+.x-toolbar {
+	background:#D0DEF0 url(/ui/lib/ext/resources/images/default/toolbar/bg.gif) repeat-x scroll left top;
+	border-color:#A9BFD3;
+	border-style:solid;
+	border-width:0 0 1px;
+	display:block;
+	padding:2px;
+	position:relative;
+}
+*/
+
+
+/* *** ALL DIALOGS - SPRITES *** */
+
+
+.ico_end_select_range {
+	background-image: url(/ui/wss/res/img/dialog/ico_end_select_range.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_portrait {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_portrait.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_landscape {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_landscape.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_portrait {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_portrait.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_portrait {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_portrait.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_portrait {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_portrait.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_portrait {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_portrait.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_portrait {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_portrait.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_portrait {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_portrait.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_portrait {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_portrait.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_portrait {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_portrait.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* PAGE SETUP */
+
+.page_margins {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_top {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_top.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_header {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_header.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_left {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_left.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_right {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_right.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_bottom {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_bottom.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_footer {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_footer.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+.center_horizontally {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_top {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_top.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_header {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_header.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_left {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_left.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_right {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_right.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_bottom {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_bottom.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_footer {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_footer.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+.center_vertically {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_top {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_top.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_header {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_header.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_left {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_left.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_right {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_right.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_bottom {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_bottom.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_footer {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_footer.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+.center_hor_ver {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_top {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_top.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_header {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_header.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_left {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_left.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_right {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_right.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_bottom {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_bottom.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_footer {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_footer.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+.page_margins_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_top_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_top_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_header_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_header_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_left_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_left_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_right_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_right_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_bottom_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_bottom_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins_footer_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins_footer_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* */
+
+.center_horizontally_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_top_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_top_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_header_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_header_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_left_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_left_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_right_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_right_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_bottom_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_bottom_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_horizontally_footer_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_horizontally_footer_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+.center_vertically_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_top_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_top_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_header_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_header_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_left_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_left_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_right_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_right_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_bottom_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_bottom_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_vertically_footer_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_vertically_footer_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+.center_hor_ver_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_top_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_top_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_header_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_header_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_left_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_left_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_right_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_right_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_bottom_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_bottom_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.center_hor_ver_footer_ls {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/center_hor_ver_footer_ls.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.page_margins {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/page_margins.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.down_over {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/down_over.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.over_down {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/over_down.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+/* *** */
+
+.icon_cancel {
+	background-image: url(/ui/wss/res/img/dialog/ico_cancel.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.cnd_fmt_new {
+	background-image: url(/ui/wss/res/img/dialog/conditional/new.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.cnd_fmt_edit {
+	background-image: url(/ui/wss/res/img/dialog/conditional/edit.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.cnd_fmt_delete {
+	background-image: url(/ui/wss/res/img/dialog/conditional/delete.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.cnd_fmt_up {
+	background-image: url(/ui/wss/res/img/dialog/conditional/up.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.cnd_fmt_down {
+	background-image: url(/ui/wss/res/img/dialog/conditional/down.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* *** */
+
+.hl_file_web {
+	background-image: url(/ui/wss/res/img/dialog/insert_hyperlink/existing_file_web_page.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.hl_place_this {
+	background-image: url(/ui/wss/res/img/dialog/insert_hyperlink/place_in_this_document.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.hl_create_new {
+	background-image: url(/ui/wss/res/img/dialog/insert_hyperlink/create_new_document.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.hl_email {
+	background-image: url(/ui/wss/res/img/dialog/insert_hyperlink/e_mail_address.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.hl_nav_sep {
+	background-image: url(/ui/wss/res/img/dialog/insert_hyperlink/hlNavSeparator.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* *** */
+
+.ico_textcolor {
+	background-image: url(/ui/wss/res/img/bar/ico_textcolor.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_page_nmb {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_page_nmb.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_nmb_of_pages {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_nmb_of_pages.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_date {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_date.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_time {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_time.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_begin_select_range {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_begin_select_range.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_tab {
+	background-image: url(/ui/wss/res/img/dialog/page_setup/ico_tab.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_ins_picture {
+	background-image: url(/ui/wss/res/img/bar/ico_ins_picture.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* *** */
+
+.border-top {
+	background-image: url(/ui/wss/res/img/dialog/format_cells/border-top.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.border-middle-h {
+	background-image: url(/ui/wss/res/img/dialog/format_cells/border-middle-h.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.border-bottom {
+	background-image: url(/ui/wss/res/img/dialog/format_cells/border-bottom.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.border-left {
+	background-image: url(/ui/wss/res/img/dialog/format_cells/border-left.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.border-right {
+	background-image: url(/ui/wss/res/img/dialog/format_cells/border-right.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.border-middle-v {
+	background-image: url(/ui/wss/res/img/dialog/format_cells/border-middle-v.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.borders-none {
+	background-image: url(/ui/wss/res/img/dialog/format_cells/none.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.borders-outline {
+	background-image: url(/ui/wss/res/img/dialog/format_cells/outline.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.borders-inside {
+	background-image: url(/ui/wss/res/img/dialog/format_cells/inside.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* *** */
+
+.mchart-bar {
+	background-image: url(/ui/wss/res/img/dialog/microchart/bar.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.mchart-line {
+	background-image: url(/ui/wss/res/img/dialog/microchart/line.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.mchart-dots {
+	background-image: url(/ui/wss/res/img/dialog/microchart/dots.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.mchart-dotted {
+	background-image: url(/ui/wss/res/img/dialog/microchart/dottedline.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.mchart-whisker {
+	background-image: url(/ui/wss/res/img/dialog/microchart/whisker.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.mchart-pie {
+	background-image: url(/ui/wss/res/img/dialog/microchart/pie.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* *** charts *** */
+
+.ico_cat_all {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_all.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_column {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_column.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_line {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_line.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_pie {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_pie.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_bar {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_bar.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_area {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_area.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_xyscatter {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_xyscatter.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_stock {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_stock.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_doughnut {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_doughnut.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_bubble {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_bubble.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_radar {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_radar.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_meter {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_meter.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.ico_cat_surface {
+	background-image: url(/ui/wss/res/img/dialog/chart/ico_cat_surface.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* *** CHARTS - TYPES *** */
+
+.xlColumnClustered {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlColumnClustered.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlColumnStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlColumnStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlColumnStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlColumnStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DColumnClustered {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DColumnClustered.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DColumnStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DColumnStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DColumnStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DColumnStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlCylinderColClustered {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlCylinderColClustered.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlCylinderColStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlCylinderColStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlCylinderColStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlCylinderColStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+.xlLine {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlLine.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlLineStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlLineStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlLineStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlLineStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlLineRotated {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlLineRotated.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlLineMarkers {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlLineMarkers.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlLineMarkersStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlLineMarkersStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlLineMarkersStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlLineMarkersStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlLineMarkersRotated {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlLineMarkersRotated.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DLine {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DLine.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+
+.xlPie {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlPie.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DPie {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DPie.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlPieExploded {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlPieExploded.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DPieExploded {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DPieExploded.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlBarClustered {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlBarClustered.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlBarStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlBarStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlBarStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlBarStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DBarClustered {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DBarClustered.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DBarStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DBarStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DBarStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DBarStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlCylinderBarClustered {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlCylinderBarClustered.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlCylinderBarStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlCylinderBarStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlCylinderBarStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlCylinderBarStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+
+.xlArea {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlArea.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlAreaStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlAreaStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlAreaStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlAreaStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DArea {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DArea.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DAreaStacked {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DAreaStacked.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xl3DAreaStacked100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xl3DAreaStacked100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+.xlXYScatter {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlXYScatter.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlXYScatterSmooth {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlXYScatterSmooth.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlXYScatterSmoothNoMarkers {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlXYScatterSmoothNoMarkers.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlXYScatterLines {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlXYScatterLines.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlXYScatterLinesNoMarkers {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlXYScatterLinesNoMarkers.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+
+
+.xlStockHLC {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlStockHLC.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlStockOHLC {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlStockOHLC.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlDoughnut {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlDoughnut.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlDoughnutExploded {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlDoughnutExploded.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* *** */
+.xlBubble {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlBubble.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlBubble3DEffect {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlBubble3DEffect.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlRadar {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlRadar.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlRadarMarkers {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlRadarMarkers.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlRadarFilled {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlRadarFilled.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlMeterOdoFull {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlMeterOdoFull.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlMeterOdoFull100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlMeterOdoFull100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlMeterOdoHalf {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlMeterOdoHalf.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlMeterOdoHalf100 {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlMeterOdoHalf100.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlMeterAngularWide {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlMeterAngularWide.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlMeterLineHorizontal {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlMeterLineHorizontal.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.xlMeterLineVertical {
+	background-image: url(/ui/wss/res/img/dialog/chart/type_xlMeterLineVertical.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+/* **** EO Chart Types **/
+
+.chart_area_icon {
+	background-image: url(/ui/wss/res/img/dialog/chart/chart_area_icon.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.plot_area_icon {
+	background-image: url(/ui/wss/res/img/dialog/chart/plot_area_icon.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.series_options_icon {
+	background-image: url(/ui/wss/res/img/dialog/chart/series_options_icon.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.points_options_icon {
+	background-image: url(/ui/wss/res/img/dialog/chart/points_options_icon.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.title_icon {
+	background-image: url(/ui/wss/res/img/dialog/chart/title_icon.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.legend_icon {
+	background-image: url(/ui/wss/res/img/dialog/chart/legend_icon.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.axis_icon {
+	background-image: url(/ui/wss/res/img/dialog/chart/axis_icon.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.chart_source_data {
+	background-image: url(/ui/wss/res/img/dialog/chart/set_source_data_icon.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.text_horizontal {
+	background-image: url(/ui/wss/res/img/dialog/chart/text_horizontal_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.text_rotate_left {
+	background-image: url(/ui/wss/res/img/dialog/chart/text_rotate_left_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.text_rotate_right {
+	background-image: url(/ui/wss/res/img/dialog/chart/text_rotate_right_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}

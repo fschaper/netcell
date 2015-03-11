@@ -1,0 +1,232 @@
+<!--  Class constructor arguments -->
+<args>
+	<arg name="width" default="600" mandatory="true">
+		<map path="Chart.ChartArea.Width">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+	</arg>
+	<arg name="height" default="400" mandatory="true">
+		<map path="Chart.ChartArea.Height">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+	</arg>
+	<arg name="bgColor" default="BackgroundColor">
+		<map path="Chart.ChartArea.Format.Fill.BackColor">&adapter_FormatConvertor_colorObject;</map>
+	</arg>
+	<arg name="edgeColor" default="Transparent">
+		<map path="Chart.ChartArea.Border.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+	</arg>
+	<arg name="raisedEffect" default="0"/>-->
+</args>
+
+&BaseChart;
+
+<!-- Ovde bi trebala provjera, da se vidi, da li postoji dodatna kordinata, a tek onda da se doda!? -->
+<!--addAxis - Adds an additional axis to the chart.-->
+<var_addAxis type="function" skip="true" result="Axis" init="addAxis">
+  <args>
+<!--Specifies which side of the plot area is the primary side of the axis. Must be one of the constants Left, Right, Top and Bottom for the 4 sides of the plot area.-->
+    <arg name="align" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An offset in pixels to move the axis away from the plot area. If a negative value is used, it will mean to move the axis into the plot area.-->
+    <arg name="offset" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addAxis>
+
+<!--setAxisAtOrigin - Sets the chart into 4 quadrant mode. The axes may intersect at origin inside the plot area (as opposed to at the border of the plot area).-->
+<setAxisAtOrigin applicable="false" type="method" skip="true">
+  <args>
+<!--predefined constants to determine which axis needs to move to intersect with the zero point of the other axis.-->
+    <arg name="originMode" default="XYAxisAtOrigin">
+      <!--<map path=""/>-->
+    </arg>
+<!--Flags to determine if the axes need to be symmetrical about the origin.-->
+    <arg name="symmetryMode" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setAxisAtOrigin>
+
+<!--setClipping - Enables clipping on the plot area.-->
+<setClipping applicable="false" type="method">
+  <args>
+<!--Additional margin, measured in pixels, to be added to the 4 sides of the plot area for the purpose of clipping. A positive value means the clipping region will be larger than the plot area. A negative value means the clipping region will be smaller than the plot area. The default value of 0 means the clipping region is equal to the plot area.-->
+    <arg name="margin" default="0">
+<!--      <map path=""/>-->
+    </arg>
+  </args>
+</setClipping>
+
+<!--setPlotArea - Sets the position, size, background colors, edge color and grid colors of the plot area.-->
+<var_setPlotArea type="function" result="PlotArea" init="setPlotArea">
+  <args>
+<!--The x coordinate of the left of the plot area.-->
+	<arg name="x" default="50" mandatory="true">
+		<map path="Chart.PlotArea.InsideLeft">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+	</arg>
+<!--The y coordinate of the top of the plot area.-->
+	<arg name="y" default="350" mandatory="true">
+		<map path="Chart.PlotArea.InsideTop">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+	</arg>
+<!--The width of the plot area in pixels.-->
+	<arg name="width" default="530" mandatory="true">
+		<map path="Chart.PlotArea.InsideWidth">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+	</arg>
+<!--The height of the plot area in pixels.-->
+	<arg name="height" mandatory="true">
+		<map path="Chart.PlotArea.InsideHeight">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+	</arg>
+<!--The background color of the plot area.-->
+	<arg name="bgColor" default="Transparent">
+		<map path="Chart.PlotArea.Fill.BackColor.RGB">
+			<adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/>
+		</map>
+	</arg>
+<!--The second background color of the plot area. -1 means there is no second background color. If there is a second background color, the two background colors will be used alternatively as horizontal bands on the background grid.-->
+	<arg name="altBgColor" default="-1"/>
+<!--The border color of the plot area. -1 means to use the default, which is LineColor. However, if the axes are configured in 4 quadrant mode (see XYChart.setAxisAtOrigin), the default will change to Transparent.-->
+	<arg name="edgeColor" default="0xC0C0C0">
+		<!--
+		<map path="Chart.PlotArea.Border.Color">
+			<adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/>
+		</map>
+		-->
+	</arg>
+<!--The horizontal grid color.-->
+	<arg name="hGridColor" default="0xC0C0C0"/>
+
+<!--The vertical grid color.-->
+	<arg name="vGridColor" default="Transparent"/>
+  </args>
+
+  &PlotArea;
+</var_setPlotArea>
+
+<!--setTrimData - Uses only a subset of the data series to draw charts.-->
+<setTrimData applicable="false" type="method" skip="true">
+  <args>
+<!--The index for the first data position to use for plotting charts.-->
+    <arg name="startPos" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The length of the data points used for plotting charts.-->
+    <arg name="len" default="7FFFFFFF">
+      <map path=""/>
+    </arg>
+  </args>
+</setTrimData>
+
+<!--setXAxisOnTop - Interchange the position of the primary x-axis and the secondary x-axis.-->
+<setXAxisOnTop type="method">
+  <args>
+<!--A true (non-zero) value means to interchange the positions of the primary and secondary x-axes. A false (zero) value means using the default positions for the primary and secondary x-axes.-->
+    <arg name="b" default="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <execadapter class="LookupValue" method="xAxisOnTop" path="Chart.Axes(1).TickLabelPosition"/>
+</setXAxisOnTop>
+
+<!--setYAxisOnRight - Interchange the position of the primary y-axis and the secondary y-axis.-->
+<setYAxisOnRight type="method">
+  <args>
+<!--A true (non-zero) value means to interchange the positions of the primary and secondary y-axes. A false (zero) value means using the default positions for the primary and secondary y-axes.-->
+    <arg name="b" default="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <execadapter class="LookupValue" method="xAxisOnTop" path="Chart.Axes(2).TickLabelPosition"/>
+</setYAxisOnRight>
+
+<!--swapXY - Swap the position of the x and y axes, so the x-axes will become vertical, and the y-axes will become horizontal.-->
+<swapXY type="method">
+  <args>
+<!--A true (non-zero) value means the x and y axes will be swapped. A false (zero) value means the x and y axes not be swapped.-->
+    <arg name="b" default="true" />
+  </args>
+
+  <execadapter class="LookupValue" method="swapXY"/>
+</swapXY>
+
+<!--syncYAxis - Sets a linear formula to synchronize the secondary y-axis scale to the primary y-axis scale.-->
+<syncYAxis applicable="false" type="method" skip="true">
+  <args>
+<!--The slope parameter for the formula linking the secondary y-axis to the primary y-axis.-->
+    <arg name="slope" default="1">
+      <map path=""/>
+    </arg>
+<!--The intercept parameter for the formula linking the secondary y-axis to the primary y-axis.-->
+    <arg name="intercept" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</syncYAxis>
+
+<!--xAxis - Retrieves the Axis object representing primary x-axis of the XYChart.-->
+<var_xAxis type="function" result="Axis" init="xAxis" context="XAxis">
+	&Axis;
+</var_xAxis>
+
+<!--xAxis2 - Retrieves the Axis object representing secondary x-axis of the XYChart.-->
+<var_xAxis2 type="function" skip="true" result="Axis" init="xAxis2"/>
+
+<!--xZoneColor - Creates a x-zone color. A x-zone will change from one color to another depending on a threshold value on the x-axis.-->
+<var_xZoneColor applicable="false" type="function" skip="true" result="integer" init="xZoneColor">
+  <args>
+<!--The x value serving as the threshold for switching between two colors.-->
+    <arg name="threshold" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to use when the x-axis value of the pixel is smaller than the threshold.-->
+    <arg name="belowColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to use when the x-axis value of the pixel is greater than the threshold.-->
+    <arg name="aboveColor" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</var_xZoneColor>
+
+<!--yAxis - Retrieves the Axis object representing the primary y-axis of the XYChart.-->
+<var_yAxis type="function" result="Axis" init="yAxis" context="YAxis">
+	&Axis;
+</var_yAxis>
+
+<!--yAxis2 - Retrieves the Axis object representing secondary y-axis of the XYChart.-->
+<var_yAxis2 type="function" skip="true" result="Axis" init="yAxis2"/>
+
+<!--yZoneColor - Creates a y-zone color. A y-zone will change from one color to another depending on a threshold value on the y-axis.-->
+<var_yZoneColor applicable="false" type="function" skip="true" result="integer" init="yZoneColor">
+  <args>
+<!--The y value serving as the threshold for switching between two colors.-->
+    <arg name="threshold" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to use when the y-axis value of the pixel is smaller than the threshold.-->
+    <arg name="belowColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to use when the y-axis value of the pixel is greater than the threshold.-->
+    <arg name="aboveColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y-axis to use to determine the pixel coordinates of data values. The y-axis may be obtained using XYChart.yAxis, XYChart.yAxis2 or XYChart.addAxis. The default is to use the primary y-axis.-->
+    <arg name="yAxis">
+      <map path=""/>
+    </arg>
+  </args>
+</var_yZoneColor>

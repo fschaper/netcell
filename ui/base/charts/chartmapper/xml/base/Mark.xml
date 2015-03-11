@@ -1,0 +1,48 @@
+
+<!--setDrawOnTop - Determine whether the mark line is drawn at the front of the chart layers, or at the back of the plot area (that is, like grid lines).-->
+<setDrawOnTop applicable="false" type="method" skip="true">
+  <args>
+<!--A true (non-zero) value means drawing the mark line at the front of the chart layers. A false (zero) value means drawing the mark line at the back of the plot area.-->
+    <arg name="b" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDrawOnTop>
+
+<!--setLineWidth - Sets the line width of the mark line.-->
+<setLineWidth applicable="false" type="method" skip="true">
+  <args>
+<!--The mark line width in pixels.-->
+    <arg name="w" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLineWidth>
+
+<!--setMarkColor - Sets the line, text and tick colors of the mark line.-->
+<setMarkColor applicable="false" type="method" skip="true">
+  <args>
+<!--The color of the mark line.-->
+    <arg name="lineColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color of the text label that will be shown on the axis. -1 means the text label color is the same as the line color.-->
+    <arg name="textColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The color of the tick that will be shown on the axis. -1 means the tick color is the same as the line color.-->
+    <arg name="tickColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setMarkColor>
+
+<!--setValue - Sets the value of the mark line.-->
+<setValue applicable="false" type="method" skip="true">
+  <args>
+<!--The value of the mark.-->
+    <arg name="value" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setValue>

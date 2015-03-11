@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+  <element>Bénéfice d’exploitation</element>
+  <element>Variations des stocks</element>
+  <element>Achat de marchandises/matériel</element>
+  <element>Autres produits d’exploitation</element>
+  <element>Marge brute</element>
+  <element>Frais de personnels</element>
+  <element>Salaires</element>
+  <element>Charges sociales</element>
+  <element>Autres charges</element>
+  <element>Frais de fonctionnement</element>
+  <element>Loyers</element>
+  <element>Primes d’assurance/Charges d’exploitation</element>
+  <element>Coûts véhicules/Coûts particuliers</element>
+  <element>Publicité/Frais de voyage</element>
+  <element>Coûts prestations de marchandises</element>
+  <element>Amortissements</element>
+  <element>Réparation/Entretien</element>
+  <element>Autres coûts</element>
+  <element>Résultats neutres</element>
+  <element>Charges d’intérêts/autres charges neutres.</element>
+  <element>Rendement</element>
+  <element>Positions restantes neutres (impôts-remboursement d’intérêts)</element>
+  <element>Résultat</element>
+</autofill_list>

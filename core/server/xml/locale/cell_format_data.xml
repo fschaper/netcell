@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="http://tempuri.org/cell_format_data.xsd">
+  <Locales>
+    <LocaleTemplate id="de">
+      <Months>
+        <Month short_name="jan" long_name="januar"/>
+        <Month short_name="feb" long_name="februar"/>
+        <Month short_name="mrz" long_name="märz"/>
+        <Month short_name="apr" long_name="april"/>
+        <Month short_name="mai" long_name="mai"/>
+        <Month short_name="jun" long_name="juni"/>
+        <Month short_name="jul" long_name="juli"/>
+        <Month short_name="aug" long_name="august"/>
+        <Month short_name="sep" long_name="september"/>
+        <Month short_name="okt" long_name="oktober"/>
+        <Month short_name="nov" long_name="november"/>
+        <Month short_name="dez" long_name="dezember"/>
+      </Months>
+      <DaysOfWeek>
+        <DayOfWeek short_name="sa" long_name="samstag"/>
+        <DayOfWeek short_name="so" long_name="sonntag"/>
+        <DayOfWeek short_name="mo" long_name="montag"/>
+        <DayOfWeek short_name="di" long_name="dienstag"/>
+        <DayOfWeek short_name="mi" long_name="mittwoch"/>
+        <DayOfWeek short_name="do" long_name="donnerstag"/>
+        <DayOfWeek short_name="fr" long_name="freitag"/>
+      </DaysOfWeek>
+      <FormatCodes currency="€" date_sep="./-" time_sep=":" list_sep=";" thousand_sep="." decimal_sep=","
+                   day="t" month="m" second="s" hour="h" minute="m" year="j" general="standard"/>
+      <Colors>
+        <Red name="rot"/>
+        <Black name="schwarz"/>
+        <Cyan name="zyan"/>
+        <Magenta name="magenta"/>
+        <White name="weiß"/>
+        <Blue name="blau"/>
+        <Green name="grün"/>
+        <Yellow name="gelb"/>
+      </Colors>
+      <DateOrder>DMY</DateOrder>
+      <YearLimit>30</YearLimit>
+      <Boolean true_name="wahr" false_name="falsch"/>
+    </LocaleTemplate>
+    <LocaleTemplate id="fr">
+      <Months>
+        <Month short_name="janv" long_name="janvier"/>
+        <Month short_name="févr" long_name="février"/>
+        <Month short_name="mars" long_name="mars"/>
+        <Month short_name="avr" long_name="avril"/>
+        <Month short_name="mai" long_name="mai"/>
+        <Month short_name="juin" long_name="juin"/>
+        <Month short_name="juil" long_name="juillet"/>
+        <Month short_name="août" long_name="août"/>
+        <Month short_name="sept" long_name="septembre"/>
+        <Month short_name="oct" long_name="octobre"/>
+        <Month short_name="nov" long_name="novembrer"/>
+        <Month short_name="déc" long_name="décembre"/>
+      </Months>
+      <DaysOfWeek>
+        <DayOfWeek short_name="sam" long_name="samedi"/>
+        <DayOfWeek short_name="dim" long_name="dimanche"/>
+        <DayOfWeek short_name="lun" long_name="lundi"/>
+        <DayOfWeek short_name="mar" long_name="mardi"/>
+        <DayOfWeek short_name="mer" long_name="mercredi"/>
+        <DayOfWeek short_name="jeu" long_name="jeudi"/>
+        <DayOfWeek short_name="ven" long_name="vendredi"/>
+      </DaysOfWeek>
+      <FormatCodes currency="€" date_sep="./-" time_sep=":" list_sep=";" thousand_sep=" " decimal_sep=","
+                   day="j" month="m" second="s" hour="h" minute="m" year="a" general="standard"/>
+      <Colors>
+        <Red name="rouge"/>
+        <Black name="noir"/>
+        <Cyan name="cyan"/>
+        <Magenta name="magenta"/>
+        <White name="blanc"/>
+        <Blue name="bleu"/>
+        <Green name="vert"/>
+        <Yellow name="jaune"/>
+      </Colors>
+      <DateOrder>DMY</DateOrder>
+      <YearLimit>30</YearLimit>
+      <Boolean true_name="vrai" false_name="faux"/>
+    </LocaleTemplate>
+    <LocaleTemplate id="nl">
+      <Months>
+        <Month short_name="jan" long_name="januari"/>
+        <Month short_name="feb" long_name="februari"/>
+        <Month short_name="mrt" long_name="maart"/>
+        <Month short_name="apr" long_name="april"/>
+        <Month short_name="mei" long_name="mei"/>
+        <Month short_name="jun" long_name="juni"/>
+        <Month short_name="jul" long_name="juli"/>
+        <Month short_name="aug" long_name="augustus"/>
+        <Month short_name="sep" long_name="september"/>
+        <Month short_name="okt" long_name="oktober"/>
+        <Month short_name="nov" long_name="november"/>
+        <Month short_name="dec" long_name="december"/>
+      </Months>
+      <DaysOfWeek>
+        <DayOfWeek short_name="za" long_name="zaterdag"/>
+        <DayOfWeek short_name="zo" long_name="zondag"/>
+        <DayOfWeek short_name="ma" long_name="maandag"/>
+        <DayOfWeek short_name="di" long_name="dinsdag"/>
+        <DayOfWeek short_name="wo" long_name="woensdag"/>
+        <DayOfWeek short_name="do" long_name="donderdag"/>
+        <DayOfWeek short_name="vr" long_name="vrijdag"/>
+      </DaysOfWeek>
+      <FormatCodes currency="€" date_sep="/.-" time_sep=":" list_sep=";" thousand_sep="," decimal_sep="."
+                   day="d" month="m" second="s" hour="u" minute="m" year="j" general="standaard"/>
+      <Colors>
+        <Red name="rood"/>
+        <Black name="zwart"/>
+        <Cyan name="cyan"/>
+        <Magenta name="magenta"/>
+        <White name="wit"/>
+        <Blue name="blauw"/>
+        <Green name="groen"/>
+        <Yellow name="geel"/>
+      </Colors>
+      <DateOrder>DMY</DateOrder>
+      <YearLimit>30</YearLimit>
+      <Boolean true_name="ware" false_name="valse"/>
+    </LocaleTemplate>
+
+    <LocaleDiversion base_id="de" id="de-de"/>
+    <LocaleDiversion base_id="fr" id="fr-fr"/>    
+    <LocaleDiversion base_id="nl" id="nl-nl"/>
+  </Locales>
+  <Formats>
+    <!-- Don't change ID-s here as they are mapped to internal ids. Change only the desired format-->
+    <DefaultFormat id="3">
+      <!-- format for numbers -->
+      <Format locale_pattern="en" code="#,##0.00"/>
+    </DefaultFormat>
+    <DefaultFormat id="4">
+      <!-- format for date -->
+      <Format locale_pattern="en" code="DD/MM/YYYY"/>
+    </DefaultFormat>
+    <DefaultFormat id="5">
+      <!-- format for date time -->
+      <Format locale_pattern="en" code="DD/MM/YYYY hh:mm"/>
+    </DefaultFormat>
+  </Formats>
+  <ReverseFormats>
+    <!--  Don't Forget: Order does matter!-->
+    <ReverseFormat rule="true|false" format="" type="bool"/>
+    <ReverseFormat rule="[:currency_symbol:][[:digit:]]*([:decimal_sep:][[:digit:]]*)?" format="[$]#,##0_);[Red]($#,##0)" type="number"/>
+    <ReverseFormat rule="(-|[+])?[:currency_symbol:][[:digit:]]{1,3}([:thousand_sep:][[:digit:]]{3})*([:decimal_sep:][[:digit:]]*)?" format="[$]#,##0_);[Red]($#,##0)" type="number"/>
+    <ReverseFormat rule="[:currency_symbol:](-|[+])?[[:digit:]]{1,3}([:thousand_sep:][[:digit:]]{3})*([:decimal_sep:][[:digit:]]*)?" format="[$]#,##0_);[Red]($#,##0)" type="number"/>
+    <ReverseFormat rule="[(][:currency_symbol:][[:digit:]]{1,3}([:thousand_sep:][[:digit:]]{3})*([:decimal_sep:][[:digit:]]*)?[)]" format="[$]#,##0_);[Red]($#,##0)" type="number"/>
+    <ReverseFormat rule="[[:digit:]]*" format="0" type="number"/>
+    <ReverseFormat rule="[[:digit:]]*([:decimal_sep:][[:digit:]]*)?" format="0.###############" type="number"/>
+    <ReverseFormat rule="[(][[:digit:]]*([:decimal_sep:][[:digit:]]*)?[)]" format="0.###############" type="number"/>
+    <ReverseFormat rule="(-|[+])?[[:digit:]]{1,3}([:thousand_sep:][[:digit:]]{3})*" format="#,##0" type="number"/>
+    <ReverseFormat rule="(-|[+])?[[:digit:]]{1,3}([:thousand_sep:][[:digit:]]{3})*([:decimal_sep:][[:digit:]]*)?" format="#,##0.###############" type="number"/>
+    <ReverseFormat rule="[(][[:digit:]]{1,3}([:thousand_sep:][[:digit:]]{3})*([:decimal_sep:][[:digit:]]*)?[)]" format="#,##0.###############" type="number"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:date_sep:][[:digit:]]{1,2}" format="d-mmm" type="date"/>
+    <ReverseFormat rule="[:short_month:][:date_sep:][[:digit:]]{1,2}" format="d-mmm" type="date"/>
+    <ReverseFormat rule="[:long_month:][:date_sep:][[:digit:]]{1,2}" format="d-mmm" type="date"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:date_sep:][[:digit:]]{1,2}" format="m/d/yyyy" type="date"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:date_sep:][[:digit:]]{1,2}[:date_sep:](([[:digit:]]{1,2})|([[:digit:]]{4}))" format="m/d/yyyy" type="date"/>
+    <ReverseFormat rule="[:short_month:][:date_sep:][[:digit:]]{1,2}" format="m/d/yyyy" type="date"/>
+    <ReverseFormat rule="[:short_month:][:date_sep:][[:digit:]]{1,2}[:date_sep:](([[:digit:]]{1,2})|([[:digit:]]{4}))" format="m/d/yyyy" type="date"/>
+    <ReverseFormat rule="[:long_month:][:date_sep:][[:digit:]]{1,2}" format="m/d/yyyy" type="date"/>
+    <ReverseFormat rule="[:long_month:][:date_sep:][[:digit:]]{1,2}[:date_sep:](([[:digit:]]{1,2})|([[:digit:]]{4}))" format="m/d/yyyy" type="date"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2}" format="h:mm" type="time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} (am|pm)" format="h:mm AM/PM" type="time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2}" format="h:mm:ss" type="time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} (am|pm)" format="h:mm:ss AM/PM" type="time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} [[:digit:]]{1,2}[:date_sep:][[:digit:]]{1,2}" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} [[:digit:]]{1,2}[:date_sep:][[:digit:]]{1,2}[:date_sep:](([[:digit:]]{1,2})|([[:digit:]]{4}))" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} (am|pm) [[:digit:]]{1,2}[:date_sep:][[:digit:]]{1,2}" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} (am|pm) [[:digit:]]{1,2}[:date_sep:][[:digit:]]{1,2}[:date_sep:](([[:digit:]]{1,2})|([[:digit:]]{4}))" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} [:short_month:][:date_sep:][[:digit:]]{1,2}" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} [:short_month:][:date_sep:][[:digit:]]{1,2}[:date_sep:](([[:digit:]]{1,2})|([[:digit:]]{4}))" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} (am|pm) [:short_month:][:date_sep:][[:digit:]]{1,2}" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} (am|pm) [:short_month:][:date_sep:][[:digit:]]{1,2}[:date_sep:](([[:digit:]]{1,2})|([[:digit:]]{4}))" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} [:long_month:][:date_sep:][[:digit:]]{1,2}" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} [:long_month:][:date_sep:][[:digit:]]{1,2}[:date_sep:](([[:digit:]]{1,2})|([[:digit:]]{4}))" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} (am|pm) [:long_month:][:date_sep:][[:digit:]]{1,2}" format="m/d/yyyy h:mm" type="date_time"/>
+    <ReverseFormat rule="[[:digit:]]{1,2}[:time_sep:][[:digit:]]{1,2} (am|pm) [:long_month:][:date_sep:][[:digit:]]{1,2}[:date_sep:](([[:digit:]]{1,2})|([[:digit:]]{4}))" format="m/d/yyyy h:mm" type="date_time"/>
+  </ReverseFormats>
+</Root>

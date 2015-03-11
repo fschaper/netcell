@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font_setting xmlns="http://www.jedox.com/jedox/wss" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <font_list >
+    <font font_name="Arial"/>
+    <font font_name="Arial Black"/>
+    <font font_name="Comic Sans MS"/>
+    <font font_name="Courier New"/>
+    <font font_name="Garamond"/>
+    <font font_name="Georgia"/>
+    <font font_name="Lucida Console"/>
+    <font font_name="Lucida Sans"/>
+    <font font_name="Palatino Linotype"/>
+    <font font_name="Tahoma"/>
+    <font font_name="Times New Roman"/>
+    <font font_name="Trebuchet MS"/>
+    <font font_name="Verdana"/>
+  </font_list>
+  <textmetric>
+	<dpi default_dpi="96"/>
+	<font_path font_path="C:/WINDOWS/Fonts"/>
+  </textmetric>
+  <default_style>
+    <key_val key="font-size" val="10"/>
+    <key_val key="font-family" val="arial"/>
+    <key_val key="font-style" val="normal"/>
+    <key_val key="font-weight" val="normal"/>
+  </default_style>
+</font_setting>
+

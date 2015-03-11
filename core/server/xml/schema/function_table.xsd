@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  function catalog schema definition
+  Copyright (c) Jedox AG 2008-2009, Florian Schaper <florian.schaper@jedox.com>
+-->
+<xs:schema targetNamespace="http://www.jedox.com/jedox/wss" xmlns="http://www.jedox.com/jedox/wss" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="general_type">
+    <xs:sequence>
+      <xs:element name="parameter_separator" type="xs:string" />
+      <xs:element name="column_separator" type="xs:string" />
+      <xs:element name="row_separator" type="xs:string" />
+      <xs:element name="use_dot" type="xs:boolean" />
+      <xs:element name="boolean_true" type="xs:string" />
+      <xs:element name="boolean_false" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group_type">
+    <xs:sequence>
+      <xs:element name="translation" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="groups_type">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="group" type="group_type" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="parameter_type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="name" type="xs:string" use="required" />
+        <xs:attribute name="type" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="sequence_type">
+    <xs:sequence>
+      <xs:element name="parameter" type="parameter_type" />
+    </xs:sequence>
+    <xs:attribute name="from" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="to" type="xs:unsignedByte" use="required" />
+  </xs:complexType>
+  <xs:complexType name="parameters_type">
+    <xs:sequence minOccurs="0">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="parameter" type="parameter_type" />
+      <xs:element minOccurs="0" name="sequence" type="sequence_type" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType mixed="true" name="syntax_type">
+    <xs:sequence minOccurs="0">
+      <xs:element name="parameters" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="description_type">
+    <xs:sequence>
+      <xs:element name="parameters" minOccurs="0" type="parameters_type" />
+      <xs:element name="syntax" type="syntax_type" />
+      <xs:element name="short" type="xs:string" />
+      <xs:element name="long" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="function_type">
+    <xs:sequence>
+      <xs:element name="translation" type="xs:string" />
+      <xs:element name="description" type="description_type" />
+      <xs:element name="comment" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="category" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="translation_table_type">
+    <xs:sequence>
+      <xs:element name="general" type="general_type" />
+      <xs:element name="groups" type="groups_type" />
+      <xs:element maxOccurs="unbounded" name="function" type="function_type" />
+    </xs:sequence>
+    <xs:attribute name="lang" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:element name="translation_table" type="translation_table_type" />
+</xs:schema>

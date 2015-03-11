@@ -1,0 +1,90 @@
+/*
+ * @brief wss file
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Drazen Kljajic <drazen.kljajic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: toolbar.css 4196 2010-10-26 22:40:22Z predragm $
+ *
+ */
+/** sprite: tb-menu-sprite; sprite-image: url('/ui/wss/res/img/sprites/toolbar-sprite.png'); */
+ .wssUserMenubar {
+	padding: 2px 2px 2px 2px !important;
+	border: none !important;
+}
+
+.iconback {
+	background-image: url(/ui/wss/res/img/bar/ico_back.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.iconrecalcnow {
+	background-image: url(/ui/wss/res/img/bar/ico_recalc_now.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.iconprint {
+	background-image: url(/ui/wss/res/img/bar/ico_quick_print.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.iconprintpreview {
+	background-image: url(/ui/wss/res/img/bar/ico_print_preview.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.iconprinttopdf {
+	background-image: url(/ui/wss/res/img/bar/ico_pdf.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icondownload {
+	background-image: url(/ui/wss/res/img/bar/ico_save_document.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.iconoptions {
+	background-image: url(/ui/wss/res/img/bar/ico_properties.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.iconhelp {
+	background-image: url(/ui/wss/res/img/bar/ico_help.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.iconclose {
+	background-image: url(/ui/wss/res/img/bar/ico_close.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_copy {
+	background-image: url(/ui/wss/res/img/bar/ico_copy.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_cut {
+	background-image: url(/ui/wss/res/img/bar/ico_cut.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_paste {
+	background-image: url(/ui/wss/res/img/bar/ico_paste.png) !important; /** sprite-ref: tb-menu-sprite; */
+}

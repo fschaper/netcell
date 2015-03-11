@@ -1,0 +1,15 @@
+﻿ns http://schemas.openxmlformats.org/drawingml/2006/main drawingml
+ns http://schemas.openxmlformats.org/drawingml/2006/chart drawingml
+ns http://schemas.openxmlformats.org/drawingml/2006/chartDrawing drawingml
+ns http://schemas.openxmlformats.org/drawingml/2006/compatibility drawingml
+ns http://schemas.openxmlformats.org/drawingml/2006/diagram drawingml
+ns http://schemas.openxmlformats.org/drawingml/2006/presentation drawingml
+ns http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas drawingml
+ns http://schemas.openxmlformats.org/drawingml/2006/picture drawingml
+ns http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing drawingml
+ns http://schemas.openxmlformats.org/spreadsheetml/2006/main spreadsheetml
+ns http://schemas.openxmlformats.org/officeDocument/2006/relationships relationships
+ns http://schemas.openxmlformats.org/officeDocument/2006/custom-properties custom_properties
+ns http://schemas.openxmlformats.org/officeDocument/2006/extended-properties extended_properties
+ns http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes docPropsVTypes
+ns http://schemas.openxmlformats.org/package/2006/relationships rels_ns

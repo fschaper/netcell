@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+	<element>Aktiva</element>
+    <element>Anlagenvermögen</element>
+    <element>Immaterielle Vermögensgegenstände</element>
+    <element>Sachanlagen</element>
+    <element>Umlaufvermögen</element>
+    <element>Forderungen und sonstige Vermögensgegenstände</element>
+    <element>Forderungen aus Lieferungen und Leistungen</element>
+    <element>Sonstige Forderungen</element>
+    <element>Kassenbestand, Guthaben bei Kreditinstituten</element>
+    <element>Rechnungsabgrenzungsposten</element>
+    <element>Passiva</element>
+    <element>Eigenkapital</element>
+    <element>Gezeichnetes Kapital</element>
+    <element>Verlustvortrag</element>
+    <element>Jahresüberschuss</element>
+    <element>Rückstellungen</element>
+    <element>sonstige Rückstellungen</element>
+    <element>Verbindlichkeiten</element>
+    <element>Verbindlichkeiten gegenüber Kreditinstituten</element>
+    <element>Verbindlichkeiten aus Lieferungen und Leistungen</element>
+    <element>Verbindlichkeiten gegenüber verbundenen Unternehmen</element>
+    <element>davon gegenüber Gesellschaftern</element>
+    <element>Sonstige Verbindlichkeiten</element>
+    <element>davon aus Steuern</element>
+    <element>davon im Rahmen der sozialen Sicherheit</element>
+    <element>Passive Rechnungsabgrenzung</element>
+</autofill_list>

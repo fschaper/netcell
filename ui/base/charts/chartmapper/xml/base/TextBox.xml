@@ -1,0 +1,149 @@
+&Box;
+
+<!--setAlignment - Sets the alignment of the text relative to the container box.-->
+<setAlignment type="eval" skip="true">
+  <args>
+<!--The alignment specification. See Alignment Specification for supported alignment types.-->
+    <arg name="a" mandatory="true" default="TopLeft" />
+  </args>
+
+  <evaladapter class="LookupValue" method="setBoxAligment"/>
+</setAlignment>
+
+<!--setFontAngle - Sets the rotation angle and layout direction of the text.-->
+<setFontAngle applicable="false" type="method" skip="true">
+  <args>
+<!--The text rotation angle. Rotation is measured in counter-clockwise direction in degrees.-->
+    <arg name="angle" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--Determine if the font is layout horizontally (from left to right) or vertically (from top to down). Vertical layout is common for Oriental languages such as Chinese, Japanese and Korean. A true (non-zero) value means vertical layout. A false (zero) value means horizontal layout.-->
+    <arg name="vertical" default="false">
+      <map path=""/>
+    </arg>
+  </args>
+</setFontAngle>
+
+<!--setFontColor - Sets the color of the text.-->
+<setFontColor type="method">
+  <args>
+<!--The font color.-->
+    <arg name="color" mandatory="true" default="0">
+      <map refcontext="Chart.Legend" path="Chart.Legend.Font.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+    </arg>
+  </args>
+</setFontColor>
+
+<!--setFontSize - Sets the font height and width in points.-->
+<setFontSize type="method" skip="true">
+  <args>
+<!--The font height in points.-->
+    <arg name="fontHeight" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The font width in points. If the font width is zero, it is assumed to be the same as the font height.-->
+    <arg name="fontWidth" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</setFontSize>
+
+<!--setFontStyle - Sets the font of the text by specifying the file that contains the font.-->
+<setFontStyle type="method" skip="true">
+  <args>
+<!--The font name.-->
+    <arg name="font" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The font index in case the font name refers to a font collection. An index of 0 means the first font.-->
+    <arg name="fontIndex" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</setFontStyle>
+
+<!--setHeight - Sets the height of the text box.-->
+<setHeight type="method" skip="true">
+  <args>
+<!--The height of the text box in pixels.-->
+    <arg name="height" default="-1" mandatory="true">
+		<map refcontext="Chart.Legend" path="Chart.Legend.Height">&adapter_UnitConvertor_pointToPixel;</map>
+	</arg>
+  </args>
+</setHeight>
+
+<!--setMargin - Sets all margins (left, right, top, and bottom) of the text box to the same value.-->
+<setMargin applicable="false" type="method" skip="true">
+  <args>
+<!--The left, right, top and bottom margins in pixels.-->
+    <arg name="m" default="7" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setMargin>
+
+<!--setMargin2 - Sets the margins of the text box in pixels.-->
+<setMargin2 type="method">
+  <args>
+<!--The left margin in pixels.-->
+    <arg name="leftMargin" default="7" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The right margin in pixels.-->
+    <arg name="rightMargin" default="7" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The top margin in pixels.-->
+    <arg name="topMargin" default="7" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The bottom margin in pixels.-->
+    <arg name="bottomMargin" default="7" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setMargin2>
+
+<!--setMaxWidth - Sets the maximum width of the text box and wraps text if necessary.-->
+<setMaxWidth type="method" skip="true">
+  <args>
+<!--The maximum width of the text box in pixels.-->
+    <arg name="maxWidth" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setMaxWidth>
+
+<!--setText - Sets the text to be shown in the text box.-->
+<setText type="method" skip="true">
+  <args>
+<!--The text to be displayed in the text box.-->
+    <arg name="text" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setText>
+
+<!--setTruncate - Sets the maximum number of lines in the text box, and truncate the text if it exceeds the line count.-->
+<setTruncate type="method" skip="true">
+  <args>
+<!--The maximum width of the text box in pixels.-->
+    <arg name="maxWidth" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The maximum number of lines that the text box can have. The text will be truncated if it exceeds the maximum number of lines.-->
+    <arg name="maxLines" default="1">
+      <map path=""/>
+    </arg>
+  </args>
+</setTruncate>
+
+<!--setWidth - Sets the width of the text box and wraps text if necessary.-->
+<setWidth type="method" skip="true">
+  <args>
+<!--The width of the text box in pixels.-->
+	<arg name="width" default="-1" mandatory="true">
+		<map refcontext="Chart.Legend" path="Chart.Legend.Width">&adapter_UnitConvertor_pointToPixel;</map>
+	</arg>
+  </args>
+</setWidth>

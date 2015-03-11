@@ -1,0 +1,195 @@
+<!--AngularMeter - Creates a new AngularMeter object.-->
+<args>
+<!--The width of the chart in pixels.-->
+    <arg name="width" default="300" mandatory="true">
+		<map path="Chart.ChartArea.Width">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+    </arg>
+<!--The height of the chart in pixels.-->
+    <arg name="height" default="300" mandatory="true">
+		<map path="Chart.ChartArea.Height">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+    </arg>
+<!--The background color of the chart.-->
+    <arg name="bgColor" default="BackgroundColor">
+		<!-- <map path="Chart.ChartArea.Fill.BackColor.RGB">
+			<adapter class="FormatConvertor" method="hexColor" static="true"/>
+		</map> -->
+    </arg>
+<!--The edge color of the chart.-->
+    <arg name="edgeColor" default="Transparent">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The 3D border width. For positive values, the border will appear raised. For negative values, the border will appear depressed. A zero value means the border will appear flat.-->
+    <arg name="raisedEffect" default="0">
+      <!-- <map path=""/> -->
+    </arg>
+</args>
+
+&BaseMeter;
+
+<!--setMeter - Sets the position and angle range of the meter.-->
+<setMeter type="method">
+  <args>
+<!--The x-coordinate of the center of the meter.-->
+    <arg name="cx" default="150" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getOdometerCenterX"/>
+      </map>
+    </arg>
+<!--The y-coordinate of the center of the meter.-->
+    <arg name="cy" default="150" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getOdometerCenterY"/>
+      </map>
+    </arg>
+<!--The radius of the meter.-->
+    <arg name="radius" default="115" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getOdometerRadius"/>
+      </map>
+    </arg>
+<!--The start angle of the meter. The angle is measured in degrees clockwise, with 0 being the upward pointing direction.-->
+    <arg name="startAngle" default="-135" mandatory="true">
+      <map path="">
+        <superadapter class="FormatConvertor" method="getOdometerStartAngle"/>
+	  </map>
+    </arg>
+<!--The end angle of the meter. The angle is measured in degrees clockwise, with 0 being the upward pointing direction.-->
+    <arg name="endAngle" default="135" mandatory="true">
+      <map path="">
+        <superadapter class="FormatConvertor" method="getOdometerEndAngle"/>
+	  </map>
+    </arg>
+  </args>
+</setMeter>
+
+<!--addRing - Adds a circular ring or a circle to the meter.-->
+<addRing type="eval" init="addRing">
+  <args>
+<!--The starting radius of the ring in pixels. To add a circle, set the start radius to 0.-->
+    <arg name="startRadius" default="117" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The ending radius of the ring in pixels.-->
+    <arg name="endRadius" default="118" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The fill color of the ring.-->
+    <arg name="fillColor" default="0x9999dd" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The edge color of the ring. The default is the same as the fill color.-->
+    <arg name="edgeColor" default="-1">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="addRings"/>
+</addRing>
+
+<!--addRingSector - Adds a ring sector or a sector to the meter.-->
+<addRingSector type="eval" init="addRingSector">
+  <args>
+<!--The starting radius of the ring in pixels. To add a circle, set the start radius to 0.-->
+    <arg name="startRadius" default="117" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The ending radius of the ring in pixels.-->
+    <arg name="endRadius" default="118" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The starting angle of the ring sector in degrees. The angle is measured in degrees clockwise, with 0 being the upward pointing direction.-->
+    <arg name="a1" mandatory="true" default="-90">
+      <!--<map path=""/>-->
+    </arg>
+<!--The ending angle of the ring sector in degrees. The angle is measured in degrees clockwise, with 0 being the upward pointing direction.-->
+    <arg name="a2" mandatory="true" default="90">
+      <!--<map path=""/>-->
+    </arg>
+<!--The fill color of the ring.-->
+    <arg name="fillColor" default="0x9999dd" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The edge color of the ring. The default is the same as the fill color.-->
+    <arg name="edgeColor" default="-1">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="addRingSectors"/>
+</addRingSector>
+
+<!--addZone - Adds a colored zone to the meter.-->
+<addZone type="eval" init="addZone">
+  <args>
+<!--The data value that marks the start position of the zone.-->
+    <arg name="startValue" default="0" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The data value that marks the end position of the zone.-->
+    <arg name="endValue" default="100" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The starting radius of the zone in pixels.-->
+    <arg name="startRadius" default="80" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The ending radius of the zone in pixels.-->
+    <arg name="endRadius" default="100" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The fill color of the zone.-->
+    <arg name="fillColor" default="0xFFFFFF" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The edge color of the zone. The default is the same as the fill color.-->
+    <arg name="edgeColor" default="-1">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="addZones"/>
+</addZone>
+
+<!--addZone2 - Adds a colored zone to the meter.-->
+<addZone2 applicable="false" type="method" skip="true">
+  <args>
+<!--The data value that marks the start position of the zone.-->
+    <arg name="startValue" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The data value that marks the end position of the zone.-->
+    <arg name="endValue" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The fill color of the zone.-->
+    <arg name="fillColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The edge color of the zone. The default is the same as the fill color.-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</addZone2>
+
+<!--setCap - Set the radius and color of the pointer cap.-->
+<setCap type="method" skip="true">
+  <args>
+<!--The radius of pointer cap circle in pixels.-->
+    <arg name="radius" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The fill color of the pointer cap circle.-->
+    <arg name="fillColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The edge color of the pointer cap circle.-->
+    <arg name="edgeColor" default="LineColor">
+      <map path=""/>
+    </arg>
+  </args>
+</setCap>

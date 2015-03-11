@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jedox.com/jedox/wss" xmlns="http://www.jedox.com/jedox/wss" xmlns:NS="http://www.jedox.com/jedox/wss" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="ui_backend_config">
+	<xs:complexType>
+	  <xs:sequence>
+		<xs:element name="diff">
+		  <xs:complexType>
+			<xs:attribute name="gc_interval" type="xs:unsignedShort" use="required" />
+		  </xs:complexType>
+		</xs:element>
+		<xs:element name="network">
+		  <xs:complexType>
+			<xs:sequence>
+			  <xs:element name="listen">
+				<xs:complexType>
+				  <xs:sequence>
+					<xs:element maxOccurs="unbounded" name="tcp">
+					  <xs:complexType>
+						<xs:attribute name="address" type="xs:string" use="required" />
+						<xs:attribute name="port" type="xs:unsignedShort" use="required" />
+					  </xs:complexType>
+					</xs:element>
+				  </xs:sequence>
+				</xs:complexType>
+			  </xs:element>
+			</xs:sequence>
+		  </xs:complexType>
+		</xs:element>
+	  </xs:sequence>
+	</xs:complexType>
+  </xs:element>
+</xs:schema>

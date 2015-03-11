@@ -1,0 +1,257 @@
+/*
+ * @brief wss file
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Srdjan Vukadinovic <srdjan.vukadinovic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: bars.css 4776 2011-03-28 14:25:45Z predragm $
+ *
+ */
+/** sprite: tb-menu-sprite; sprite-image: url('/ui/wss/res/img/sprites/toolbar-sprite.png'); */
+.x-toolbar .x-btn-with-menu .x-btn-center em {
+	padding-right: 10px;
+}
+
+tr .x-btn-center em {
+	background: transparent none repeat scroll 0%;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.x-btn button, .x-btn-center em, .x-toolbar .x-btn-right, .x-toolbar .x-btn-center, .x-toolbar .x-btn-left, .x-btn-icon .x-btn-center .x-btn-text, .x-form-field-wrap .x-form-trigger, .x-combo-noedit {
+	cursor: default;
+}
+
+.x-menu {
+	background:#F0F0F0 url(/ui/wss/res/img/menu/menu.png) repeat-y scroll 0% 50%;
+}
+
+/* fix for toolbar comboboxes alignment */
+/*
+.x-small-editor .x-form-field-wrap .x-form-trigger{
+	margin-bottom: 1px;
+}
+*/
+.x-combo-list-item {
+	font-size: 11px;
+}
+
+.newtab {
+    background-image:url(/ui/wss/res/img/sheet_selector/newtab.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.delete_sheet {
+	background-image: url(/ui/wss/res/img/context_menu/ico_delete.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.shsel_first {
+	background-image: url(/ui/wss/res/img/sheet_selector/first.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.shsel_next {
+	background-image: url(/ui/wss/res/img/sheet_selector/next.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.shsel_last {
+	background-image: url(/ui/wss/res/img/sheet_selector/last.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.shsel_prev {
+	background-image: url(/ui/wss/res/img/sheet_selector/prev.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.x-tab-strip .x-tab-with-icon span.x-tab-strip-text {
+	background-position: 0pt 0px;
+}
+
+.x-tab-strip-bottom .x-tab-left {
+	padding:0pt 6px;
+}
+
+.x-tab-strip span.x-tab-strip-text {
+	color: #15428B;
+	cursor: default;
+	font-family: tahoma,arial,helvetica;
+	font-size: 11px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+	padding: 1px 0pt;
+	white-space: nowrap;
+}
+
+.x-tab-strip-bottom .x-tab-strip-active .x-tab-right span.x-tab-strip-text {
+	padding-top: 3px;
+}
+
+/*************************** Sheet selector buttons styling ********************/
+/**/
+
+.extsheetselector {
+	background: transparent none repeat scroll 0% 50% !important;
+	width: 90px;
+	height: 17px !important;
+	border-style: none;
+	padding: 0px;
+}
+
+/* ************* XSMALL button class ****************** */
+
+.x-btn-noicon .x-btn-xsmall .x-btn-text{
+	height: 10px;
+}
+
+.x-btn-icon .x-btn-xsmall .x-btn-text{
+	height: 10px;
+	width: 10px;
+	line-height: 0 !important;
+}
+
+.x-btn-text-icon .x-btn-icon-xsmall-left .x-btn-text{
+    background-position: 0 center;
+	background-repeat: no-repeat;
+    padding-left:12px;
+    height:10px;
+    line-height: 0 !important;
+}
+
+.x-btn-xsmall td.x-btn-mc {
+	line-height: 0 !important;
+}
+
+.x-btn-text-icon .x-btn-icon-xsmall-top .x-btn-text{
+    background-position: center 0;
+	background-repeat: no-repeat;
+    padding-top:12px;
+}
+
+.x-btn-text-icon .x-btn-icon-xsmall-right .x-btn-text{
+    background-position: right center;
+	background-repeat: no-repeat;
+    padding-right:12px;
+    height:10px;
+}
+
+.x-btn-text-icon .x-btn-icon-xsmall-bottom .x-btn-text{
+    background-position: center bottom;
+	background-repeat: no-repeat;
+    padding-bottom:12px;
+}
+
+.x-toolbar-more .x-btn-xsmall .x-btn-text{
+	height: 10px;
+	width: 12px;
+}
+
+
+/******************* END OF SHEETSELECTOR BTNS TWEAKING *************************/
+
+/* ****** */
+.x-tab-strip a {
+	cursor: default;
+}
+
+.x-tab-strip-active span.x-tab-strip-text {
+	font-weight: bold;
+}
+
+.extsheettabs .x-tab-scroller-right {
+	border-bottom: 1px solid #8DB2E3;
+	cursor: default;
+	height: 15px !important;
+	background: transparent url(/ui/wss/res/img/sheet_selector/scroll-right.png) no-repeat scroll 1px 18%;
+}
+
+.extsheettabs .x-tab-scroller-left {
+	border-bottom: 1px solid #8DB2E3;
+	cursor: default;
+	height: 15px !important;
+	background: transparent url(/ui/wss/res/img/sheet_selector/scroll-left.png) no-repeat scroll 1pt 18%;
+}
+
+.extsheettabs .x-tab-strip-bottom .x-tab-strip-active .x-tab-right {
+	margin-top:-2px;
+}
+
+.x-tab-strip-bottom .x-tab-left{
+	padding: 0pt 6px 1px;
+}
+
+.extsheettabs .x-tab-strip li {
+	margin-left: 1px;
+	border-style: solid;
+	border-width: 1px 0 0;
+}
+
+ul.x-tab-strip-bottom {
+	border-bottom: 0pt none;
+	border-top: 0px none;
+	padding-bottom: 0px;
+}
+
+.extsheettabs .x-tab-panel-footer {
+	padding-top: 0px;
+}
+
+.extsheettabs ul.x-tab-strip li.x-tab-with-icon {
+	margin-left: 1px;
+	width: 31px;
+}
+
+.extsheettabs .x-tab-with-icon .x-tab-right {
+	padding-left: 0px;
+}
+
+/* +++ Status Bar Styles +++ */
+
+.statusBarStyle {
+	border-color:#99BBE8 #FFFFFF #FFFFFF #99BBE8;
+	border-style:solid;
+	border-width:1px;
+	text-align: left;
+}
+
+.wssStatusBar{
+padding:0 2px 0 !important;
+line-height:16px !important;
+display:block !important;
+}
+
+div.x-toolbar.x-statusbar
+{
+	cursor:default;
+	padding:1px;
+}
+
+/* --- Status Bar Styles --- */

@@ -1,0 +1,2674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="library">
+      <UniqueIdentifier>{de3356f5-497d-4962-a871-47f88688a25e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\logging">
+      <UniqueIdentifier>{48e37eb8-2915-441b-8035-68e0af03321c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\logging\implementation">
+      <UniqueIdentifier>{5e41f518-89d5-4f01-b62a-048ecf820e28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\logging\modifier">
+      <UniqueIdentifier>{7dab1c42-39a1-46b8-9b16-fe8c490c8e39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\logging\modifier\implementation">
+      <UniqueIdentifier>{198c2f04-a6f1-4516-aa70-48bd88c3ed9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\debug">
+      <UniqueIdentifier>{1027cfb5-e637-48e2-96ce-c613adff0895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\debug\implementation">
+      <UniqueIdentifier>{960859d0-784f-4b3f-97d1-3f61486cfb48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\geometry">
+      <UniqueIdentifier>{596a3a5f-15ea-407e-a1ea-575cd17cb70d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\geometry\implementation">
+      <UniqueIdentifier>{f24e4b9e-c562-4822-a4ac-3859d5aaecd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\event">
+      <UniqueIdentifier>{ee2a7018-0582-45fd-a200-bf56b75abaf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\utility">
+      <UniqueIdentifier>{251779a8-e0d2-443a-8a14-39715d3df279}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\utility\implementation">
+      <UniqueIdentifier>{2ee959dc-b75b-453f-a348-78c57143e478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\key_value">
+      <UniqueIdentifier>{389c8a45-dcf8-4e86-8002-1cd2d24e3a84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\key_value\serializer">
+      <UniqueIdentifier>{15fbb2ec-e375-4c4c-8337-d1d94da650e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\key_value\serializer\implementation">
+      <UniqueIdentifier>{18275210-8785-4286-bf8c-66742a62d777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\key_value\implementation">
+      <UniqueIdentifier>{54853f76-c1b1-4b53-a381-51eb1296da90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\extension">
+      <UniqueIdentifier>{3484f2f1-4d8e-4f86-aa4a-7939b1547caf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\extension\implementation">
+      <UniqueIdentifier>{bb148f0f-769a-463c-b849-6cc56de873b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\memory">
+      <UniqueIdentifier>{c8f7ddae-ed92-4d83-81b2-df31fc154632}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\creational">
+      <UniqueIdentifier>{cbed7f1e-5635-4ffd-b0a7-51d724f20ba9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\container">
+      <UniqueIdentifier>{d11b5dfd-a259-41f2-ac62-91124f1ee3bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\io">
+      <UniqueIdentifier>{1ff775b1-b848-453e-95c6-633ec1ae9914}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\io\implementation">
+      <UniqueIdentifier>{2f3c1b17-c9ed-4e8a-9d1e-4abe275f93ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\filesystem">
+      <UniqueIdentifier>{78c9049f-4a8f-4034-9577-6a1c6e17be70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\filesystem\implementation">
+      <UniqueIdentifier>{5609b599-7e37-4a76-b5ec-b2beaeca1ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\thread">
+      <UniqueIdentifier>{d1811992-c4e8-4b97-b678-09891d65f11b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\thread\implementation">
+      <UniqueIdentifier>{ae69a515-6dfd-4909-ade8-45c8149f089a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{8b8ff36f-a64c-48da-a136-363f390de5a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\xsd">
+      <UniqueIdentifier>{474b6495-b590-4850-92b9-5ec2c57c4ca3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\locale">
+      <UniqueIdentifier>{c51fb11a-3d07-4f53-933b-59f5fbf98d3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\locale\de_DE">
+      <UniqueIdentifier>{df98beea-a9ec-4d6f-9ba0-7af938754a46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\locale\en_US">
+      <UniqueIdentifier>{3651fa64-73a9-4476-9a79-8a7e6e0d709e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\locale\fr_FR">
+      <UniqueIdentifier>{27ddb56b-fe1c-4d42-b22c-edd9450fa128}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api">
+      <UniqueIdentifier>{90219f43-fe12-40e7-8a23-4540454722ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\implementation">
+      <UniqueIdentifier>{ceffa12a-6c4a-442f-b418-6ae89884f013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core">
+      <UniqueIdentifier>{4e73e45a-ebc3-4d6a-a36e-6f6879c64dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\implementation">
+      <UniqueIdentifier>{d1dcfe1d-178e-4516-9b36-59fd55de6f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\dependency">
+      <UniqueIdentifier>{849d1619-0f89-4be1-ad3d-d9ac8486b677}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\dependency\implementation">
+      <UniqueIdentifier>{d8f2aae6-bb93-4c83-b3d8-aa302a7c10c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula">
+      <UniqueIdentifier>{8aa3020b-8a6e-4794-acf1-831544947960}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula\implementation">
+      <UniqueIdentifier>{b407dfa3-9a4b-4edd-a554-b8f0195963eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula\syntax">
+      <UniqueIdentifier>{49090fd2-73d8-4c97-b997-741991cc13ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula\syntax\implementation">
+      <UniqueIdentifier>{6aa35c74-3b27-42a3-8ebb-34a7984493ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula\AST">
+      <UniqueIdentifier>{23725cde-0e96-4b95-a88b-bed2b37daeab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula\AST\implementation">
+      <UniqueIdentifier>{d597b106-7950-4fad-96d2-a46405d5d6fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula\opcode">
+      <UniqueIdentifier>{4a4b0837-c015-4b28-8c7a-3e26ef119a3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula\opcode\implementation">
+      <UniqueIdentifier>{5a9c95e4-2d20-4f62-adfc-2f4b2700acc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula\calculation">
+      <UniqueIdentifier>{eae2a4ee-f11b-4a94-94de-b6ec1e05130e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\formula\calculation\implementation">
+      <UniqueIdentifier>{ece408cb-9797-4217-9683-73ae440f1736}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\named formulas">
+      <UniqueIdentifier>{5006e9df-32ea-4a3c-9a15-8cb240b0e4ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\named formulas\implementation">
+      <UniqueIdentifier>{0e5682b2-02c4-4d70-9f0e-f065808bd00c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\conditional formatting">
+      <UniqueIdentifier>{0fd12994-9f08-4129-9522-aacadd70825b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\conditional formatting\implementation">
+      <UniqueIdentifier>{62da2b31-949c-4b65-bc0f-6ad24e605489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\style">
+      <UniqueIdentifier>{f03ddc84-e6ed-4bba-a537-1301d8eaa137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\style\implementation">
+      <UniqueIdentifier>{720db09b-f870-47ba-bb14-e36a8f9da6d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\layout">
+      <UniqueIdentifier>{66715e61-6328-42fa-b617-243d7cfbe133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\layout\implementation">
+      <UniqueIdentifier>{bbdb3e1d-7ea7-43f8-a2d2-c822f22e4adb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\merged_cells">
+      <UniqueIdentifier>{bd71d235-13ea-4f0e-a475-fa829c780116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\merged_cells\implementation">
+      <UniqueIdentifier>{f40d0799-174b-4153-a0fa-5b9333a47fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\variable">
+      <UniqueIdentifier>{6036978b-231e-4155-a7db-4d584576ffb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\variable\implementation">
+      <UniqueIdentifier>{9ce6ccb9-fb55-400e-ba7e-9431ba291536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\borders">
+      <UniqueIdentifier>{1d9e389f-5132-454f-a394-7d45cb25df13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\borders\implementation">
+      <UniqueIdentifier>{d4891977-f87f-4ddb-b6b3-8297ddb1d4a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\attribute">
+      <UniqueIdentifier>{f507c245-b934-4834-8841-3daa5fb20fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\attribute\implementation">
+      <UniqueIdentifier>{8ceb8a01-397e-4746-b77c-e4b6fa01d0cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\locked_cells">
+      <UniqueIdentifier>{e94ce106-8fb7-4cec-b14f-0ae1df7156e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\locked_cells\implementation">
+      <UniqueIdentifier>{59a8d26a-7182-4954-b2a6-f2bddcb6e831}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\format">
+      <UniqueIdentifier>{5bc92124-7894-4e6f-a6c0-5b840dd68890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\format\implementation">
+      <UniqueIdentifier>{1ff2d303-b4bb-452c-9a4e-9f207d797fa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\registry">
+      <UniqueIdentifier>{6757026f-e243-4f2b-ac9b-23445205785a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\registry\implementation">
+      <UniqueIdentifier>{4444d015-52d3-4a4c-8c18-72fbbd76be09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\a1conversion">
+      <UniqueIdentifier>{316da1b3-6e12-4d92-8e9a-dc3a05de226a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\a1conversion\implementation">
+      <UniqueIdentifier>{6b2bc611-8b5b-4ab4-bbba-10221a9686af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\locale">
+      <UniqueIdentifier>{73653100-7b68-4629-b0af-2697f13c7444}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\locale\implementation">
+      <UniqueIdentifier>{8153401c-9d42-4779-84dc-ae9673f0063e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\clipboard">
+      <UniqueIdentifier>{746f4e7b-ac99-4830-a4e6-1d0096a8667d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\clipboard\implementation">
+      <UniqueIdentifier>{3104d8c4-42d6-4f2f-a4d1-053e5f4e6813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\functions">
+      <UniqueIdentifier>{9909cc9f-b116-4e3f-a3c7-5d26580d67e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\functions\implementation">
+      <UniqueIdentifier>{bb36b0ec-4b5d-4311-9546-1b254b72e9ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\exception">
+      <UniqueIdentifier>{1f5c814f-fc43-4fae-a147-1a5988cebf0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\command">
+      <UniqueIdentifier>{4a2a8bba-fb62-482a-ab88-810fb0a0d793}</UniqueIdentifier>
+      <Extensions>hpp</Extensions>
+    </Filter>
+    <Filter Include="api\command\implementation">
+      <UniqueIdentifier>{1ae198fe-caea-4956-8dab-03658cac43de}</UniqueIdentifier>
+      <Extensions>cpp</Extensions>
+    </Filter>
+    <Filter Include="api\format">
+      <UniqueIdentifier>{a1a122a4-2b88-4bc1-ab15-201f8f5034d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\format\implementation">
+      <UniqueIdentifier>{7525e594-0673-4049-8edb-93701b560561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\module">
+      <UniqueIdentifier>{a5a5bc61-9c61-4ad6-b3bb-d5cf7b0008fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\module\implementation">
+      <UniqueIdentifier>{4501f6b2-7036-4812-994e-527ebfdfd7f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\session">
+      <UniqueIdentifier>{d31c40f1-ac0d-489a-8573-ae533015d98f}</UniqueIdentifier>
+      <Extensions>hpp</Extensions>
+    </Filter>
+    <Filter Include="api\session\implementation">
+      <UniqueIdentifier>{4fe1bb67-0925-499d-8023-9a3edd555f7f}</UniqueIdentifier>
+      <Extensions>cpp</Extensions>
+    </Filter>
+    <Filter Include="api\translation_table">
+      <UniqueIdentifier>{f2360bbd-11f4-49a9-9e02-278c7ef9a1eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\translation_table\implementation">
+      <UniqueIdentifier>{d4224b44-a642-4b8f-8d25-3685dcb378f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\translation_table\catalogue reader">
+      <UniqueIdentifier>{58c16c1b-7177-402f-8cef-11e6b248778b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\translation_table\catalogue reader\implementation">
+      <UniqueIdentifier>{8dbd30ce-671e-4cf5-9ca2-8d4aa51ee40a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\translation_table\catalogue reader\xml_parser">
+      <UniqueIdentifier>{b1d21368-e612-4df5-b177-e875f23ca85e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\translation_table\catalogue reader\xml_parser\implementation">
+      <UniqueIdentifier>{b3df011a-a2ff-41c4-9c36-240174df8745}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\worksheet elements">
+      <UniqueIdentifier>{77e627a7-3191-4716-b909-259fc0eb44c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\worksheet elements\implementation">
+      <UniqueIdentifier>{9d9056f5-9b06-4d4f-b8f7-ecee8b71a482}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\text metrics">
+      <UniqueIdentifier>{b9024fdf-cd1f-4d96-8f0d-6aa140eaaec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\text metrics\implementation">
+      <UniqueIdentifier>{8c02b67d-85f8-4dcd-95db-08e23dc0a99d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\auto_fill">
+      <UniqueIdentifier>{12884680-2f4c-439a-a288-5e3f97cc998e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\auto_fill\implementation">
+      <UniqueIdentifier>{faef39c3-29ce-4ebe-a669-38c25e547f28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\transaction">
+      <UniqueIdentifier>{bb85f3ba-a7ce-4dc3-96c8-b7dd581fc4ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\transaction\implementation">
+      <UniqueIdentifier>{16f1086e-0821-45ba-8525-16f65d75c87d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\allocation_tracking">
+      <UniqueIdentifier>{f6606797-c922-4975-8ae4-724dfff57984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\allocation_tracking\implementation">
+      <UniqueIdentifier>{967bfac5-60c6-438b-b959-130242cb1f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\utils">
+      <UniqueIdentifier>{161e8811-75c3-43d0-90d6-b98525eb21d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\utils\implementation">
+      <UniqueIdentifier>{d8bc3891-741a-4d07-88f1-ce88b3030bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="configuration">
+      <UniqueIdentifier>{74c39d17-c357-4742-ba9e-95c6b1f1aff4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="configuration\implementation">
+      <UniqueIdentifier>{8be5152d-04d3-4bad-8793-d3645cfdddd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="configuration\xml_parser">
+      <UniqueIdentifier>{7e213258-cf10-4bf5-870b-1ca830df38c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="configuration\xml_parser\implementation">
+      <UniqueIdentifier>{4d222fea-0dde-436b-9afc-38554fae19ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="configuration\filters">
+      <UniqueIdentifier>{d56174d6-e933-40d0-904f-8a06c562aa03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="configuration\filters\implementation">
+      <UniqueIdentifier>{a5bc7600-3b2a-460a-8861-81cf3e5dafe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\auto_save">
+      <UniqueIdentifier>{d5da6914-cef1-496b-b8ba-b7d333c150e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\auto_save\implementation">
+      <UniqueIdentifier>{5316d18d-31cc-4a91-8546-264341bf0f70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\container">
+      <UniqueIdentifier>{1f8c1692-9f86-4464-a99a-dd6293aab526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api\core\container\implementation">
+      <UniqueIdentifier>{6e5cf27e-47cb-4435-8130-34bb94fbf970}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Amplifier Results">
+      <UniqueIdentifier>{a243d992-5854-424f-bf71-fb986e45574a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\wss\base_log_handler.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\console_logger.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core_logging.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\debug_logging_helper.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\file_logger.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_log_handler.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_loggable.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_logger.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\log_level_factory.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\log_modifier.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\logger.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\logger_factory.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\loggers.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\logging.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\modifier_factory.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\socket_logger.hpp">
+      <Filter>library\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\date_timestamp_modifier.hpp">
+      <Filter>library\logging\modifier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_log_modifier.hpp">
+      <Filter>library\logging\modifier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\log_level_modifier.hpp">
+      <Filter>library\logging\modifier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\thread_id_modifier.hpp">
+      <Filter>library\logging\modifier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\performance_timer.hpp">
+      <Filter>library\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\generic_point.hpp">
+      <Filter>library\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\generic_rectangle.hpp">
+      <Filter>library\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\point.hpp">
+      <Filter>library\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\rectangle.hpp">
+      <Filter>library\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\rectangle_iterator.hpp">
+      <Filter>library\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\boolean_combiner.hpp">
+      <Filter>library\event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\algorithm.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\bitcount.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\boost_mutex_trait.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\ci_string.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\copy_fill_iterator.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\core_dump_handler.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\destroying_auto_pointer.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\insert_from_temporary.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\iterators.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\lock_once.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\locked_object.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\locking_iterator_wrapper.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\minmax.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\null_lock.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\ref_pointer.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\scoped_reference.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\shared_action_pointer.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\sleep.hpp">
+      <Filter>library\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\key_value_manager.hpp">
+      <Filter>library\key_value</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\key_value_set.hpp">
+      <Filter>library\key_value</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\value_manager.hpp">
+      <Filter>library\key_value</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\css_serializer.hpp">
+      <Filter>library\key_value\serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\css_unserializer.hpp">
+      <Filter>library\key_value\serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\json_serializer.hpp">
+      <Filter>library\key_value\serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\json_unserializer.hpp">
+      <Filter>library\key_value\serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\value_manager_bool_specialization.hpp">
+      <Filter>library\key_value\implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\extension.hpp">
+      <Filter>library\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\extension_function_caller.hpp">
+      <Filter>library\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\i_module_loader.hpp">
+      <Filter>library\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\unix_module_loader.hpp">
+      <Filter>library\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\win32_module_loader.hpp">
+      <Filter>library\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\allocation.hpp">
+      <Filter>library\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\delete_object.hpp">
+      <Filter>library\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\heap_clone_allocator.hpp">
+      <Filter>library\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_cloneable.hpp">
+      <Filter>library\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\factory.hpp">
+      <Filter>library\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\friend.hpp">
+      <Filter>library\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_createable.hpp">
+      <Filter>library\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\non_instantiable.hpp">
+      <Filter>library\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\singleton.hpp">
+      <Filter>library\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\singleton_dependency.hpp">
+      <Filter>library\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\threadsafe_singleton.hpp">
+      <Filter>library\creational</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\indexed_mapping.hpp">
+      <Filter>library\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\node.hpp">
+      <Filter>library\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\r_tree.hpp">
+      <Filter>library\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\reference_counted_indexed_mapping.hpp">
+      <Filter>library\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\sparse_index_integer_container.hpp">
+      <Filter>library\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\sparse_vector.hpp">
+      <Filter>library\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\stack.hpp">
+      <Filter>library\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\binary_iostream.hpp">
+      <Filter>library\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\binary_istream.hpp">
+      <Filter>library\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\binary_ostream.hpp">
+      <Filter>library\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\tied_buffer.hpp">
+      <Filter>library\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\tied_stream.hpp">
+      <Filter>library\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\token_stream.hpp">
+      <Filter>library\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\token_stream_specialization.hpp">
+      <Filter>library\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\vector_io_device.hpp">
+      <Filter>library\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\storage_rotation.hpp">
+      <Filter>library\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\named_thread.hpp">
+      <Filter>library\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\application.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\core2_compatibility.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\define.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\definition.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\identifiable_object.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\loadable_object.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\object_container.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\range.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\reference.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\server.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\server_defaults.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\sheet_dimension.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\sheet_point.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\sheet_range.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\shift_direction.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\type.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\used_range.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\variant.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\version.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\workbook.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\worksheet.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\array_manager.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\calculation_cache.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\calculation_context.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\calculation_setting.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell_manager.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\content_type.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_range_operation.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\lock.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\object_lookup.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\range_lock.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\range_lock_handler.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\range_lock_keeper.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\abstract_dependency.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actualize_dependencies.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\dependency_info.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\dependency_info_utility.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dependency_manager.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\dependency_node_reference.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_dependency.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_dependency_reference.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\precedent_proxy.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\range_reference.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\reference_operation.hpp">
+      <Filter>api\core\dependency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fill_operation.hpp">
+      <Filter>api\core\formula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\formula.hpp">
+      <Filter>api\core\formula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\formula_kernel.hpp">
+      <Filter>api\core\formula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\interpreter_context.hpp">
+      <Filter>api\core\formula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\interpreter_variant.hpp">
+      <Filter>api\core\formula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\reference_info.hpp">
+      <Filter>api\core\formula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\reference_table.hpp">
+      <Filter>api\core\formula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stack_calculation.hpp">
+      <Filter>api\core\formula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\with_initiator.hpp">
+      <Filter>api\core\formula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\addition_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\array_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\array_row_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\base_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\base_visitor.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\boolean_false_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\boolean_true_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\brace_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\digit_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\division_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\empty_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\equal_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\error_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\exponent_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\function_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\greater_equal_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\greater_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_visitor.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\less_equal_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\less_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\multiplication_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\named_formula_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\negation_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\not_equal_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\percentage_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\range_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\reference_base_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\reference_list_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\root_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\string_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\subtraction_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\syntax.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\syntax_defines.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\syntax_node_deallocator.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\syntax_node_trait.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\token.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\tree_visitor.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\variable_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\ast_formula.hpp">
+      <Filter>api\core\formula\AST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\formula_parser.hpp">
+      <Filter>api\core\formula\AST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\formula_parsing_context.hpp">
+      <Filter>api\core\formula\AST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\formula_parsing_result.hpp">
+      <Filter>api\core\formula\AST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\forumula_parser.hpp">
+      <Filter>api\core\formula\AST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\opcode.hpp">
+      <Filter>api\core\formula\opcode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\opcode_generator.hpp">
+      <Filter>api\core\formula\opcode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\opcode_interpreter.hpp">
+      <Filter>api\core\formula\opcode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\opcode_pretty_printer.hpp">
+      <Filter>api\core\formula\opcode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\opcode_pretty_printer_context.hpp">
+      <Filter>api\core\formula\opcode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\opcode_rewriter.hpp">
+      <Filter>api\core\formula\opcode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opcode_stream_helper.hpp">
+      <Filter>api\core\formula\opcode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\abstract_calculation.hpp">
+      <Filter>api\core\formula\calculation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\calculation.hpp">
+      <Filter>api\core\formula\calculation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\formula_calculation.hpp">
+      <Filter>api\core\formula\calculation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_calculation.hpp">
+      <Filter>api\core\formula\calculation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\named_formula_calculation.hpp">
+      <Filter>api\core\formula\calculation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\free_formula.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\free_formula_impl.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_named_formula_manager.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\named_formula.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\named_formula_accessor.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\named_formula_dependency_wrapper.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\named_formula_kernel.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\named_formula_manager.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\named_formula_reference.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\named_formula_scope.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\named_formula_storage.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\named_formula_utility.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\named_formula_wrapper.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\on_event_handler_helper.hpp">
+      <Filter>api\core\named formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_affected_range_list.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_callbacks.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_counter.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_formula_writer.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_locked_storage.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\conditional_format_manager.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_rank.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_rule.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_rule_parser.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_storage.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_style_unlock_type.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_types.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\conditional_format_utils.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_conditional_format.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_conditional_format.hpp">
+      <Filter>api\core\conditional formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\style_manager.hpp">
+      <Filter>api\core\style</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\style_set.hpp">
+      <Filter>api\core\style</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\sheet_layout_manager.hpp">
+      <Filter>api\core\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\sheet_layout_trait.hpp">
+      <Filter>api\core\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\merged_cell_manager.hpp">
+      <Filter>api\core\merged_cells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\variable_map.hpp">
+      <Filter>api\core\variable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\variable_mapping_list.hpp">
+      <Filter>api\core\variable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\variable_store.hpp">
+      <Filter>api\core\variable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\border.hpp">
+      <Filter>api\core\borders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\border_callbacks.hpp">
+      <Filter>api\core\borders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\border_locked_storage.hpp">
+      <Filter>api\core\borders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\border_manager.hpp">
+      <Filter>api\core\borders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\border_node.hpp">
+      <Filter>api\core\borders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\border_storage.hpp">
+      <Filter>api\core\borders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\border_types.hpp">
+      <Filter>api\core\borders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\border_utility.hpp">
+      <Filter>api\core\borders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\copy_format_from.hpp">
+      <Filter>api\core\borders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\attribute_manager.hpp">
+      <Filter>api\core\attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\attribute_set.hpp">
+      <Filter>api\core\attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\locked_cell_manager.hpp">
+      <Filter>api\core\locked_cells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\format_manager.hpp">
+      <Filter>api\core\format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\object_registry.hpp">
+      <Filter>api\core\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\a1conversion.hpp">
+      <Filter>api\a1conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\locale.hpp">
+      <Filter>api\locale</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\scoped_neutral_locale_enforcer.hpp">
+      <Filter>api\locale</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\clipboard.hpp">
+      <Filter>api\clipboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\function_entry.hpp">
+      <Filter>api\functions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\function_parameters.hpp">
+      <Filter>api\functions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\function_registry.hpp">
+      <Filter>api\functions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\return_type_format.hpp">
+      <Filter>api\functions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\sparse_range.hpp">
+      <Filter>api\functions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\arbitrary_storage_object_not_found_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\can_not_change_merged_cell_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\can_not_change_part_of_an_array_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\conditional_format_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\creation_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\export_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\extension_function_call_failed_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\extension_module_load_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\extension_registry_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\fatal_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\filter_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\filter_registry_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\import_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_application_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_clipboard_entry_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_formula_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_function_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_locale_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_name_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_reference_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_seek_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_session_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_translation_table_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_workbook_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\invalid_worksheet_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\lock_timeout_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\missing_text_metrics_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\named_formula_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\named_formula_not_found_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\no_buffer_assigned_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\not_implemented_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\object_not_found_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\object_unloading_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\position_out_of_range_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\stack_underflow_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\translation_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\undo_chain_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\uninitialized_session_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\variant_conversion_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\vector_io_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\worksheet_element_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\wss_runtime_exception.hpp">
+      <Filter>api\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\active_workbook_has_changes_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\base_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\clear_attributes_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\clear_cells_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\clone_worksheet_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\command_chain.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\copy_fill_range_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\copy_move_range_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\copy_range_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\copy_worksheet_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\create_application_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\create_empty_workbook_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\create_named_formula_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\create_workbook_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\create_worksheet_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\create_worksheet_element_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\deactivate_array_formula_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\delete_cells_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\delete_column_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\delete_row_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\execute_fetch.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_all_conditional_formats_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_all_named_formulas_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_attribute_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_border_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_cell_lock_list_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_conditional_format_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_default_column_width_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_default_format_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_default_row_height_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_default_sheet_dimensions_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_default_style_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_formatted_value_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_formula_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_named_formula_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_precedents_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_server_query_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_server_version_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_sparse_column_width_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_sparse_max_cell_height_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_sparse_max_cell_width_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_sparse_row_height_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_style_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_used_range_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_value_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_workbook_version_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_worksheet_elements_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_undoable_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\insert_cells_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\insert_column_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\insert_row_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\load_workbook_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\measure_text_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\move_conditional_format_rank_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\move_range_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\move_worksheet_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\paste_range_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\remove_application_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\remove_clone_worksheet_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\remove_conditional_format_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\remove_named_formula_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\remove_workbook_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\remove_worksheet_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\remove_worksheet_element_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\rename_application_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\rename_workbook_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\rename_worksheet_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\save_workbook_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\select_application_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\select_workbook_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\select_worksheet_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_array_value_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_attribute_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_border_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_cell_lock_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_conditional_format_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_default_column_width_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_default_format_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_default_row_height_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_default_style_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_format_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_style_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_value_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\start_new_calculation_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\trigger_extension_module_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\unmerge_cells_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\update_conditional_format_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\update_named_formula_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\update_worksheet_elements_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_dependents_command.hpp">
+      <Filter>api\command\implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\formatter.hpp">
+      <Filter>api\format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_format.hpp">
+      <Filter>api\format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\extension_registry.hpp">
+      <Filter>api\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\module_registry.hpp">
+      <Filter>api\module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\arbitrary_storage.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\broken_evaluation_dependencies.h">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\default_format_serializer.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\default_format_unserializer.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\scoped_selection_state.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\selection_state.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\session.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\session_handler.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\session_sheet_map.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\user_return_format.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\translation_map.hpp">
+      <Filter>api\translation_table</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\translation_table.hpp">
+      <Filter>api\translation_table</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\catalogue_reader.hpp">
+      <Filter>api\translation_table\catalogue reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\function_table.hpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\function_table_literals.hpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\function_table_parser.hpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\function_table_readers.hpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\function_table_serializer.hpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\function_table_writers.hpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\worksheet_element.hpp">
+      <Filter>api\worksheet elements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\worksheet_element_filter.hpp">
+      <Filter>api\worksheet elements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\worksheet_element_key_value_map.hpp">
+      <Filter>api\worksheet elements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\worksheet_element_storage.hpp">
+      <Filter>api\worksheet elements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_text_metrics.hpp">
+      <Filter>api\text metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\text_metrics.hpp">
+      <Filter>api\text metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\auto_fill.hpp">
+      <Filter>api\auto_fill</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_autofill_handler.hpp">
+      <Filter>api\auto_fill</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\transaction.hpp">
+      <Filter>api\transaction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\transaction_command.hpp">
+      <Filter>api\transaction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\transaction_wrapper.hpp">
+      <Filter>api\transaction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\allocation_tracking.hpp">
+      <Filter>api\allocation_tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\uuid_adjust.hpp">
+      <Filter>api\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\configuration.hpp">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\server_configuration.hpp">
+      <Filter>configuration\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\server_configuration_literals.hpp">
+      <Filter>configuration\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\server_configuration_parser.hpp">
+      <Filter>configuration\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\server_configuration_readers.hpp">
+      <Filter>configuration\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\server_configuration_serializer.hpp">
+      <Filter>configuration\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\server_configuration_writers.hpp">
+      <Filter>configuration\xml_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\filter_registry.hpp">
+      <Filter>configuration\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_export_filter.hpp">
+      <Filter>configuration\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_import_filter.hpp">
+      <Filter>configuration\filters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\message_defines.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\precompiled_header.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\include\wss\locked_session.hpp">
+      <Filter>api\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\auto_save_filesystem.hpp">
+      <Filter>api\auto_save</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\auto_save.hpp">
+      <Filter>api\auto_save</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\cyclic_dependency_set.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\win32_service.hpp" />
+    <ClInclude Include="..\src\win32_service_status_updater.hpp" />
+    <ClInclude Include="..\include\wss\double_to_string.hpp">
+      <Filter>api\core\formula\opcode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_workbook_variables_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_variable_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\get_worksheet_variable_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\merge_cells_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_cell_dimension_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_column_width_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\set_row_height_command.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\abstract_undoable_command.hpp">
+      <Filter>api\command\implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\supports_do_undo.hpp">
+      <Filter>api\command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\layout_coord.hpp">
+      <Filter>api\core\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\flyweight_types.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\concatenation_node.hpp">
+      <Filter>api\core\formula\syntax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\release_pooled_memory.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\memory_garbage_collector.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\generic_container.hpp">
+      <Filter>api\core\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\simple_allocator.hpp">
+      <Filter>api\core\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\contained_row.hpp">
+      <Filter>api\core\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\reference_table_coverage.hpp">
+      <Filter>api\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\wss\i_cached_connection.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\base_log_handler.cpp">
+      <Filter>library\logging\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\console_logger.cpp">
+      <Filter>library\logging\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\file_logger.cpp">
+      <Filter>library\logging\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\log_level_factory.cpp">
+      <Filter>library\logging\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\logger.cpp">
+      <Filter>library\logging\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\logger_factory.cpp">
+      <Filter>library\logging\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modifier_factory.cpp">
+      <Filter>library\logging\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\socket_logger.cpp">
+      <Filter>library\logging\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\date_timestamp_modifier.cpp">
+      <Filter>library\logging\modifier\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\log_level_modifier.cpp">
+      <Filter>library\logging\modifier\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\thread_id_modifier.cpp">
+      <Filter>library\logging\modifier\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\performance_timer.cpp">
+      <Filter>library\debug\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ci_string.cpp">
+      <Filter>library\utility\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core_dump_handler.cpp">
+      <Filter>library\utility\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\css_serializer.cpp">
+      <Filter>library\key_value\serializer\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\css_unserializer.cpp">
+      <Filter>library\key_value\serializer\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\json_serializer.cpp">
+      <Filter>library\key_value\serializer\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\json_unserializer.cpp">
+      <Filter>library\key_value\serializer\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\unix_module_loader.cpp">
+      <Filter>library\extension\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32_module_loader.cpp">
+      <Filter>library\extension\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sparse_vector.cpp">
+      <Filter>library\container</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\vector_io_device.cpp">
+      <Filter>library\io\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\storage_rotation.cpp">
+      <Filter>library\filesystem\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\name_thread.cpp">
+      <Filter>library\thread\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\application.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\identifiable_object.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\loadable_object.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\precompiled_header.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\range.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\server.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\server_defaults.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sheet_point.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sheet_range.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\variant.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\workbook.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\worksheet.cpp">
+      <Filter>api\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\array_manager.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\calculation_setting.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cell.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cell_manager.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\object_lookup.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\range_lock.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\range_lock_handler.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\range_lock_keeper.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\abstract_dependency.cpp">
+      <Filter>api\core\dependency\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dependency_info_utility.cpp">
+      <Filter>api\core\dependency\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dependency_manager.cpp">
+      <Filter>api\core\dependency\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dependency_node_reference.cpp">
+      <Filter>api\core\dependency\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\precedent_proxy.cpp">
+      <Filter>api\core\dependency\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\range_reference.cpp">
+      <Filter>api\core\dependency\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fill_operation.cpp">
+      <Filter>api\core\formula\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\formula.cpp">
+      <Filter>api\core\formula\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\formula_kernel.cpp">
+      <Filter>api\core\formula\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\interpreter_context.cpp">
+      <Filter>api\core\formula\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\interpreter_variant.cpp">
+      <Filter>api\core\formula\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\reference_info.cpp">
+      <Filter>api\core\formula\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\reference_table.cpp">
+      <Filter>api\core\formula\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stack_calculation.cpp">
+      <Filter>api\core\formula\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\with_initiator.cpp">
+      <Filter>api\core\formula\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\addition_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\array_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\array_row_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\base_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\boolean_false_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\boolean_true_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\brace_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\digit_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\division_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\empty_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\equal_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\error_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\exponent_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\greater_equal_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\greater_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\less_equal_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\less_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\multiplication_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\negation_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\not_equal_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\percentage_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\range_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\reference_base_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\reference_list_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\root_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\string_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\subtraction_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\variable_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ast_formula.cpp">
+      <Filter>api\core\formula\AST\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\formula_parser.cpp">
+      <Filter>api\core\formula\AST\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\formula_parsing_context.cpp">
+      <Filter>api\core\formula\AST\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\formula_parsing_result.cpp">
+      <Filter>api\core\formula\AST\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opcode.cpp">
+      <Filter>api\core\formula\opcode\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opcode_generator.cpp">
+      <Filter>api\core\formula\opcode\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opcode_interpreter.cpp">
+      <Filter>api\core\formula\opcode\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opcode_pretty_printer.cpp">
+      <Filter>api\core\formula\opcode\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opcode_pretty_printer_context.cpp">
+      <Filter>api\core\formula\opcode\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opcode_rewriter.cpp">
+      <Filter>api\core\formula\opcode\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\abstract_calculation.cpp">
+      <Filter>api\core\formula\calculation\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\formula_calculation.cpp">
+      <Filter>api\core\formula\calculation\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_calculation.cpp">
+      <Filter>api\core\formula\calculation\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\free_formula.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_accessor.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_dependency_wrapper.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_kernel.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_manager.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_reference.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_storage.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_utility.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_wrapper.cpp">
+      <Filter>api\core\named formulas\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\conditional_format_formula_writer.cpp">
+      <Filter>api\core\conditional formatting\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\conditional_format_locked_storage.cpp">
+      <Filter>api\core\conditional formatting\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\conditional_format_manager.cpp">
+      <Filter>api\core\conditional formatting\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\conditional_format_rule.cpp">
+      <Filter>api\core\conditional formatting\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\conditional_format_storage.cpp">
+      <Filter>api\core\conditional formatting\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_conditional_format.cpp">
+      <Filter>api\core\conditional formatting\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_conditional_format.cpp">
+      <Filter>api\core\conditional formatting\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\style_manager.cpp">
+      <Filter>api\core\style\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sheet_layout_manager.cpp">
+      <Filter>api\core\layout\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\merged_cell_manager.cpp">
+      <Filter>api\core\merged_cells\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\variable_map.cpp">
+      <Filter>api\core\variable\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\variable_store.cpp">
+      <Filter>api\core\variable\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\border_locked_storage.cpp">
+      <Filter>api\core\borders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\border_manager.cpp">
+      <Filter>api\core\borders\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\border_node.cpp">
+      <Filter>api\core\borders\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\border_storage.cpp">
+      <Filter>api\core\borders\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\border_utility.cpp">
+      <Filter>api\core\borders\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\attribute_manager.cpp">
+      <Filter>api\core\attribute\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\locked_cell_manager.cpp">
+      <Filter>api\core\locked_cells\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\format_manager.cpp">
+      <Filter>api\core\format\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\object_registry.cpp">
+      <Filter>api\core\registry\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\a1conversion.cpp">
+      <Filter>api\a1conversion\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\locale.cpp">
+      <Filter>api\locale\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scoped_neutral_locale_enforcer.cpp">
+      <Filter>api\locale\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\clipboard.cpp">
+      <Filter>api\clipboard\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_entry.cpp">
+      <Filter>api\functions\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_parameters.cpp">
+      <Filter>api\functions\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_registry.cpp">
+      <Filter>api\functions\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sparse_range.cpp">
+      <Filter>api\functions\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\named_formula_not_found_exception.cpp">
+      <Filter>api\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\active_workbook_has_changes_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\clear_attributes_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\clear_cells_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\clone_worksheet_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\command_chain.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\copy_fill_range_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\copy_move_range_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\copy_range_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\copy_worksheet_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\create_application_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\create_empty_workbook_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\create_named_formula_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\create_workbook_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\create_worksheet_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\create_worksheet_element_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\deactivate_array_formula_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\delete_cells_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\delete_column_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\delete_row_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_all_conditional_formats_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_all_named_formulas_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_attribute_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_border_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_cell_lock_list_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_conditional_format_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_default_column_width_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_default_format_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_default_row_height_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_default_sheet_dimensions_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_default_style_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_dependents_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_formatted_value_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_formula_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_named_formula_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_precedents_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_server_query_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_server_version_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_sparse_column_width_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_sparse_max_cell_height_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_sparse_max_cell_width_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_sparse_row_height_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_style_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_used_range_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_value_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_workbook_version_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_worksheet_elements_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\insert_cells_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\insert_column_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\insert_row_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\load_workbook_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\measure_text_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\move_conditional_format_rank_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\move_range_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\move_worksheet_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\paste_range_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\remove_application_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\remove_clone_worksheet_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\remove_conditional_format_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\remove_named_formula_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\remove_workbook_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\remove_worksheet_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\remove_worksheet_element_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\rename_application_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\rename_workbook_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\rename_worksheet_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\save_workbook_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\select_application_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\select_workbook_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\select_worksheet_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_array_value_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_attribute_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_border_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_cell_lock_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_conditional_format_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_default_column_width_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_default_format_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_default_row_height_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_default_style_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_format_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_style_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_value_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\start_new_calculation_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\trigger_extension_module_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\unmerge_cells_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\update_conditional_format_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\update_named_formula_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\update_worksheet_elements_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\formatter.cpp">
+      <Filter>api\format\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extension_registry.cpp">
+      <Filter>api\module\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\module_registry.cpp">
+      <Filter>api\module\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\arbitrary_storage.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\broken_evaluation_dependencies.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\default_format_serializer.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\default_format_unserializer.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scoped_selection_state.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\selection_state.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\session.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\session_sheet_map.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\user_return_format.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\translation_map.cpp">
+      <Filter>api\translation_table\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\translation_table.cpp">
+      <Filter>api\translation_table\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\catalogue_reader.cpp">
+      <Filter>api\translation_table\catalogue reader\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_table_parser.cpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_table_readers.cpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_table_serializer.cpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_table_writers.cpp">
+      <Filter>api\translation_table\catalogue reader\xml_parser\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\worksheet_element.cpp">
+      <Filter>api\worksheet elements\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\worksheet_element_storage.cpp">
+      <Filter>api\worksheet elements\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\text_metrics.cpp">
+      <Filter>api\text metrics\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\auto_fill.cpp">
+      <Filter>api\auto_fill\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\transaction.cpp">
+      <Filter>api\transaction\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\transaction_command.cpp">
+      <Filter>api\transaction\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\transaction_wrapper.cpp">
+      <Filter>api\transaction\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\allocation_tracking.cpp">
+      <Filter>api\allocation_tracking\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\configuration.cpp">
+      <Filter>configuration\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\server_configuration.cpp">
+      <Filter>configuration\xml_parser\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\server_configuration_parser.cpp">
+      <Filter>configuration\xml_parser\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\server_configuration_readers.cpp">
+      <Filter>configuration\xml_parser\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\server_configuration_serializer.cpp">
+      <Filter>configuration\xml_parser\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\server_configuration_writers.cpp">
+      <Filter>configuration\xml_parser\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\filter_registry.cpp">
+      <Filter>configuration\filters\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\locked_session.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\auto_save.cpp">
+      <Filter>api\auto_save\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\auto_save_filesystem.cpp">
+      <Filter>api\auto_save\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\session_handler.cpp">
+      <Filter>api\session\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\win32_service.cpp" />
+    <ClCompile Include="..\src\win32_service_status_updater.cpp" />
+    <ClCompile Include="..\src\set_row_height_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_workbook_variables_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\get_worksheet_variable_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\merge_cells_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_cell_dimension_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\set_column_width_command.cpp">
+      <Filter>api\command\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\layout_coord.cpp">
+      <Filter>api\core\layout\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\concatenation_node.cpp">
+      <Filter>api\core\formula\syntax\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\release_pooled_memory.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\memory_garbage_collector.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\contained_row.cpp">
+      <Filter>api\core\container\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\generic_container.ipp">
+      <Filter>api\core\container\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\reference_table_coverage.cpp">
+      <Filter>api\core\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uuid_adjust.cpp">
+      <Filter>api\utils\implementation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\wss\generic_point.ipp">
+      <Filter>library\geometry\implementation</Filter>
+    </None>
+    <None Include="..\src\key_value_manager.ipp">
+      <Filter>library\key_value\implementation</Filter>
+    </None>
+    <None Include="..\include\wss\key_value_set.ipp">
+      <Filter>library\key_value\implementation</Filter>
+    </None>
+    <None Include="..\src\value_manager.ipp">
+      <Filter>library\key_value\implementation</Filter>
+    </None>
+    <None Include="..\include\wss\allocation.ipp">
+      <Filter>library\memory</Filter>
+    </None>
+    <None Include="..\etc\config.xml">
+      <Filter>xml</Filter>
+    </None>
+    <None Include="..\include\wss\version.hpp.tpl">
+      <Filter>api</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r018hs\r018hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r020hs\r020hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r039hs\r039hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r040hs\r040hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r036hs\r036hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+    <None Include="C:\Users\fhofmann\Documents\My Amplifier Results\r059hs\r059hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+    <None Include="C:\Users\fhofmann\Documents\My Amplifier Results\r060hs\r060hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+    <None Include="C:\Users\fhofmann\Documents\My Amplifier Results\r061hs\r061hs.ampl">
+      <Filter>My Amplifier Results</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="wss.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <xsd2cpp Include="..\xml\schema\function_table.xsd">
+      <Filter>xml\xsd</Filter>
+    </xsd2cpp>
+    <xsd2cpp Include="..\xml\schema\server_configuration.xsd">
+      <Filter>xml\xsd</Filter>
+    </xsd2cpp>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="..\xml\locale\de_DE\function_table.xml">
+      <Filter>xml\locale\de_DE</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\xml\locale\en_US\function_table.xml">
+      <Filter>xml\locale\en_US</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\xml\locale\fr_FR\function_table.xml">
+      <Filter>xml\locale\fr_FR</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>

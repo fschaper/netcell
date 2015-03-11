@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persistence_settings xmlns="http://www.jedox.com/jedox/wss" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <pattern_fills>
+    <pattern_fill patternType = "gray125"	background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_1.png)"/>
+    <pattern_fill patternType = "darkGray" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_2.png)"/>
+    <pattern_fill patternType = "mediumGray" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_3.png)"/>
+    <pattern_fill patternType = "lightGray" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_4.png)"/>
+    <pattern_fill patternType = "gray0625" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_5.png)"/>
+    <pattern_fill patternType = "darkHorizontal" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_6.png)"/>
+    <pattern_fill patternType = "darkVertical" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_7.png)"/>
+    <pattern_fill patternType = "darkDown" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_8.png)"/>
+    <pattern_fill patternType = "darkUp" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_9.png)"/>
+    <pattern_fill patternType = "darkGrid" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_10.png)"/>
+    <pattern_fill patternType = "darkTrellis" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_11.png)"/>
+    <pattern_fill patternType = "lightHorizontal" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_12.png)"/>
+    <pattern_fill patternType = "lightVertical" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_13.png)"/>
+    <pattern_fill patternType = "lightDown" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_14.png)"/>
+    <pattern_fill patternType = "lightUp" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_15.png)"/>
+    <pattern_fill patternType = "lightGrid" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_16.png)"/>
+    <pattern_fill patternType = "lightTrellis" background-image = "url(/ui/wss/res/img/dialog/format_cells/patterns/pattern_17.png)"/>
+  </pattern_fills>
+</persistence_settings>

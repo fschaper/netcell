@@ -1,0 +1,94 @@
+<!--setBackground - Sets the background color, border color and 3D border effect of the box.-->
+<setBackground type="method">
+  <args>
+<!--The background color of the box.-->
+	<arg name="color" mandatory="true" default="-1">
+		<!-- <map refcontext="Chart.ChartTitle" path="Chart.ChartTitle.Fill.BackColor">&adapter_FormatConvertor_colorObject;</map> -->
+		<map refcontext="Chart.Legend" path="Chart.Legend.Fill.BackColor">&adapter_FormatConvertor_colorObject;</map>
+	</arg>
+<!--The border color of the box.-->
+	<arg name="edgeColor" default="-1">
+		<!-- <map refcontext="Chart.ChartTitle" path="Chart.ChartTitle.Border.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map> -->
+		<map refcontext="Chart.Legend" path="Chart.Legend.Border.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+	</arg>
+<!--The 3D border width. For positive values, the border will appear raised. For negative values, the border will appear depressed. A zero value means the border will appear flat. This argument is also used to support glassEffect and softLighting effects.-->
+    <arg name="raisedEffect" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setBackground>
+
+<!--setPos - Sets the coordinates of the top-left corner of the box.-->
+<setPos type="method" skip="true">
+  <args>
+<!--The x coordinate of the left of the box.-->
+	<arg name="x" default="-2" mandatory="true">
+		<!-- Ostavljeno kao primjer samo. Problem sa Title-om bio taj sto je bio pozicioniran na centar i
+		   onda se x racunao od sredine.
+		<map refcontext="Chart.ChartTitle" path="Chart.ChartTitle.Left">
+			<adapter class="UnitConvertor" method="pointToPixelTweakTest" static="true">
+				<arg name="operator" value="-"/>
+				<arg name="tweak" value="292"/>
+				<arg name="unit" value="pixel"/>
+			</adapter>
+		</map>-->
+		<map refcontext="Chart.ChartTitle" path="Chart.ChartTitle.Left">&adapter_UnitConvertor_pointToPixel;</map>
+		<map refcontext="Chart.Legend" path="Chart.Legend.Left">&adapter_UnitConvertor_pointToPixel;</map>
+	</arg>
+<!--The y coordinate of the top of the box.-->
+	<arg name="y" default="0" mandatory="true">
+		<!--<map refcontext="Chart.ChartTitle" path="Chart.ChartTitle.Top">
+			<superadapter class="UnitConvertor" method="pointToPixelSuperTest"/>
+		</map>-->
+		<map refcontext="Chart.ChartTitle" path="Chart.ChartTitle.Top">&adapter_UnitConvertor_pointToPixel;</map>
+		<map refcontext="Chart.Legend" path="Chart.Legend.Top">&adapter_UnitConvertor_pointToPixel;</map>
+	</arg>
+  </args>
+</setPos>
+
+<!-- mladent .. can't fine where Excel keep information is border rounded or not. -->
+<!--setRoundedCorners - Sets the border style to use rounded corners.-->
+<setRoundedCorners type="method" skip="true">
+  <args>
+<!--The radius of the top-left rounded corner in pixels.-->
+    <arg name="r1" default="10">
+      <map path=""/>
+    </arg>
+<!--The radius of the top-right rounded corner in pixels. The default value of -1 means it is the same as the radius of the top-left corner.-->
+    <arg name="r2" default="-1">
+      <map path=""/>
+    </arg>
+<!--The radius of the bottom-right rounded corner in pixels. The default value of -1 means it is the same as the radius of the top-left corner.-->
+    <arg name="r3" default="-1">
+      <map path=""/>
+    </arg>
+<!--The radius of the bottom-left rounded corner in pixels. The default value of -1 means it is the same as the radius of the top-left corner.-->
+    <arg name="r4" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setRoundedCorners>
+
+<!--setSize - Sets the width and height of the box.-->
+<setSize type="method" skip="true">
+  <args>
+<!--The width of the box in pixels.-->
+    <arg name="w" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The height of the box in pixels.-->
+    <arg name="h" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setSize>
+
+<!--setZOrder - Sets the z-order (drawing order) for custom box objects.-->
+<setZOrder applicable="false" type="method" skip="true">
+  <args>
+<!--The z-order of the object.-->
+    <arg name="z" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setZOrder>

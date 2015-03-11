@@ -1,0 +1,17 @@
+	<!--addLineLayer2 -->
+	<xlLineStacked100 type="function" class="LineLayer" init="addLineLayer2" context="LineGroup">
+	  <args>
+	<!--The method to combine the data sets together in the bar layer.-->
+	    <arg name="dataCombineMethod" default="Percentage">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--The 3D depth of the bar layer.-->
+	    <arg name="depth" default="0">
+	      <!--<map path=""/>-->
+	    </arg>
+	  </args>
+
+	  &LineLayer;
+	</xlLineStacked100>
+
+	&packPlotArea;

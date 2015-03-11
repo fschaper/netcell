@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup
+    Condition="'$(xsd2cppBeforeTargets)' == '' and '$(xsd2cppAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <xsd2cppBeforeTargets>Midl</xsd2cppBeforeTargets>
+    <xsd2cppAfterTargets>CustomBuild</xsd2cppAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <xsd2cppDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(xsd2cppDependsOn)</xsd2cppDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <xsd2cpp>
+      <xsdbinary>$(ProjectDir)..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <schemadir>$(ProjectDir)xml\schema</schemadir>
+      <sourcedir>$(ProjectDir)src</sourcedir>
+      <CommandLineTemplate>[xsdbinary] [inputs] [sourcedir] [settingsfile]</CommandLineTemplate>
+      <Outputs>[sourcedir]\%(Filename).cpp</Outputs>
+      <ExecutionDescription>code generator for xsd -&gt; cpp </ExecutionDescription>
+      <AdditionalDependencies>[inputs]</AdditionalDependencies>
+    </xsd2cpp>
+  </ItemDefinitionGroup>
+</Project>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{1f47d526-6edd-4d8d-9792-1a14867c30fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\engine">
+      <UniqueIdentifier>{ff3df4e0-6283-4c29-bbf1-dfb60a8ddee6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{85e826aa-ec6f-4cca-b9f7-fc5514d3792b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\schema">
+      <UniqueIdentifier>{bc3676a8-4619-4a5b-948b-814544e26ead}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="configuration">
+      <UniqueIdentifier>{325ca208-5b60-4e53-9a64-a7a1e8226c0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="configuration\implementation">
+      <UniqueIdentifier>{d30d9fef-4745-4733-991e-dd41b15a5faf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\metrics_engine.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\textmetric_exceptions.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\textmetric_ftmgr.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\textmetric_glyphcache.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\textmetric_impl.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\textmetric_intf.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\textmetric_routines.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\font_config_writers.cpp">
+      <Filter>configuration\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\font_config_parser.cpp">
+      <Filter>configuration\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\font_config_readers.cpp">
+      <Filter>configuration\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\font_config_serializer.cpp">
+      <Filter>configuration\implementation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="text_metrics.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\metrics_engine.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_constants.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_converter.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_enums.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_ftmgr.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_glyphcache.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_glyphs.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_impl.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_intf.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_routines.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_tables.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\textmetric_types.hpp">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\font_config_serializer.hpp">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\font_config.hpp">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\font_config_literals.hpp">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\font_config_parser.hpp">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\font_config_readers.hpp">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\font_config_writers.hpp">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\logging.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="font_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <xsd2cpp Include="..\xml\schema\font_config.xsd">
+      <Filter>xml\schema</Filter>
+    </xsd2cpp>
+  </ItemGroup>
+</Project>

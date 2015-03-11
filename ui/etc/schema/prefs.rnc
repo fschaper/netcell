@@ -1,0 +1,89 @@
+element prefs
+{
+	element general
+	{
+		element l10n { "en_US" | "de_DE" | "fr_FR" }? &
+		element theme { "default" | "blue" | "gray" | "slate" }? &
+		element updatecheck { "yes" | "no" }?
+	}? &
+
+	element studio
+	{
+		element panel
+		{
+			element visibility { "open" | "closed" }?
+		}? &
+
+		element default
+		{
+			element files
+			{
+				element group { text },
+				element hierarchy { text }?
+			}? &
+
+			element reports
+			{
+				element group { text },
+				(
+					element hierarchy { text }
+					|
+					(
+						element hierarchy { text },
+						element node { text },
+						element type { "spreadsheet" | "frameset" }?,
+						element path { text },
+						element var
+						{
+							element type { text },
+							element name { text },
+							element val { text }
+						}*
+					)
+				)?
+			}? &
+
+			element view { "icons" | "list" | "details" }?
+		}? &
+
+		element users
+		{
+			element layout { "horizontal" | "vertical" | "tabbed" }?
+		}?
+	}? &
+
+	element wss
+	{
+		element interface { "toolbar" | "ribbon" }? &
+
+		element designer
+		{
+			 element toolbar { "yes" | "no" }? &
+			 element formulabar { "yes" | "no" }? &
+			 element status { "yes" | "no" }?
+		}? &
+
+		element viewer
+		{
+			 element toolbar { "yes" | "no" }? &
+			 element status { "yes" | "no" }?
+		}?
+	}? &
+
+	element etl
+	{
+		empty
+	}? &
+
+	element palo
+	{
+		empty
+	}? &
+
+	element mypalo
+	{
+		element username { text },
+		element password { text }
+	}?
+
+}

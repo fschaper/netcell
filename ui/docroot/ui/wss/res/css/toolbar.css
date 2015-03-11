@@ -1,0 +1,164 @@
+/*
+ * @brief wss file
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Drazen Kljajic <drazen.kljajic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: toolbar.css 4196 2010-10-26 22:40:22Z predragm $
+ *
+ */
+
+/** sprite: tb-menu-sprite; sprite-image: url('/ui/wss/res/img/sprites/toolbar-sprite.png'); */
+
+.iconbgcolor {
+	background-image: url(/ui/wss/res/img/bar/ico_bgcolor.png) !important;
+	background-position: right !important;
+	width: 19px !important;
+}
+
+.icontextcolor {
+	background-image: url(/ui/wss/res/img/bar/ico_textcolor.png) !important;
+	background-position: right !important;
+	width: 18px !important;
+}
+
+
+/* ********************************* */
+/* *** ICONS FOR TOOLBAR BUTTONS *** */
+/* ********************************* */
+
+.icon_new_doc {
+	background-image: url(/ui/wss/res/img/menu/ico_new_document.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_open_doc {
+	background-image: url(/ui/wss/res/img/menu/ico_open_document.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_save_doc {
+	background-image: url(/ui/wss/res/img/menu/ico_save_document.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_undo {
+	background-image: url(/ui/wss/res/img/bar/ico_undo.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_redo {
+	background-image: url(/ui/wss/res/img/bar/ico_redo.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_copy {
+	background-image: url(/ui/wss/res/img/bar/ico_copy.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_cut {
+	background-image: url(/ui/wss/res/img/bar/ico_cut.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_paste {
+	background-image: url(/ui/wss/res/img/bar/ico_paste.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_format_painter {
+	background-image: url(/ui/wss/res/img/bar/ico_format_painter.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_font_bold {
+	background-image: url(/ui/wss/res/img/bar/ico_bold.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_font_italic {
+	background-image: url(/ui/wss/res/img/bar/ico_italic.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_font_fett {
+	background-image: url(/ui/wss/res/img/bar/ico_fett.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_font_kursiv {
+	background-image: url(/ui/wss/res/img/bar/ico_kursiv.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_font_gras {
+	background-image: url(/ui/wss/res/img/bar/ico_gras.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_font_italique {
+	background-image: url(/ui/wss/res/img/bar/ico_italique.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_font_underline {
+	background-image: url(/ui/wss/res/img/bar/ico_underline.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_align_left {
+	background-image: url(/ui/wss/res/img/bar/ico_align_left.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_align_center {
+	background-image: url(/ui/wss/res/img/bar/ico_align_center.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_align_right {
+	background-image: url(/ui/wss/res/img/bar/ico_align_right.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_merge_cells {
+	background-image: url(/ui/wss/res/img/bar/ico_merge_cells.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_unmerge_cells {
+	background-image: url(/ui/wss/res/img/bar/ico_unmerge_cells.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_insert_chart {
+	background-image: url(/ui/wss/res/img/menu/ico_chart.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_lock {
+	background-image: url(/ui/wss/res/img/bar/ico_lock.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_vert_dynarange {
+	background-image: url(/ui/wss/res/img/bar/ico_hb_vert.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_hor_dynarange {
+	background-image: url(/ui/wss/res/img/bar/ico_hb_horiz.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_designer_preview {
+	background-image: url(/ui/wss/res/img/bar/ico_quick_view.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_user_mode {
+	background-image: url(/ui/wss/res/img/bar/ico_user_mode.png) !important; /** sprite-ref: tb-menu-sprite; */
+}

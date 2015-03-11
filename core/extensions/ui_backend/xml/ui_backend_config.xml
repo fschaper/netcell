@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui_backend_config xmlns="http://www.jedox.com/jedox/wss" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <diff gc_interval="1800" />
+  <network>
+	<listen>
+	  <tcp address="127.0.0.1" port="8193" />
+	</listen>
+  </network>
+</ui_backend_config>

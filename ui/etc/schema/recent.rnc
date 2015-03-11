@@ -1,0 +1,33 @@
+element recent
+{
+	attribute max { xsd:unsignedByte },
+
+	element item
+	{
+		(
+			element context { "files" | "reports" },
+			element type { "spreadsheet" | "static" | "hyperlink" | "urlplugin" | "frameset" },
+			element subtype { text }?,
+			element location
+			{
+				element group { text },
+				element hierarchy { text },
+				element node { text },
+				element path { text },
+				element var
+				{
+					element type { text },
+					element name { text },
+					element val { text }
+				}*
+			}
+		)
+		|
+		(
+			element context { "etl" },
+			element type { "job" },
+			element location { text }
+		)
+	}*
+
+}

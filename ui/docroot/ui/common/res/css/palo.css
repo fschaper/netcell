@@ -1,0 +1,259 @@
+/*
+ * @brief wss file
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Mladen Todorovic <mladen.todorovic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: palo.css 4636 2011-02-15 17:02:44Z predragm $
+ *
+ */
+
+/** sprite: palo-sprite; sprite-image: url('/ui/wss/res/img/sprites/palo-sprite.png'); */
+/* Data View */
+.row-modeller
+{
+	cursor: pointer;
+	font-size: 11px;
+	line-height: 18px;
+}
+
+.row-modeller img
+{
+	vertical-align: middle;
+}
+
+.row-modeller span
+{
+	vertical-align: middle;
+}
+
+.modellerDataViewSelect .x-view-selected
+{
+	background: #D9E8FB;
+}
+
+/* Button Styles */
+.modellerButtonWithMargin .x-btn button {
+	width: 20px;
+	}
+
+.subsetEditorBtns .x-btn button {
+width: 50px;
+}
+
+.modellerButtonWithMargin {
+
+	margin: 2px;
+}
+
+.modellerImageButton
+{
+	cursor: pointer;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.seButton1 button
+{
+	width: 90px !important;
+}
+
+.largeLoadingImage
+{
+	background: transparent url(/ui/common/res/img/loading.gif) no-repeat top left;
+}
+
+/* fix for plain option in Ext.TabPanel */
+.x-border-layout-ct .x-tab-panel
+{
+	background: transparent;
+}
+
+/* fix for spinner */
+.spinner-panel-scroll-hide .x-form-item
+{
+	overflow: hidden !important;
+}
+
+/* fix for padding of radio and checkbox buttons for Subset Editor */
+.palo-sse-dailog .x-form-check-wrap, .x-form-radio-wrap
+{
+	padding: 0px;
+}
+
+
+/* *** BUTTON ICONS *** */
+
+.icon_palo_cube {
+	background-image: url(/ui/common/res/img/palo/Cube1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.icon_palo_table {
+	background-image: url(/ui/common/res/img/palo/Table1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.icon_palo_user {
+	background-image: url(/ui/common/res/img/palo/User1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_plus {
+	background-image: url(/ui/common/res/img/palo/Plus1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_minus {
+	background-image: url(/ui/common/res/img/palo/Minus1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_expandall {
+	background-image: url(/ui/common/res/img/palo/ExpandAll1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_colapseall {
+	background-image: url(/ui/common/res/img/palo/CollapseAll1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_up {
+	background-image: url(/ui/common/res/img/palo/Up1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_right {
+	background-image: url(/ui/common/res/img/palo/Right1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_left {
+	background-image: url(/ui/common/res/img/palo/Left1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_down {
+	background-image: url(/ui/common/res/img/palo/Down1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_showHR {
+	background-image: url(/ui/common/res/img/palo/ShowHierarchy1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_showHRflat {
+	background-image: url(/ui/common/res/img/palo/ShowFlat1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_toup {
+	background-image: url(/ui/studio/res/img/rt/toUp1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_todown {
+	background-image: url(/ui/studio/res/img/rt/toDown1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_cl_create {
+	background-image: url(/ui/common/res/img/palo/Create1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_cl_edit {
+	background-image: url(/ui/common/res/img/palo/Edit1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_cl_delete {
+	background-image: url(/ui/common/res/img/palo/Delete1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_turnoff {
+	background-image: url(/ui/common/res/img/palo/TurnOFF1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_turnon {
+	background-image: url(/ui/common/res/img/palo/TurnON1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_db {
+	background-image: url(/ui/common/res/img/palo/Database1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_newcube {
+	background-image: url(/ui/common/res/img/palo/CubeNew1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_deletecube {
+	background-image: url(/ui/common/res/img/palo/CubeDelete1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_fxcube {
+	background-image: url(/ui/common/res/img/palo/CubeFx1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_C {
+	background-image: url(/ui/common/res/img/palo/C1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_OK {
+	background-image: url(/ui/common/res/img/palo/OK1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_cancel {
+	background-image: url(/ui/common/res/img/palo/Cancel1.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_sort_time {
+	background-image: url(/ui/common/res/img/palo/sortTime.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_sort_az {
+	background-image: url(/ui/common/res/img/palo/sortAZ.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_sort_za {
+	background-image: url(/ui/common/res/img/palo/sortZA.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_icon_togl_syscubes {
+	background-image: url(/ui/common/res/img/palo/toggleSystemCubes.png) !important; /** sprite-ref: palo-sprite; */
+}
+
+.palo_selelem_string {
+	background-image: url(/ui/common/res/img/palo/string.png) !important; /** sprite-ref: palo-sprite; */
+	width: 16px; height: 16px;
+}
+
+.palo_selelem_numeric {
+	background-image: url(/ui/common/res/img/palo/numeric.png) !important; /** sprite-ref: palo-sprite; */
+	width: 16px; height: 16px;
+}
+
+.palo_selelem_consolidated {
+	background-image: url(/ui/common/res/img/palo/consolidated.png) !important; /** sprite-ref: palo-sprite; */
+	width: 16px; height: 16px;
+}
+
+.palo_selelem_subset {
+	background-image: url(/ui/common/res/img/palo/subset.png) !important; /** sprite-ref: palo-sprite; */
+	width: 16px; height: 16px;
+}
+
+/* *** *** *** *** *** *** */

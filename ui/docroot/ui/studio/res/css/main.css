@@ -1,0 +1,1386 @@
+/*
+ * @brief css
+ *
+ * @file main.css
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Drazen Kljajic <drazen.kljajic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: main.css 5113 2011-07-14 13:55:46Z mladent $
+ *
+ */
+/** sprite: studio-sprite; sprite-image: url('/ui/studio/res/img/sprites/studio-sprite.png'); */
+html, body {
+	font: normal 12px tahoma, arial, verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+}
+
+.ext-el-mask {
+	filter: alpha(opacity=0);
+	-moz-opacity: 0.0;
+	opacity: 0;
+}
+
+/*
+ Context menu fix for Mozila 2.0
+*/
+.x-menu-sep {
+	height: 1px;
+}
+
+.x-tree-node-icon {
+	height: 16px !important;
+}
+
+/*
+Main Menu CSS
+*/
+
+
+.w_resources {
+	background-image: url(/ui/studio/res/img/welcome/resources.png) !important; /** sprite-ref: studio-sprite; */
+	width: 104px; height: 144px;
+	cursor: pointer;
+}
+
+.w_reports {
+	background-image: url(/ui/studio/res/img/welcome/reports.png) !important; /** sprite-ref: studio-sprite; */
+	width: 104px; height: 144px;
+	cursor: pointer;
+}
+
+.w_users {
+	background-image: url(/ui/studio/res/img/welcome/usersgroups.png) !important; /** sprite-ref: studio-sprite; */
+	width: 104px; height: 144px;
+	cursor: pointer;
+}
+
+.w_scheduler {
+	background-image: url(/ui/studio/res/img/welcome/scheduler.png) !important; /** sprite-ref: studio-sprite; */
+	width: 104px; height: 144px;
+	cursor: pointer;
+}
+
+.w_olapman {
+	background-image: url(/ui/studio/res/img/welcome/palo.png) !important; /** sprite-ref: studio-sprite; */
+	width: 104px; height: 144px;
+	cursor: pointer;
+}
+
+.w_etlman{
+	background-image: url(/ui/studio/res/img/welcome/etl.png) !important; /** sprite-ref: studio-sprite; */
+	width: 104px; height: 144px;
+	cursor: pointer;
+}
+
+.w_connections {
+	background-image: url(/ui/studio/res/img/welcome/connections.png) !important; /** sprite-ref: studio-sprite; */
+	width: 104px; height: 144px;
+	cursor: pointer;
+}
+
+.w_clear_recent_list {
+	background-image: url(/ui/studio/res/img/welcome/clear_recent_list.png) !important; /** sprite-ref: studio-sprite; */
+	width: 16px; height: 16px;
+	cursor: pointer;
+}
+
+
+/*
+	Welcome panel
+*/
+
+#recent-list-view {
+	margin-right: 8px;
+}
+
+#recent-list-view .thumb {
+	padding: 0px;
+
+}
+
+#recent-list-view span {
+	padding: 0px;
+	border:1px solid #FFFFFF;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+#recent-list-view .thumb img {
+	height: 16px;
+	width: 16px;
+	padding-top: 0px;
+	vertical-align:text-bottom;
+}
+
+#recent-list-view .thumb-wrap {
+	float: left;
+	margin: 1px 0px 1px 1px;
+	margin-right: 0;
+	padding: 0px 0px 0px 2px;
+	width:auto;
+	cursor: default;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+
+#recent-list-view .br {
+	margin:3px;
+	padding:1px;
+}
+
+#recent-list-view .x-view-over {
+	padding: 0px 0px 0px 2px;
+	cursor: pointer;
+	background: #eff5fb; /*url(/ui/studio/res/img/wt/selected.gif) no-repeat right bottom;*/
+}
+
+
+#recent-list-view .x-view-selected span {
+	background: #eff5fb; /*url(/ui/studio/res/img/wt/selected.gif) no-repeat right bottom;*/
+	border:1px solid #99bbe8;
+}
+
+
+#recent-list-view .x-view-selected .thumb {
+background: transparent;
+}
+
+
+tr .x-btn-center em, .extmenubaritem .x-btn-with-menu .x-btn-center em {
+	background: transparent none repeat scroll 0%;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.extmenubar {
+    border-width: 0px 0;
+    border-color: #666;
+    background-color: #B8D1F8;
+	background: #B8D1F8;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 20px;
+	border-bottom: solid 1px #92ADD3;
+}
+
+
+/*
+Main Toolbar CSS
+*/
+
+.exttoolbar {
+
+	background: transparent none repeat scroll 0%;
+	background: #B8D1F8;
+	padding: 2px 2px 2px 2px;
+}
+
+.exttoolbar .x-form-text {
+	color: #15428B;
+}
+
+
+
+/*
+ Toolbar CSS
+
+ Home   Refresh   |   Copy   Cut   Paste   |   Options   Help   Close
+
+*/
+
+
+.home-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_home.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.home-icon-users {
+    background-image:url(/ui/studio/res/img/icons/ico_home_users.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.refresh-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_refresh.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.copy-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_copy.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.cut-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_cut.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.paste-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_paste.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.properties-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_properties.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.mark-workbook-icon {
+	 background-image:url(/ui/studio/res/img/wt/mark_workbook.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.marked-workbook-icon {
+	 background-image:url(/ui/studio/res/img/wt/marked_workbook.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.help-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_help.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.close-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_close.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.export-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_globe.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.export-bundle {
+    background-image:url(/ui/studio/res/img/icons/ico_globe.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.import-bundle {
+    background-image:url(/ui/studio/res/img/wt/import-file.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+/* Navigation panel - bottom bar */
+
+.logout-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_logout.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.user-preferences-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_preferences.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.help-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_help.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+/*
+Header CSS
+*/
+
+#header {
+    background: #7F99BE url(/ui/studio/res/img/layout-browser-hd-bg.gif) repeat-x center;
+}
+
+#header h1 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 10px;
+}
+
+
+
+/*
+ Tree panel moje CSS //popraviti prvo .x-panel-noborder .x-panel-header-noborder
+*/
+
+
+
+
+.x-panel-noborder .x-panel-header-noborder {
+	border-bottom:0px solid #99BBE8;
+	border-width:1px;
+}
+
+
+
+
+
+#ps-ug-tree .user-icon {
+    background-image:url(/ui/studio/res/img/fam/user.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+#ps-ug-tree .group-icon {
+    background-image:url(/ui/studio/res/img/fam/group.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.group-icon {
+    background-image:url(/ui/studio/res/img/fam/group.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+#ps-ug-tree .role-icon {
+    background-image:url(/ui/studio/res/img/fam/role.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+
+/*
+ Main panel za User and groups popraviti za klasu
+*/
+
+
+
+#ps-main-panel .x-tab-panel-header-plain .x-tab-strip-top {
+	background:none;
+}
+
+
+
+
+/*
+#ug-panel .x-tab-panel-header-plain .x-tab-strip-top {
+	background:#DFE8F6 url(/ui/lib/ext/resources/images/default/tabs/tab-strip-bg.gif) repeat-x scroll center bottom !important;
+}
+
+*/
+
+.prefs-general {
+	background-image: url(/ui/studio/res/img/prefs_general_icon.png); /** sprite-ref: studio-sprite; */
+}
+
+.prefs-wss {
+	background-image: url(/ui/studio/res/img/prefs_wss_icon.png); /** sprite-ref: studio-sprite; */
+}
+
+.prefs-palo-online {
+	background-image: url(/ui/studio/res/img/prefs_paloonline_icon.png); /** sprite-ref: studio-sprite; */
+}
+
+.add-user-icon {
+    background-image: url(/ui/studio/res/img/fam/user_add.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.delete-user-icon {
+    background-image:url(/ui/studio/res/img/fam/user_delete.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.new-tab-icon {
+    background-image:url(/ui/studio/res/img/new_tab.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.open-wb-icon {
+	background-image:url(/ui/studio/res/img/wt/workbook.png) !important; /** sprite-ref: studio-sprite; */
+	}
+
+.open-folder-icon {
+	background-image:url(/ui/studio/res/img/wt/folder_open.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.preview-bottom-icon {
+    background-image: url(/ui/studio/res/img/preview-bottom.png) !important; /** sprite-ref: studio-sprite; */
+}
+.preview-right-icon {
+    background-image: url(/ui/studio/res/img/preview-right.png) !important; /** sprite-ref: studio-sprite; */
+}
+.preview-hide-icon {
+    background-image: url(/ui/studio/res/img/preview-hide.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.tabs-icon {
+    background-image: url(/ui/studio/res/img/tabs.png ) !important; /** sprite-ref: studio-sprite; */
+}
+
+.add-group-icon {
+    background-image: url(/ui/studio/res/img/fam/group_add.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.delete-group-icon {
+    background-image:url(/ui/studio/res/img/fam/group_delete.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.add-role-icon {
+    background-image: url(/ui/studio/res/img/fam/role_add.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.delete-role-icon {
+    background-image:url(/ui/studio/res/img/fam/role_delete.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+/*
+ User panel, Group panel
+*/
+
+.split-line {
+	overflow:hidden;
+	background:transparent url(/ui/studio/res/img/border.png) repeat-x;
+}
+
+/*
+
+#ug-preview-panel .x-tab-panel-header-plain .x-tab-strip-top {
+	background:none !important;
+}
+
+
+#ug-add-user-panel .x-tab-panel-header-plain .x-tab-strip-top {
+	background:none !important;
+}
+
+#ug-add-group-panel .x-tab-panel-header-plain .x-tab-strip-top {
+	background:none !important;
+}
+
+*/
+
+
+
+
+/*
+ Preview panel
+*/
+#ug-preview-panel .preview-properties-panel {
+	font-size:11px;
+}
+
+.preview-properties-panel {
+	font-size:11px;
+}
+
+/*
+Combo box
+*/
+.x-form-field {
+	font-size:11px;
+}
+
+
+
+
+/*
+ Workbook and Templates panel
+*/
+.new-icon {
+    background-image:url(/ui/studio/res/img/new.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.add-general {
+    background-image:url(/ui/studio/res/img/add.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.rename-icon {
+    background-image:url(/ui/studio/res/img/rename.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.refresh-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_refresh.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.info-icon {
+    background-image:url(/ui/studio/res/img/icons/info.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.clear-icon {
+    background-image:url(/ui/studio/res/img/icons/clear.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.new-folder-icon {
+    background-image:url(/ui/studio/res/img/wt/folder_add.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+.new-dyna-folder-icon {
+    background-image:url(/ui/studio/res/img/wt/dyna_folder_add.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.new-document-icon {
+    background-image:url(/ui/studio/res/img/wt/new_document.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.new-workbook-icon {
+    background-image:url(/ui/studio/res/img/wt/new_workbook.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.new-spreadsheet-icon {
+    background-image:url(/ui/studio/res/img/wt/ico_new_spreadsheet_16.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.new-frameset-icon {
+    background-image:url(/ui/studio/res/img/wt/ico_new_frameset_16.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+.delete-icon {
+    background-image:url(/ui/studio/res/img/wt/delete.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.my-workbook-documents-icon {
+    background-image:url(/ui/studio/res/img/wt/my_workbook_documents.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+.quickview-icon {
+    background-image:url(/ui/studio/res/img/rt/ico_quick_view.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+/*
+.x-tree-node-leaf .x-tree-node-icon {
+	background-image:url(/ui/studio/res/img/wt/workbook.png) !important;
+}
+*/
+
+.folder-up-icon {
+	background-image:url(/ui/studio/res/img/wt/folder_up.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.import-file {
+	background-image:url(/ui/studio/res/img/wt/import-file.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.tagged-edit-icon {
+	background-image:url(/ui/studio/res/img/wt/tagged_edit.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.x-tree-node-expanded .w3s_folder {
+	background-image:url(/ui/studio/res/img/wt/folder_open.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+/* w3s_rfolder_s */
+
+.x-tree-node img.folder, .x-tree-node-collapsed img.folder{
+    background-image: url(/ui/studio/res/img/wt/folder.png); /** sprite-ref: studio-sprite; */
+}
+
+.x-tree-node-expanded img.folder {
+    background-image: url(/ui/studio/res/img/wt/folder_open.png); /** sprite-ref: studio-sprite; */
+}
+
+.x-tree-node img.w3s_rfolder_s, .x-tree-node-collapsed img.w3s_rfolder_s{
+    background-image: url(/ui/studio/res/img/wt/folder.png); /** sprite-ref: studio-sprite; */
+}
+
+.x-tree-node-expanded img.w3s_rfolder_s {
+    background-image: url(/ui/studio/res/img/wt/folder_open.png); /** sprite-ref: studio-sprite; */
+}
+
+/* **************************************************************** */
+
+
+
+
+.w3s_template_s {
+	background-image:url(/ui/studio/res/img/wt/workbook.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_hierarchy {
+	background-image:url(/ui/studio/res/img/wt/hierarchy.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_hierarchy32 {
+	background-image:url(/ui/studio/res/img/wt/hierarchy_32.png) !important; /** sprite-ref: studio-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_group {
+	background-image:url(/ui/studio/res/img/wt/group.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_group32 {
+	background-image:url(/ui/studio/res/img/wt/group_32.png) !important; /** sprite-ref: studio-sprite; */
+	width: 32px; height: 32px;
+}
+
+.new-group-icon {
+    background-image:url(/ui/studio/res/img/wt/group_add.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.tlb-menu-icon {
+    background-image:url(/ui/studio/res/img/wt/gear_icon.png) !important; /** sprite-ref: studio-sprite; */
+}
+/*
+.x-tree-node-leaf {
+	background-image:url(/ui/studio/res/img/wt/workbook.png) !important;
+}
+
+*/
+
+.view-menu-icon {
+    background-image:url(/ui/studio/res/img/wt/view.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.view-details-icon {
+    background-image:url(/ui/studio/res/img/wt/view_details.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.view-thumbnails-icon {
+    background-image:url(/ui/studio/res/img/wt/view_thumbnails.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.view-list-icon {
+    background-image:url(/ui/studio/res/img/wt/view_list.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+.view-menu .x-menu-item-checked .x-menu-group-item {
+	background:#FFE7AE url(/ui/wss/res/img/dialog/item_checked_bcg.png) repeat-x scroll left bottom;
+	border:1px solid #AACCF6;
+	padding:3px 21px 3px 27px;
+}
+
+
+#sFiles_mainList_dv {
+	margin-left: 2px;
+}
+
+#sFiles_mainList_dv .thumb {
+	padding: 0px;
+
+}
+
+#sFiles_mainList_dv span {
+	padding: 1px;
+	border:1px solid #FFFFFF;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+#sFiles_mainList_dv .thumb img {
+	height: 16px;
+	width: 16px;
+	padding-top: 0px;
+	vertical-align:text-bottom;
+}
+
+#sFiles_mainList_dv .thumb-wrap {
+	float: left;
+	margin: 1px 0px 1px 1px;
+	margin-right: 0;
+	padding: 0px 0px 0px 2px;
+	width: 95%;
+	cursor: default;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+#sFiles_mainList_dv .br {
+	margin:3px;
+	padding:1px;
+}
+
+#sFiles_mainList_dv .x-view-over {
+	padding: 0px 0px 0px 2px;
+	cursor: default;
+}
+
+
+#sFiles_mainList_dv .x-view-selected span {
+	background: #eff5fb url(/ui/studio/res/img/wt/selected.gif) no-repeat right bottom;
+	border:1px solid #99bbe8;
+}
+
+
+#sFiles_mainList_dv .x-view-selected .thumb {
+background: transparent;
+}
+
+
+
+#main-thumbnails-view .x-panel-body{
+	background: white;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+#main-thumbnails-view .thumb{
+/*
+	background: #dddddd;
+*/
+	padding: 3px;
+	text-align:center;
+	margin-left: 5px;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+#main-thumbnails-view .thumb img{
+	height: 32px;
+	width: 32px;
+}
+#main-thumbnails-view .thumb-wrap{
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 5px;
+	width: 50px;
+	height:70px;
+}
+#main-thumbnails-view .thumb-wrap span{
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+#main-thumbnails-view .x-view-over{
+    border:1px solid #dddddd;
+    background: #efefef url(/ui/lib/ext/resources/images/default/grid/row-over.gif) repeat-x left top;
+	padding: 4px;
+}
+
+#main-thumbnails-view .x-view-selected{
+	background: #eff5fb url(/ui/studio/res/img/wt/selected.gif) no-repeat right bottom;
+	border:1px solid #99bbe8;
+	padding: 4px;
+}
+
+#main-thumbnails-view .x-view-selected .thumb{
+	background:transparent;
+}
+
+/*
+#main-thumbnails-view .x-view-selected span {
+	background: #eff5fb url(/ui/studio/res/img/wt/selected.gif) no-repeat right bottom;
+	border:1px solid #99bbe8;
+}
+*/
+
+#main-thumbnails-view .loading-indicator {
+	font-size:11px;
+	background-image:url(/ui/lib/ext/resources/images/default/grid/loading.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:20px;
+	margin:10px;
+}
+
+
+#main-details-view .x-grid3-row {
+	border-color:#FFFFFF !important;
+	height:20px;
+}
+
+#main-details-view .x-grid3-col {
+    border-right: 0px solid;
+    border-bottom: 0px solid;
+}
+
+/*
+.x-grid3-cell-inner, .x-grid3-hd-inner {
+	background:transparent url(/ui/studio/res/img/wt/workbook.png) no-repeat scroll 0 2px;
+	padding-left:20px;
+	overflow:hidden;
+
+	white-space:nowrap;
+}
+*/
+
+
+.topic {
+	/*background:transparent url(/ui/studio/res/img/wt/workbook.png) no-repeat scroll 0 2px;*/
+	padding-left:2px;
+	height:16px;
+	vertical-align:text-bottom;
+}
+
+.topic img {
+	vertical-align:text-bottom;
+}
+
+.workbook {
+	 background-image:url(/ui/studio/res/img/wt/workbook.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+/*
+ Node properties and Access List
+*/
+
+
+#group-list-view {
+	margin-right: 8px;
+}
+
+#group-list-view .thumb {
+	padding: 0px;
+}
+
+#group-list-view .thumb img {
+	height: 16px;
+	width: 16px;
+}
+
+#group-list-view .thumb-wrap {
+	float: left;
+	margin: 1px 0px 1px 1px;
+	margin-right: 0;
+	padding: 0px 0px 0px 2px;
+	width: 93%;
+	cursor: default;
+}
+
+#group-list-view .x-view-over {
+	padding: 0px 0px 0px 2px;
+	cursor: default;
+}
+
+#group-list-view .x-view-selected {
+	background: #D9E8FB ;
+	padding: 0px 0px 0px 2px;
+}
+
+#group-list-view .x-view-selected .thumb {
+	background: transparent;
+}
+
+
+
+/*
+ User feedback
+*/
+
+.topmsg .x-box-mc {
+	font-size: 14px;
+}
+
+#topmsg {
+	left: 35%;
+	position: absolute;
+	top: 10px;
+	width: 250px;
+	z-index: 20000;
+}
+
+
+/*
+ Split line for UGPanel
+*/
+
+/*
+#ps-content-panel .x-layout-split {
+	background-color:#FFFFFF;
+}
+*/
+
+
+/*
+ Connections panel
+*/
+
+.connection-icon {
+    background-image:url(/ui/studio/res/img/c/connection.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.palo-connection-icon {
+    background-image:url(/ui/studio/res/img/c/palo_conn.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.odbc-connection-icon {
+    background-image:url(/ui/studio/res/img/c/odbc_conn.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.palo-modeller-icon {
+	background-image: url(/ui/studio/res/img/icons/ico_palo_modeller.png); /** sprite-ref: studio-sprite; */
+}
+
+.palo-subset-icon {
+	background-image: url(/ui/studio/res/img/icons/ico_palo_subset_admin.png); /** sprite-ref: studio-sprite; */
+}
+
+.palo-dbadmin-icon {
+	background-image: url(/ui/studio/res/img/icons/ico_palo_db_admin.png); /** sprite-ref: studio-sprite; */
+}
+
+/*	############################
+ * 	Tree - icons for elements
+ * 	############################
+ */
+.reports-tree .x-tree-node-collapsed .x-tree-node-icon {
+	background-image:url(/ui/studio/res/img/wt/folder.png); /** sprite-ref: studio-sprite; */
+}
+
+.reports-tree .x-tree-node-expanded .x-tree-node-icon {
+	background-image:url(/ui/studio/res/img/wt/folder_open.png); /** sprite-ref: studio-sprite; */
+}
+
+.w3s_rfolder_d {
+	background-image:url(/ui/studio/res/img/rt/dyna-folder.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_var_folder {
+	background-image:url(/ui/studio/res/img/rt/var_folder.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_template_d {
+	background-image:url(/ui/studio/res/img/rt/dyna-workbook.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_rframeset {
+	background-image:url(/ui/studio/res/img/wt/frameset.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_rframeset_s {
+	background-image:url(/ui/studio/res/img/wt/frameset.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_rframeset_d {
+	background-image:url(/ui/studio/res/img/wt/frameset_d.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_frameset32 {
+	 background-image:url(/ui/studio/res/img/wt/frameset_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+.w3s_rframeset32 {
+	 background-image:url(/ui/studio/res/img/wt/frameset_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+.w3s_variable {
+	background-image:url(/ui/studio/res/img/rt/variable.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_rfolder_c {
+	background-image:url(/ui/studio/res/img/rt/child-folder.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_database {
+	background-image:url(/ui/studio/res/img/rt/database.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_subset {
+	background-image:url(/ui/common/res/img/palo/subset.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.x-tree-node-expanded .w3s_rfolder_d {
+	background-image:url(/ui/studio/res/img/rt/dyna-folder_open.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.x-tree-node-expanded .w3s_var_folder {
+	background-image:url(/ui/studio/res/img/rt/var_folder_open.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.x-tree-node-expanded .w3s_rfolder_c {
+	background-image:url(/ui/studio/res/img/rt/child-folder_open.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.toTopBTN {
+	background-image:url(/ui/studio/res/img/rt/toUp1.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.toUpBTN {
+	background-image:url(/ui/studio/res/img/rt/Up1.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.toDownBTN {
+	background-image:url(/ui/studio/res/img/rt/Down1.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.toBottomBTN {
+	background-image:url(/ui/studio/res/img/rt/toDown1.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+/*
+ Connection panel combo box rendering problem - WEBKIT browsers
+*/
+
+.ext-strict .ext-webkit .x-small-editor .x-form-text {
+    height: 10px !important;
+}
+
+.ext-webkit .x-form-field-wrap .x-form-trigger{
+    position:static;
+    top:auto;
+    vertical-align:top;
+}
+
+
+/* List Wizard */
+
+.list-selector
+{
+	cursor: pointer;
+	line-height: 18px;
+}
+
+.wiz-list .x-view-over {
+	background: #EFB66B;
+}
+
+.wiz-list .x-view-selected {
+	background: #D9E8FB;
+}
+
+/* template mapping grid
+ *
+ */
+
+ .DVSelector
+{
+	cursor: pointer;
+	font-size: 11px;
+	line-height: 18px;
+	padding-left: 5px;
+}
+
+
+.listDataViewSelect .x-view-selected {
+	background: #D9E8FB;
+	margin: 0px;
+}
+
+.listDataViewSelect .x-view-over {
+	background: #D9E8FB;
+}
+
+.x-form-field-wrap .std-trigger-button {
+    background-image:url(/ui/studio/res/img/rt/std-trigger-button.png); /** sprite-ref: studio-sprite; */
+    cursor:pointer;
+}
+
+
+.x-btn td.x-btn-left, .x-btn td.x-btn-right {
+	padding: 0;
+	font-size: 1px;
+	line-height: 1px;
+	}
+
+
+/*
+.x-btn td.x-btn-center {
+	padding:0 5px;
+	vertical-align: middle;
+	}
+*/
+
+
+.tplMap-Grid .x-grid3-row td {
+	line-height: 20px;
+}
+
+.tplGrid-editorField {
+	width: 150px;
+}
+
+/* var mapping */
+.mapping-grid-mapped {
+	background-color: #FFCC33 !important;
+}
+
+.varMappingCombo .x-menu-floating{
+	border-color: #98C0F4;
+	}
+
+.varMappingCombo .x-menu-list {
+	padding: 0px;
+}
+
+.varMappingCombo .x-menu-list-item {
+	padding: 0px;
+}
+
+/* Workaround for Subset in Variable Mapping */
+#palo_subset_s_panel .x-panel-body {background:white;border:1px solid #99BBE8;}
+#palo_subset_s_panel .x-panel-noborder .x-panel-body-noborder {border-width:0;}
+
+/* IMPORT DIALOG */
+.x-form-file-wrap {
+    position: relative;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file {
+	position: absolute;
+	right: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file-btn {
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+.x-form-file-wrap .x-form-file-text {
+color:#777777;
+left:0;
+position:absolute;
+z-index:3;
+}
+
+/*
+	Properties Dlg
+*/
+
+.mail-link-icon {
+	background-image:url(/ui/studio/res/img/mail_link_ico.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.ext-warning-icon {
+	background-image: url(/ui/lib/ext/resources/images/default/window/icon-warning.gif) !important; /** sprite-ref: studio-sprite; */
+}
+
+.remove-item-dlg-label {
+	font-size:12px;
+}
+
+#remove-item-dlg .x-window-header {
+	font-size:12px;
+}
+
+
+
+#studio-files-properties-dlg .x-toolbar {
+	background:none;
+	border-color:none;
+}
+
+#studio-files-properties-dlg .x-form-item {
+	font-size:11px;
+}
+
+#studio-files-properties-dlg .custom-title-fieldset {
+	overflow:hidden;
+	/*
+	border:1px solid #B5B8C8;
+	border-left:0px none;
+	border-bottom:0px none;
+	border-right:0px none;
+	*/
+	border:0px none;
+	display:block;
+	margin-bottom:0px;
+	padding:0;
+	background:transparent;
+}
+
+/*
+	Options.js
+*/
+
+#options-menu-navigation {
+	margin-right: 8px;
+	background-color: #FFFFFF;
+}
+
+#options-menu-navigation .thumb {
+	font-size: 8pt;
+		/*
+	color: #15428B;
+	*/
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+#options-menu-navigation .thumb img {
+	height: 27px;
+	width: 29px;
+	vertical-align:text-bottom;
+}
+
+#options-menu-navigation .thumb-wrap {
+	float: left;
+	margin: 1px 1px 1px 1px;
+	margin-right: 0;
+	padding: 2px 4px 2px 2px;
+	width: 95%;
+	cursor: pointer;
+}
+
+#options-menu-navigation .x-view-over {
+	border: 1px solid #9EBAE1;
+	background:#F9F8F3;
+	padding: 1px 1px 1px 1px;
+	cursor: pointer;
+}
+
+#options-menu-navigation .x-view-selected {
+	background: #eff5fb url(/ui/wss/res/img/dialog/open/row_selected.png) repeat-x left top;
+	border: 1px solid #A78E66;
+	padding: 1px 1px 1px 1px;
+}
+
+#options-menu-navigation .x-view-selected .thumb {
+	background: transparent;
+}
+
+
+#charttypespanel .thumb {
+	padding: 0px;
+}
+
+#charttypespanel .thumb img {
+	height: 46px;
+	width: 46px;
+}
+
+#charttypespanel .thumb-wrap {
+	float: left;
+	margin: 1px 0px 1px 1px;
+	margin-right: 0;
+	padding: 4px 4px 2px;
+}
+
+#charttypespanel .x-view-over {
+    border: 1px solid #dddddd;
+    background: #efefef url(/ui/wss/res/img/dialog/chart/row-over.png) repeat-x left top;
+	padding: 3px 3px 1px;
+}
+
+#charttypespanel .x-view-selected {
+	background: #eff5fb url(/ui/wss/res/img/dialog/chart/item_selected2.png) repeat-x left top;
+	border: 1px solid #9F7559;
+	padding: 3px 3px 1px;
+}
+
+
+#charttypespanel .x-view-selected .thumb {
+	background: transparent;
+}
+
+.charttypes {
+	background: #D0DEF0;
+	padding: 2px 0px 2px 7px;
+	font-weight: bold;
+	color: #15428B;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 9pt;
+	border-bottom: 1px solid #DDDDDD;
+	margin: 1px;
+}
+
+.options-tab-panel {
+	background: transparent;
+	border: 1px solid #99BBE8;
+}
+
+
+.preferences-title {
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+/* Ext.Msg textarea && inputfield override */
+
+.msgbox-hide-promt{
+	display: none !important;
+}
+
+
+/*
+ Licence Dialog
+*/
+
+.licence-header-title {
+	font-size: 18pt;
+	font-style: bold;
+	text-align: right;
+	color:white;
+}
+
+.licence-header-icon {
+	background-image:url(/ui/studio/res/img/licence.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.licence-title {
+	font-size: 14pt;
+	font-style: bold;
+}
+
+
+/*
+	Frameset Dialog
+*/
+
+.frameset_split_horizontal {
+	background-image: url(/ui/studio/res/img/wt/frameset_split_horizontal_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.frameset_split_vertical {
+	background-image: url(/ui/studio/res/img/wt/frameset_split_vertical_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.frameset_split_custom {
+	background-image: url(/ui/studio/res/img/wt/frameset_split_custom_ico.png) !important; /** sprite-ref: wss-dlg-sprite; */
+}
+
+.frameset_wh_bcg {
+	background-image: url(/ui/studio/res/img/wt/frameset_bcg.png);  /** sprite-ref: wss-dlg-sprite; */
+	background-repeat:no-repeat;
+}
+
+.frameset-split-direction .thumb-wrap {
+	float: left;
+	padding: 2px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.frameset-split-direction .x-combo-selected {
+	border: 0 none !important;
+}
+
+/*
+	BundleWizard Dialog
+ */
+
+
+.no_icon_node {
+	background-image:none !important;
+	height: 0px !important;
+	width: 2px !important;
+}
+
+.segment_node {
+    /*background: url(/ui/lib/ext/resources/images/default/panel/white-top-bottom.gif) repeat-x scroll 0 0 #EEEEEE;*/
+	background: url(/ui/lib/ext/resources/images/default/grid/grid3-hrow.gif) repeat-x scroll 0 0 #EEEEEE;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #DDDDDD;
+    margin-top: 1px;
+    padding-bottom: 1px;
+    padding-top: 2px;
+}
+
+
+#bundle-wizard-log-list .x-grid3-row {
+	border-color:#FFFFFF !important;
+	height:16px;
+}
+
+#bundle-wizard-log-list .x-grid3-col {
+    border-right: 0px solid;
+    border-bottom: 0px solid;
+}
+
+/* Scheduler */
+.enabled-grid-bool-icon {
+	 background-image:url(/ui/studio/res/img/wt/mark_workbook.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.disabled-grid-bool-icon {
+	 background-image:url(/ui/studio/res/img/wt/delete.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.sch-run-task-button {
+	 background-image:url(/ui/studio/res/img/run_task.png) !important; /** sprite-ref: studio-sprite; */
+}

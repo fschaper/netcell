@@ -1,0 +1,10 @@
+<xlRadarMarkers_@dataset_id type="eval" result="PolarLineLayer" init="addLineLayer">
+    <args>
+	 	<arg name="addLayerID" default="xlRadarMarkers_@dataset_id">
+	    </arg>
+	</args>
+
+	<evaladapter class="LookupValue" method="addRadarLayer"/>
+
+	&PolarLayer;
+</xlRadarMarkers_@dataset_id>

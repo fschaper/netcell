@@ -1,0 +1,5 @@
+element userdata
+{
+	element view { "icons" | "list" | "details" }?
+
+}

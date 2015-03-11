@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<php_macro_engine_config xmlns="http://www.jedox.com/jedox/wss" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<php_extensions directory="php_extensions">
+		<extensions>
+		  <extension extension_file="php_soap.dll" />
+		  <extension extension_file="eAccelerator_ts.dll" />
+		  <extension extension_file="php_jedox_palo.dll" />
+		  <extension extension_file="phpchartdir520.dll" />
+		  <extension extension_file="libphp_jedox_palo.so" />		  		  
+		</extensions>
+	</php_extensions>
+	<php_files directory="../httpd/app" temp_directory="tmp">
+		<include_paths>
+			<include_path path="base" relative="true" />
+			<include_path path="lib" relative="true" />
+			<include_path path="lib/jpgraph" relative="true" />
+		</include_paths>
+	</php_files>
+	<ini_directives>
+			memory_limit = 256M
+			max_execution_time = 90
+			max_input_time = 90
+			date.timezone = "Europe/Berlin"
+			open_basedir = "../httpd/app/base;../httpd/app/lib;tmp"
+			eaccelerator.shm_size=32
+			eaccelerator.cache_dir=tmp
+			eaccelerator.enable=1
+			eaccelerator.optimizer=1
+			eaccelerator.debug=0
+			eaccelerator.check_mtime=1
+			eaccelerator.filter=""
+			eaccelerator.shm_max=0
+			eaccelerator.shm_ttl=0
+			eaccelerator.shm_prune_period=0
+			eaccelerator.shm_only=0
+			eaccelerator.compress=1
+			eaccelerator.compress_level=9
+			eaccelerator.keys=shm_and_disk
+			eaccelerator.sessions=shm_and_disk
+			eaccelerator.content=shm_and_disk
+	</ini_directives>
+	<functions loglevel="error">
+
+		<!-- misc -->
+		<function spreadsheet_function="RESOLVE" php_file="base/macro/fns/misc.php" php_function="RESOLVE" always_recalc="false" />
+		<function spreadsheet_function="ASARRAY" php_file="base/macro/fns/misc.php" php_function="ASARRAY" always_recalc="false" />
+
+		<!-- hyperlink -->
+		<function spreadsheet_function="HYPERLINK" php_file="base/macro/fns/hyperlink.php" php_function="HYPERLINK" always_recalc="false" />
+
+		<!--- microcharts monochrome -->
+		<function spreadsheet_function="Sparkbars" php_file="base/macro/fns/microchart.php" php_function="Sparkbars" always_recalc="false" />
+		<function spreadsheet_function="SparkbarsScaled" php_file="base/macro/fns/microchart.php" php_function="SparkbarsScaled" always_recalc="false" />
+		<function spreadsheet_function="SparkbarsScaledMM" php_file="base/macro/fns/microchart.php" php_function="SparkbarsScaledMM" always_recalc="false" />
+		<function spreadsheet_function="Sparkpie" php_file="base/macro/fns/microchart.php" php_function="Sparkpie" always_recalc="false" />
+		<function spreadsheet_function="Sparkwhisker" php_file="base/macro/fns/microchart.php" php_function="Sparkwhisker" always_recalc="false" />
+		<function spreadsheet_function="Sparkline" php_file="base/macro/fns/microchart.php" php_function="Sparkline" always_recalc="false" />
+		<function spreadsheet_function="SparklineScaled" php_file="base/macro/fns/microchart.php" php_function="SparklineScaled" always_recalc="false" />
+		<function spreadsheet_function="SparklineScaledMM" php_file="base/macro/fns/microchart.php" php_function="SparklineScaledMM" always_recalc="false" />
+		<function spreadsheet_function="Sparkdots" php_file="base/macro/fns/microchart.php" php_function="Sparkdots" always_recalc="false" />
+		<function spreadsheet_function="SparkdotsScaled" php_file="base/macro/fns/microchart.php" php_function="SparkdotsScaled" always_recalc="false" />
+		<function spreadsheet_function="SparkdotsScaledMM" php_file="base/macro/fns/microchart.php" php_function="SparkdotsScaledMM" always_recalc="false" />
+		<function spreadsheet_function="SparklineDots" php_file="base/macro/fns/microchart.php" php_function="SparklineDots" always_recalc="false" />
+		<function spreadsheet_function="SparklineDotsScaled" php_file="base/macro/fns/microchart.php" php_function="SparklineDotsScaled" always_recalc="false" />
+		<function spreadsheet_function="SparklineDotsScaledMM" php_file="base/macro/fns/microchart.php" php_function="SparklineDotsScaledMM" always_recalc="false" />
+
+		<!-- microcharts colored -->
+		<function spreadsheet_function="SparkbarsColored" php_file="base/macro/fns/microchart.php" php_function="SparkbarsColored" always_recalc="false" />
+		<function spreadsheet_function="SparklineColored" php_file="base/macro/fns/microchart.php" php_function="SparklineColored" always_recalc="false" />
+		<function spreadsheet_function="SparkdotsColored" php_file="base/macro/fns/microchart.php" php_function="SparkdotsColored" always_recalc="false" />
+		<function spreadsheet_function="SparklinedotsColored" php_file="base/macro/fns/microchart.php" php_function="SparklinedotsColored" always_recalc="false" />
+		<function spreadsheet_function="SparkpieColored" php_file="base/macro/fns/microchart.php" php_function="SparkpieColored" always_recalc="false" />
+		<function spreadsheet_function="SparkwhiskerColored" php_file="base/macro/fns/microchart.php" php_function="SparkwhiskerColored" always_recalc="false" />
+
+		<!-- MySQL -->
+		<function spreadsheet_function="MYSQLINIT" php_file="base/macro/fns/database.php" php_function="MYSQLINITxl" always_recalc="true" />
+		<function spreadsheet_function="MYSQLEXEC" php_file="base/macro/fns/database.php" php_function="MYSQLEXECxl" always_recalc="true" />
+		<function spreadsheet_function="MYSQLCOUNT" php_file="base/macro/fns/database.php" php_function="MYSQLCOUNTxl" always_recalc="true" />
+		<function spreadsheet_function="MYSQLERRORNO" php_file="base/macro/fns/database.php" php_function="MYSQLERRORNOxl" always_recalc="true" />
+		<function spreadsheet_function="MYSQLERROR" php_file="base/macro/fns/database.php" php_function="MYSQLERRORxl" always_recalc="true" />
+		<function spreadsheet_function="MYSQLDATA" php_file="base/macro/fns/database.php" php_function="MYSQLDATAxl" always_recalc="true" />
+
+		<!-- legacy WSS2 functions -->
+		<function spreadsheet_function="CURRENTENTITY" php_file="base/macro/fns/legacy.php" php_function="CURRENTENTITY" always_recalc="false" />
+		<function spreadsheet_function="FIRSTENTITY" php_file="base/macro/fns/legacy.php" php_function="FIRSTENTITY" always_recalc="false" />
+		<function spreadsheet_function="NEXTENTITY" php_file="base/macro/fns/legacy.php" php_function="NEXTENTITY" always_recalc="false" />
+		<function spreadsheet_function="ENTITYNAME" php_file="base/macro/fns/legacy.php" php_function="ENTITYNAME" always_recalc="false" />
+		<function spreadsheet_function="ENTITYDATA" php_file="base/macro/fns/legacy.php" php_function="ENTITYDATA" always_recalc="false" />
+		<function spreadsheet_function="CURRENTENTITYLEVEL" php_file="base/macro/fns/legacy.php" php_function="CURRENTENTITYLEVEL" always_recalc="false" />
+		<function spreadsheet_function="CURRENTENTITYISBASE" php_file="base/macro/fns/legacy.php" php_function="CURRENTENTITYISBASE" always_recalc="false" />
+		<function spreadsheet_function="ODOCHART" php_file="base/macro/fns/legacy.php" php_function="ODOCHART" always_recalc="false" />
+		<function spreadsheet_function="SOAPINIT" php_file="base/macro/fns/legacy.php" php_function="SOAPINIT" always_recalc="false" />
+		<function spreadsheet_function="SOAPEXEC" php_file="base/macro/fns/legacy.php" php_function="SOAPEXEC" always_recalc="false" />
+		<function spreadsheet_function="SOAPDATA" php_file="base/macro/fns/legacy.php" php_function="SOAPDATA" always_recalc="false" />
+		<function spreadsheet_function="DIRINIT" php_file="base/macro/fns/legacy.php" php_function="DIRINIT" always_recalc="false" />
+		<function spreadsheet_function="DIRDATA" php_file="base/macro/fns/legacy.php" php_function="DIRDATA" always_recalc="false" />
+		<function spreadsheet_function="ALEALISTBOX" php_file="base/macro/fns/legacy.php" php_function="ALEALISTBOX" always_recalc="false" />
+		<function spreadsheet_function="TM1LISTBOX" php_file="base/macro/fns/legacy.php" php_function="TM1LISTBOX" always_recalc="false" />
+		<function spreadsheet_function="PALOLISTBOX" php_file="base/macro/fns/legacy.php" php_function="PALOLISTBOX" always_recalc="false" />
+		<function spreadsheet_function="DINDENT" php_file="base/macro/fns/legacy.php" php_function="DINDENT" always_recalc="false" />
+		<function spreadsheet_function="ALEADIMENSION" php_file="base/macro/fns/legacy.php" php_function="ALEADIMENSION" always_recalc="false" />
+		<function spreadsheet_function="ALEAELEMENT" php_file="base/macro/fns/legacy.php" php_function="ALEAELEMENT" always_recalc="false" />
+		<function spreadsheet_function="TM1DIMENSION" php_file="base/macro/fns/legacy.php" php_function="TM1DIMENSION" always_recalc="false" />
+		<function spreadsheet_function="TM1ELEMENT" php_file="base/macro/fns/legacy.php" php_function="TM1ELEMENT" always_recalc="false" />
+		<function spreadsheet_function="PALODIMENSION" php_file="base/macro/fns/legacy.php" php_function="PALODIMENSION" always_recalc="false" />
+		<function spreadsheet_function="PALOELEMENT" php_file="base/macro/fns/legacy.php" php_function="PALOELEMENT" always_recalc="false" />
+		<function spreadsheet_function="XMLAINIT" php_file="base/macro/fns/legacy.php" php_function="XMLAINIT" always_recalc="false" />
+		<function spreadsheet_function="XMLAEXEC" php_file="base/macro/fns/legacy.php" php_function="XMLAEXEC" always_recalc="false" />
+		<function spreadsheet_function="XMLADATA" php_file="base/macro/fns/legacy.php" php_function="XMLADATA" always_recalc="false" />
+		<function spreadsheet_function="LINKINIT" php_file="base/macro/fns/legacy.php" php_function="LINKINIT" always_recalc="false" />
+		<function spreadsheet_function="LINKDATA" php_file="base/macro/fns/legacy.php" php_function="LINKDATA" always_recalc="false" />
+		<function spreadsheet_function="APPLINK" php_file="base/macro/fns/legacy.php" php_function="APPLINK" always_recalc="false" />
+		<function spreadsheet_function="APPLINK2" php_file="base/macro/fns/legacy.php" php_function="APPLINK2" always_recalc="false" />
+		<function spreadsheet_function="APPLINK3" php_file="base/macro/fns/legacy.php" php_function="APPLINK3" always_recalc="false" />
+		<function spreadsheet_function="ADDTOLIST" php_file="base/macro/fns/legacy.php" php_function="ADDTOLIST" always_recalc="false" />
+		<function spreadsheet_function="DELETEFROMLIST" php_file="base/macro/fns/legacy.php" php_function="DELETEFROMLIST" always_recalc="false" />
+		<function spreadsheet_function="MOVEINLIST" php_file="base/macro/fns/legacy.php" php_function="MOVEINLIST" always_recalc="false" />
+		<function spreadsheet_function="EDITINLIST" php_file="base/macro/fns/legacy.php" php_function="EDITINLIST" always_recalc="false" />
+		<function spreadsheet_function="SHOWPICT" php_file="base/macro/fns/legacy.php" php_function="SHOWPICT" always_recalc="false" />
+		<function spreadsheet_function="SHOWBUTTON" php_file="base/macro/fns/legacy.php" php_function="SHOWBUTTON" always_recalc="false" />
+		<function spreadsheet_function="SHOWPOPUP" php_file="base/macro/fns/legacy.php" php_function="SHOWPOPUP" always_recalc="false" />
+		<function spreadsheet_function="SHOWCALCULATOR" php_file="base/macro/fns/legacy.php" php_function="SHOWCALCULATOR" always_recalc="false" />
+		<function spreadsheet_function="SHOWDATEPICKER" php_file="base/macro/fns/legacy.php" php_function="SHOWDATEPICKER" always_recalc="false" />
+		<function spreadsheet_function="SHOWTOOL" php_file="base/macro/fns/legacy.php" php_function="SHOWTOOL" always_recalc="false" />
+		<function spreadsheet_function="LISTBOX" php_file="base/macro/fns/legacy.php" php_function="LISTBOX" always_recalc="false" />
+		<function spreadsheet_function="DIRECTHTML" php_file="base/macro/fns/legacy.php" php_function="DIRECTHTML" always_recalc="false" />
+		<function spreadsheet_function="TREECONTROL" php_file="base/macro/fns/legacy.php" php_function="TREECONTROL" always_recalc="false" />
+		<function spreadsheet_function="CURRENTFOLDER" php_file="base/macro/fns/legacy.php" php_function="CURRENTFOLDER" always_recalc="false" />
+		<function spreadsheet_function="CHECKUSERGROUP" php_file="base/macro/fns/legacy.php" php_function="CHECKUSERGROUP" always_recalc="false" />
+		<function spreadsheet_function="SHEETNAME" php_file="base/macro/fns/legacy.php" php_function="SHEETNAME" always_recalc="false" />
+		<function spreadsheet_function="LDAPDATA" php_file="base/macro/fns/legacy.php" php_function="LDAPDATA" always_recalc="false" />
+		<function spreadsheet_function="COPYCELLS" php_file="base/macro/fns/legacy.php" php_function="COPYCELLS" always_recalc="false" />
+		<function spreadsheet_function="PASTECELLS" php_file="base/macro/fns/legacy.php" php_function="PASTECELLS" always_recalc="false" />
+		<function spreadsheet_function="MENUXL" php_file="base/macro/fns/legacy.php" php_function="MENUXL" always_recalc="false" />
+		<function spreadsheet_function="WEEKNUM" php_file="base/macro/fns/legacy.php" php_function="WEEKNUMxl" always_recalc="true" />
+		<function spreadsheet_function="KALENDERWOCHE" php_file="base/macro/fns/legacy.php" php_function="WEEKNUMxl" always_recalc="true" />
+		<function spreadsheet_function="DAY" php_file="base/macro/fns/legacy.php" php_function="DAYxl" always_recalc="true" />
+		<function spreadsheet_function="MONTH" php_file="base/macro/fns/legacy.php" php_function="MONTHxl" always_recalc="true" />
+		<function spreadsheet_function="YEAR" php_file="base/macro/fns/legacy.php" php_function="YEARxl" always_recalc="true" />
+		<function spreadsheet_function="DSUM" php_file="base/macro/fns/legacy.php" php_function="DSUMxl" always_recalc="true" />
+
+		<!-- legacy draw funcitons -->
+		<function spreadsheet_function="INITDRAW" php_file="base/macro/fns/legacy.php" php_function="INITDRAW" always_recalc="true" />
+		<function spreadsheet_function="DRAWLINE" php_file="base/macro/fns/legacy.php" php_function="DRAWLINE" always_recalc="false" />
+		<function spreadsheet_function="DRAWRECTANGLE" php_file="base/macro/fns/legacy.php" php_function="DRAWRECTANGLE" always_recalc="false" />
+		<function spreadsheet_function="DRAWCIRCLE" php_file="base/macro/fns/legacy.php" php_function="DRAWCIRCLE" always_recalc="false" />
+		<function spreadsheet_function="DRAWARC" php_file="base/macro/fns/legacy.php" php_function="DRAWARC" always_recalc="false" />
+		<function spreadsheet_function="DRAWPOLYGON" php_file="base/macro/fns/legacy.php" php_function="DRAWPOLYGON" always_recalc="false" />
+		<function spreadsheet_function="DRAWBEZIER" php_file="base/macro/fns/legacy.php" php_function="DRAWBEZIER" always_recalc="false" />
+		<function spreadsheet_function="DRAWTEXT" php_file="base/macro/fns/legacy.php" php_function="DRAWTEXT" always_recalc="false" />
+		<function spreadsheet_function="DRAWPIXEL" php_file="base/macro/fns/legacy.php" php_function="DRAWPIXEL" always_recalc="false" />
+		<function spreadsheet_function="DRAWARROW" php_file="base/macro/fns/legacy.php" php_function="DRAWARROW" always_recalc="false" />
+		<function spreadsheet_function="DRAWPOLYGONAPPLINK" php_file="base/macro/fns/legacy.php" php_function="DRAWPOLYGONAPPLINK" always_recalc="false" />
+		<function spreadsheet_function="DRAWNOW" php_file="base/macro/fns/legacy.php" php_function="DRAWNOW" always_recalc="true" />
+
+	</functions>
+
+	<general_settings>
+		<console_echo>false</console_echo>
+	</general_settings>
+
+</php_macro_engine_config>

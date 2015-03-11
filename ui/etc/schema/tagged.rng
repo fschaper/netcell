@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element name="tagged" xmlns="http://relaxng.org/ns/structure/1.0">
+  <zeroOrMore>
+    <element name="item">
+      <choice>
+        <group>
+          <element name="context">
+            <choice>
+              <value>files</value>
+              <value>reports</value>
+            </choice>
+          </element>
+          <element name="type">
+            <choice>
+              <value>spreadsheet</value>
+              <value>static</value>
+              <value>hyperlink</value>
+              <value>urlplugin</value>
+            </choice>
+          </element>
+          <optional>
+            <element name="subtype">
+              <text/>
+            </element>
+          </optional>
+          <element name="location">
+            <element name="group">
+              <text/>
+            </element>
+            <element name="hierarchy">
+              <text/>
+            </element>
+            <element name="node">
+              <text/>
+            </element>
+            <element name="path">
+              <text/>
+            </element>
+            <zeroOrMore>
+              <element name="var">
+                <element name="type">
+                  <text/>
+                </element>
+                <element name="name">
+                  <text/>
+                </element>
+                <element name="val">
+                  <text/>
+                </element>
+              </element>
+            </zeroOrMore>
+          </element>
+          <element name="tag">
+            <text/>
+          </element>
+        </group>
+        <group>
+          <element name="context">
+            <value>etl</value>
+          </element>
+          <element name="type">
+            <value>job</value>
+          </element>
+          <element name="location">
+            <text/>
+          </element>
+          <element name="tag">
+            <text/>
+          </element>
+        </group>
+      </choice>
+    </element>
+  </zeroOrMore>
+</element>

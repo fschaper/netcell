@@ -1,0 +1,162 @@
+
+<!--setDataColor - Sets the colors used to draw the data set.-->
+<setDataColor applicable="false" type="method" skip="true">
+  <args>
+<!--The main color used to draw the data set.-->
+    <arg name="dataColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color used to draw the edges or borders of the data set, if any. -1 means that the edges are drawn using the default border color of the layer (defined using Layer.setBorderColor).-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The color to use to draw 3D shadows of the data set, if any. -1 means the shadow color will be a "darker" version of the dataColor, created by reducing the RGB intensities of the dataColor in half.-->
+    <arg name="shadowColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The color to use to draw edges of the 3D shadows of the data set, if any. -1 means the shadow color will be a "darker" version of the edgeColor, created by by reducing the RGB intensities of the edgeColor in half.-->
+    <arg name="shadowEdgeColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataColor>
+
+<!--setDataLabelFormat - Sets the data label format for the data set.-->
+<setDataLabelFormat applicable="false" type="method" skip="true">
+  <args>
+<!--The format string.-->
+    <arg name="formatString" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataLabelFormat>
+
+<!--setDataLabelStyle - Enables data labels and sets their styles.-->
+<var_setDataLabelStyle applicable="false" type="function" skip="true" result="TextBox" init="setDataLabelStyle">
+  <args>
+<!--The font used to draw the labels.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size used to draw the labels.-->
+    <arg name="fontSize" default="8">
+      <map path=""/>
+    </arg>
+<!--The color used to draw the labels.-->
+    <arg name="fontColor" default="TextColor">
+      <map path=""/>
+    </arg>
+<!--The rotation angle of the labels.-->
+    <arg name="fontAngle" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</var_setDataLabelStyle>
+
+<!--setDataName - Sets the name of the data set.-->
+<setDataName applicable="false" type="method" skip="true">
+  <args>
+<!--The name of the data set.-->
+    <arg name="name" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataName>
+
+<!--setDataSymbol - Uses one of the built-in symbols as the graphics symbol to plot the data points.-->
+<setDataSymbol applicable="false" type="method" skip="true">
+  <args>
+<!--One of the predefined shape constants representing the symbol shape. See Shape Specification for the available built-in shapes.-->
+    <arg name="symbol" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The width and height of the symbol in pixels.-->
+    <arg name="size" default="5">
+      <map path=""/>
+    </arg>
+<!--The color used to fill the symbol. -1 means the color of the data set will be used.-->
+    <arg name="fillColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The edge color used to draw the edge of the symbol. -1 means the edge color of the data set will be used.-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The line width used for drawing the symbols.-->
+    <arg name="lineWidth" default="1">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataSymbol>
+
+<!--setDataSymbol2 - Load an image from a file and use it as the graphics symbol to plot the data points.-->
+<setDataSymbol2 applicable="false" type="method" skip="true">
+  <args>
+<!--The filename of the image file. The image type is determined based on file extension, which must be png, jpg/jpeg, gif or wbmp/wmp.-->
+    <arg name="image" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataSymbol2>
+
+<!--setDataSymbol3 - Uses a DrawArea object as the graphics symbol to plot the data points.-->
+<setDataSymbol3 applicable="false" type="method" skip="true">
+  <args>
+<!--A DrawArea object to be used as the symbol.-->
+    <arg name="obj" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataSymbol3>
+
+<!--setDataSymbol4 - Uses a custom polygon as the graphics symbol to plot the data points.-->
+<setDataSymbol4 applicable="false" type="method" skip="true">
+  <args>
+<!--An array of integers representing the coordinates the polygon vertices. See Shape Specification on how the custom shape is defined.-->
+    <arg name="polygon" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The nominal width and height of the symbol in pixels.-->
+    <arg name="size" default="11">
+      <map path=""/>
+    </arg>
+<!--The color used to fill the symbol. -1 means the color of the data set will be used.-->
+    <arg name="fillColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The edge color used to draw the edge of the symbol. -1 means the edge color of the data set will be used.-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataSymbol4>
+
+<!--setLineWidth - Sets the line width of lines when drawing the data set.-->
+<setLineWidth applicable="false" type="method" skip="true">
+  <args>
+<!--The width of the line in pixels.-->
+    <arg name="w" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLineWidth>
+
+<!--setUseYAxis - Determine the y-axis to use when drawing the data set.-->
+<setUseYAxis applicable="false" applicable="false" type="method" skip="true">
+  <args>
+<!--The y-axis to use when drawing the data set.-->
+    <arg name="a" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setUseYAxis>
+
+<!--setUseYAxis2 - Determine if the primary or secondary y-axis should be used when drawing the data set.-->
+<setUseYAxis2 applicable="false" type="method" skip="true">
+  <args>
+<!--A true (non-zero) value means the secondary y-axis will be used. A false (zero) value means the primary y-axis will be used.-->
+    <arg name="b" default="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setUseYAxis2>

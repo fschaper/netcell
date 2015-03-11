@@ -1,0 +1,77 @@
+<!--addConfidenceBand - Adds a confidence band to the trend layer.-->
+<addConfidenceBand applicable="false" type="method" skip="true">
+  <args>
+<!--The confidence level - must be between 0 - 1.-->
+    <arg name="confidence" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The fill color for the upper side of the confidence band (the portion that is above the regression line).-->
+    <arg name="upperFillColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The border color for the upper side of the confidence band (the portion that is above the regression line).-->
+    <arg name="upperEdgeColor" default="Transparent">
+      <map path=""/>
+    </arg>
+<!--The border width for the upper side of the confidence band (the portion that is above the regression line).-->
+    <arg name="upperLineWidth" default="1">
+      <map path=""/>
+    </arg>
+<!--The fill color for the lower side of the confidence band (the portion that is below the regression line). -1 means the color is the same as upperFillColor.-->
+    <arg name="lowerFillColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The border color for the lower side of the confidence band (the portion that is below the regression line). -1 means the color is the same as upperEdgeColor.-->
+    <arg name="lowerEdgeColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The border width for the lower side of the confidence band (the portion that is below the regression line). -1 means the color is the same as upperLineWidth.-->
+    <arg name="lowerLineWidth" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</addConfidenceBand>
+
+<!--addPredictionBand - Adds a prediction band to the trend layer.-->
+<addPredictionBand applicable="false" type="method" skip="true">
+  <args>
+<!--The confidence level - must be between 0 - 1.-->
+    <arg name="confidence" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The fill color for the upper side of the prediction band (the portion that is above the regression line).-->
+    <arg name="upperFillColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The border color for the upper side of the prediction band (the portion that is above the regression line).-->
+    <arg name="upperEdgeColor" default="Transparent">
+      <map path=""/>
+    </arg>
+<!--The border width for the upper side of the prediction band (the portion that is above the regression line).-->
+    <arg name="upperLineWidth" default="1">
+      <map path=""/>
+    </arg>
+<!--The fill color for the lower side of the prediction band (the portion that is below the regression line). -1 means the color is the same as upperFillColor.-->
+    <arg name="lowerFillColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The border color for the lower side of the prediction band (the portion that is below the regression line). -1 means the color is the same as upperEdgeColor.-->
+    <arg name="lowerEdgeColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The border width for the lower side of the prediction band (the portion that is below the regression line). -1 means the color is the same as upperLineWidth.-->
+    <arg name="lowerLineWidth" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</addPredictionBand>
+
+<!--setImageMapWidth - Sets the effective width of the line used for producing image maps.-->
+<setImageMapWidth applicable="false" type="method" skip="true">
+  <args>
+<!--The effective width of the line used for producing image maps.-->
+    <arg name="width" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setImageMapWidth>

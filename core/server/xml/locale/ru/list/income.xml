@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+	<element>Revenues</element>
+    <element>Inventory changes</element>
+    <element>Material/goods purchase</element>
+    <element>Other operating income</element>
+    <element>Gross profit</element>
+    <element>Personnel costs</element>
+    <element>Wages and salaries</element>
+    <element>Social security contributions </element>
+    <element>Other additional expenses</element>
+    <element>Material expenses</element>
+    <element>Premise expenses</element>
+    <element>Various contributions/taxes concerned</element>
+    <element>Vehicle costs/special costs</element>
+    <element>Advertising/travel expenses</element>
+    <element>Issue of goods cost</element>
+    <element>Depreciation</element>
+    <element>Repair / Maintenance</element>
+    <element>Other costs</element>
+    <element>neutral result</element>
+    <element>Interest expenditure/other neutral expenditure</element>
+    <element>Interest yield</element>
+    <element>remaining neutral positions (Interest conclusion tax)</element>
+    <element>Result</element>
+</autofill_list>

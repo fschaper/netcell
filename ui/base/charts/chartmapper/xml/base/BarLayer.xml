@@ -1,0 +1,112 @@
+&Layer;
+
+<!--setBarGap - Sets the gap between the bars in a bar chart layer.-->
+<setBarGap type="method">
+  <args>
+<!--The portion of the space between the bars (or between bar groups for multi-bar layers).-->
+    <arg name="barGap" default="0.3" mandatory="true">
+      <map refcontext="Chart.Column3DGroup" path="Chart.Column3DGroup.GapWidth">
+		  <adapter class="UnitConvertor" method="percentBarGap" static="true"/>
+      </map>
+      <map refcontext="Chart.Bar3DGroup" path="Chart.Bar3DGroup.GapWidth">
+		  <adapter class="UnitConvertor" method="percentBarGap" static="true"/>
+      </map>
+    </arg>
+<!--This argument only applies to multi-bar charts. It is the portion of the space between the bars in a bar group.-->
+    <arg name="subBarGap" default="0.2">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setBarGap>
+
+<!--setBarShape - Sets the shape of the bar(s) using built-in shapes.-->
+<setBarShape type="method">
+  <args>
+<!--The bar shape to use. Please refer to Shape Specification on how shapes are specified.-->
+    <arg name="shape" default="SquareShape" mandatory="true">
+      <map path="Chart.ChartType">
+      	<adapter class="UnitConvertor" method="xlBarShapeToCDBarShape" static="true"/>
+      </map>
+    </arg>
+<!--The index of the data group that the shape applies to. In a multi-stacked bar, the data sets that are stacked up into a single bar forms a data group. In a multi-bar chart, each data set is a data group by itself. The default value of -1 means the shape applies to all data groups.-->
+    <arg name="dataGroup" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+<!--The index of the data points that the shape applies to. For example, if set to 3, the shape will only apply to the 4th bar (index starts from 0) in each data series. The default value of -1 means the shape applies to all data points.-->
+    <arg name="dataItem" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setBarShape>
+
+<!--setBarShape2 - Sets the shape of the bar(s) to a custom shape defined using an array of (x, y) coordinates.-->
+<setBarShape2 applicable="false" type="method" skip="true">
+  <args>
+<!--The bar shape to use. Please refer to Shape Specification on how shapes are specified.-->
+    <arg name="shape" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The index of the data group that the shape applies to. In a multi-stacked bar, the data sets that are stacked up into a single bar forms a data group. In a multi-bar chart, each data set is a data group by itself. The default value of -1 means the shape applies to all data groups.-->
+    <arg name="dataGroup" default="-1">
+      <map path=""/>
+    </arg>
+<!--The index of the data points that the shape applies to. For example, if set to 3, the shape will only apply to the 4th bar (index starts from 0) in each data series. The default value of -1 means the shape applies to all data points.-->
+    <arg name="dataItem" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setBarShape2>
+
+<!-- #MLADEN# Excel ne koristi sirinu barova, tako da je sve podeseno preko gap-ova izmedju njih. -->
+<!--setBarWidth - Sets the width of the bars.-->
+<setBarWidth applicable="false" type="method" skip="true">
+  <args>
+<!--The width of the bars (or bar groups for multi-bar layers) in pixels.-->
+    <arg name="barWidth" default="20" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--This argument only applies to multi-bar charts. It is the width of the bars in a bar group in pixels.-->
+    <arg name="subBarWidth" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setBarWidth>
+
+<!--setIconSize - Sets the size of the icon(s) to be used in legend box.-->
+<setIconSize applicable="false" type="method">
+  <args>
+<!--The height of the icon in pixels.-->
+    <arg name="height" default="8" mandatory="true">
+      <map path="LegendEntry.LegendKey.Height">&adapter_UnitConvertor_pointToPixel;</map>
+    </arg>
+<!--The width of the icon in pixels. The default value of -1 means the width is the same as the height.-->
+    <arg name="width" default="-1">
+      <map path="LegendEntry.LegendKey.Width">&adapter_UnitConvertor_pointToPixel;</map>
+    </arg>
+  </args>
+</setIconSize>
+
+<!-- MLADEN .. posto Excel u svakom slucaju prikazuje Label-e na barovima, MinLableSize je postavljen na 0, sto znaci da ce se uvjek prikazati. -->
+<!--setMinLabelSize - Sets the minimum height (or width for horizontal bars) of the bar segments below which data labels will be hidden.-->
+<setMinLabelSize type="method">
+  <args>
+<!--The minimum length of the bar segments in pixels, below which data labels will be hidden.-->
+    <arg name="s" default="0" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setMinLabelSize>
+
+<!--setOverlapRatio - Sets overlapping among bars in within a bar group in a multi-bar chart.-->
+<setOverlapRatio applicable="false" type="method" skip="true">
+  <args>
+<!--The overlapping ratio between adjacent bars in a bar group. Should be between 0 to 1.-->
+    <arg name="overlapRatio" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--If this value is true (non-zero), the first data set will be on top of the second data during overlapping, and the second data set will be on top of the third data set, and so on. If this value is false (zero), then the overlapping order will be reversed.-->
+    <arg name="firstOnTop" default="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setOverlapRatio>

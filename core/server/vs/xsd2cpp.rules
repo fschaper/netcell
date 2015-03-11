@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="xsd2cpp"
+	Version="8.00"
+	>
+	<Rules>
+		<CustomBuildRule
+			Name="xsd2cpp"
+			DisplayName="xsd2cpp"
+			CommandLine="[xsdbinary] [inputs] [sourcedir] [settingsfile]"
+			Outputs="[sourcedir]\$(InputName).cpp"
+			AdditionalDependencies="[inputs]"
+			FileExtensions="*.xsd"
+			ExecutionDescription="code generator for xsd -&gt; cpp "
+			>
+			<Properties>
+				<StringProperty
+					Name="xsdbinary"
+					DisplayName="XSD Binary"
+					Category="Paths"
+					Switch="[value]"
+					DefaultValue="$(ProjectDir)..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe"
+				/>
+				<StringProperty
+					Name="schemadir"
+					DisplayName="schema directory"
+					Category="Paths"
+					Switch="[value]"
+					DefaultValue="$(ProjectDir)xml\schema"
+				/>
+				<StringProperty
+					Name="sourcedir"
+					DisplayName="source output directory"
+					Category="Paths"
+					Switch="[value]"
+					DefaultValue="$(ProjectDir)src"
+				/>
+				<StringProperty
+					Name="settingsfile"
+					DisplayName="settings"
+					Category="Paths"
+					Switch="-settings [value]"
+				/>
+			</Properties>
+		</CustomBuildRule>
+	</Rules>
+</VisualStudioToolFile>

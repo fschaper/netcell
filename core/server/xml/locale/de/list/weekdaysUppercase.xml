@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+	<element>MONTAG</element>
+	<element>DIENSTAG</element>
+	<element>MITTWOCH</element>
+	<element>DONNERSTAG</element>
+	<element>FREITAG</element>
+	<element>SAMSTAG</element>
+	<element>SONNTAG</element>
+</autofill_list>

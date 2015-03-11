@@ -1,0 +1,18 @@
+; Example:,,
+; id,desc,path
+; wInsChart,WSS Insert Chart Dialog,Jedox.wss.dlg.InsChart
+;,,
+; id: <app code><container code>,,
+; app code:,,
+; w - WSS,,
+; s - Studio,,
+"; container code: InsChart, FmtCells, ...",,
+;,,
+wFmtCells,WSS Format Cells Dialog,Jedox.wss.dlg.Format
+wInsFnc,WSS Insert Function Dialog,Jedox.wss.dlg.InsertFunction
+wFuncArgs,WSS Function Arguments,Jedox.wss.dlg.FunctionArguments
+wInsHyperlink,WSS Insert Hyperlink,Jedox.wss.dlg.InsertHyperlink
+wNameMngr,WSS Name Manager,Jedox.wss.dlg.NameManager
+wNewName,WSS New Name Dialog,Jedox.wss.dlg.NewName
+wToolbar,WSS Toolbar,Jedox.wss.app.toolbar
+wMenubar,WSS Menubar,Jedox.wss.app.Menu

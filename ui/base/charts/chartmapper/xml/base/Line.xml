@@ -1,0 +1,52 @@
+
+<!--setColor - Sets the color of the line.-->
+<setColor applicable="false" type="method" skip="true">
+  <args>
+<!--The color of the line.-->
+    <arg name="c" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setColor>
+
+<!--setPos - Sets the end-points of the line.-->
+<setPos applicable="false" type="method" skip="true">
+  <args>
+<!--The x coordinate of the first end-point of the line.-->
+    <arg name="x1" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the first end-point of the line.-->
+    <arg name="y1" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The x coordinate of the second end-point of the line.-->
+    <arg name="x2" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the second end-point of the line.-->
+    <arg name="y2" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setPos>
+
+<!--setWidth - Sets the width of the line in pixels.-->
+<setWidth applicable="false" type="method" skip="true">
+  <args>
+<!--The width (thickness) of the line in pixels.-->
+    <arg name="w" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setWidth>
+
+<!--setZOrder - Sets the z-order (drawing order) of the line.-->
+<setZOrder applicable="false" type="method" skip="true">
+  <args>
+<!--The z-order of the line.-->
+    <arg name="z" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setZOrder>

@@ -1,0 +1,49 @@
+&Layer;
+
+<!--setGapColor - Sets the color and style of the line used for jumping across NoValue data points.-->
+<setGapColor applicable="false" type="method" skip="true">
+  <args>
+<!--The line color of the line used for jumping across NoValue data points-->
+    <arg name="lineColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The line width of the line used for jumping across NoValue data points. -1 means the width will be the same as the line width of the line for drawing normal data points.-->
+    <arg name="lineWidth" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setGapColor>
+
+<!--setImageMapWidth - Sets the effective width of the line used for producing image maps.-->
+<setImageMapWidth applicable="false" type="method" skip="true">
+  <args>
+<!--The effective width of the line used for producing image maps.-->
+    <arg name="width" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setImageMapWidth>
+
+<!-- MLADEN: Ovo se ne bi trebalo koristiti, posto se ova metoda moze koristi samo kod pravljenja Bubble chartova,
+a mi Bubble chart pravimo na drugi nacin. -->
+<!--setSymbolScale - Sets the size of the symbol for each data point (for creating bubble charts).-->
+<setSymbolScale applicable="false" type="method" skip="true">
+  <args>
+<!--The sizes of the symbols at the x-axis direction, expressed using the unit defined by the scaleTypeX argument.-->
+    <arg name="zDataX" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The unit for zDataX, which must be one of the predefined constants in the table above.-->
+    <arg name="scaleTypeX" default="PixelScale">
+      <map path=""/>
+    </arg>
+<!--The sizes of the symbols at the y-axis direction, expressed using the unit defined by the scaleTypeY argument. An empty array means the sizes at the y-axis direction are the means as the sizes at the x-axis direction.-->
+    <arg name="zDataY" default="[Empty_Array]">
+      <map path=""/>
+    </arg>
+<!--The unit for zDataY, which must be one of the predefined constants in the table above.-->
+    <arg name="scaleTypeY" default="PixelScale">
+      <map path=""/>
+    </arg>
+  </args>
+</setSymbolScale>

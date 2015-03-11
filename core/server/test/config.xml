@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wss_configuration xmlns="http://www.jedox.com/jedox/wss"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <logging>
+      <logger name="console" level="error">
+         <modifiers>
+            <modifier priority="500" name="timestamp"/>
+            <modifier priority="400" name="loglevel"/>
+         </modifiers>
+      </logger>
+   </logging>
+  <garbage_collector>
+      <interval seconds="180"/>
+  </garbage_collector>
+  <session>
+      <timeout seconds="3600"/>
+  </session>
+  <quota enable="true"/>
+  <autosave>
+      <interval seconds="0"/>
+  </autosave>
+  <textmetric>
+      <dpi default_dpi="96"/>
+      <font_path/>
+  </textmetric>
+  <extensions >
+    <extension name="cell_format" config="locale/cell_format_data.xml"/>
+    <extension name="persistence" config="persistence_settings.xml" critical="true"/>
+    <extension name="function" config=""/>
+    <extension name="palo" config="palo_config.xml"/>
+    <extension name="macro_engine" config="macro_engine_config.xml"/>
+    <extension name="odbc" config=""/>
+    <extension name="text_metrics" config="font_config.xml"/>
+    <extension name="auto_fill" config="locale/"/>
+  </extensions>
+</wss_configuration>
