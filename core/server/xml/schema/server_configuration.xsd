@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  server configuration schema definition
+  Copyright (c) Jedox AG 2008-2009, Florian Schaper <florian.schaper@jedox.com>
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jedox.com/jedox/wss" xmlns="http://www.jedox.com/jedox/wss" xmlns:NS="http://www.jedox.com/jedox/wss" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:complexType name="module_type">
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="config" type="xs:string" use="optional" />
+    <xs:attribute name="critical" type="xs:boolean" use="optional" default="false" />
+  </xs:complexType>
+  <xs:complexType name="session_timeout_type">
+    <xs:attribute name="seconds" type="xs:long" use="optional" default="3600" />
+  </xs:complexType>
+  <xs:complexType name="session_max_lazy_function_count_type">
+    <xs:attribute name="number" type="xs:int" use="optional" default="20" />
+  </xs:complexType>
+  <xs:complexType name="autosave_interval_type">
+    <xs:attribute name="seconds" type="xs:long" use="optional" default="3600" />
+  </xs:complexType>
+  <xs:complexType name="garbage_collector_interval_type">
+    <xs:attribute name="seconds" type="xs:long" use="optional" default="180" />
+  </xs:complexType>
+  <xs:simpleType name="loglevel_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="trace" />
+      <xs:enumeration value="debug" />
+      <xs:enumeration value="info" />
+      <xs:enumeration value="notice" />
+      <xs:enumeration value="warning" />
+      <xs:enumeration value="error" />
+      <xs:enumeration value="critical" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="modifier_type">
+    <xs:sequence />
+    <xs:attribute name="priority" type="xs:unsignedShort" />
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="modifiers_type">
+    <xs:sequence>
+      <xs:element name="modifier" type="modifier_type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="logger_type">
+    <xs:sequence>
+      <xs:element name="modifiers" type="modifiers_type" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="level" type="loglevel_type" use="required" />
+    <xs:attribute name="target" type="xs:string" />
+    <xs:attribute name="module" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="logging_type">
+    <xs:sequence>
+      <xs:element name="logger" type="logger_type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="level" type="loglevel_type" use="optional" default="debug" />
+  </xs:complexType>
+  <xs:complexType name="garbage_collector_type">
+    <xs:sequence>
+      <xs:element name="interval" type="garbage_collector_interval_type" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="session_type">
+    <xs:sequence>
+      <xs:element name="timeout" type="session_timeout_type" minOccurs="1" maxOccurs="1" />
+        <xs:element name="max_lazy_function_count" type="session_max_lazy_function_count_type" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="autosave_type">
+    <xs:sequence>
+      <xs:element name="interval" type="autosave_interval_type" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="extensions_type">
+    <xs:sequence>
+      <xs:element name="extension" type="module_type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="path" type="xs:string"  default ="extension/"/>
+  </xs:complexType>
+  <xs:complexType name="wss_configuration_type">
+    <xs:sequence>
+      <xs:element name="logging" type="logging_type" />
+      <xs:element name="garbage_collector" type="garbage_collector_type" />
+      <xs:element name="session" type="session_type" />
+      <xs:element name="autosave" type="autosave_type" />
+      <xs:element name="extensions" type="extensions_type" />
+    </xs:sequence>
+    <xs:attribute name="version" type="xs:decimal" use="required" />
+  </xs:complexType>
+  <xs:element name="wss_configuration" type="wss_configuration_type" />
+</xs:schema>

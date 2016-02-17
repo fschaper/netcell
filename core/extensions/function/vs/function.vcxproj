@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile_suite_server|Win32">
+      <Configuration>profile_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile_suite_server|x64">
+      <Configuration>profile_suite_server</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="test_suite_server|Win32">
+      <Configuration>test_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="test_suite_server|x64">
+      <Configuration>test_suite_server</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{74243380-4B71-4040-8F2C-8F8A96C5D81D}</ProjectGuid>
+    <RootNamespace>function</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='test_suite_server|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|x64'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='test_suite_server|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='test_suite_server|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='test_suite_server|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|x64'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectName)_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 /Zm260 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\atomic\include;..\..\..\extlibs\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FUNCTION_LIBRARY_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>function.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>$(TargetDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251  /Zm260 %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\atomic\include;..\..\..\extlibs\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FUNCTION_LIBRARY_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;libtcmalloc_minimal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>function.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>__tcmalloc;%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle" --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251  /Zm260 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\atomic\include;..\..\..\extlibs\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FUNCTION_LIBRARY_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>function.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle" --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251  /Zm260 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\atomic\include;..\..\..\extlibs\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_NDEBUG;_WINDOWS;_USRDLL;FUNCTION_LIBRARY_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>function.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\uuid\include;..\..\..\extlibs\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FUNCTION_LIBRARY_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wss_d.lib;libtcmalloc_minimal-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>function.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>$(TargetDir)$(TargetName)_d.lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\uuid\include;..\..\..\extlibs\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FUNCTION_LIBRARY_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wss.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>function.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 /Zm260 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\uuid\include;..\..\..\extlibs\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FUNCTION_LIBRARY_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wss_d.lib;libtcmalloc_minimal-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\x86_64;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>function.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\server\include;..\..\..\extlibs\uuid\include;..\..\..\extlibs\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FUNCTION_LIBRARY_EXPORTS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wss_d.lib;libtcmalloc_minimal-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\x86_64;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>function.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\binomdist_cumulative.cpp" />
+    <ClCompile Include="..\src\binomdist_density.cpp" />
+    <ClCompile Include="..\src\combin.cpp" />
+    <ClCompile Include="..\src\function_concatenate_range.cpp" />
+    <ClCompile Include="..\src\function_indirect.cpp" />
+    <ClCompile Include="..\src\function_library.cpp" />
+    <ClCompile Include="..\src\function_unformatted.cpp" />
+    <ClCompile Include="..\src\function_used_range.cpp" />
+    <ClCompile Include="..\src\function_value.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\poisson_density.cpp" />
+    <ClCompile Include="..\src\precompiled_header.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\function_and.cpp" />
+    <ClCompile Include="..\src\function_false.cpp" />
+    <ClCompile Include="..\src\function_if.cpp" />
+    <ClCompile Include="..\src\function_not.cpp" />
+    <ClCompile Include="..\src\function_or.cpp" />
+    <ClCompile Include="..\src\function_true.cpp" />
+    <ClCompile Include="..\src\function_avedev.cpp" />
+    <ClCompile Include="..\src\function_average.cpp" />
+    <ClCompile Include="..\src\function_averagea.cpp" />
+    <ClCompile Include="..\src\function_averagee.cpp" />
+    <ClCompile Include="..\src\function_betadist.cpp" />
+    <ClCompile Include="..\src\function_betainv.cpp" />
+    <ClCompile Include="..\src\function_binomdist.cpp" />
+    <ClCompile Include="..\src\function_chidist.cpp" />
+    <ClCompile Include="..\src\function_chiinv.cpp" />
+    <ClCompile Include="..\src\function_chitest.cpp" />
+    <ClCompile Include="..\src\function_combin.cpp" />
+    <ClCompile Include="..\src\function_confidence.cpp" />
+    <ClCompile Include="..\src\function_correl.cpp" />
+    <ClCompile Include="..\src\function_count.cpp" />
+    <ClCompile Include="..\src\function_counta.cpp" />
+    <ClCompile Include="..\src\function_countblank.cpp" />
+    <ClCompile Include="..\src\function_countif.cpp" />
+    <ClCompile Include="..\src\function_covar.cpp" />
+    <ClCompile Include="..\src\function_critbinom.cpp" />
+    <ClCompile Include="..\src\function_devsq.cpp" />
+    <ClCompile Include="..\src\function_expondist.cpp" />
+    <ClCompile Include="..\src\function_fdist.cpp" />
+    <ClCompile Include="..\src\function_finv.cpp" />
+    <ClCompile Include="..\src\function_fisher.cpp" />
+    <ClCompile Include="..\src\function_fisherinv.cpp" />
+    <ClCompile Include="..\src\function_forecast.cpp" />
+    <ClCompile Include="..\src\function_frequency.cpp" />
+    <ClCompile Include="..\src\function_ftest.cpp" />
+    <ClCompile Include="..\src\function_gammadist.cpp" />
+    <ClCompile Include="..\src\function_gammainv.cpp" />
+    <ClCompile Include="..\src\function_gammaln.cpp" />
+    <ClCompile Include="..\src\function_geomean.cpp" />
+    <ClCompile Include="..\src\function_harmean.cpp" />
+    <ClCompile Include="..\src\function_hypgeomdist.cpp" />
+    <ClCompile Include="..\src\function_intercept.cpp" />
+    <ClCompile Include="..\src\function_kurt.cpp" />
+    <ClCompile Include="..\src\function_large.cpp" />
+    <ClCompile Include="..\src\function_loginv.cpp" />
+    <ClCompile Include="..\src\function_lognormdist.cpp" />
+    <ClCompile Include="..\src\function_max.cpp" />
+    <ClCompile Include="..\src\function_maxa.cpp" />
+    <ClCompile Include="..\src\function_median.cpp" />
+    <ClCompile Include="..\src\function_min.cpp" />
+    <ClCompile Include="..\src\function_mina.cpp" />
+    <ClCompile Include="..\src\function_mode.cpp" />
+    <ClCompile Include="..\src\function_negbinomdist.cpp" />
+    <ClCompile Include="..\src\function_normdist.cpp" />
+    <ClCompile Include="..\src\function_norminv.cpp" />
+    <ClCompile Include="..\src\function_normsdist.cpp" />
+    <ClCompile Include="..\src\function_normsinv.cpp" />
+    <ClCompile Include="..\src\function_pearson.cpp" />
+    <ClCompile Include="..\src\function_percentile.cpp" />
+    <ClCompile Include="..\src\function_percentrank.cpp" />
+    <ClCompile Include="..\src\function_permut.cpp" />
+    <ClCompile Include="..\src\function_poisson.cpp" />
+    <ClCompile Include="..\src\function_prob.cpp" />
+    <ClCompile Include="..\src\function_quartile.cpp" />
+    <ClCompile Include="..\src\function_rank.cpp" />
+    <ClCompile Include="..\src\function_rsq.cpp" />
+    <ClCompile Include="..\src\function_skew.cpp" />
+    <ClCompile Include="..\src\function_slope.cpp" />
+    <ClCompile Include="..\src\function_small.cpp" />
+    <ClCompile Include="..\src\function_standardize.cpp" />
+    <ClCompile Include="..\src\function_stdev.cpp" />
+    <ClCompile Include="..\src\function_stdeva.cpp" />
+    <ClCompile Include="..\src\function_stdevp.cpp" />
+    <ClCompile Include="..\src\function_stdevpa.cpp" />
+    <ClCompile Include="..\src\function_steyx.cpp" />
+    <ClCompile Include="..\src\function_sumx2my2.cpp" />
+    <ClCompile Include="..\src\function_sumx2py2.cpp" />
+    <ClCompile Include="..\src\function_sumxmy2.cpp" />
+    <ClCompile Include="..\src\function_syd.cpp" />
+    <ClCompile Include="..\src\function_tdist.cpp" />
+    <ClCompile Include="..\src\function_tinv.cpp" />
+    <ClCompile Include="..\src\function_trimmean.cpp" />
+    <ClCompile Include="..\src\function_ttest.cpp" />
+    <ClCompile Include="..\src\function_var.cpp" />
+    <ClCompile Include="..\src\function_vara.cpp" />
+    <ClCompile Include="..\src\function_varp.cpp" />
+    <ClCompile Include="..\src\function_varpa.cpp" />
+    <ClCompile Include="..\src\function_weibull.cpp" />
+    <ClCompile Include="..\src\function_ztest.cpp" />
+    <ClCompile Include="..\src\function_error_type.cpp" />
+    <ClCompile Include="..\src\function_isblank.cpp" />
+    <ClCompile Include="..\src\function_iserr.cpp" />
+    <ClCompile Include="..\src\function_iserror.cpp" />
+    <ClCompile Include="..\src\function_iseven.cpp" />
+    <ClCompile Include="..\src\function_islogical.cpp" />
+    <ClCompile Include="..\src\function_isna.cpp" />
+    <ClCompile Include="..\src\function_isnontext.cpp" />
+    <ClCompile Include="..\src\function_isnumber.cpp" />
+    <ClCompile Include="..\src\function_isodd.cpp" />
+    <ClCompile Include="..\src\function_isref.cpp" />
+    <ClCompile Include="..\src\function_istext.cpp" />
+    <ClCompile Include="..\src\function_char.cpp" />
+    <ClCompile Include="..\src\function_code.cpp" />
+    <ClCompile Include="..\src\function_concatenate.cpp" />
+    <ClCompile Include="..\src\function_exact.cpp" />
+    <ClCompile Include="..\src\function_find.cpp" />
+    <ClCompile Include="..\src\function_left.cpp" />
+    <ClCompile Include="..\src\function_leftb.cpp" />
+    <ClCompile Include="..\src\function_len.cpp" />
+    <ClCompile Include="..\src\function_mid.cpp" />
+    <ClCompile Include="..\src\function_proper.cpp" />
+    <ClCompile Include="..\src\function_replace.cpp" />
+    <ClCompile Include="..\src\function_rept.cpp" />
+    <ClCompile Include="..\src\function_right.cpp" />
+    <ClCompile Include="..\src\function_search.cpp" />
+    <ClCompile Include="..\src\function_substitute.cpp" />
+    <ClCompile Include="..\src\function_t.cpp" />
+    <ClCompile Include="..\src\function_tolower.cpp" />
+    <ClCompile Include="..\src\function_toupper.cpp" />
+    <ClCompile Include="..\src\function_trim.cpp" />
+    <ClCompile Include="..\src\function_between.cpp" />
+    <ClCompile Include="..\src\function_currentuser.cpp" />
+    <ClCompile Include="..\src\function_hidecolumn.cpp" />
+    <ClCompile Include="..\src\function_hiderow.cpp" />
+    <ClCompile Include="..\src\function_isduplicate.cpp" />
+    <ClCompile Include="..\src\function_isunique.cpp" />
+    <ClCompile Include="..\src\function_nbetween.cpp" />
+    <ClCompile Include="..\src\function_text.cpp" />
+    <ClCompile Include="..\src\function_type.cpp" />
+    <ClCompile Include="..\src\function_usergroups.cpp" />
+    <ClCompile Include="..\src\function_userlocale.cpp" />
+    <ClCompile Include="..\src\function_db.cpp" />
+    <ClCompile Include="..\src\function_ddb.cpp" />
+    <ClCompile Include="..\src\function_fv.cpp" />
+    <ClCompile Include="..\src\function_irr.cpp" />
+    <ClCompile Include="..\src\function_ispmt.cpp" />
+    <ClCompile Include="..\src\function_mirr.cpp" />
+    <ClCompile Include="..\src\function_nper.cpp" />
+    <ClCompile Include="..\src\function_npv.cpp" />
+    <ClCompile Include="..\src\function_pmt.cpp" />
+    <ClCompile Include="..\src\function_pv.cpp" />
+    <ClCompile Include="..\src\function_rate.cpp" />
+    <ClCompile Include="..\src\function_sln.cpp" />
+    <ClCompile Include="..\src\function_abs.cpp" />
+    <ClCompile Include="..\src\function_acos.cpp" />
+    <ClCompile Include="..\src\function_acosh.cpp" />
+    <ClCompile Include="..\src\function_asin.cpp" />
+    <ClCompile Include="..\src\function_asinh.cpp" />
+    <ClCompile Include="..\src\function_atan.cpp" />
+    <ClCompile Include="..\src\function_atan2.cpp" />
+    <ClCompile Include="..\src\function_atanh.cpp" />
+    <ClCompile Include="..\src\function_ceiling.cpp" />
+    <ClCompile Include="..\src\function_cos.cpp" />
+    <ClCompile Include="..\src\function_cosh.cpp" />
+    <ClCompile Include="..\src\function_degrees.cpp" />
+    <ClCompile Include="..\src\function_even.cpp" />
+    <ClCompile Include="..\src\function_exp.cpp" />
+    <ClCompile Include="..\src\function_fact.cpp" />
+    <ClCompile Include="..\src\function_floor.cpp" />
+    <ClCompile Include="..\src\function_int.cpp" />
+    <ClCompile Include="..\src\function_ln.cpp" />
+    <ClCompile Include="..\src\function_log.cpp" />
+    <ClCompile Include="..\src\function_log10.cpp" />
+    <ClCompile Include="..\src\function_mdeterm.cpp" />
+    <ClCompile Include="..\src\function_minverse.cpp" />
+    <ClCompile Include="..\src\function_mmult.cpp" />
+    <ClCompile Include="..\src\function_mod.cpp" />
+    <ClCompile Include="..\src\function_mround.cpp" />
+    <ClCompile Include="..\src\function_odd.cpp" />
+    <ClCompile Include="..\src\function_pi.cpp" />
+    <ClCompile Include="..\src\function_power.cpp" />
+    <ClCompile Include="..\src\function_product.cpp" />
+    <ClCompile Include="..\src\function_radians.cpp" />
+    <ClCompile Include="..\src\function_rand.cpp" />
+    <ClCompile Include="..\src\function_randbetween.cpp" />
+    <ClCompile Include="..\src\function_round.cpp" />
+    <ClCompile Include="..\src\function_rounddown.cpp" />
+    <ClCompile Include="..\src\function_roundup.cpp" />
+    <ClCompile Include="..\src\function_sign.cpp" />
+    <ClCompile Include="..\src\function_sin.cpp" />
+    <ClCompile Include="..\src\function_sinh.cpp" />
+    <ClCompile Include="..\src\function_sqrt.cpp" />
+    <ClCompile Include="..\src\function_sum.cpp" />
+    <ClCompile Include="..\src\function_sumif.cpp" />
+    <ClCompile Include="..\src\function_sumproduct.cpp" />
+    <ClCompile Include="..\src\function_sumsq.cpp" />
+    <ClCompile Include="..\src\function_tan.cpp" />
+    <ClCompile Include="..\src\function_tanh.cpp" />
+    <ClCompile Include="..\src\function_transpose.cpp" />
+    <ClCompile Include="..\src\function_trunc.cpp" />
+    <ClCompile Include="..\src\function_dependents.cpp" />
+    <ClCompile Include="..\src\function_precedents.cpp" />
+    <ClCompile Include="..\src\function_volatile_count.cpp" />
+    <ClCompile Include="..\src\function_date.cpp" />
+    <ClCompile Include="..\src\function_day.cpp" />
+    <ClCompile Include="..\src\function_month.cpp" />
+    <ClCompile Include="..\src\function_now.cpp" />
+    <ClCompile Include="..\src\function_time.cpp" />
+    <ClCompile Include="..\src\function_today.cpp" />
+    <ClCompile Include="..\src\function_weeknum.cpp" />
+    <ClCompile Include="..\src\function_year.cpp" />
+    <ClCompile Include="..\src\function_address.cpp" />
+    <ClCompile Include="..\src\function_choose.cpp" />
+    <ClCompile Include="..\src\function_column.cpp" />
+    <ClCompile Include="..\src\function_columns.cpp" />
+    <ClCompile Include="..\src\function_hlookup.cpp" />
+    <ClCompile Include="..\src\function_index.cpp" />
+    <ClCompile Include="..\src\function_lookup.cpp" />
+    <ClCompile Include="..\src\function_match.cpp" />
+    <ClCompile Include="..\src\function_na.cpp" />
+    <ClCompile Include="..\src\function_offset.cpp" />
+    <ClCompile Include="..\src\function_row.cpp" />
+    <ClCompile Include="..\src\function_rows.cpp" />
+    <ClCompile Include="..\src\function_vlookup.cpp" />
+    <ClCompile Include="..\src\lookup_functors.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="function.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\function_helper.hpp" />
+    <ClInclude Include="..\src\function_helper_internals.hpp" />
+    <ClInclude Include="..\src\function_library.hpp" />
+    <ClInclude Include="..\src\internal_functions.hpp" />
+    <ClInclude Include="..\src\precompiled_header.hpp" />
+    <ClInclude Include="..\src\traverse.hpp" />
+    <ClInclude Include="..\src\traverse12.hpp" />
+    <ClInclude Include="..\src\traverse2.hpp" />
+    <ClInclude Include="..\src\traversea.hpp" />
+    <ClInclude Include="..\src\utility.hpp" />
+    <ClInclude Include="..\src\lookup_functors.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\server\vs\wss.vcxproj">
+      <Project>{949cfc6b-e44f-4b9e-8229-84c00a33866f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

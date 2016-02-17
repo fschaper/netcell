@@ -1,0 +1,17 @@
+	<!--addBarLayer2 - Adds an empty bar layer to the XYChart.-->
+	<xl3DBarStacked100 type="function" class="BarLayer" init="addBarLayer2" context="Bar3DGroup">
+	  <args>
+	<!--The method to combine the data sets together in the bar layer.-->
+	    <arg name="dataCombineMethod" default="Percentage" mandatory="true">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--The 3D depth of the bar layer.-->
+	    <arg name="depth" default="8">
+	      <!--<map path=""/>-->
+	    </arg>
+	  </args>
+
+	  &BarLayer;
+	</xl3DBarStacked100>
+
+	&packPlotArea;

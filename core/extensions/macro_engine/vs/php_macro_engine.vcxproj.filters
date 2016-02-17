@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\config">
+      <UniqueIdentifier>{562f5f40-24db-4a68-9eb2-cb550fad2285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{7f279564-8adc-44b8-a29f-00fb6e7b3c9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\schema">
+      <UniqueIdentifier>{740a3e0d-5ef6-4cce-b0a8-0befb81560de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted">
+      <UniqueIdentifier>{515a20b9-55b0-449b-a591-329161e10530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\session handler">
+      <UniqueIdentifier>{4bcb9cdb-44cc-495c-9170-0f9f21a3e42d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\session handler\implementation">
+      <UniqueIdentifier>{d213671b-f938-4d79-a785-d1226fecb063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\utility">
+      <UniqueIdentifier>{4aa82967-552f-4816-bdb0-eb9f3c3051e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\utility\implementation">
+      <UniqueIdentifier>{32d6ab1d-562f-4229-9e7f-07d3c6677dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\exception">
+      <UniqueIdentifier>{60eadef7-eaae-4c8b-82c1-fe3d7c7e9289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\exception\implementation">
+      <UniqueIdentifier>{b1802c12-3e1b-400c-bd4b-d75afa1e5c56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\implementation">
+      <UniqueIdentifier>{9a6c29ad-9e84-4e27-b9b0-4c5a35c4711c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\adapter">
+      <UniqueIdentifier>{7596e558-c311-4c42-a7e0-eb78aa642940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\adapter\implementation">
+      <UniqueIdentifier>{cd2c590c-60e6-49d1-83f9-4ee02adeddb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\function">
+      <UniqueIdentifier>{d2b8378c-6553-4d97-bbe8-0c4d7d126c02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapted\function\implementation">
+      <UniqueIdentifier>{49b90010-922e-40ad-9ef3-b09aa3e27115}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="macro_engine.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\xml\schema\macro_engine_config.xsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\precompiled_header.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\macro_engine_config.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\macro_engine_config_parser.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\macro_engine_config_readers.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\macro_engine_config_serializer.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\macro_engine_config_writers.cpp">
+      <Filter>Source Files\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\session_handler.cpp">
+      <Filter>adapted\session handler\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\array_input_converter.cpp">
+      <Filter>adapted\utility\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\array_return_converter.cpp">
+      <Filter>adapted\utility\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\logging.cpp">
+      <Filter>adapted\utility\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\value_converter.cpp">
+      <Filter>adapted\utility\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\wss2php_loglevel.cpp">
+      <Filter>adapted\utility\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\duplicate_handler_exception.cpp">
+      <Filter>adapted\exception\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extension_init.cpp">
+      <Filter>adapted\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\php_sapi.cpp">
+      <Filter>adapted\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\application.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\arginfo.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\attribute.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\column.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\element.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\elements.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\global.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\module.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\name.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\names.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\range.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\row.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\workbook.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\workbooks.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\worksheet.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\worksheets.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\wss_exception.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\php_file_callback_task.cpp">
+      <Filter>adapted\function\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\php_function_redirection_registry.cpp">
+      <Filter>adapted\function\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\php_function_registry.cpp">
+      <Filter>adapted\function\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\php_internal_function_callback_task.cpp">
+      <Filter>adapted\function\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\php_redirected_spreadsheet_function.cpp">
+      <Filter>adapted\function\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\php_spreadsheet_file_function_wrapper.cpp">
+      <Filter>adapted\function\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\php_spreadsheet_internal_function_wrapper.cpp">
+      <Filter>adapted\function\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\variant_error.cpp">
+      <Filter>adapted\adapter\implementation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\macro_engine_config.hpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\macro_engine_config_literals.hpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\macro_engine_config_parser.hpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\macro_engine_config_readers.hpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\macro_engine_config_serializer.hpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\macro_engine_config_writers.hpp">
+      <Filter>Source Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\i_task.hpp">
+      <Filter>adapted</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\php_includes.hpp">
+      <Filter>adapted</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\php_sapi.hpp">
+      <Filter>adapted</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\version_info.hpp">
+      <Filter>adapted</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\session_handler.hpp">
+      <Filter>adapted\session handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\array_input_converter.hpp">
+      <Filter>adapted\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\array_return_converter.hpp">
+      <Filter>adapted\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\logging.hpp">
+      <Filter>adapted\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\value_converter.hpp">
+      <Filter>adapted\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\wss2php_loglevel.hpp">
+      <Filter>adapted\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\duplicate_handler_exception.hpp">
+      <Filter>adapted\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\i_php_function_wrapper.hpp">
+      <Filter>adapted\function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\php_file_callback_task.hpp">
+      <Filter>adapted\function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\php_function_redirection_registry.hpp">
+      <Filter>adapted\function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\php_function_registry.hpp">
+      <Filter>adapted\function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\php_internal_function_callback_task.hpp">
+      <Filter>adapted\function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\php_redirected_spreadsheet_function.hpp">
+      <Filter>adapted\function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\php_spreadsheet_file_function_wrapper.hpp">
+      <Filter>adapted\function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\php_spreadsheet_internal_function_wrapper.hpp">
+      <Filter>adapted\function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\precompiled_header.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <xsd2cpp Include="..\xml\schema\macro_engine_config.xsd">
+      <Filter>xml\schema</Filter>
+    </xsd2cpp>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="..\xml\macro_engine_config.xml">
+      <Filter>xml</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Logical">
+      <UniqueIdentifier>{ec7442dd-f6c1-47b7-8e3c-c273a9aeedea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Statistical">
+      <UniqueIdentifier>{7a4ae459-2181-481d-be48-a19b7c556503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IsFunctions">
+      <UniqueIdentifier>{c7cdc8e1-78d5-427d-903c-5e2419666bcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TextAndData">
+      <UniqueIdentifier>{1fe06176-5e50-47f4-b06e-f31d7e7b3274}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Custom">
+      <UniqueIdentifier>{8a0499ee-118f-47a2-8ccf-16a9cbb09443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Financial">
+      <UniqueIdentifier>{d83cd706-a0f6-43ed-843c-328bea98737b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MathAndTrig">
+      <UniqueIdentifier>{584a3c15-971d-4dfa-a4d6-bb526d62c518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Debug">
+      <UniqueIdentifier>{4d774567-7239-42fc-b58a-3cab8957b97b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DateAndTime">
+      <UniqueIdentifier>{8cf061db-1524-46f5-8c4e-2727c610170d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LookupAndReference">
+      <UniqueIdentifier>{c3acb6ef-e15f-4d17-b8e1-0fe70d5ac7de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\binomdist_cumulative.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\binomdist_density.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\combin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_library.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\poisson_density.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\precompiled_header.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_and.cpp">
+      <Filter>Source Files\Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_false.cpp">
+      <Filter>Source Files\Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_if.cpp">
+      <Filter>Source Files\Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_not.cpp">
+      <Filter>Source Files\Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_or.cpp">
+      <Filter>Source Files\Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_true.cpp">
+      <Filter>Source Files\Logical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_avedev.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_average.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_averagea.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_averagee.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_betadist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_betainv.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_binomdist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_chidist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_chiinv.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_chitest.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_combin.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_confidence.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_correl.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_count.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_counta.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_countblank.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_countif.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_covar.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_critbinom.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_devsq.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_expondist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_fdist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_finv.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_fisher.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_fisherinv.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_forecast.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_frequency.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_ftest.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_gammadist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_gammainv.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_gammaln.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_geomean.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_harmean.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_hypgeomdist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_intercept.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_kurt.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_large.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_loginv.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_lognormdist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_max.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_maxa.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_median.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_min.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_mina.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_mode.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_negbinomdist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_normdist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_norminv.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_normsdist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_normsinv.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_pearson.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_percentile.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_percentrank.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_permut.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_poisson.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_prob.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_quartile.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_rank.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_rsq.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_skew.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_slope.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_small.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_standardize.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_stdev.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_stdeva.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_stdevp.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_stdevpa.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_steyx.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sumx2my2.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sumx2py2.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sumxmy2.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_syd.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_tdist.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_tinv.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_trimmean.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_ttest.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_var.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_vara.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_varp.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_varpa.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_weibull.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_ztest.cpp">
+      <Filter>Source Files\Statistical</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_error_type.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_isblank.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_iserr.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_iserror.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_iseven.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_islogical.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_isna.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_isnontext.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_isnumber.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_isodd.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_isref.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_istext.cpp">
+      <Filter>Source Files\IsFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_char.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_code.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_concatenate.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_exact.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_find.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_left.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_leftb.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_len.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_mid.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_proper.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_replace.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_rept.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_right.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_search.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_substitute.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_t.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_tolower.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_toupper.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_trim.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_between.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_currentuser.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_hidecolumn.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_hiderow.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_isduplicate.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_isunique.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_nbetween.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_text.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_type.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_usergroups.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_userlocale.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_db.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_ddb.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_fv.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_irr.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_ispmt.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_mirr.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_nper.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_npv.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_pmt.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_pv.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_rate.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sln.cpp">
+      <Filter>Source Files\Financial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_abs.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_acos.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_acosh.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_asin.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_asinh.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_atan.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_atan2.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_atanh.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_ceiling.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_cos.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_cosh.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_degrees.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_even.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_exp.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_fact.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_floor.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_int.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_ln.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_log.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_log10.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_mdeterm.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_minverse.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_mmult.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_mod.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_mround.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_odd.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_pi.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_power.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_product.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_radians.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_rand.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_randbetween.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_round.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_rounddown.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_roundup.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sign.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sin.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sinh.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sqrt.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sum.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sumif.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sumproduct.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_sumsq.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_tan.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_tanh.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_transpose.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_trunc.cpp">
+      <Filter>Source Files\MathAndTrig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_dependents.cpp">
+      <Filter>Source Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_precedents.cpp">
+      <Filter>Source Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_volatile_count.cpp">
+      <Filter>Source Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_date.cpp">
+      <Filter>Source Files\DateAndTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_day.cpp">
+      <Filter>Source Files\DateAndTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_month.cpp">
+      <Filter>Source Files\DateAndTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_now.cpp">
+      <Filter>Source Files\DateAndTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_time.cpp">
+      <Filter>Source Files\DateAndTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_today.cpp">
+      <Filter>Source Files\DateAndTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_weeknum.cpp">
+      <Filter>Source Files\DateAndTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_year.cpp">
+      <Filter>Source Files\DateAndTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_address.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_choose.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_column.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_columns.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_hlookup.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_index.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_lookup.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_match.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_na.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_offset.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_row.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_rows.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_vlookup.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\lookup_functors.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_used_range.cpp">
+      <Filter>Source Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_concatenate_range.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_value.cpp">
+      <Filter>Source Files\TextAndData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_indirect.cpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\function_unformatted.cpp">
+      <Filter>Source Files\Custom</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="function.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\function_helper.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\function_helper_internals.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\function_library.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\internal_functions.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\precompiled_header.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\traverse.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\traverse12.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\traverse2.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\traversea.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utility.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\lookup_functors.hpp">
+      <Filter>Source Files\LookupAndReference</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

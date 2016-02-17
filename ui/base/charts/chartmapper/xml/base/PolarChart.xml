@@ -1,0 +1,256 @@
+
+  <args>
+<!--The width of the chart in pixels.-->
+    <arg name="width" mandatory="true">
+		<map path="Chart.ChartArea.Width">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+    </arg>
+<!--The height of the chart in pixels.-->
+    <arg name="height" mandatory="true">
+		<map path="Chart.ChartArea.Height">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+    </arg>
+<!--The background color of the chart.-->
+    <arg name="bgColor" default="BackgroundColor">
+      <!--<map path=""/>-->
+    </arg>
+<!--The edge color of the chart.-->
+    <arg name="edgeColor" default="Transparent">
+      <!--<map path=""/>-->
+    </arg>
+<!--The 3D border width. For positive values, the border will appear raised. For negative values, the border will appear depressed. A zero value means the border will appear flat.-->
+    <arg name="raisedEffect" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+&BaseChart;
+
+<!--addAreaLayer - Adds a polar area layer to the polar chart.-->
+<var_addAreaLayer applicable="false" type="eval" result="PolarAreaLayer" init="addAreaLayer" skip="true">
+  <args>
+<!--An array of numbers representing the data points in the layer.-->
+    <arg name="data" default="" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The color to draw the area. -1 means that the color is automatically selected from the palette.-->
+    <arg name="color" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+<!--The name of the layer. The name will be used in the legend box, if one is available. An empty string means the layer has no name.-->
+    <arg name="name" default="">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="getDataSetRadarArea"/>
+  <!--<evaladapter class="LookupValue" method="addLayers"/>-->
+</var_addAreaLayer>
+
+<!--addLineLayer - Adds a polar line layer to the polar chart.-->
+<var_addLineLayer applicable="false" type="eval" result="PolarLineLayer" init="addLineLayer" skip="ture">
+  <args>
+<!--An array of numbers representing the data points in the layer.-->
+    <arg name="data" default="" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The color to draw the line. -1 means that the color is automatically selected from the palette.-->
+    <arg name="color" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+<!--The name of the layer. The name will be used in the legend box, if one is available. An empty string means the layer has no name.-->
+    <arg name="name" default="" string="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="getDataSetRadar"/>
+  <!--<evaladapter class="LookupValue" method="addLayers"/>-->
+</var_addLineLayer>
+
+<!--addSplineAreaLayer - Adds a polar spline area layer to the polar chart.-->
+<var_addSplineAreaLayer applicable="false" type="function" skip="true" result="PolarSplineAreaLayer" init="addSplineAreaLayer">
+  <args>
+<!--An array of numbers representing the data points in the layer.-->
+    <arg name="data" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to draw the spline area. -1 means that the color is automatically selected from the palette.-->
+    <arg name="color" default="-1">
+      <map path=""/>
+    </arg>
+<!--The name of the layer. The name will be used in the legend box, if one is available. An empty string means the layer has no name.-->
+    <arg name="name">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addSplineAreaLayer>
+
+<!--addSplineLineLayer - Adds a polar spline line layer to the polar chart.-->
+<var_addSplineLineLayer applicable="false" type="function" skip="true" result="PolarSplineLineLayer" init="addSplineLineLayer">
+  <args>
+<!--An array of numbers representing the data points in the layer.-->
+    <arg name="data" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color to draw the spline line. -1 means that the color is automatically selected from the palette.-->
+    <arg name="color" default="-1">
+      <map path=""/>
+    </arg>
+<!--The name of the layer. The name will be used in the legend box, if one is available. An empty string means the layer has no name.-->
+    <arg name="name">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addSplineLineLayer>
+
+<!--addVectorLayer - Adds a vector layer to the chart.-->
+<var_addVectorLayer applicable="false" type="function" skip="true" result="PolarVectorLayer" init="addVectorLayer">
+  <args>
+<!--An array of numbers representing the radial coordinates for the reference points of the vectors.-->
+    <arg name="rData" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of numbers representing the angular coordinates for the reference points of the vectors.-->
+    <arg name="aData" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of numbers representing the lengths of the vectors, in unit as specified in the lengthScale argument.-->
+    <arg name="lengths" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of numbers representing the direction of the vectors as a clockwise angle in degrees, where 0 is upward pointing direction.-->
+    <arg name="directions" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The unit for the lengths, which must be one of the predefined constants in the table above.-->
+    <arg name="lengthScale" default="PixelScale">
+      <map path=""/>
+    </arg>
+<!--The color to draw the data points. -1 means that the color is automatically selected from the palette.-->
+    <arg name="color" default="-1">
+      <map path=""/>
+    </arg>
+<!--The name of the layer. The name will be used in the legend box, if one is available. An empty string means the layer has no name.-->
+    <arg name="name">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addVectorLayer>
+
+<!--angularAxis - Gets the AngularAxis object representing the angular axis of the polar chart.-->
+<var_angularAxis type="function" result="AngularAxis" init="angularAxis">
+	&AngularAxis;
+</var_angularAxis>
+
+<!--radialAxis - Gets the RadialAxis object representing the radial axis of the polar chart.-->
+<var_radialAxis type="function" skip="true" result="RadialAxis" init="radialAxis">
+	$Axis;
+</var_radialAxis>
+
+<!-- MLADEN .. DORADA .. Nisam mogao naci gdje se drzi podatak o boji i debljini linije. -->
+<!--setGridColor - Sets the grid colors and widths of the polar plot area.-->
+<setGridColor type="method" skip="true">
+  <args>
+<!--The color of grid lines in the radial direction (from the center outwards).-->
+    <arg name="rGridColor" default="80000000">
+      <!--<map path=""/>-->
+    </arg>
+<!--The line width for grid lines in the radial direction (from the center outwards).-->
+    <arg name="rGridWidth" default="1">
+      <!--<map path=""/>-->
+    </arg>
+<!--The color of grid lines in the angular direction (concentric circles around the center).-->
+    <arg name="aGridColor" default="80000000">
+      <!--<map path=""/>-->
+    </arg>
+<!--The line width of grid lines in the angular direction (concentric circles around the center) The line width is only used if the polar plot area is using a polygon grid (see PolarChart.setGridStyle). If circular grid is used, the line width is always 1.-->
+    <arg name="aGridWidth" default="1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setGridColor>
+
+<!--setGridStyle - Configure whether to use circular grids or polygon grids, and whether the grid lines are on top of the polar plot area or are at the back.-->
+<setGridStyle applicable="false" type="method" skip="true">
+  <args>
+<!--A true (non-zero) value means polygonal grid will be used. A false (zero) value means circular grid will be used.-->
+    <arg name="polygonGrid" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A true (non-zero) value means the grid lines will be on top of the polar plot area. A false (zero) value means the grid lines will be at the bottom of the polar plot area.-->
+    <arg name="gridOnTop" default="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setGridStyle>
+
+<!--setPlotArea - Sets the position, background colors, border color and border width of the polar plot area.-->
+<setPlotArea type="method">
+  <args>
+<!--The x coordinate of the center of the polar plot area.-->
+    <arg name="x" default="200" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getRadarCenterX"/>
+      </map>
+    </arg>
+<!--The y coordinate of the center of the polar plot area.-->
+    <arg name="y" default="200" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getRadarCenterY"/>
+      </map>
+    </arg>
+<!--The radius of the polar plot area in pixels.-->
+    <arg name="r" default="100" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getRadarRadius"/>
+      </map>
+    </arg>
+<!--The background color of the polar plot area.-->
+    <arg name="bgColor" default="Transparent">
+      <!--<map path=""/>-->
+    </arg>
+<!--The border color of the polar plot area.-->
+    <arg name="edgeColor" default="Transparent">
+      <!--<map path=""/>-->
+    </arg>
+<!--The border width of the polar plot area. The border width is only used if the polar plot area is using a polygon grid (see PolarChart.setGridStyle). If circular grid is used, the border width is always 1.-->
+    <arg name="edgeWidth" default="1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setPlotArea>
+
+<!--setPlotAreaBg - Sets alternating background colors for the polar plot area.-->
+<setPlotAreaBg applicable="false" type="method" skip="true">
+  <args>
+<!--The first background color.-->
+    <arg name="bgColor1" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The second background color. The default value of -1 means it is the same as the first background color.-->
+    <arg name="bgColor2" default="-1">
+      <map path=""/>
+    </arg>
+<!--A true (non-zero) value means the background colors alternate in the radial direction, resulting in concentric circles. A false (zero) value means the background colors alternates in the angular direction, resulting in alternating sectors.-->
+    <arg name="altRings" default="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setPlotAreaBg>
+
+<!--setStartAngle - Sets the angle of the radial axis, and the layout direction of radial grid lines.-->
+<setStartAngle applicable="false" type="method" skip="true">
+  <args>
+<!--The angle of the radial axis in degrees. The upward pointing direction is 0 degree, with angle measured in the clockwise direction.-->
+    <arg name="startAngle" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A true (non-zero) value means the radial grid line will be laid out in the clockwise direction. A false (zero) value means the radial grid lines will be laid out in the counter-clockwise direction.-->
+    <arg name="clockwise" default="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setStartAngle>

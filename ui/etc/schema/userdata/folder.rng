@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element name="userdata" xmlns="http://relaxng.org/ns/structure/1.0">
+  <optional>
+    <element name="view">
+      <choice>
+        <value>icons</value>
+        <value>list</value>
+        <value>details</value>
+      </choice>
+    </element>
+  </optional>
+</element>

@@ -1,0 +1,136 @@
+
+<!--set4QBgColor - Sets using 4 background plot area colors for 4 quadrants.-->
+<set4QBgColor applicable="false" type="method" skip="true">
+  <args>
+<!--The background color to be used for the first quadrant.-->
+    <arg name="Q1Color" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The background color to be used for the second quadrant.-->
+    <arg name="Q2Color" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The background color to be used for the third quadrant.-->
+    <arg name="Q3Color" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The background color to be used for the fourth quadrant.-->
+    <arg name="Q4Color" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--he border color of the plot area. -1 means to use the default, which is LineColor. However, if the axes are configured in 4 quadrant mode (see XYChart.setAxisAtOrigin), the default will change to Transparent.-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</set4QBgColor>
+
+<!--setBackground - Sets the background colors and the border color of the plot area.-->
+<setBackground type="method">
+  <args>
+<!--The background color.-->
+    <arg name="color" mandatory="true">
+      <map path="Chart.PlotArea.Fill.BackColor">&adapter_FormatConvertor_colorObject;</map>
+    </arg>
+<!--The second background color. -1 means there is no second background color.-->
+    <arg name="altBgColor" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+<!--The border color of the plot area. -1 means to use the default, which is LineColor. However, if the axes are configured in 4 quadrant mode (see XYChart.setAxisAtOrigin), the default will change to Transparent.-->
+    <arg name="edgeColor" default="-1">
+      <map path="Chart.PlotArea.Border.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+    </arg>
+  </args>
+</setBackground>
+
+<!--setAltBgColor - Sets alternating plot area background color.-->
+<setAltBgColor applicable="false" type="method" skip="true">
+  <args>
+<!--true (non-zero) means to use horizontal bands. false (zero) means to use vertical bands.-->
+    <arg name="horizontal" default="false" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The first color to be used as the alternating background color.-->
+    <arg name="color1" default="0xeeeeff" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The second color to be used as the alternating background color.-->
+    <arg name="color2" default="0x0000cc" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The border color of the plot area. -1 means to use the default, which is LineColor. However, if the axes are configured in 4 quadrant mode (see XYChart.setAxisAtOrigin), the default will change to Transparent.-->
+    <arg name="edgeColor" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setAltBgColor>
+
+<!--setBackground2 - Sets the specified image file as the background image of the plot area.-->
+<setBackground2 applicable="false" type="method" skip="true">
+  <args>
+<!--The image file that is used as the background image of the plot area.-->
+    <arg name="img" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The alignment of the background image relative to the plot area. See Alignment Specification for supported alignment types.-->
+    <arg name="align" default="Center">
+      <map path=""/>
+    </arg>
+  </args>
+</setBackground2>
+
+<!-- #MLADEN# There should exist object with gridlines colors. Property: Gridlines -->
+<!--setGridColor - Sets the horizontal and vertical grid colors of the plot area.-->
+<setGridColor type="eval" init="setGridColor">
+  <args>
+<!--The color for the horizontal grid lines associated with major ticks.-->
+    <arg name="hGridColor" default="0x00FF00" mandatory="true">
+      <map path="Chart.Axes(2).MajorGridlines.Border">
+      	<superadapter class="FormatConvertor" method="getBorderColor"/>
+      </map>
+    </arg>
+<!--The color for the vertical grid lines associated with major ticks.-->
+    <arg name="vGridColor" default="Transparent">
+      <map path="Chart.Axes(1).MajorGridlines.Border">
+      	<superadapter class="FormatConvertor" method="getBorderColor"/>
+      </map>
+    </arg>
+<!--The color for the horizontal grid lines associated with minor ticks. -1 means the color is the same as hGridColor.-->
+<!-- #MLADEN# Here should be mapped property, but it's not properly filled in Chart object. -->
+    <arg name="minorHGridColor" default="-1">
+<!--      <map path="Chart.Axes(2).MinorGridlines.Border">
+      	<superadapter class="FormatConvertor" method="getBorderColor"/>
+      </map> -->
+    </arg>
+<!--The color for the vertical grid lines associated with minor ticks. -1 means the color is the same as vGridColor.-->
+    <arg name="minorVGridColor" default="-1">
+<!--      <map path="Chart.Axes(1).MinorGridlines.Border">
+      	<superadapter class="FormatConvertor" method="getBorderColor"/>
+      </map> -->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="setGridColor" />
+</setGridColor>
+
+<!--setGridWidth - Sets the horizontal and vertical grid line width.-->
+<setGridWidth type="method">
+  <args>
+<!--The line width for the horizontal grid lines associated with major ticks.-->
+    <arg name="hGridWidth" mandatory="true">
+      <map path="Chart.Axes(2).MajorGridlines.Format.Line.Weight">&adapter_UnitConvertor_pointToPixel;</map>
+    </arg>
+<!--The line width for the vertical grid lines associated with major ticks. -1 means the vertical grid line width is the same as hGridWidth.-->
+    <arg name="vGridWidth" default="-1">
+      <map path="Chart.Axes(1).MajorGridlines.Format.Line.Weight">&adapter_UnitConvertor_pointToPixel;</map>
+    </arg>
+<!--The line width for the horizontal grid lines associated with minor ticks. -1 means the color is the same as hGridWidth.-->
+    <arg name="minorHGridWidth" default="-1">
+      <map path="Chart.Axes(2).MinorGridlines.Format.Line.Weight">&adapter_UnitConvertor_pointToPixel;</map>
+    </arg>
+<!--The line width for the horizontal grid lines associated with minor ticks. -1 means the color is the same as vGridWidth.-->
+    <arg name="minorVGridWidth" default="-1">
+      <map path="Chart.Axes(1).MinorGridlines.Format.Line.Weight">&adapter_UnitConvertor_pointToPixel;</map>
+    </arg>
+  </args>
+</setGridWidth>

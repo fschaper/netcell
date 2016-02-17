@@ -1,0 +1,209 @@
+
+<!--addCustomDataLabel - Adds a custom data label to a data point.-->
+<var_addCustomDataLabel applicable="false" type="function" skip="true" result="TextBox" init="addCustomDataLabel">
+  <args>
+<!--The data point number for the data point. The first data point is 0, while the nth data point is (n - 1).-->
+    <arg name="i" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A text string representing the data label. Parameter Substitution and Formatting is supported.-->
+    <arg name="label" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The font used to draw the label.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size used to draw the label.-->
+    <arg name="fontSize" default="8">
+      <map path=""/>
+    </arg>
+<!--The color used to draw the label.-->
+    <arg name="fontColor" default="TextColor">
+      <map path=""/>
+    </arg>
+<!--The rotation angle of the label.-->
+    <arg name="fontAngle" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addCustomDataLabel>
+
+<!--setAngles - Sets the angular coordinates of the data points.-->
+<setAngles applicable="false" type="method" skip="true">
+  <args>
+<!--An array of numbers representing the angular coordinates of the data points.-->
+    <arg name="angles" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setAngles>
+
+<!--setBorderColor - Sets the border color for drawing the data on the layer.-->
+<setBorderColor applicable="false" type="method" skip="true">
+  <args>
+<!--The border color.-->
+    <arg name="edgeColor" default="0xffffff" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setBorderColor>
+
+<!--setDataLabelFormat - Sets the data label format.-->
+<setDataLabelFormat applicable="false" type="method" skip="true">
+  <args>
+<!--The format string.-->
+    <arg name="formatString" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataLabelFormat>
+
+<!--setDataLabelStyle - Enables data labels and sets their styles.-->
+<var_setDataLabelStyle applicable="false" type="function" skip="true" result="TextBox" init="setDataLabelStyle">
+  <args>
+<!--The font used to draw the labels.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size used to draw the labels.-->
+    <arg name="fontSize" default="8">
+      <map path=""/>
+    </arg>
+<!--The color used to draw the labels.-->
+    <arg name="fontColor" default="TextColor">
+      <map path=""/>
+    </arg>
+<!--The rotation angle of the labels.-->
+    <arg name="fontAngle" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</var_setDataLabelStyle>
+
+<!--setDataSymbol - Uses one of the built-in symbols as the graphics symbol to plot the data points.-->
+<setDataSymbol applicable="false" type="method" skip="true">
+  <args>
+<!--One of the predefined shape constants representing the symbol shape. See Shape Specification for the available built-in shapes.-->
+    <arg name="symbol" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The width and height of the symbol in pixels.-->
+    <arg name="size" default="7">
+      <map path=""/>
+    </arg>
+<!--The color used to fill the symbol. -1 means the color of the data set will be used.-->
+    <arg name="fillColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The edge color used to draw the edge of the symbol. -1 means the edge color of the data set will be used.-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The line width used for drawing the symbols.-->
+    <arg name="lineWidth" default="1">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataSymbol>
+
+<!--setDataSymbol2 - Load an image from a file and use it as the graphics symbol to plot the data points.-->
+<setDataSymbol2 applicable="false" type="method" skip="true">
+  <args>
+<!--The filename of the image file. The image type is determined based on file extension, which must be png, jpg/jpeg, gif or wbmp/wmp.-->
+    <arg name="image" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataSymbol2>
+
+<!--setDataSymbol3 - Uses a DrawArea object as the graphics symbol to plot the data points.-->
+<setDataSymbol3 applicable="false" type="method" skip="true">
+  <args>
+<!--A DrawArea object to be used as the symbol.-->
+    <arg name="obj" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataSymbol3>
+
+<!--setDataSymbol4 - Uses a custom polygon as the graphics symbol to plot the data points.-->
+<setDataSymbol4 applicable="false" type="method" skip="true">
+  <args>
+<!--An array of integers representing the coordinates the polygon vertices. See Shape Specification on how the custom shape is defined.-->
+    <arg name="polygon" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The nominal width and height of the symbol in pixels.-->
+    <arg name="size" default="11">
+      <map path=""/>
+    </arg>
+<!--The color used to fill the symbol. -1 means the color of the data set will be used.-->
+    <arg name="fillColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The edge color used to draw the edge of the symbol. -1 means the edge color of the data set will be used.-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataSymbol4>
+
+<!--setHTMLImageMap - Override the default arguments used when generating HTML image map for the layer.-->
+<setHTMLImageMap applicable="false" type="method" skip="true">
+  <args>
+<!--The URL to be used in the "href" attribute of the image map. Parameter Substitution and Formatting is supported.
+The special keyword "{default}" represents the global URL as specified in BaseChart.getHTMLImageMap. This field is useful for specifying appending to the global URL.
+Note that an empty string also means to use the global URL. To specify no URL, use the special keyword "{none}".
+To disable the entire image map, use the special keyword "{disable}".-->
+    <arg name="url" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A text string representing the template of the query parameters to be appended to the URL. Parameter Substitution and Formatting is supported.
+The special keyword "{default}" represents the global query parameters as specified in BaseChart.getHTMLImageMap. This field is useful for specifying appending to the global query parameters.
+Note that an empty string also means to use the global query parameters. To specify no query parameters, use the special keyword "{none}".-->
+    <arg name="queryFormat">
+      <map path=""/>
+    </arg>
+<!--A text string to specify additional attributes to add to the area tag. Parameter Substitution and Formatting is supported.
+The special keyword "{default}" represents the global additional attributes as specified in BaseChart.getHTMLImageMap. This field is useful for specifying appending to the global additional attributes.
+Note that an empty string also means to use the global additional attributes. To specify no additional attributes, use the special keyword "{none}".-->
+    <arg name="extraAttr">
+      <map path=""/>
+    </arg>
+  </args>
+</setHTMLImageMap>
+
+<!--setImageMapWidth - Sets the effective size of a data point for producing image maps.-->
+<setImageMapWidth applicable="false" type="method" skip="true">
+  <args>
+<!--The effective width and height of the data point for the purpose of producing image maps.-->
+    <arg name="width" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setImageMapWidth>
+
+<!--setLineWidth - Sets the line width of lines when drawing the data on the layer.-->
+<setLineWidth applicable="false" type="method">
+  <args>
+<!--The width of the line in pixels.-->
+    <arg name="w" default="3" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setLineWidth>
+
+<!--setSymbolScale - Sets the size of the symbol for each data point (for creating bubble charts).-->
+<setSymbolScale applicable="false" type="method" skip="true">
+  <args>
+<!--The sizes of the symbols, expressed using the unit defined by the scaleType argument.-->
+    <arg name="zData" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The unit for zData, which must be one of the predefined constants in the table above.-->
+    <arg name="scaleType" default="PixelScale">
+      <map path=""/>
+    </arg>
+  </args>
+</setSymbolScale>

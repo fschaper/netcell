@@ -1,0 +1,204 @@
+/*
+ * @brief wss file
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Drazen Kljajic <drazen.kljajic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: menubar.css 4196 2010-10-26 22:40:22Z predragm $
+ *
+ */
+
+/** sprite: tb-menu-sprite; sprite-image: url('/ui/wss/res/img/sprites/tb-menu-sprite.png'); */
+/* *** ICONS CLASSES *** */
+
+.icon_file_xlsx {
+	background-image: url(/ui/wss/res/img/bar/ico_xlsx.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_file_pdf {
+	background-image: url(/ui/wss/res/img/bar/ico_pdf.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_file_html {
+	background-image: url(/ui/wss/res/img/bar/ico_html.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_clear_all {
+	background-image: url(/ui/wss/res/img/bar/ico_clear_all.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_clear_formats {
+	background-image: url(/ui/wss/res/img/bar/ico_clear_formats.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_clear_content {
+	background-image: url(/ui/wss/res/img/bar/ico_clear_contents.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_del_row {
+	background-image: url(/ui/wss/res/img/bar/ico_del_row.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_del_col {
+	background-image: url(/ui/wss/res/img/bar/ico_del_column.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_ins_row {
+	background-image: url(/ui/wss/res/img/bar/ico_ins_row.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_ins_col {
+	background-image: url(/ui/wss/res/img/bar/ico_ins_column.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_ins_sheet {
+	background-image: url(/ui/wss/res/img/bar/ico_ins_sheet.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_ins_func {
+	background-image: url(/ui/wss/res/img/bar/ico_ins_function.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_name_mgr {
+	background-image: url(/ui/wss/res/img/bar/ico_named_range.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_ins_picture {
+	background-image: url(/ui/wss/res/img/bar/ico_ins_picture.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_insert_hyperlink {
+	background-image: url(/ui/wss/res/img/bar/ico_hl_insert.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_edit {
+	background-image: url(/ui/wss/res/img/context_menu/ico_edit.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_row_height {
+	background-image: url(/ui/wss/res/img/bar/ico_row_height.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_col_width {
+	background-image: url(/ui/wss/res/img/bar/ico_column_width.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_conditional_fmt {
+	background-image: url(/ui/wss/res/img/bar/ico_cond_format.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_cnd_new {
+	background-image: url(/ui/wss/res/img/bar/ico_new_rule.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_cnd_manage {
+	background-image: url(/ui/wss/res/img/bar/ico_manage_rules.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_cnd_clear {
+	background-image: url(/ui/wss/res/img/bar/ico_clear_rules.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_palo_pasteview {
+	background-image: url(/ui/wss/res/img/menu/ico_palo_meni_paste_view.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_palo_pasteelements {
+	background-image: url(/ui/wss/res/img/menu/ico_palo_meni_paste_elements.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_palo_pastesubset {
+	background-image: url(/ui/wss/res/img/menu/ico_palo_meni_paste_subset.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_palo_pastedatafn {
+	background-image: url(/ui/wss/res/img/menu/ico_palo_meni_paste_data_function.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_palo_modeller {
+	background-image: url(/ui/wss/res/img/menu/ico_palo_meni_modellerV1.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_palo_dataimport {
+	background-image: url(/ui/wss/res/img/menu/ico_palo_meni_data_import.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_palo_saveassnap {
+	background-image: url(/ui/wss/res/img/menu/ico_palo_meni_save_as_snapshot.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_palo_wiki {
+	background-image: url(/ui/wss/res/img/menu/ico_palo_meni_www_wikipalo_com.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_form_elems {
+	background-image: url(/ui/wss/res/img/bar/ico_form.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_form_combo {
+	background-image: url(/ui/wss/res/img/bar/ico_form_combobox.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_form_checkbox {
+	background-image: url(/ui/wss/res/img/bar/ico_form_checkbox.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_form_button {
+	background-image: url(/ui/wss/res/img/bar/ico_form_button.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_macro {
+	background-image: url(/ui/wss/res/img/context_menu/ico_macro.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_macro_editor {
+	background-image: url(/ui/wss/res/img/bar/ico_macro_editor.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_dynaranges {
+	background-image: url(/ui/wss/res/img/bar/ico_drs.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_goto {
+    background-image: url( /ui/wss/res/img/bar/ico_goto.png ) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_widget {
+	background-image: url(/ui/wss/res/img/bar/ico_widget.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_widget_custom {
+	background-image: url(/ui/wss/res/img/bar/ico_widget_custom.png) !important; /** sprite-ref: tb-menu-sprite; */
+}
+
+.icon_variables {
+	background-image: url(/ui/wss/res/img/menu/variable_editor.png) !important; /** sprite-ref: tb-menu-sprite; */
+}

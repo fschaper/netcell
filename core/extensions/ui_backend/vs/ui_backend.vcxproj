@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile_suite_server|Win32">
+      <Configuration>profile_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8791CE9D-BDC8-47E7-96B2-F2D6F2521ADF}</ProjectGuid>
+    <RootNamespace>ui_backend</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle" --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 /Zm150 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\extlibs\atomic\include;..\..\..\extlibs\sockets\include;..\..\..\extlibs\tinyjson\include;..\..\..\extlibs\boost\include;..\..\..\server\include;..\..\..\extlibs\xsd2cpp\include;..\..\..\extlibs\xerces\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core_d.lib;Sockets_d.lib;xerces-c_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;..\..\..\extlibs\sockets\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>ui_backend.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>@copy ..\xml\ui_backend_config.xml $(SolutionDir)$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle" --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 /Zm150 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\extlibs\atomic\include;..\..\..\extlibs\sockets\include;..\..\..\extlibs\tinyjson\include;..\..\..\extlibs\boost\include;..\..\..\server\include;..\..\..\extlibs\xsd2cpp\include;..\..\..\extlibs\xerces\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;Sockets.lib;xerces-c_3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;..\..\..\extlibs\sockets\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>ui_backend.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>@copy ..\xml\ui_backend_config.xml $(SolutionDir)$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp $(ProjectDir)..\include\*.hpp $(ProjectDir)..\include\*.ipp $(ProjectDir)..\include\*.cpp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 /Zm150 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\..\..\extlibs\atomic\include;..\..\..\extlibs\sockets\include;..\..\..\extlibs\tinyjson\include;..\..\..\extlibs\boost\include;..\..\..\server\include;..\..\..\extlibs\xsd2cpp\include;..\..\..\extlibs\xerces\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;Sockets.lib;libtcmalloc_minimal.lib;xerces-c_3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\boost\lib\Windows\i386;..\..\..\extlibs\sockets\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>ui_backend.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>__tcmalloc;%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>@copy ..\xml\ui_backend_config.xml $(SolutionDir)$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AJPConnection.cpp" />
+    <ClCompile Include="..\src\AJPServer.cpp" />
+    <ClCompile Include="..\src\BackendHandler.cpp" />
+    <ClCompile Include="..\src\backend_config_parser.cpp" />
+    <ClCompile Include="..\src\backend_config_readers.cpp" />
+    <ClCompile Include="..\src\backend_config_serializer.cpp" />
+    <ClCompile Include="..\src\backend_config_writers.cpp" />
+    <ClCompile Include="..\src\CCmdHandler.cpp" />
+    <ClCompile Include="..\src\ExampleHandler.cpp" />
+    <ClCompile Include="..\src\HandleDispatcher.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\precompiled_header.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">precompiled_header.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">precompiled_header.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">precompiled_header.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\src\SnapshotManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ui_backend.def" />
+    <None Include="..\xml\ui_backend_config.xml" />
+    <None Include="..\xml\schema\ui_backend_config.xsx">
+      <DependentUpon>ui_backend_config.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\AJPConnection.hpp" />
+    <ClInclude Include="..\src\AJPServer.hpp" />
+    <ClInclude Include="..\src\BackendHandler.hpp" />
+    <ClInclude Include="..\src\backend_config.hpp" />
+    <ClInclude Include="..\src\backend_config_literals.hpp" />
+    <ClInclude Include="..\src\backend_config_parser.hpp" />
+    <ClInclude Include="..\src\backend_config_readers.hpp" />
+    <ClInclude Include="..\src\backend_config_serializer.hpp" />
+    <ClInclude Include="..\src\backend_config_writers.hpp" />
+    <ClInclude Include="..\src\CCmdHandler.hpp" />
+    <ClInclude Include="..\src\CommandFunctors.hpp" />
+    <ClInclude Include="..\src\debug_defines.hpp" />
+    <ClInclude Include="..\src\error_codes.hpp" />
+    <ClInclude Include="..\src\ExampleHandler.hpp" />
+    <ClInclude Include="..\src\HandleDispatcher.hpp" />
+    <ClInclude Include="..\src\JSONSerializer.hpp" />
+    <ClInclude Include="..\src\logging.hpp" />
+    <ClInclude Include="..\src\precompiled_header.hpp" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\src\SnapshotManager.hpp" />
+    <ClInclude Include="..\src\ui_backend.hpp" />
+    <ClInclude Include="..\src\version_info.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ui_backend.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xsd Include="..\xml\schema\ui_backend_config.xsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Xsd>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\server\vs\wss.vcxproj">
+      <Project>{949cfc6b-e44f-4b9e-8229-84c00a33866f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

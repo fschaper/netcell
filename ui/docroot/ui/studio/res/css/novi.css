@@ -1,0 +1,363 @@
+/*
+ * @brief css
+ *
+ * @file novi.css
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Drazen Kljajic <drazen.kljajic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: novi.css 4196 2010-10-26 22:40:22Z predragm $
+ *
+ */
+/** sprite: studio-sprite; sprite-image: url('/ui/studio/res/img/sprites/studio-sprite.png'); */
+html, body {
+	font: normal 12px tahoma, arial, verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+}
+
+
+/*
+Main Menu CSS
+*/
+
+tr .x-btn-center em, .extmenubaritem .x-btn-with-menu .x-btn-center em {
+	background: transparent none repeat scroll 0%;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.extmenubar {
+    border-width: 0px 0;
+    border-color: #666;
+    background-color: #B8D1F8;
+	background: #B8D1F8;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 20px;
+	border-bottom: solid 1px #92ADD3;
+}
+
+/*
+Main Toolbar CSS
+*/
+
+
+.exttoolbar {
+
+	background: transparent none repeat scroll 0%;
+	background: #B8D1F8;
+	padding: 2px 2px 2px 2px;
+}
+
+.exttoolbar .x-form-text {
+	color: #15428B;
+}
+
+
+/*
+Header CSS
+*/
+
+
+#header {
+    background: #7F99BE url(/ui/studio/res/img/layout-browser-hd-bg.gif) repeat-x center;
+}
+
+#header h1 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 10px;
+}
+
+
+/*
+ Tree panel moje CSS
+*/
+
+/*
+.x-panel-noborder .x-panel-header-noborder {
+	border-bottom:1px solid #99BBE8;
+	border-width:1px;
+}
+*/
+
+
+/*
+ Tree panel CSS
+*/
+
+
+
+#umi-tree .node {
+    border:1px solid #fff;
+    margin:3px;
+}
+
+#umi-tree .x-tree-selected {
+    border:1px dotted #a3bae9;
+    background:#DFE8F6;
+}
+
+#umi-tree .x-tree-node .x-tree-selected a span  {
+	background:transparent;
+	color:#15428b;
+    font-weight:bold;
+}
+
+#umi-tree .root-node .x-tree-node-icon {
+	display:none;
+}
+
+
+
+#umi-tree .x-tree-node div.root-node{
+	background:#eee url(/ui/studio/res/img/cmp-bg.gif) repeat-x;
+    margin-top:1px;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ccc;
+    padding-top:2px;
+    padding-bottom:1px;
+}
+
+
+
+#umi-tree .user-icon {
+    background-image:url(/ui/studio/res/img/fam/user.gif) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+
+.icona {
+    background:transparent url(/ui/studio/res/img/fam/user.gif) no-repeat scroll 0 2px;
+}
+
+#umi-tree .role-icon {
+    background:transparent url(/ui/studio/res/img/fam/role_icon.png) no-repeat scroll 0 2px;
+}
+
+#umi-tree .group-icon {
+    background-image:url(/ui/studio/res/img/fam/group.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+#umi-tree .application-icon {
+    background-image:url(/ui/studio/res/img/fam/application.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+
+/*
+ Main panel CSS
+*/
+
+
+.import-workbook-icon {
+	background-image: url(/ui/studio/res/img/import.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.rename-workbook-icon {
+	background-image: url(/ui/studio/res/img/rename1.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.new-icon {
+	background-image: url(/ui/studio/res/img/new.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.new-blank-icon {
+	background-image: url(/ui/studio/res/img/new_blank.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.open-icon {
+	background-image: url(/ui/studio/res/img/open.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.delete-workbook-icon {
+	background-image: url(/ui/studio/res/img/delete_workbook.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.share-workbook-icon {
+	background-image: url(/ui/studio/res/img/share_workbook.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.preview-bottom-icon {
+    background-image: url(/ui/studio/res/img/preview-bottom.png) !important; /** sprite-ref: studio-sprite; */
+}
+.preview-right-icon {
+    background-image: url(/ui/studio/res/img/preview-right.png) !important; /** sprite-ref: studio-sprite; */
+}
+.preview-hide-icon {
+    background-image: url(/ui/studio/res/img/preview-hide.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.tabs-icon {
+    background-image: url(/ui/studio/res/img/tabs.png ) !important; /** sprite-ref: studio-sprite; */
+}
+
+.summary-icon {
+    background-image: url(/ui/studio/res/img/details.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.layout-menu {
+	background:#FFFFFF repeat-y scroll 0 0;
+	border:1px solid #718BB7;
+	padding:2px;
+	z-index:15000;
+}
+
+.layout-menu .x-menu-item-checked {
+   border:1px dotted #a3bae9 !important;
+    background:#DFE8F6;
+	padding:0;
+}
+
+.add-user-icon {
+    background-image: url(/ui/studio/res/img/fam/user_add.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.delete-user-icon {
+    background-image:url(/ui/studio/res/img/fam/user_delete.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.add-group-icon {
+    background-image: url(/ui/studio/res/img/fam/group_add.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.delete-group-icon {
+    background-image:url(/ui/studio/res/img/fam/group_delete.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.new-tab-icon {
+    background-image:url(/ui/studio/res/img/new_tab.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+#main-tabs .x-tab-panel-body {
+    background:transparent;
+    border:0 none;
+}
+
+
+
+/*
+ Preview panel CSS
+*/
+
+
+.preview-properties-panel {
+	font-size:11px;
+}
+
+.preview-tab {
+padding-top:1px;
+}
+
+
+.refresh-tab-icon {
+    background-image:url(/ui/studio/res/img/fam/table_refresh.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.split-line {
+	overflow:hidden;
+	background:transparent url(/ui/studio/res/img/border.png) repeat-x;
+}
+
+
+
+/*
+ Main menu CSS
+*/
+
+
+
+
+
+
+
+
+/*
+ Toolbar CSS
+
+ Home   Refresh   |   Copy   Cut   Paste   |   Options   Help   Close
+
+*/
+
+
+.home-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_home.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.refresh-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_refresh.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.copy-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_copy.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.cut-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_cut.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.paste-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_paste.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.properties-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_properties.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.help-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_help.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.close-icon {
+    background-image:url(/ui/studio/res/img/icons/ico_close.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+
+
+
+
+/*
+ Grid panel CSS
+*/
+
+.workbook-grid-icon {
+background:transparent url(/ui/studio/res/img/workbook.png) no-repeat scroll 0 2px;
+/*
+padding-left:20px;
+*/
+padding-left:30px;
+padding-bottom:3px;
+padding-top:3px;
+}

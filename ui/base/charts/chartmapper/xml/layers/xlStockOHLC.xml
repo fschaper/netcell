@@ -1,0 +1,60 @@
+	<!--addCandleStickLayer - Adds a candlestick layer to the XYChart, and specify the data sets to use for drawing the layer.-->
+	<xlStockOHLC type="eval" result="CandleStickLayer" init="addCandleStickLayer">
+	  <args>
+	<!--An array of numbers representing the high values.-->
+	    <arg name="highData" default="" mandatory="true">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--An array of numbers representing the low values.-->
+	    <arg name="lowData" default="" mandatory="true">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--An array of numbers representing the opening values.-->
+	    <arg name="openData" default="" mandatory="true">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--An array of numbers representing the closing values.-->
+	    <arg name="closeData" default="" mandatory="true">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--The color used to fill the candle if the closing value is higher than the opening value.-->
+	    <arg name="riseColor" default="0xFFFFFF">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--The color used to fill the candle if the opening value is higher than the closing value.-->
+	    <arg name="fallColor" default="0x505050">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--The color used to draw the center line and the border of the candle.-->
+	    <arg name="edgeColor" default="LineColor">
+	      <!--<map path=""/>-->
+	    </arg>
+	  </args>
+
+	  <evaladapter class="LookupValue" method="addOHLCLayer"/>
+
+	  &BaseBoxLayer;
+	  &Layer;
+
+	  	<!--setLineWidth - Sets the default line width of lines when drawing data sets on the layer.-->
+		<setLineWidth type="method">
+		  <args>
+		<!--The width of the line in pixels.-->
+		    <arg name="w" default="2" mandatory="true">
+		    	<!--<map path=""/>-->
+		    </arg>
+		  </args>
+		</setLineWidth>
+
+		<!--setDataWidth - Sets the symbol width by specifying the pixel width of the symbols.-->
+		<setDataWidth type="method">
+		  <args>
+		<!--The width of the symbols in pixels.-->
+		    <arg name="width" default="30" mandatory="true">
+		      <!--<map path=""/>-->
+		    </arg>
+		  </args>
+		</setDataWidth>
+	</xlStockOHLC>
+
+	&packPlotArea;

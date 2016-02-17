@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0BAE5A61-25F2-4B74-BB27-C4CDD51C814C}</ProjectGuid>
+    <RootNamespace>oxml</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)/../lib/Windows/i386\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)/../lib/Windows/x86_64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)/tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)/tmp\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)/../lib/Windows/i386\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)/../lib/Windows/x86_64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)/tmp\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)/tmp\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)../include/oxml;$(ProjectDir)../../../extlibs/boost/include;$(ProjectDir)../../../extlibs/xsd2cpp/include;$(ProjectDir)../../../extlibs/xerces/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName)_d.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)_d.lib</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\extlibs\xerces\lib\Windows\i386;$(ProjectDir)..\..\..\extlibs\boost\lib\Windows\i386;$(ProjectDir)..\..\..\extlibs\zlib\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)../include/oxml;$(ProjectDir)../../boost/include;$(ProjectDir)../../xsd2cpp/include;$(ProjectDir)../../xerces/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName)_d.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)_d.lib</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\extlibs\xerces\lib\Windows\x86_64;$(ProjectDir)..\..\..\extlibs\boost\lib\Windows\x86_64;$(ProjectDir)..\..\..\extlibs\zlib\lib\Windows\x86_64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)../include/oxml;$(ProjectDir)../../../extlibs/boost/include;$(ProjectDir)../../../extlibs/xsd2cpp/include;$(ProjectDir)../../../extlibs/xerces/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\extlibs\xerces\lib\Windows\i386;$(ProjectDir)..\..\..\extlibs\boost\lib\Windows\i386;$(ProjectDir)..\..\..\extlibs\zlib\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)../include/oxml;$(ProjectDir)../../boost/include;$(ProjectDir)../../xsd2cpp/include;$(ProjectDir)../../xerces/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\..\extlibs\xerces\lib\Windows\x86_64;$(ProjectDir)..\..\..\extlibs\boost\lib\Windows\x86_64;$(ProjectDir)..\..\..\extlibs\zlib\lib\Windows\x86_64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\oxml\custom_data.hpp" />
+    <ClInclude Include="..\include\oxml\custom_data_literals.hpp" />
+    <ClInclude Include="..\include\oxml\custom_data_parser.hpp" />
+    <ClInclude Include="..\include\oxml\custom_data_readers.hpp" />
+    <ClInclude Include="..\include\oxml\custom_data_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\custom_data_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-audioVideo.hpp" />
+    <ClInclude Include="..\include\oxml\dml-audioVideo_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-audioVideo_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-audioVideo_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-baseStylesheet.hpp" />
+    <ClInclude Include="..\include\oxml\dml-baseStylesheet_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-baseStylesheet_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-baseStylesheet_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-baseTypes.hpp" />
+    <ClInclude Include="..\include\oxml\dml-baseTypes_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-baseTypes_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-baseTypes_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-compatibility.hpp" />
+    <ClInclude Include="..\include\oxml\dml-compatibility_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-compatibility_parser.hpp" />
+    <ClInclude Include="..\include\oxml\dml-compatibility_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-compatibility_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\dml-compatibility_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-documentProperties.hpp" />
+    <ClInclude Include="..\include\oxml\dml-documentProperties_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-documentProperties_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-documentProperties_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObject.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_parser.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectAnimation.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectAnimation_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectAnimation_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectAnimation_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectFormat.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectFormat_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectFormat_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectFormat_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-picture.hpp" />
+    <ClInclude Include="..\include\oxml\dml-picture_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-picture_parser.hpp" />
+    <ClInclude Include="..\include\oxml\dml-picture_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-picture_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\dml-picture_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DCamera.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DCamera_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DCamera_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DCamera_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DLighting.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DLighting_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DLighting_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DLighting_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DScene.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DScene_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DScene_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DScene_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DScenePlane.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DScenePlane_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DScenePlane_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DScenePlane_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DStyles.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DStyles_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DStyles_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shape3DStyles_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeEffects.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_parser.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeGeometry.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeGeometry_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeGeometry_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeGeometry_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeLineProperties.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeLineProperties_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeLineProperties_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeLineProperties_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeMiscellaneous.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeMiscellaneous_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeMiscellaneous_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeMiscellaneous_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeProperties.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeProperties_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeProperties_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeProperties_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeStyle.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeStyle_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeStyle_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-shapeStyle_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing.hpp" />
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_parser.hpp" />
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-styleDefaults.hpp" />
+    <ClInclude Include="..\include\oxml\dml-styleDefaults_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-styleDefaults_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-styleDefaults_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-stylesheet.hpp" />
+    <ClInclude Include="..\include\oxml\dml-stylesheet_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-stylesheet_parser.hpp" />
+    <ClInclude Include="..\include\oxml\dml-stylesheet_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-stylesheet_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\dml-stylesheet_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-text.hpp" />
+    <ClInclude Include="..\include\oxml\dml-text_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-text_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-text_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textBullet.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textBullet_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textBullet_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textBullet_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textCharacter.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textCharacter_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textCharacter_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textCharacter_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textParagraph.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textParagraph_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textParagraph_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textParagraph_writers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textRun.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textRun_literals.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textRun_readers.hpp" />
+    <ClInclude Include="..\include\oxml\dml-textRun_writers.hpp" />
+    <ClInclude Include="..\include\oxml\relationships.hpp" />
+    <ClInclude Include="..\include\oxml\relationships_literals.hpp" />
+    <ClInclude Include="..\include\oxml\relationships_parser.hpp" />
+    <ClInclude Include="..\include\oxml\relationships_readers.hpp" />
+    <ClInclude Include="..\include\oxml\relationships_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\relationships_writers.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_literals.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_parser.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_readers.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_writers.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_literals.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_parser.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_readers.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_writers.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_literals.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_parser.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_readers.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_writers.hpp" />
+    <ClInclude Include="..\include\oxml\shared-relationshipReference.hpp" />
+    <ClInclude Include="..\include\oxml\shared-relationshipReference_literals.hpp" />
+    <ClInclude Include="..\include\oxml\shared-relationshipReference_readers.hpp" />
+    <ClInclude Include="..\include\oxml\shared-relationshipReference_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-autoFilter.hpp" />
+    <ClInclude Include="..\include\oxml\sml-autoFilter_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-autoFilter_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-autoFilter_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-baseTypes.hpp" />
+    <ClInclude Include="..\include\oxml\sml-baseTypes_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-baseTypes_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-baseTypes_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-calculationChain.hpp" />
+    <ClInclude Include="..\include\oxml\sml-calculationChain_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-calculationChain_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-calculationChain_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-calculationChain_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-calculationChain_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-comments.hpp" />
+    <ClInclude Include="..\include\oxml\sml-comments_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-comments_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-comments_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-comments_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-comments_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings.hpp" />
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-externalConnections.hpp" />
+    <ClInclude Include="..\include\oxml\sml-externalConnections_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-externalConnections_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-externalConnections_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-externalConnections_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-externalConnections_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTable.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTable_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTable_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTable_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTable_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTable_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTableShared.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTableShared_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTableShared_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-pivotTableShared_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-queryTable.hpp" />
+    <ClInclude Include="..\include\oxml\sml-queryTable_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-queryTable_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-queryTable_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-queryTable_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-queryTable_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheet.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheet_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheet_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheet_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheet_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheet_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-singleCellTable.hpp" />
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-styles.hpp" />
+    <ClInclude Include="..\include\oxml\sml-styles_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-styles_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-styles_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-styles_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-styles_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks.hpp" />
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-table.hpp" />
+    <ClInclude Include="..\include\oxml\sml-table_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-table_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-table_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-table_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-table_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies.hpp" />
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_writers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-workbook.hpp" />
+    <ClInclude Include="..\include\oxml\sml-workbook_literals.hpp" />
+    <ClInclude Include="..\include\oxml\sml-workbook_parser.hpp" />
+    <ClInclude Include="..\include\oxml\sml-workbook_readers.hpp" />
+    <ClInclude Include="..\include\oxml\sml-workbook_serializer.hpp" />
+    <ClInclude Include="..\include\oxml\sml-workbook_writers.hpp" />
+    <ClInclude Include="..\..\xio\include\xio\util\binary_search.h" />
+    <ClInclude Include="..\..\xio\include\xio\util\hex.h" />
+    <ClInclude Include="..\..\xio\include\xio\xercesc\context.h" />
+    <ClInclude Include="..\..\xio\include\xio\xercesc\exception.h" />
+    <ClInclude Include="..\..\xio\include\xio\xercesc\istream.h" />
+    <ClInclude Include="..\..\xio\include\xio\xercesc\ostream.h" />
+    <ClInclude Include="..\..\xio\include\xio\xercesc\types.h" />
+    <ClInclude Include="..\..\xio\include\xio\xercesc\utf8.h" />
+    <ClInclude Include="..\..\xio\include\xio\xercesc\writer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\custom_data_parser.cpp" />
+    <ClCompile Include="..\src\custom_data_readers.cpp" />
+    <ClCompile Include="..\src\custom_data_serializer.cpp" />
+    <ClCompile Include="..\src\custom_data_writers.cpp" />
+    <ClCompile Include="..\src\dml-baseStylesheet.cpp" />
+    <ClCompile Include="..\src\dml-baseStylesheet_readers.cpp" />
+    <ClCompile Include="..\src\dml-baseStylesheet_writers.cpp" />
+    <ClCompile Include="..\src\dml-baseTypes.cpp" />
+    <ClCompile Include="..\src\dml-baseTypes_readers.cpp" />
+    <ClCompile Include="..\src\dml-baseTypes_writers.cpp" />
+    <ClCompile Include="..\src\dml-documentProperties_readers.cpp" />
+    <ClCompile Include="..\src\dml-documentProperties_writers.cpp" />
+    <ClCompile Include="..\src\dml-graphicalObject_parser.cpp" />
+    <ClCompile Include="..\src\dml-graphicalObject_readers.cpp" />
+    <ClCompile Include="..\src\dml-graphicalObject_serializer.cpp" />
+    <ClCompile Include="..\src\dml-graphicalObject_writers.cpp" />
+    <ClCompile Include="..\src\dml-graphicalObjectAnimation.cpp" />
+    <ClCompile Include="..\src\dml-graphicalObjectAnimation_readers.cpp" />
+    <ClCompile Include="..\src\dml-graphicalObjectAnimation_writers.cpp" />
+    <ClCompile Include="..\src\dml-graphicalObjectFormat_readers.cpp" />
+    <ClCompile Include="..\src\dml-graphicalObjectFormat_writers.cpp" />
+    <ClCompile Include="..\src\dml-picture_parser.cpp" />
+    <ClCompile Include="..\src\dml-picture_readers.cpp" />
+    <ClCompile Include="..\src\dml-picture_serializer.cpp" />
+    <ClCompile Include="..\src\dml-picture_writers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DCamera.cpp" />
+    <ClCompile Include="..\src\dml-shape3DCamera_readers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DCamera_writers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DLighting.cpp" />
+    <ClCompile Include="..\src\dml-shape3DLighting_readers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DLighting_writers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DScene_readers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DScene_writers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DScenePlane_readers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DScenePlane_writers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DStyles.cpp" />
+    <ClCompile Include="..\src\dml-shape3DStyles_readers.cpp" />
+    <ClCompile Include="..\src\dml-shape3DStyles_writers.cpp" />
+    <ClCompile Include="..\src\dml-shapeEffects.cpp" />
+    <ClCompile Include="..\src\dml-shapeEffects_parser.cpp" />
+    <ClCompile Include="..\src\dml-shapeEffects_readers.cpp" />
+    <ClCompile Include="..\src\dml-shapeEffects_serializer.cpp" />
+    <ClCompile Include="..\src\dml-shapeEffects_writers.cpp" />
+    <ClCompile Include="..\src\dml-shapeGeometry.cpp" />
+    <ClCompile Include="..\src\dml-shapeGeometry_readers.cpp" />
+    <ClCompile Include="..\src\dml-shapeGeometry_writers.cpp" />
+    <ClCompile Include="..\src\dml-shapeLineProperties.cpp" />
+    <ClCompile Include="..\src\dml-shapeLineProperties_readers.cpp" />
+    <ClCompile Include="..\src\dml-shapeLineProperties_writers.cpp" />
+    <ClCompile Include="..\src\dml-shapeMiscellaneous_readers.cpp" />
+    <ClCompile Include="..\src\dml-shapeMiscellaneous_writers.cpp" />
+    <ClCompile Include="..\src\dml-shapeProperties_readers.cpp" />
+    <ClCompile Include="..\src\dml-shapeProperties_writers.cpp" />
+    <ClCompile Include="..\src\dml-shapeStyle_readers.cpp" />
+    <ClCompile Include="..\src\dml-shapeStyle_writers.cpp" />
+    <ClCompile Include="..\src\dml-spreadsheetDrawing.cpp" />
+    <ClCompile Include="..\src\dml-spreadsheetDrawing_parser.cpp" />
+    <ClCompile Include="..\src\dml-spreadsheetDrawing_readers.cpp" />
+    <ClCompile Include="..\src\dml-spreadsheetDrawing_serializer.cpp" />
+    <ClCompile Include="..\src\dml-spreadsheetDrawing_writers.cpp" />
+    <ClCompile Include="..\src\dml-styleDefaults_readers.cpp" />
+    <ClCompile Include="..\src\dml-styleDefaults_writers.cpp" />
+    <ClCompile Include="..\src\dml-stylesheet_parser.cpp" />
+    <ClCompile Include="..\src\dml-stylesheet_readers.cpp" />
+    <ClCompile Include="..\src\dml-stylesheet_serializer.cpp" />
+    <ClCompile Include="..\src\dml-stylesheet_writers.cpp" />
+    <ClCompile Include="..\src\dml-text.cpp" />
+    <ClCompile Include="..\src\dml-text_readers.cpp" />
+    <ClCompile Include="..\src\dml-text_writers.cpp" />
+    <ClCompile Include="..\src\dml-textBullet.cpp" />
+    <ClCompile Include="..\src\dml-textBullet_readers.cpp" />
+    <ClCompile Include="..\src\dml-textBullet_writers.cpp" />
+    <ClCompile Include="..\src\dml-textCharacter.cpp" />
+    <ClCompile Include="..\src\dml-textCharacter_readers.cpp" />
+    <ClCompile Include="..\src\dml-textCharacter_writers.cpp" />
+    <ClCompile Include="..\src\dml-textParagraph.cpp" />
+    <ClCompile Include="..\src\dml-textParagraph_readers.cpp" />
+    <ClCompile Include="..\src\dml-textParagraph_writers.cpp" />
+    <ClCompile Include="..\src\dml-textRun_readers.cpp" />
+    <ClCompile Include="..\src\dml-textRun_writers.cpp" />
+    <ClCompile Include="..\src\relationships_parser.cpp" />
+    <ClCompile Include="..\src\relationships_readers.cpp" />
+    <ClCompile Include="..\src\relationships_serializer.cpp" />
+    <ClCompile Include="..\src\relationships_writers.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesCustom_parser.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesCustom_readers.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesCustom_serializer.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesCustom_writers.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesExtended_parser.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesExtended_readers.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesExtended_serializer.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesExtended_writers.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes_parser.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes_readers.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes_serializer.cpp" />
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes_writers.cpp" />
+    <ClCompile Include="..\src\shared-relationshipReference_readers.cpp" />
+    <ClCompile Include="..\src\shared-relationshipReference_writers.cpp" />
+    <ClCompile Include="..\src\sml-autoFilter.cpp" />
+    <ClCompile Include="..\src\sml-autoFilter_readers.cpp" />
+    <ClCompile Include="..\src\sml-autoFilter_writers.cpp" />
+    <ClCompile Include="..\src\sml-baseTypes_readers.cpp" />
+    <ClCompile Include="..\src\sml-baseTypes_writers.cpp" />
+    <ClCompile Include="..\src\sml-calculationChain_parser.cpp" />
+    <ClCompile Include="..\src\sml-calculationChain_readers.cpp" />
+    <ClCompile Include="..\src\sml-calculationChain_serializer.cpp" />
+    <ClCompile Include="..\src\sml-calculationChain_writers.cpp" />
+    <ClCompile Include="..\src\sml-comments_parser.cpp" />
+    <ClCompile Include="..\src\sml-comments_readers.cpp" />
+    <ClCompile Include="..\src\sml-comments_serializer.cpp" />
+    <ClCompile Include="..\src\sml-comments_writers.cpp" />
+    <ClCompile Include="..\src\sml-customXmlMappings_parser.cpp" />
+    <ClCompile Include="..\src\sml-customXmlMappings_readers.cpp" />
+    <ClCompile Include="..\src\sml-customXmlMappings_serializer.cpp" />
+    <ClCompile Include="..\src\sml-customXmlMappings_writers.cpp" />
+    <ClCompile Include="..\src\sml-externalConnections_parser.cpp" />
+    <ClCompile Include="..\src\sml-externalConnections_readers.cpp" />
+    <ClCompile Include="..\src\sml-externalConnections_serializer.cpp" />
+    <ClCompile Include="..\src\sml-externalConnections_writers.cpp" />
+    <ClCompile Include="..\src\sml-pivotTable.cpp" />
+    <ClCompile Include="..\src\sml-pivotTable_parser.cpp" />
+    <ClCompile Include="..\src\sml-pivotTable_readers.cpp" />
+    <ClCompile Include="..\src\sml-pivotTable_serializer.cpp" />
+    <ClCompile Include="..\src\sml-pivotTable_writers.cpp" />
+    <ClCompile Include="..\src\sml-pivotTableShared.cpp" />
+    <ClCompile Include="..\src\sml-pivotTableShared_readers.cpp" />
+    <ClCompile Include="..\src\sml-pivotTableShared_writers.cpp" />
+    <ClCompile Include="..\src\sml-queryTable.cpp" />
+    <ClCompile Include="..\src\sml-queryTable_parser.cpp" />
+    <ClCompile Include="..\src\sml-queryTable_readers.cpp" />
+    <ClCompile Include="..\src\sml-queryTable_serializer.cpp" />
+    <ClCompile Include="..\src\sml-queryTable_writers.cpp" />
+    <ClCompile Include="..\src\sml-sharedStringTable.cpp" />
+    <ClCompile Include="..\src\sml-sharedStringTable_parser.cpp" />
+    <ClCompile Include="..\src\sml-sharedStringTable_readers.cpp" />
+    <ClCompile Include="..\src\sml-sharedStringTable_serializer.cpp" />
+    <ClCompile Include="..\src\sml-sharedStringTable_writers.cpp" />
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions.cpp" />
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions_parser.cpp" />
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions_readers.cpp" />
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions_serializer.cpp" />
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions_writers.cpp" />
+    <ClCompile Include="..\src\sml-sharedWorkbookUserNames_parser.cpp" />
+    <ClCompile Include="..\src\sml-sharedWorkbookUserNames_readers.cpp" />
+    <ClCompile Include="..\src\sml-sharedWorkbookUserNames_serializer.cpp" />
+    <ClCompile Include="..\src\sml-sharedWorkbookUserNames_writers.cpp" />
+    <ClCompile Include="..\src\sml-sheet.cpp" />
+    <ClCompile Include="..\src\sml-sheet_parser.cpp" />
+    <ClCompile Include="..\src\sml-sheet_readers.cpp" />
+    <ClCompile Include="..\src\sml-sheet_serializer.cpp" />
+    <ClCompile Include="..\src\sml-sheet_writers.cpp" />
+    <ClCompile Include="..\src\sml-sheetMetadata.cpp" />
+    <ClCompile Include="..\src\sml-sheetMetadata_parser.cpp" />
+    <ClCompile Include="..\src\sml-sheetMetadata_readers.cpp" />
+    <ClCompile Include="..\src\sml-sheetMetadata_serializer.cpp" />
+    <ClCompile Include="..\src\sml-sheetMetadata_writers.cpp" />
+    <ClCompile Include="..\src\sml-singleCellTable_parser.cpp" />
+    <ClCompile Include="..\src\sml-singleCellTable_readers.cpp" />
+    <ClCompile Include="..\src\sml-singleCellTable_serializer.cpp" />
+    <ClCompile Include="..\src\sml-singleCellTable_writers.cpp" />
+    <ClCompile Include="..\src\sml-styles.cpp" />
+    <ClCompile Include="..\src\sml-styles_parser.cpp" />
+    <ClCompile Include="..\src\sml-styles_readers.cpp" />
+    <ClCompile Include="..\src\sml-styles_serializer.cpp" />
+    <ClCompile Include="..\src\sml-styles_writers.cpp" />
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks.cpp" />
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks_parser.cpp" />
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks_readers.cpp" />
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks_serializer.cpp" />
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks_writers.cpp" />
+    <ClCompile Include="..\src\sml-table.cpp" />
+    <ClCompile Include="..\src\sml-table_parser.cpp" />
+    <ClCompile Include="..\src\sml-table_readers.cpp" />
+    <ClCompile Include="..\src\sml-table_serializer.cpp" />
+    <ClCompile Include="..\src\sml-table_writers.cpp" />
+    <ClCompile Include="..\src\sml-volatileDependencies.cpp" />
+    <ClCompile Include="..\src\sml-volatileDependencies_parser.cpp" />
+    <ClCompile Include="..\src\sml-volatileDependencies_readers.cpp" />
+    <ClCompile Include="..\src\sml-volatileDependencies_serializer.cpp" />
+    <ClCompile Include="..\src\sml-volatileDependencies_writers.cpp" />
+    <ClCompile Include="..\src\sml-workbook.cpp" />
+    <ClCompile Include="..\src\sml-workbook_parser.cpp" />
+    <ClCompile Include="..\src\sml-workbook_readers.cpp" />
+    <ClCompile Include="..\src\sml-workbook_serializer.cpp" />
+    <ClCompile Include="..\src\sml-workbook_writers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="..\src\Makefile">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

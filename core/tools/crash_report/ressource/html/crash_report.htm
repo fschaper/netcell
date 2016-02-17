@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+       <title></title>
+       <style type="text/css">
+        body {
+            font-size: 12px;
+            font-family: Arial;
+            background-color: #ece9d8;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            font-size: 13px;
+            font-weight: bold;
+            font-family: Arial;
+        }
+       </style>
+    </head>
+    <body id='crash_report_dialog'>
+        <div>
+            <div style="height:30px; padding: 6px; font-weight: bold; border-bottom: solid 1px #a8a7a2; background-color: white;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td >We are very sorry, but Worksheet-Server3 has encountered a problem an needs to close.</td>
+                        <td><a href="http://www.jedox.com/" target="_blank"><img src="res:/IMAGES/#138" style="border: 0;float:right;" alt=""/></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="vertical-align:top; padding: 6px; border-top:solid 1px white; border-bottom:solid 1px #a8a7a2;">
+                All user input is automatically saved in an intervall that can be configured in the 
+                file "config.xml". Still, information might be lost.<br />
+                <br />
+                <span style="font-weight: bold;">Please tell us about this problem.</span><br />
+                <br />
+                Worksheetserver has created an error report that you can send to us. We will treat this report as strictly confidential.<br />
+                <br />
+                To help us diagnose the cause of the error and improve this software, please describe 
+                what you were doing when this error occurred, and send this report to us.<br />
+                <br />
+                Please provide your email address (optional):<br />
+                <input id="email_address" type="text" value="" size="50"/><br />
+                Describe what you were doing when the error occured (optional):
+                <textarea id="crash_description" cols="60" rows="10" style="width:505px;"></textarea><br />
+                In addition the report will contain the following files:<br />
+                <input type="text" id="report_files" style="width:505px; background-color: lightgrey;" value="" readonly="readonly"/>
+            </div>   
+            <div style="padding: 5px 6px 6px 6px; border-top:solid 1px white; text-align: right;">
+                <button style="width:125;" id="button_send_report">Send Error Report</button>&nbsp;
+                <button style="width:100;" id="button_cancel">Cancel</button>
+            </div>
+        </div>
+    </body>
+</html>

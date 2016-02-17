@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<palo_configuration xmlns="http://www.jedox.com/wss" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <server>
+    <host name="127.0.0.1" />
+    <port name="7777" />
+    <username name="_internal_suite" />
+    <password name="_internal_suite" />
+  </server>
+</palo_configuration>

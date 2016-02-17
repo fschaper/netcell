@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema
+      Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml" />
+    <AvailableItemName
+      Include="xsd2cpp">
+      <Targets>_xsd2cpp</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask
+    TaskName="xsd2cpp"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target
+    Name="_xsd2cpp"
+    BeforeTargets="$(xsd2cppBeforeTargets)"
+    AfterTargets="$(xsd2cppAfterTargets)"
+    Condition="'@(xsd2cpp)' != ''"
+    DependsOnTargets="$(xsd2cppDependsOn);Computexsd2cppOutput"
+    Outputs="%(xsd2cpp.Outputs)"
+    Inputs="%(xsd2cpp.Identity);%(xsd2cpp.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <xsd2cpp
+        Remove="@(xsd2cpp)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <xsd2cpp_tlog
+        Include="%(xsd2cpp.Outputs)"
+        Condition="'%(xsd2cpp.Outputs)' != '' and '%(xsd2cpp.ExcludedFromBuild)' != 'true'">
+        <Source>@(xsd2cpp, '|')</Source>
+      </xsd2cpp_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(xsd2cpp.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(xsd2cpp_tlog)' != '' and '%(xsd2cpp_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(xsd2cpp_tlog.Source);@(xsd2cpp_tlog-&gt;'%(Fullpath)')" />
+    <xsd2cpp
+      Condition="'@(xsd2cpp)' != '' and '%(xsd2cpp.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(xsd2cpp.CommandLineTemplate)"
+      xsdbinary="%(xsd2cpp.xsdbinary)"
+      schemadir="%(xsd2cpp.schemadir)"
+      sourcedir="%(xsd2cpp.sourcedir)"
+      settingsfile="%(xsd2cpp.settingsfile)"
+      AdditionalOptions="%(xsd2cpp.AdditionalOptions)"
+      Inputs="%(xsd2cpp.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            Computexsd2cppOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            Computexsd2cppOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="Computexsd2cppOutput"
+    Condition="'@(xsd2cpp)' != ''">
+    <ItemGroup>
+      <xsd2cppDirsToMake
+        Condition="'@(xsd2cpp)' != '' and '%(xsd2cpp.ExcludedFromBuild)' != 'true'"
+        Include="%(xsd2cpp.Outputs)" />
+      <Link
+        Include="%(xsd2cppDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(xsd2cppDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(xsd2cppDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(xsd2cppDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+</Project>

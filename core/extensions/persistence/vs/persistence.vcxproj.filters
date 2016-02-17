@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="filter">
+      <UniqueIdentifier>{c9da948f-9173-45a7-ac12-d612fadcf40b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="filter\implementation">
+      <UniqueIdentifier>{0b228036-86a0-4923-885e-71dbb0d9af61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="package">
+      <UniqueIdentifier>{5b7eda06-1cb3-4c50-b6e7-4140e9c6e6bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="package\implementation">
+      <UniqueIdentifier>{402a6d05-60af-47d3-b415-139307862c00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{4c7b1648-d1cd-4bbf-ab2e-8e5a7f75279f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\implementation">
+      <UniqueIdentifier>{3a1cf8bd-6351-40f0-be2a-75e54b6b41bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="primitives">
+      <UniqueIdentifier>{4de90dd6-8924-4525-886a-3246c0344029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="primitives\implementation">
+      <UniqueIdentifier>{b067e734-094a-4ddf-92db-0fad38c42d08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{5de55514-a54c-4f70-b486-243b027c544f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\schema">
+      <UniqueIdentifier>{9cd69aff-1ba3-4b80-b2cd-8eb3e54b55e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{257fe93e-0070-4eb8-9dab-f790b5fe3776}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\implementation">
+      <UniqueIdentifier>{944455b3-4ac9-45d3-a283-97d597da9f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapters">
+      <UniqueIdentifier>{973e0bac-59ea-4e93-bca2-4bb979e50706}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapters\implementation">
+      <UniqueIdentifier>{359bf62b-5882-4aec-8a9c-0d6c1cfebee9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\xlsx_export_filter.hpp">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\xlsx_import_filter.hpp">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\package.hpp">
+      <Filter>package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\zpackage.hpp">
+      <Filter>package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\zstream.hpp">
+      <Filter>package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\css_utils.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gen_utils.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\optional.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\oxml_utils.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\string_utils.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\content_types.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_alignment.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_alignments.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_border.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_border_side.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_borders.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_color.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_conditional_format.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_conditional_formats.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_defined_name.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_defined_names.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_drawing.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_dxf.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_fill.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_fills.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_font.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_fonts.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_nfmt.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_nfmts.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_protection.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_style.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_styles.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_theme.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_xf.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_xfs.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\relations.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shared_strings.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\simple_types.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_color_table.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistent_version_info.hpp">
+      <Filter>primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistence_config.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistence_config_writers.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistence_config_serializer.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistence_config_readers.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistence_config_parser.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\persistence_config_literals.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pattern_translate.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\logging.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\paste_view_adapter.hpp">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\row_agregator.hpp">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\export_wrapper.hpp">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\import_wrapper.hpp">
+      <Filter>filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\hyperlink_adapter.hpp">
+      <Filter>adapters</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\xlsx_import_filter.cpp">
+      <Filter>filter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\package.cpp">
+      <Filter>package\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\zpackage.cpp">
+      <Filter>package\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\zstream.cpp">
+      <Filter>package\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\css_utils.cpp">
+      <Filter>utils\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gen_utils.cpp">
+      <Filter>utils\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\oxml_utils.cpp">
+      <Filter>utils\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\string_utils.cpp">
+      <Filter>utils\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\content_types.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_alignment.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_alignments.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_border.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_border_side.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_borders.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_color.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_conditional_format.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_conditional_formats.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_defined_name.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_defined_names.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_drawing.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_dxf.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_fill.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_fills.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_font.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_fonts.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_nfmts.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_protection.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_style.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_styles.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_theme.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_xf.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistent_xfs.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\relations.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared_strings.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\persistent_color_table.cpp">
+      <Filter>primitives\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistence_config_writers.cpp">
+      <Filter>config\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistence_config_parser.cpp">
+      <Filter>config\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistence_config_readers.cpp">
+      <Filter>config\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\persistence_config_serializer.cpp">
+      <Filter>config\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pattern_translate.cpp">
+      <Filter>utils\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\paste_view_adapter.cpp">
+      <Filter>adapters\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\row_agregator.cpp">
+      <Filter>adapters\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\xlsx_export_filter.cpp">
+      <Filter>filter\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hyperlink_adapter.cpp">
+      <Filter>adapters\implementation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="persistence.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <xsd2cpp Include="..\xml\schema\persistence_config.xsd">
+      <Filter>xml\schema</Filter>
+    </xsd2cpp>
+  </ItemGroup>
+</Project>

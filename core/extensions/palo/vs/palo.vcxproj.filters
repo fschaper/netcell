@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{20d626e8-325d-4510-a77a-0b8f799af26c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\schema">
+      <UniqueIdentifier>{5d32e2e4-f083-4690-a1c9-b18f1299d084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\xslt">
+      <UniqueIdentifier>{507039db-fc6d-46cf-910b-f2fe40f448c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\xslt\output">
+      <UniqueIdentifier>{2785d19b-9580-4be3-b7e3-d101719afaa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wrapper">
+      <UniqueIdentifier>{ebd353ea-588a-4394-acd7-d3fb0e2049ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wrapper\implementation">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generated">
+      <UniqueIdentifier>{695633ee-c89e-4145-9c56-1ca2f5a59eab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="connection handler">
+      <UniqueIdentifier>{4ef54ab9-00d2-4342-b484-8b95ba5a4cbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{cd91bff0-ade0-44ed-a61d-96064eed2f5b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="palo.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\xml\palo_config.xml">
+      <Filter>xml</Filter>
+    </None>
+    <None Include="palo.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <xsd2cpp Include="..\xml\schema\palo_config.xsd">
+      <Filter>xml\schema</Filter>
+    </xsd2cpp>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\function_declaration.hpp">
+      <Filter>xml\xslt\output</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\function_registration.hpp">
+      <Filter>xml\xslt\output</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_argument_list.hpp">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_cell_adapter.hpp">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_context.hpp">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_functions.hpp">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_wrapper.hpp">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\spreadsheet_function.hpp">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_config.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_config_literals.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_config_parser.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_config_readers.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_config_serializer.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\palo_config_writers.hpp">
+      <Filter>generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\connection_handler.hpp">
+      <Filter>connection handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\transform_result.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\logging.hpp" />
+    <ClInclude Include="..\src\precompiled_header.hpp" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\src\palo_cell_adapter_helpers.hpp">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\palo_argument_list.cpp">
+      <Filter>wrapper\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\palo_cell_adapter.cpp">
+      <Filter>wrapper\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\palo_context.cpp">
+      <Filter>wrapper\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\palo_functions.cpp">
+      <Filter>wrapper\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\palo_wrapper.cpp">
+      <Filter>wrapper\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\spreadsheet_function.cpp">
+      <Filter>wrapper\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\palo_config_parser.cpp">
+      <Filter>generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\palo_config_readers.cpp">
+      <Filter>generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\palo_config_serializer.cpp">
+      <Filter>generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\palo_config_writers.cpp">
+      <Filter>generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\connection_handler.cpp">
+      <Filter>connection handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="..\xml\xslt\create_function_wrapper.xslt">
+      <Filter>xml\xslt</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\xml\xslt\create_function_wrapper_registration.xslt">
+      <Filter>xml\xslt</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\xml\documentation.xml">
+      <Filter>xml</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

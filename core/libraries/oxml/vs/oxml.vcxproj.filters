@@ -1,0 +1,1439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="oxml">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="oxml\implementation">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="xio">
+      <UniqueIdentifier>{2680ddb5-6515-44b9-a2af-504a54b07266}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xio\util">
+      <UniqueIdentifier>{a40e5a0d-e570-45b4-a7fb-b001013968d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xio\xml">
+      <UniqueIdentifier>{48cb1cd0-9bcf-4e1b-9a57-31ce332d793f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xio\xml\binding">
+      <UniqueIdentifier>{61be09e1-af6f-4a22-b15c-bcfc0fe46b72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xio\xml\schema">
+      <UniqueIdentifier>{ef7c7949-20d7-4bd6-b752-e94246202f81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xio\xercesc">
+      <UniqueIdentifier>{dabc26af-2416-4752-818a-332b6aedb449}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\oxml\custom_data.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\custom_data_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\custom_data_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\custom_data_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\custom_data_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\custom_data_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-audioVideo.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-audioVideo_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-audioVideo_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-audioVideo_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-baseStylesheet.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-baseStylesheet_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-baseStylesheet_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-baseStylesheet_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-baseTypes.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-baseTypes_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-baseTypes_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-baseTypes_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-compatibility.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-compatibility_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-compatibility_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-compatibility_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-compatibility_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-compatibility_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-documentProperties.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-documentProperties_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-documentProperties_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-documentProperties_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObject.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObject_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectAnimation.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectAnimation_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectAnimation_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectAnimation_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectFormat.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectFormat_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectFormat_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-graphicalObjectFormat_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-picture.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-picture_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-picture_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-picture_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-picture_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-picture_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DCamera.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DCamera_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DCamera_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DCamera_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DLighting.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DLighting_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DLighting_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DLighting_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DScene.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DScene_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DScene_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DScene_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DScenePlane.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DScenePlane_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DScenePlane_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DScenePlane_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DStyles.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DStyles_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DStyles_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shape3DStyles_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeEffects.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeEffects_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeGeometry.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeGeometry_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeGeometry_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeGeometry_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeLineProperties.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeLineProperties_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeLineProperties_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeLineProperties_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeMiscellaneous.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeMiscellaneous_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeMiscellaneous_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeMiscellaneous_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeProperties.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeProperties_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeProperties_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeProperties_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeStyle.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeStyle_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeStyle_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-shapeStyle_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-spreadsheetDrawing_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-styleDefaults.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-styleDefaults_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-styleDefaults_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-styleDefaults_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-stylesheet.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-stylesheet_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-stylesheet_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-stylesheet_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-stylesheet_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-stylesheet_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-text.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-text_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-text_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-text_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textBullet.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textBullet_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textBullet_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textBullet_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textCharacter.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textCharacter_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textCharacter_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textCharacter_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textParagraph.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textParagraph_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textParagraph_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textParagraph_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textRun.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textRun_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textRun_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\dml-textRun_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\relationships.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\relationships_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\relationships_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\relationships_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\relationships_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\relationships_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesCustom_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesExtended_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-documentPropertiesVariantTypes_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-relationshipReference.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-relationshipReference_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-relationshipReference_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\shared-relationshipReference_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-autoFilter.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-autoFilter_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-autoFilter_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-autoFilter_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-baseTypes.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-baseTypes_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-baseTypes_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-baseTypes_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-calculationChain.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-calculationChain_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-calculationChain_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-calculationChain_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-calculationChain_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-calculationChain_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-comments.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-comments_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-comments_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-comments_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-comments_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-comments_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-customXmlMappings_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-externalConnections.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-externalConnections_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-externalConnections_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-externalConnections_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-externalConnections_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-externalConnections_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTable.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTable_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTable_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTable_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTable_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTable_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTableShared.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTableShared_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTableShared_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-pivotTableShared_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-queryTable.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-queryTable_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-queryTable_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-queryTable_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-queryTable_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-queryTable_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedStringTable_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookRevisions_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sharedWorkbookUserNames_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheet.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheet_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheet_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheet_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheet_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheet_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-sheetMetadata_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-singleCellTable.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-singleCellTable_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-styles.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-styles_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-styles_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-styles_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-styles_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-styles_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-supplementaryWorkbooks_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-table.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-table_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-table_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-table_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-table_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-table_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-volatileDependencies_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-workbook.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-workbook_literals.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-workbook_parser.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-workbook_readers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-workbook_serializer.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\oxml\sml-workbook_writers.hpp">
+      <Filter>oxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xio\include\xio\util\binary_search.h">
+      <Filter>xio\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xio\include\xio\util\hex.h">
+      <Filter>xio\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xio\include\xio\xercesc\context.h">
+      <Filter>xio\xercesc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xio\include\xio\xercesc\exception.h">
+      <Filter>xio\xercesc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xio\include\xio\xercesc\istream.h">
+      <Filter>xio\xercesc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xio\include\xio\xercesc\ostream.h">
+      <Filter>xio\xercesc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xio\include\xio\xercesc\types.h">
+      <Filter>xio\xercesc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xio\include\xio\xercesc\utf8.h">
+      <Filter>xio\xercesc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\xio\include\xio\xercesc\writer.h">
+      <Filter>xio\xercesc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\custom_data_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\custom_data_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\custom_data_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\custom_data_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-baseStylesheet.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-baseStylesheet_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-baseStylesheet_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-baseTypes.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-baseTypes_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-baseTypes_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-documentProperties_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-documentProperties_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-graphicalObject_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-graphicalObject_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-graphicalObject_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-graphicalObject_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-graphicalObjectAnimation.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-graphicalObjectAnimation_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-graphicalObjectAnimation_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-graphicalObjectFormat_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-graphicalObjectFormat_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-picture_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-picture_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-picture_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-picture_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DCamera.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DCamera_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DCamera_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DLighting.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DLighting_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DLighting_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DScene_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DScene_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DScenePlane_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DScenePlane_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DStyles.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DStyles_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shape3DStyles_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeEffects.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeEffects_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeEffects_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeEffects_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeEffects_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeGeometry.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeGeometry_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeGeometry_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeLineProperties.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeLineProperties_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeLineProperties_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeMiscellaneous_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeMiscellaneous_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeProperties_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeProperties_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeStyle_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-shapeStyle_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-spreadsheetDrawing.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-spreadsheetDrawing_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-spreadsheetDrawing_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-spreadsheetDrawing_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-spreadsheetDrawing_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-styleDefaults_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-styleDefaults_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-stylesheet_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-stylesheet_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-stylesheet_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-stylesheet_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-text.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-text_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-text_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textBullet.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textBullet_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textBullet_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textCharacter.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textCharacter_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textCharacter_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textParagraph.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textParagraph_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textParagraph_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textRun_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dml-textRun_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\relationships_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\relationships_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\relationships_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\relationships_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesCustom_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesCustom_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesCustom_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesCustom_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesExtended_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesExtended_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesExtended_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesExtended_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-documentPropertiesVariantTypes_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-relationshipReference_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared-relationshipReference_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-autoFilter.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-autoFilter_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-autoFilter_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-baseTypes_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-baseTypes_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-calculationChain_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-calculationChain_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-calculationChain_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-calculationChain_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-comments_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-comments_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-comments_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-comments_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-customXmlMappings_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-customXmlMappings_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-customXmlMappings_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-customXmlMappings_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-externalConnections_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-externalConnections_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-externalConnections_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-externalConnections_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-pivotTable.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-pivotTable_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-pivotTable_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-pivotTable_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-pivotTable_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-pivotTableShared.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-pivotTableShared_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-pivotTableShared_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-queryTable.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-queryTable_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-queryTable_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-queryTable_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-queryTable_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedStringTable.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedStringTable_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedStringTable_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedStringTable_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedStringTable_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedWorkbookRevisions_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedWorkbookUserNames_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedWorkbookUserNames_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedWorkbookUserNames_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sharedWorkbookUserNames_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheet.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheet_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheet_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheet_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheet_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheetMetadata.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheetMetadata_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheetMetadata_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheetMetadata_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-sheetMetadata_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-singleCellTable_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-singleCellTable_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-singleCellTable_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-singleCellTable_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-styles.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-styles_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-styles_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-styles_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-styles_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-supplementaryWorkbooks_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-table.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-table_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-table_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-table_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-table_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-volatileDependencies.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-volatileDependencies_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-volatileDependencies_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-volatileDependencies_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-volatileDependencies_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-workbook.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-workbook_parser.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-workbook_readers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-workbook_serializer.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sml-workbook_writers.cpp">
+      <Filter>oxml\implementation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="..\src\Makefile" />
+  </ItemGroup>
+</Project>

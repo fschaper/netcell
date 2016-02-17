@@ -1,0 +1,1113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile_suite_server|Win32">
+      <Configuration>profile_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="test_suite_server|Win32">
+      <Configuration>test_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>core</ProjectName>
+    <ProjectGuid>{949CFC6B-E44F-4B9E-8229-84C00A33866F}</ProjectGuid>
+    <RootNamespace>wss</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="xsd2cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectName)_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectName)</TargetName>
+    <xsd2cppBeforeTargets Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">Clean</xsd2cppBeforeTargets>
+    <xsd2cppBeforeTargets Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">Clean</xsd2cppBeforeTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\extlibs\astyle\bin\windows\i386\astyle" --options="$(ProjectDir)..\..\extlibs\astyle\share\default_options.conf" "$(ProjectDir)..\src\*.cpp" "$(ProjectDir)..\src\*.hpp" "$(ProjectDir)..\src\*.ipp" "$(ProjectDir)..\include\*.hpp" "$(ProjectDir)..\include\*.ipp" "$(ProjectDir)..\include\*.cpp"</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/Zm400 /wd4275 /wd4251 /wo4709 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\extensions\memory\include;..\..\extlibs\xerces\include;..\..\extlibs\atomic\include;..\..\extlibs\boost\include;..\..\extlibs\uuid\include;..\..\extlibs\tinyjson\include;..\..\extlibs\xsd2cpp\include;..\..\extlibs\icu\include;..\..\libraries\oxml\include;..\..\extlibs\threadpool\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WSS_BUILD_EXPORTS;WIN32;_DEBUG;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>xerces-c_3D.lib;icuucd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\extlibs\perftools\lib\windows\i386;..\..\extlibs\xerces\lib\windows\i386;..\..\extlibs\boost\lib\windows\i386;..\..\extlibs\icu\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+      <FixedBaseAddress>
+      </FixedBaseAddress>
+      <StackReserveSize>5242880</StackReserveSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(ProjectDir)..\bin\deploy_debug.bat $(SolutionDir).. extlibs</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\extlibs\astyle\bin\windows\i386\astyle" --options="$(ProjectDir)..\..\extlibs\astyle\share\default_options.conf" "$(ProjectDir)..\src\*.cpp" "$(ProjectDir)..\src\*.hpp" "$(ProjectDir)..\src\*.ipp" "$(ProjectDir)..\include\*.hpp" "$(ProjectDir)..\include\*.ipp" "$(ProjectDir)..\include\*.cpp"</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/Zm400 /wd4275 /wd4251 /wo4709 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\extensions\memory\include;..\..\extlibs\xerces\include;..\..\extlibs\atomic\include;..\..\extlibs\boost\include;..\..\extlibs\uuid\include;..\..\extlibs\tinyjson\include;..\..\extlibs\xsd2cpp\include;..\..\extlibs\icu\include;..\..\libraries\oxml\include;..\..\extlibs\threadpool\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WSS_BUILD_EXPORTS;WIN32;_DEBUG;_SCL_SECURE_NO_WARNINGS;_LIB;_WSS_UNIT_TESTS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>xerces-c_3D.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\extlibs\perftools\lib\windows\i386;..\..\extlibs\xerces\lib\windows\i386;..\..\extlibs\boost\lib\windows\i386;..\..\extlibs\icu\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+      <FixedBaseAddress>
+      </FixedBaseAddress>
+      <StackReserveSize>5242880</StackReserveSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(ProjectDir)..\bin\deploy_test.bat $(SolutionDir).. extlibs</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\extlibs\astyle\bin\windows\i386\astyle" --options="$(ProjectDir)..\..\extlibs\astyle\share\default_options.conf" "$(ProjectDir)..\src\*.cpp" "$(ProjectDir)..\src\*.hpp" "$(ProjectDir)..\src\*.ipp" "$(ProjectDir)..\include\*.hpp" "$(ProjectDir)..\include\*.ipp" "$(ProjectDir)..\include\*.cpp"</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/Zm400 /wd4275 /wd4251 /wo4709 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\extensions\memory\include;..\..\extlibs\xerces\include;..\..\extlibs\atomic\include;..\..\extlibs\boost\include;..\..\extlibs\uuid\include;..\..\extlibs\tinyjson\include;..\..\extlibs\xsd2cpp\include;..\..\extlibs\icu\include;..\..\libraries\oxml\include;..\..\extlibs\threadpool\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WSS_BUILD_EXPORTS;_NDEBUG;WIN32;_SCL_SECURE_NO_WARNINGS;_LIB;_WSS_UNIT_TESTS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>xerces-c_3.lib;icuuc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\extlibs\perftools\lib\windows\i386;..\..\extlibs\xerces\lib\windows\i386;..\..\extlibs\boost\lib\windows\i386;..\..\extlibs\icu\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+      <FixedBaseAddress>
+      </FixedBaseAddress>
+      <StackReserveSize>5242880</StackReserveSize>
+      <OptimizeReferences>true</OptimizeReferences>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(ProjectDir)..\bin\deploy_profile.bat $(SolutionDir)..</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\bin\update_version_number.bat
+"$(ProjectDir)..\..\extlibs\astyle\bin\windows\i386\astyle" --options="$(ProjectDir)..\..\extlibs\astyle\share\default_options.conf" "$(ProjectDir)..\src\*.cpp" "$(ProjectDir)..\src\*.hpp" "$(ProjectDir)..\src\*.ipp" "$(ProjectDir)..\include\*.hpp" "$(ProjectDir)..\include\*.ipp" "$(ProjectDir)..\include\*.cpp"
+</Command>
+    </PreBuildEvent>
+    <xsd2cpp>
+      <xsdbinary>$(SolutionDir)..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+    </xsd2cpp>
+    <ClCompile>
+      <AdditionalOptions>/Zm400 /wd4275 /wd4251 /wo4709 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\include;..\..\extensions\memory\include;..\..\extlibs\xerces\include;..\..\extlibs\atomic\include;..\..\extlibs\boost\include;..\..\extlibs\uuid\include;..\..\extlibs\tinyjson\include;..\..\extlibs\xsd2cpp\include;..\..\extlibs\icu\include;..\..\libraries\oxml\include;..\..\extlibs\threadpool\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WSS_BUILD_EXPORTS;WIN32;NDEBUG;_NDEBUG;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>xerces-c_3.lib;icuuc.lib;libtcmalloc_minimal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\extlibs\perftools\lib\windows\i386;..\..\extlibs\xerces\lib\windows\i386;..\..\extlibs\boost\lib\windows\i386;..\..\extlibs\icu\lib\windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceSymbolReferences>__tcmalloc;%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <OptimizeReferences>true</OptimizeReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+      <FixedBaseAddress>
+      </FixedBaseAddress>
+      <StackReserveSize>5242880</StackReserveSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(ProjectDir)..\bin\deploy_release.bat $(SolutionDir).. extlibs</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\wss\base_log_handler.hpp" />
+    <ClInclude Include="..\include\wss\console_logger.hpp" />
+    <ClInclude Include="..\include\wss\contained_row.hpp" />
+    <ClInclude Include="..\include\wss\cyclic_dependency_set.hpp" />
+    <ClInclude Include="..\include\wss\double_to_string.hpp" />
+    <ClInclude Include="..\include\wss\flyweight_types.hpp" />
+    <ClInclude Include="..\include\wss\generic_container.hpp" />
+    <ClInclude Include="..\include\wss\i_cached_connection.hpp" />
+    <ClInclude Include="..\include\wss\layout_coord.hpp" />
+    <ClInclude Include="..\include\wss\locked_session.hpp" />
+    <ClInclude Include="..\include\wss\memory_garbage_collector.hpp" />
+    <ClInclude Include="..\include\wss\reference_table_coverage.hpp" />
+    <ClInclude Include="..\include\wss\simple_allocator.hpp" />
+    <ClInclude Include="..\include\wss\supports_do_undo.hpp" />
+    <ClInclude Include="..\src\auto_save.hpp" />
+    <ClInclude Include="..\src\auto_save_filesystem.hpp" />
+    <ClInclude Include="..\src\core_logging.hpp" />
+    <ClInclude Include="..\src\debug_logging_helper.hpp" />
+    <ClInclude Include="..\include\wss\file_logger.hpp" />
+    <ClInclude Include="..\include\wss\i_log_handler.hpp" />
+    <ClInclude Include="..\include\wss\i_loggable.hpp" />
+    <ClInclude Include="..\include\wss\i_logger.hpp" />
+    <ClInclude Include="..\include\wss\log_level_factory.hpp" />
+    <ClInclude Include="..\include\wss\log_modifier.hpp" />
+    <ClInclude Include="..\include\wss\logger.hpp" />
+    <ClInclude Include="..\include\wss\logger_factory.hpp" />
+    <ClInclude Include="..\include\wss\loggers.hpp" />
+    <ClInclude Include="..\include\wss\logging.hpp" />
+    <ClInclude Include="..\include\wss\modifier_factory.hpp" />
+    <ClInclude Include="..\include\wss\socket_logger.hpp" />
+    <ClInclude Include="..\include\wss\date_timestamp_modifier.hpp" />
+    <ClInclude Include="..\include\wss\i_log_modifier.hpp" />
+    <ClInclude Include="..\include\wss\log_level_modifier.hpp" />
+    <ClInclude Include="..\include\wss\thread_id_modifier.hpp" />
+    <ClInclude Include="..\include\wss\performance_timer.hpp" />
+    <ClInclude Include="..\include\wss\generic_point.hpp" />
+    <ClInclude Include="..\include\wss\generic_rectangle.hpp" />
+    <ClInclude Include="..\include\wss\point.hpp" />
+    <ClInclude Include="..\include\wss\rectangle.hpp" />
+    <ClInclude Include="..\include\wss\rectangle_iterator.hpp" />
+    <ClInclude Include="..\include\wss\boolean_combiner.hpp" />
+    <ClInclude Include="..\include\wss\algorithm.hpp" />
+    <ClInclude Include="..\include\wss\bitcount.hpp" />
+    <ClInclude Include="..\include\wss\boost_mutex_trait.hpp" />
+    <ClInclude Include="..\include\wss\ci_string.hpp" />
+    <ClInclude Include="..\src\copy_fill_iterator.hpp" />
+    <ClInclude Include="..\include\wss\core_dump_handler.hpp" />
+    <ClInclude Include="..\include\wss\destroying_auto_pointer.hpp" />
+    <ClInclude Include="..\include\wss\insert_from_temporary.hpp" />
+    <ClInclude Include="..\include\wss\iterators.hpp" />
+    <ClInclude Include="..\include\wss\lock_once.hpp" />
+    <ClInclude Include="..\include\wss\locked_object.hpp" />
+    <ClInclude Include="..\include\wss\locking_iterator_wrapper.hpp" />
+    <ClInclude Include="..\include\wss\minmax.hpp" />
+    <ClInclude Include="..\include\wss\null_lock.hpp" />
+    <ClInclude Include="..\include\wss\ref_pointer.hpp" />
+    <ClInclude Include="..\include\wss\scoped_reference.hpp" />
+    <ClInclude Include="..\include\wss\shared_action_pointer.hpp" />
+    <ClInclude Include="..\include\wss\sleep.hpp" />
+    <ClInclude Include="..\include\wss\key_value_manager.hpp" />
+    <ClInclude Include="..\include\wss\key_value_set.hpp" />
+    <ClInclude Include="..\include\wss\value_manager.hpp" />
+    <ClInclude Include="..\include\wss\css_serializer.hpp" />
+    <ClInclude Include="..\include\wss\css_unserializer.hpp" />
+    <ClInclude Include="..\include\wss\json_serializer.hpp" />
+    <ClInclude Include="..\include\wss\json_unserializer.hpp" />
+    <ClInclude Include="..\src\release_pooled_memory.hpp" />
+    <ClInclude Include="..\src\value_manager_bool_specialization.hpp" />
+    <ClInclude Include="..\src\extension.hpp" />
+    <ClInclude Include="..\src\extension_function_caller.hpp" />
+    <ClInclude Include="..\src\i_module_loader.hpp" />
+    <ClInclude Include="..\src\unix_module_loader.hpp" />
+    <ClInclude Include="..\src\win32_module_loader.hpp" />
+    <ClInclude Include="..\include\wss\allocation.hpp" />
+    <ClInclude Include="..\include\wss\delete_object.hpp" />
+    <ClInclude Include="..\include\wss\heap_clone_allocator.hpp" />
+    <ClInclude Include="..\include\wss\i_cloneable.hpp" />
+    <ClInclude Include="..\include\wss\factory.hpp" />
+    <ClInclude Include="..\include\wss\friend.hpp" />
+    <ClInclude Include="..\include\wss\i_createable.hpp" />
+    <ClInclude Include="..\include\wss\non_instantiable.hpp" />
+    <ClInclude Include="..\include\wss\singleton.hpp" />
+    <ClInclude Include="..\include\wss\singleton_dependency.hpp" />
+    <ClInclude Include="..\include\wss\threadsafe_singleton.hpp" />
+    <ClInclude Include="..\include\wss\indexed_mapping.hpp" />
+    <ClInclude Include="..\include\wss\node.hpp" />
+    <ClInclude Include="..\include\wss\r_tree.hpp" />
+    <ClInclude Include="..\include\wss\reference_counted_indexed_mapping.hpp" />
+    <ClInclude Include="..\include\wss\sparse_index_integer_container.hpp" />
+    <ClInclude Include="..\include\wss\sparse_vector.hpp" />
+    <ClInclude Include="..\include\wss\stack.hpp" />
+    <ClInclude Include="..\include\wss\binary_iostream.hpp" />
+    <ClInclude Include="..\include\wss\binary_istream.hpp" />
+    <ClInclude Include="..\include\wss\binary_ostream.hpp" />
+    <ClInclude Include="..\include\wss\tied_buffer.hpp" />
+    <ClInclude Include="..\include\wss\tied_stream.hpp" />
+    <ClInclude Include="..\include\wss\token_stream.hpp" />
+    <ClInclude Include="..\include\wss\token_stream_specialization.hpp" />
+    <ClInclude Include="..\include\wss\vector_io_device.hpp" />
+    <ClInclude Include="..\include\wss\storage_rotation.hpp" />
+    <ClInclude Include="..\include\wss\named_thread.hpp" />
+    <ClInclude Include="..\include\wss\application.hpp" />
+    <ClInclude Include="..\include\wss\core2_compatibility.hpp" />
+    <ClInclude Include="..\include\wss\define.hpp" />
+    <ClInclude Include="..\include\wss\definition.hpp" />
+    <ClInclude Include="..\include\wss\identifiable_object.hpp" />
+    <ClInclude Include="..\include\wss\loadable_object.hpp" />
+    <ClInclude Include="..\include\wss\object_container.hpp" />
+    <ClInclude Include="..\include\wss\range.hpp" />
+    <ClInclude Include="..\include\wss\reference.hpp" />
+    <ClInclude Include="..\include\wss\server.hpp" />
+    <ClInclude Include="..\include\wss\server_defaults.hpp" />
+    <ClInclude Include="..\include\wss\sheet_dimension.hpp" />
+    <ClInclude Include="..\include\wss\sheet_point.hpp" />
+    <ClInclude Include="..\include\wss\sheet_range.hpp" />
+    <ClInclude Include="..\include\wss\shift_direction.hpp" />
+    <ClInclude Include="..\include\wss\type.hpp" />
+    <ClInclude Include="..\include\wss\used_range.hpp" />
+    <ClInclude Include="..\include\wss\variant.hpp" />
+    <ClInclude Include="..\include\wss\version.hpp" />
+    <ClInclude Include="..\include\wss\workbook.hpp" />
+    <ClInclude Include="..\include\wss\worksheet.hpp" />
+    <ClInclude Include="..\src\array_manager.hpp" />
+    <ClInclude Include="..\include\wss\calculation_cache.hpp" />
+    <ClInclude Include="..\include\wss\calculation_context.hpp" />
+    <ClInclude Include="..\include\wss\calculation_setting.hpp" />
+    <ClInclude Include="..\src\cell.hpp" />
+    <ClInclude Include="..\src\cell_manager.hpp" />
+    <ClInclude Include="..\include\wss\content_type.hpp" />
+    <ClInclude Include="..\include\wss\i_range_operation.hpp" />
+    <ClInclude Include="..\include\wss\lock.hpp" />
+    <ClInclude Include="..\src\object_lookup.hpp" />
+    <ClInclude Include="..\include\wss\range_lock.hpp" />
+    <ClInclude Include="..\src\range_lock_handler.hpp" />
+    <ClInclude Include="..\src\range_lock_keeper.hpp" />
+    <ClInclude Include="..\src\abstract_dependency.hpp" />
+    <ClInclude Include="..\src\actualize_dependencies.hpp" />
+    <ClInclude Include="..\include\wss\dependency_info.hpp" />
+    <ClInclude Include="..\include\wss\dependency_info_utility.hpp" />
+    <ClInclude Include="..\src\dependency_manager.hpp" />
+    <ClInclude Include="..\include\wss\dependency_node_reference.hpp" />
+    <ClInclude Include="..\include\wss\i_dependency.hpp" />
+    <ClInclude Include="..\include\wss\i_dependency_reference.hpp" />
+    <ClInclude Include="..\include\wss\precedent_proxy.hpp" />
+    <ClInclude Include="..\include\wss\range_reference.hpp" />
+    <ClInclude Include="..\include\wss\reference_operation.hpp" />
+    <ClInclude Include="..\src\fill_operation.hpp" />
+    <ClInclude Include="..\include\wss\formula.hpp" />
+    <ClInclude Include="..\src\formula_kernel.hpp" />
+    <ClInclude Include="..\include\wss\interpreter_context.hpp" />
+    <ClInclude Include="..\include\wss\interpreter_variant.hpp" />
+    <ClInclude Include="..\include\wss\reference_info.hpp" />
+    <ClInclude Include="..\include\wss\reference_table.hpp" />
+    <ClInclude Include="..\src\stack_calculation.hpp" />
+    <ClInclude Include="..\include\wss\with_initiator.hpp" />
+    <ClInclude Include="..\include\wss\addition_node.hpp" />
+    <ClInclude Include="..\include\wss\array_node.hpp" />
+    <ClInclude Include="..\include\wss\array_row_node.hpp" />
+    <ClInclude Include="..\include\wss\base_node.hpp" />
+    <ClInclude Include="..\include\wss\base_visitor.hpp" />
+    <ClInclude Include="..\include\wss\boolean_false_node.hpp" />
+    <ClInclude Include="..\include\wss\boolean_true_node.hpp" />
+    <ClInclude Include="..\include\wss\brace_node.hpp" />
+    <ClInclude Include="..\include\wss\concatenation_node.hpp" />
+    <ClInclude Include="..\include\wss\digit_node.hpp" />
+    <ClInclude Include="..\include\wss\division_node.hpp" />
+    <ClInclude Include="..\include\wss\empty_node.hpp" />
+    <ClInclude Include="..\include\wss\equal_node.hpp" />
+    <ClInclude Include="..\include\wss\error_node.hpp" />
+    <ClInclude Include="..\include\wss\exponent_node.hpp" />
+    <ClInclude Include="..\include\wss\function_node.hpp" />
+    <ClInclude Include="..\include\wss\greater_equal_node.hpp" />
+    <ClInclude Include="..\include\wss\greater_node.hpp" />
+    <ClInclude Include="..\include\wss\i_visitor.hpp" />
+    <ClInclude Include="..\include\wss\less_equal_node.hpp" />
+    <ClInclude Include="..\include\wss\less_node.hpp" />
+    <ClInclude Include="..\include\wss\multiplication_node.hpp" />
+    <ClInclude Include="..\include\wss\named_formula_node.hpp" />
+    <ClInclude Include="..\include\wss\negation_node.hpp" />
+    <ClInclude Include="..\include\wss\not_equal_node.hpp" />
+    <ClInclude Include="..\include\wss\percentage_node.hpp" />
+    <ClInclude Include="..\include\wss\range_node.hpp" />
+    <ClInclude Include="..\include\wss\reference_base_node.hpp" />
+    <ClInclude Include="..\include\wss\reference_list_node.hpp" />
+    <ClInclude Include="..\include\wss\root_node.hpp" />
+    <ClInclude Include="..\include\wss\string_node.hpp" />
+    <ClInclude Include="..\include\wss\subtraction_node.hpp" />
+    <ClInclude Include="..\include\wss\syntax.hpp" />
+    <ClInclude Include="..\include\wss\syntax_defines.hpp" />
+    <ClInclude Include="..\include\wss\syntax_node_deallocator.hpp" />
+    <ClInclude Include="..\include\wss\syntax_node_trait.hpp" />
+    <ClInclude Include="..\include\wss\token.hpp" />
+    <ClInclude Include="..\include\wss\tree_visitor.hpp" />
+    <ClInclude Include="..\include\wss\variable_node.hpp" />
+    <ClInclude Include="..\include\wss\ast_formula.hpp" />
+    <ClInclude Include="..\include\wss\formula_parser.hpp" />
+    <ClInclude Include="..\include\wss\formula_parsing_context.hpp" />
+    <ClInclude Include="..\include\wss\formula_parsing_result.hpp" />
+    <ClInclude Include="..\include\wss\forumula_parser.hpp" />
+    <ClInclude Include="..\include\wss\opcode.hpp" />
+    <ClInclude Include="..\include\wss\opcode_generator.hpp" />
+    <ClInclude Include="..\include\wss\opcode_interpreter.hpp" />
+    <ClInclude Include="..\include\wss\opcode_pretty_printer.hpp" />
+    <ClInclude Include="..\include\wss\opcode_pretty_printer_context.hpp" />
+    <ClInclude Include="..\include\wss\opcode_rewriter.hpp" />
+    <ClInclude Include="..\src\opcode_stream_helper.hpp" />
+    <ClInclude Include="..\include\wss\abstract_calculation.hpp" />
+    <ClInclude Include="..\include\wss\calculation.hpp" />
+    <ClInclude Include="..\include\wss\formula_calculation.hpp" />
+    <ClInclude Include="..\include\wss\i_calculation.hpp" />
+    <ClInclude Include="..\include\wss\named_formula_calculation.hpp" />
+    <ClInclude Include="..\include\wss\free_formula.hpp" />
+    <ClInclude Include="..\src\free_formula_impl.hpp" />
+    <ClInclude Include="..\include\wss\i_named_formula_manager.hpp" />
+    <ClInclude Include="..\src\named_formula.hpp" />
+    <ClInclude Include="..\include\wss\named_formula_accessor.hpp" />
+    <ClInclude Include="..\src\named_formula_dependency_wrapper.hpp" />
+    <ClInclude Include="..\src\named_formula_kernel.hpp" />
+    <ClInclude Include="..\src\named_formula_manager.hpp" />
+    <ClInclude Include="..\include\wss\named_formula_reference.hpp" />
+    <ClInclude Include="..\include\wss\named_formula_scope.hpp" />
+    <ClInclude Include="..\src\named_formula_storage.hpp" />
+    <ClInclude Include="..\src\named_formula_utility.hpp" />
+    <ClInclude Include="..\src\named_formula_wrapper.hpp" />
+    <ClInclude Include="..\include\wss\on_event_handler_helper.hpp" />
+    <ClInclude Include="..\src\conditional_format_affected_range_list.hpp" />
+    <ClInclude Include="..\src\conditional_format_callbacks.hpp" />
+    <ClInclude Include="..\src\conditional_format_counter.hpp" />
+    <ClInclude Include="..\src\conditional_format_formula_writer.hpp" />
+    <ClInclude Include="..\src\conditional_format_locked_storage.hpp" />
+    <ClInclude Include="..\include\wss\conditional_format_manager.hpp" />
+    <ClInclude Include="..\src\conditional_format_rank.hpp" />
+    <ClInclude Include="..\src\conditional_format_rule.hpp" />
+    <ClInclude Include="..\src\conditional_format_rule_parser.hpp" />
+    <ClInclude Include="..\src\conditional_format_storage.hpp" />
+    <ClInclude Include="..\src\conditional_format_style_unlock_type.hpp" />
+    <ClInclude Include="..\src\conditional_format_types.hpp" />
+    <ClInclude Include="..\src\conditional_format_utils.hpp" />
+    <ClInclude Include="..\include\wss\get_conditional_format.hpp" />
+    <ClInclude Include="..\include\wss\set_conditional_format.hpp" />
+    <ClInclude Include="..\include\wss\style_manager.hpp" />
+    <ClInclude Include="..\include\wss\style_set.hpp" />
+    <ClInclude Include="..\include\wss\sheet_layout_manager.hpp" />
+    <ClInclude Include="..\include\wss\sheet_layout_trait.hpp" />
+    <ClInclude Include="..\include\wss\merged_cell_manager.hpp" />
+    <ClInclude Include="..\include\wss\variable_map.hpp" />
+    <ClInclude Include="..\include\wss\variable_mapping_list.hpp" />
+    <ClInclude Include="..\include\wss\variable_store.hpp" />
+    <ClInclude Include="..\src\border.hpp" />
+    <ClInclude Include="..\src\border_callbacks.hpp" />
+    <ClInclude Include="..\src\border_locked_storage.hpp" />
+    <ClInclude Include="..\include\wss\border_manager.hpp" />
+    <ClInclude Include="..\src\border_node.hpp" />
+    <ClInclude Include="..\src\border_storage.hpp" />
+    <ClInclude Include="..\include\wss\border_types.hpp" />
+    <ClInclude Include="..\src\border_utility.hpp" />
+    <ClInclude Include="..\include\wss\copy_format_from.hpp" />
+    <ClInclude Include="..\include\wss\attribute_manager.hpp" />
+    <ClInclude Include="..\include\wss\attribute_set.hpp" />
+    <ClInclude Include="..\include\wss\locked_cell_manager.hpp" />
+    <ClInclude Include="..\include\wss\format_manager.hpp" />
+    <ClInclude Include="..\include\wss\object_registry.hpp" />
+    <ClInclude Include="..\include\wss\a1conversion.hpp" />
+    <ClInclude Include="..\include\wss\locale.hpp" />
+    <ClInclude Include="..\include\wss\scoped_neutral_locale_enforcer.hpp" />
+    <ClInclude Include="..\include\wss\clipboard.hpp" />
+    <ClInclude Include="..\include\wss\function_entry.hpp" />
+    <ClInclude Include="..\include\wss\function_parameters.hpp" />
+    <ClInclude Include="..\include\wss\function_registry.hpp" />
+    <ClInclude Include="..\include\wss\return_type_format.hpp" />
+    <ClInclude Include="..\include\wss\sparse_range.hpp" />
+    <ClInclude Include="..\include\wss\arbitrary_storage_object_not_found_exception.hpp" />
+    <ClInclude Include="..\include\wss\can_not_change_merged_cell_exception.hpp" />
+    <ClInclude Include="..\include\wss\can_not_change_part_of_an_array_exception.hpp" />
+    <ClInclude Include="..\include\wss\conditional_format_exception.hpp" />
+    <ClInclude Include="..\include\wss\creation_exception.hpp" />
+    <ClInclude Include="..\include\wss\exception.hpp" />
+    <ClInclude Include="..\include\wss\export_exception.hpp" />
+    <ClInclude Include="..\include\wss\extension_function_call_failed_exception.hpp" />
+    <ClInclude Include="..\include\wss\extension_module_load_exception.hpp" />
+    <ClInclude Include="..\include\wss\extension_registry_exception.hpp" />
+    <ClInclude Include="..\include\wss\fatal_exception.hpp" />
+    <ClInclude Include="..\include\wss\filter_exception.hpp" />
+    <ClInclude Include="..\include\wss\filter_registry_exception.hpp" />
+    <ClInclude Include="..\include\wss\import_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_application_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_clipboard_entry_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_formula_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_function_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_locale_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_name_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_reference_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_seek_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_session_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_translation_table_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_workbook_exception.hpp" />
+    <ClInclude Include="..\include\wss\invalid_worksheet_exception.hpp" />
+    <ClInclude Include="..\include\wss\lock_timeout_exception.hpp" />
+    <ClInclude Include="..\include\wss\missing_text_metrics_exception.hpp" />
+    <ClInclude Include="..\include\wss\named_formula_exception.hpp" />
+    <ClInclude Include="..\include\wss\named_formula_not_found_exception.hpp" />
+    <ClInclude Include="..\include\wss\no_buffer_assigned_exception.hpp" />
+    <ClInclude Include="..\include\wss\not_implemented_exception.hpp" />
+    <ClInclude Include="..\include\wss\object_not_found_exception.hpp" />
+    <ClInclude Include="..\include\wss\object_unloading_exception.hpp" />
+    <ClInclude Include="..\include\wss\position_out_of_range_exception.hpp" />
+    <ClInclude Include="..\include\wss\stack_underflow_exception.hpp" />
+    <ClInclude Include="..\include\wss\translation_exception.hpp" />
+    <ClInclude Include="..\include\wss\undo_chain_exception.hpp" />
+    <ClInclude Include="..\include\wss\uninitialized_session_exception.hpp" />
+    <ClInclude Include="..\include\wss\variant_conversion_exception.hpp" />
+    <ClInclude Include="..\include\wss\vector_io_exception.hpp" />
+    <ClInclude Include="..\include\wss\worksheet_element_exception.hpp" />
+    <ClInclude Include="..\include\wss\wss_runtime_exception.hpp" />
+    <ClInclude Include="..\include\wss\active_workbook_has_changes_command.hpp" />
+    <ClInclude Include="..\include\wss\base_command.hpp" />
+    <ClInclude Include="..\include\wss\clear_attributes_command.hpp" />
+    <ClInclude Include="..\include\wss\clear_cells_command.hpp" />
+    <ClInclude Include="..\include\wss\clone_worksheet_command.hpp" />
+    <ClInclude Include="..\include\wss\command.hpp" />
+    <ClInclude Include="..\include\wss\command_chain.hpp" />
+    <ClInclude Include="..\include\wss\copy_fill_range_command.hpp" />
+    <ClInclude Include="..\include\wss\copy_move_range_command.hpp" />
+    <ClInclude Include="..\include\wss\copy_range_command.hpp" />
+    <ClInclude Include="..\include\wss\copy_worksheet_command.hpp" />
+    <ClInclude Include="..\include\wss\create_application_command.hpp" />
+    <ClInclude Include="..\include\wss\create_empty_workbook_command.hpp" />
+    <ClInclude Include="..\include\wss\create_named_formula_command.hpp" />
+    <ClInclude Include="..\include\wss\create_workbook_command.hpp" />
+    <ClInclude Include="..\include\wss\create_worksheet_command.hpp" />
+    <ClInclude Include="..\include\wss\create_worksheet_element_command.hpp" />
+    <ClInclude Include="..\include\wss\deactivate_array_formula_command.hpp" />
+    <ClInclude Include="..\include\wss\delete_cells_command.hpp" />
+    <ClInclude Include="..\include\wss\delete_column_command.hpp" />
+    <ClInclude Include="..\include\wss\delete_row_command.hpp" />
+    <ClInclude Include="..\include\wss\execute_fetch.hpp" />
+    <ClInclude Include="..\include\wss\get_all_conditional_formats_command.hpp" />
+    <ClInclude Include="..\include\wss\get_all_named_formulas_command.hpp" />
+    <ClInclude Include="..\include\wss\get_attribute_command.hpp" />
+    <ClInclude Include="..\include\wss\get_border_command.hpp" />
+    <ClInclude Include="..\include\wss\get_cell_lock_list_command.hpp" />
+    <ClInclude Include="..\include\wss\get_conditional_format_command.hpp" />
+    <ClInclude Include="..\include\wss\get_default_column_width_command.hpp" />
+    <ClInclude Include="..\include\wss\get_default_format_command.hpp" />
+    <ClInclude Include="..\include\wss\get_default_row_height_command.hpp" />
+    <ClInclude Include="..\include\wss\get_default_sheet_dimensions_command.hpp" />
+    <ClInclude Include="..\include\wss\get_default_style_command.hpp" />
+    <ClInclude Include="..\include\wss\get_formatted_value_command.hpp" />
+    <ClInclude Include="..\include\wss\get_formula_command.hpp" />
+    <ClInclude Include="..\include\wss\get_named_formula_command.hpp" />
+    <ClInclude Include="..\include\wss\get_precedents_command.hpp" />
+    <ClInclude Include="..\include\wss\get_server_query_command.hpp" />
+    <ClInclude Include="..\include\wss\get_server_version_command.hpp" />
+    <ClInclude Include="..\include\wss\get_sparse_column_width_command.hpp" />
+    <ClInclude Include="..\include\wss\get_sparse_max_cell_height_command.hpp" />
+    <ClInclude Include="..\include\wss\get_sparse_max_cell_width_command.hpp" />
+    <ClInclude Include="..\include\wss\get_sparse_row_height_command.hpp" />
+    <ClInclude Include="..\include\wss\get_style_command.hpp" />
+    <ClInclude Include="..\include\wss\get_used_range_command.hpp" />
+    <ClInclude Include="..\include\wss\get_value_command.hpp" />
+    <ClInclude Include="..\include\wss\get_workbook_version_command.hpp" />
+    <ClInclude Include="..\include\wss\get_worksheet_elements_command.hpp" />
+    <ClInclude Include="..\include\wss\i_command.hpp" />
+    <ClInclude Include="..\include\wss\i_undoable_command.hpp" />
+    <ClInclude Include="..\include\wss\insert_cells_command.hpp" />
+    <ClInclude Include="..\include\wss\insert_column_command.hpp" />
+    <ClInclude Include="..\include\wss\insert_row_command.hpp" />
+    <ClInclude Include="..\include\wss\load_workbook_command.hpp" />
+    <ClInclude Include="..\include\wss\measure_text_command.hpp" />
+    <ClInclude Include="..\include\wss\move_conditional_format_rank_command.hpp" />
+    <ClInclude Include="..\include\wss\move_range_command.hpp" />
+    <ClInclude Include="..\include\wss\move_worksheet_command.hpp" />
+    <ClInclude Include="..\include\wss\paste_range_command.hpp" />
+    <ClInclude Include="..\include\wss\remove_application_command.hpp" />
+    <ClInclude Include="..\include\wss\remove_clone_worksheet_command.hpp" />
+    <ClInclude Include="..\include\wss\remove_conditional_format_command.hpp" />
+    <ClInclude Include="..\include\wss\remove_named_formula_command.hpp" />
+    <ClInclude Include="..\include\wss\remove_workbook_command.hpp" />
+    <ClInclude Include="..\include\wss\remove_worksheet_command.hpp" />
+    <ClInclude Include="..\include\wss\remove_worksheet_element_command.hpp" />
+    <ClInclude Include="..\include\wss\rename_application_command.hpp" />
+    <ClInclude Include="..\include\wss\rename_workbook_command.hpp" />
+    <ClInclude Include="..\include\wss\rename_worksheet_command.hpp" />
+    <ClInclude Include="..\include\wss\save_workbook_command.hpp" />
+    <ClInclude Include="..\include\wss\select_application_command.hpp" />
+    <ClInclude Include="..\include\wss\select_workbook_command.hpp" />
+    <ClInclude Include="..\include\wss\select_worksheet_command.hpp" />
+    <ClInclude Include="..\include\wss\set_array_value_command.hpp" />
+    <ClInclude Include="..\include\wss\set_attribute_command.hpp" />
+    <ClInclude Include="..\include\wss\set_border_command.hpp" />
+    <ClInclude Include="..\include\wss\set_cell_lock_command.hpp" />
+    <ClInclude Include="..\include\wss\set_conditional_format_command.hpp" />
+    <ClInclude Include="..\include\wss\set_default_column_width_command.hpp" />
+    <ClInclude Include="..\include\wss\set_default_format_command.hpp" />
+    <ClInclude Include="..\include\wss\set_default_row_height_command.hpp" />
+    <ClInclude Include="..\include\wss\set_default_style_command.hpp" />
+    <ClInclude Include="..\include\wss\set_format_command.hpp" />
+    <ClInclude Include="..\include\wss\set_style_command.hpp" />
+    <ClInclude Include="..\include\wss\set_value_command.hpp" />
+    <ClInclude Include="..\include\wss\start_new_calculation_command.hpp" />
+    <ClInclude Include="..\include\wss\trigger_extension_module_command.hpp" />
+    <ClInclude Include="..\include\wss\unmerge_cells_command.hpp" />
+    <ClInclude Include="..\include\wss\update_conditional_format_command.hpp" />
+    <ClInclude Include="..\include\wss\update_named_formula_command.hpp" />
+    <ClInclude Include="..\include\wss\update_worksheet_elements_command.hpp" />
+    <ClInclude Include="..\include\wss\get_dependents_command.hpp" />
+    <ClInclude Include="..\include\wss\get_workbook_variables_command.hpp" />
+    <ClInclude Include="..\include\wss\get_worksheet_variable_command.hpp" />
+    <ClInclude Include="..\include\wss\merge_cells_command.hpp" />
+    <ClInclude Include="..\include\wss\set_cell_dimension_command.hpp" />
+    <ClInclude Include="..\include\wss\set_column_width_command.hpp" />
+    <ClInclude Include="..\include\wss\set_row_height_command.hpp" />
+    <ClInclude Include="..\include\wss\set_variable_command.hpp" />
+    <ClInclude Include="..\include\wss\abstract_undoable_command.hpp" />
+    <ClInclude Include="..\include\wss\formatter.hpp" />
+    <ClInclude Include="..\include\wss\i_format.hpp" />
+    <ClInclude Include="..\include\wss\extension_registry.hpp" />
+    <ClInclude Include="..\include\wss\module_registry.hpp" />
+    <ClInclude Include="..\include\wss\arbitrary_storage.hpp" />
+    <ClInclude Include="..\include\wss\broken_evaluation_dependencies.h" />
+    <ClInclude Include="..\include\wss\default_format_serializer.hpp" />
+    <ClInclude Include="..\include\wss\default_format_unserializer.hpp" />
+    <ClInclude Include="..\include\wss\scoped_selection_state.hpp" />
+    <ClInclude Include="..\include\wss\selection_state.hpp" />
+    <ClInclude Include="..\include\wss\session.hpp" />
+    <ClInclude Include="..\include\wss\session_handler.hpp" />
+    <ClInclude Include="..\include\wss\session_sheet_map.hpp" />
+    <ClInclude Include="..\include\wss\user_return_format.hpp" />
+    <ClInclude Include="..\include\wss\translation_map.hpp" />
+    <ClInclude Include="..\include\wss\translation_table.hpp" />
+    <ClInclude Include="..\src\catalogue_reader.hpp" />
+    <ClInclude Include="..\src\function_table.hpp" />
+    <ClInclude Include="..\src\function_table_literals.hpp" />
+    <ClInclude Include="..\src\function_table_parser.hpp" />
+    <ClInclude Include="..\src\function_table_readers.hpp" />
+    <ClInclude Include="..\src\function_table_serializer.hpp" />
+    <ClInclude Include="..\src\function_table_writers.hpp" />
+    <ClInclude Include="..\include\wss\worksheet_element.hpp" />
+    <ClInclude Include="..\src\win32_service.hpp" />
+    <ClInclude Include="..\src\win32_service_status_updater.hpp" />
+    <ClInclude Include="..\src\worksheet_element_filter.hpp" />
+    <ClInclude Include="..\src\worksheet_element_key_value_map.hpp" />
+    <ClInclude Include="..\include\wss\worksheet_element_storage.hpp" />
+    <ClInclude Include="..\include\wss\i_text_metrics.hpp" />
+    <ClInclude Include="..\include\wss\text_metrics.hpp" />
+    <ClInclude Include="..\include\wss\auto_fill.hpp" />
+    <ClInclude Include="..\include\wss\i_autofill_handler.hpp" />
+    <ClInclude Include="..\src\transaction.hpp" />
+    <ClInclude Include="..\include\wss\transaction_command.hpp" />
+    <ClInclude Include="..\include\wss\transaction_wrapper.hpp" />
+    <ClInclude Include="..\include\wss\allocation_tracking.hpp" />
+    <ClInclude Include="..\src\uuid_adjust.hpp" />
+    <ClInclude Include="..\src\configuration.hpp" />
+    <ClInclude Include="..\src\server_configuration.hpp" />
+    <ClInclude Include="..\src\server_configuration_literals.hpp" />
+    <ClInclude Include="..\src\server_configuration_parser.hpp" />
+    <ClInclude Include="..\src\server_configuration_readers.hpp" />
+    <ClInclude Include="..\src\server_configuration_serializer.hpp" />
+    <ClInclude Include="..\src\server_configuration_writers.hpp" />
+    <ClInclude Include="..\include\wss\filter_registry.hpp" />
+    <ClInclude Include="..\include\wss\i_export_filter.hpp" />
+    <ClInclude Include="..\include\wss\i_import_filter.hpp" />
+    <ClInclude Include="..\src\message_defines.hpp" />
+    <ClInclude Include="..\src\precompiled_header.hpp" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\auto_save.cpp" />
+    <ClCompile Include="..\src\auto_save_filesystem.cpp" />
+    <ClCompile Include="..\src\base_log_handler.cpp" />
+    <ClCompile Include="..\src\console_logger.cpp" />
+    <ClCompile Include="..\src\contained_row.cpp" />
+    <ClCompile Include="..\src\file_logger.cpp" />
+    <ClCompile Include="..\src\generic_container.ipp" />
+    <ClCompile Include="..\src\layout_coord.cpp" />
+    <ClCompile Include="..\src\locked_session.cpp" />
+    <ClCompile Include="..\src\log_level_factory.cpp" />
+    <ClCompile Include="..\src\logger.cpp" />
+    <ClCompile Include="..\src\logger_factory.cpp" />
+    <ClCompile Include="..\src\memory_garbage_collector.cpp" />
+    <ClCompile Include="..\src\modifier_factory.cpp" />
+    <ClCompile Include="..\src\reference_table_coverage.cpp" />
+    <ClCompile Include="..\src\release_pooled_memory.cpp" />
+    <ClCompile Include="..\src\session_handler.cpp" />
+    <ClCompile Include="..\src\socket_logger.cpp" />
+    <ClCompile Include="..\src\date_timestamp_modifier.cpp" />
+    <ClCompile Include="..\src\log_level_modifier.cpp" />
+    <ClCompile Include="..\src\thread_id_modifier.cpp" />
+    <ClCompile Include="..\src\performance_timer.cpp" />
+    <ClCompile Include="..\src\ci_string.cpp" />
+    <ClCompile Include="..\src\core_dump_handler.cpp" />
+    <ClCompile Include="..\src\css_serializer.cpp" />
+    <ClCompile Include="..\src\css_unserializer.cpp" />
+    <ClCompile Include="..\src\json_serializer.cpp" />
+    <ClCompile Include="..\src\json_unserializer.cpp" />
+    <ClCompile Include="..\src\unix_module_loader.cpp" />
+    <ClCompile Include="..\src\win32_module_loader.cpp" />
+    <ClCompile Include="..\src\sparse_vector.cpp" />
+    <ClCompile Include="..\src\vector_io_device.cpp" />
+    <ClCompile Include="..\src\storage_rotation.cpp" />
+    <ClCompile Include="..\src\name_thread.cpp" />
+    <ClCompile Include="..\src\application.cpp" />
+    <ClCompile Include="..\src\identifiable_object.cpp" />
+    <ClCompile Include="..\src\loadable_object.cpp" />
+    <ClCompile Include="..\src\precompiled_header.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">precompiled_header.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">precompiled_header.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">precompiled_header.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">precompiled_header.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\src\range.cpp" />
+    <ClCompile Include="..\src\server.cpp">
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExpandAttributedSource>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExpandAttributedSource>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">false</ExpandAttributedSource>
+      <ExpandAttributedSource Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">false</ExpandAttributedSource>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">
+      </AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">
+      </AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="..\src\server_defaults.cpp" />
+    <ClCompile Include="..\src\sheet_point.cpp" />
+    <ClCompile Include="..\src\sheet_range.cpp" />
+    <ClCompile Include="..\src\variant.cpp" />
+    <ClCompile Include="..\src\win32_service.cpp" />
+    <ClCompile Include="..\src\win32_service_status_updater.cpp" />
+    <ClCompile Include="..\src\workbook.cpp" />
+    <ClCompile Include="..\src\worksheet.cpp" />
+    <ClCompile Include="..\src\array_manager.cpp" />
+    <ClCompile Include="..\src\calculation_setting.cpp" />
+    <ClCompile Include="..\src\cell.cpp" />
+    <ClCompile Include="..\src\cell_manager.cpp" />
+    <ClCompile Include="..\src\object_lookup.cpp" />
+    <ClCompile Include="..\src\range_lock.cpp" />
+    <ClCompile Include="..\src\range_lock_handler.cpp" />
+    <ClCompile Include="..\src\range_lock_keeper.cpp" />
+    <ClCompile Include="..\src\abstract_dependency.cpp" />
+    <ClCompile Include="..\src\dependency_info_utility.cpp" />
+    <ClCompile Include="..\src\dependency_manager.cpp" />
+    <ClCompile Include="..\src\dependency_node_reference.cpp" />
+    <ClCompile Include="..\src\precedent_proxy.cpp" />
+    <ClCompile Include="..\src\range_reference.cpp" />
+    <ClCompile Include="..\src\fill_operation.cpp" />
+    <ClCompile Include="..\src\formula.cpp" />
+    <ClCompile Include="..\src\formula_kernel.cpp" />
+    <ClCompile Include="..\src\interpreter_context.cpp" />
+    <ClCompile Include="..\src\interpreter_variant.cpp" />
+    <ClCompile Include="..\src\reference_info.cpp" />
+    <ClCompile Include="..\src\reference_table.cpp" />
+    <ClCompile Include="..\src\stack_calculation.cpp" />
+    <ClCompile Include="..\src\with_initiator.cpp" />
+    <ClCompile Include="..\src\addition_node.cpp" />
+    <ClCompile Include="..\src\array_node.cpp" />
+    <ClCompile Include="..\src\array_row_node.cpp" />
+    <ClCompile Include="..\src\base_node.cpp" />
+    <ClCompile Include="..\src\boolean_false_node.cpp" />
+    <ClCompile Include="..\src\boolean_true_node.cpp" />
+    <ClCompile Include="..\src\brace_node.cpp" />
+    <ClCompile Include="..\src\concatenation_node.cpp" />
+    <ClCompile Include="..\src\digit_node.cpp" />
+    <ClCompile Include="..\src\division_node.cpp" />
+    <ClCompile Include="..\src\empty_node.cpp" />
+    <ClCompile Include="..\src\equal_node.cpp" />
+    <ClCompile Include="..\src\error_node.cpp" />
+    <ClCompile Include="..\src\exponent_node.cpp" />
+    <ClCompile Include="..\src\function_node.cpp" />
+    <ClCompile Include="..\src\greater_equal_node.cpp" />
+    <ClCompile Include="..\src\greater_node.cpp" />
+    <ClCompile Include="..\src\less_equal_node.cpp" />
+    <ClCompile Include="..\src\less_node.cpp" />
+    <ClCompile Include="..\src\multiplication_node.cpp" />
+    <ClCompile Include="..\src\named_formula_node.cpp" />
+    <ClCompile Include="..\src\negation_node.cpp" />
+    <ClCompile Include="..\src\not_equal_node.cpp" />
+    <ClCompile Include="..\src\percentage_node.cpp" />
+    <ClCompile Include="..\src\range_node.cpp" />
+    <ClCompile Include="..\src\reference_base_node.cpp" />
+    <ClCompile Include="..\src\reference_list_node.cpp" />
+    <ClCompile Include="..\src\root_node.cpp" />
+    <ClCompile Include="..\src\string_node.cpp" />
+    <ClCompile Include="..\src\subtraction_node.cpp" />
+    <ClCompile Include="..\src\variable_node.cpp" />
+    <ClCompile Include="..\src\ast_formula.cpp" />
+    <ClCompile Include="..\src\formula_parser.cpp" />
+    <ClCompile Include="..\src\formula_parsing_context.cpp" />
+    <ClCompile Include="..\src\formula_parsing_result.cpp" />
+    <ClCompile Include="..\src\opcode.cpp" />
+    <ClCompile Include="..\src\opcode_generator.cpp" />
+    <ClCompile Include="..\src\opcode_interpreter.cpp" />
+    <ClCompile Include="..\src\opcode_pretty_printer.cpp" />
+    <ClCompile Include="..\src\opcode_pretty_printer_context.cpp" />
+    <ClCompile Include="..\src\opcode_rewriter.cpp" />
+    <ClCompile Include="..\src\abstract_calculation.cpp" />
+    <ClCompile Include="..\src\formula_calculation.cpp" />
+    <ClCompile Include="..\src\named_formula_calculation.cpp" />
+    <ClCompile Include="..\src\free_formula.cpp" />
+    <ClCompile Include="..\src\named_formula.cpp" />
+    <ClCompile Include="..\src\named_formula_accessor.cpp" />
+    <ClCompile Include="..\src\named_formula_dependency_wrapper.cpp" />
+    <ClCompile Include="..\src\named_formula_kernel.cpp" />
+    <ClCompile Include="..\src\named_formula_manager.cpp" />
+    <ClCompile Include="..\src\named_formula_reference.cpp" />
+    <ClCompile Include="..\src\named_formula_storage.cpp" />
+    <ClCompile Include="..\src\named_formula_utility.cpp" />
+    <ClCompile Include="..\src\named_formula_wrapper.cpp" />
+    <ClCompile Include="..\src\conditional_format_formula_writer.cpp" />
+    <ClCompile Include="..\src\conditional_format_locked_storage.cpp" />
+    <ClCompile Include="..\src\conditional_format_manager.cpp" />
+    <ClCompile Include="..\src\conditional_format_rule.cpp" />
+    <ClCompile Include="..\src\conditional_format_storage.cpp" />
+    <ClCompile Include="..\src\get_conditional_format.cpp" />
+    <ClCompile Include="..\src\set_conditional_format.cpp" />
+    <ClCompile Include="..\src\style_manager.cpp" />
+    <ClCompile Include="..\src\sheet_layout_manager.cpp" />
+    <ClCompile Include="..\src\merged_cell_manager.cpp" />
+    <ClCompile Include="..\src\variable_map.cpp" />
+    <ClCompile Include="..\src\variable_store.cpp" />
+    <ClCompile Include="..\src\border_locked_storage.cpp" />
+    <ClCompile Include="..\src\border_manager.cpp" />
+    <ClCompile Include="..\src\border_node.cpp" />
+    <ClCompile Include="..\src\border_storage.cpp" />
+    <ClCompile Include="..\src\border_utility.cpp" />
+    <ClCompile Include="..\src\attribute_manager.cpp" />
+    <ClCompile Include="..\src\locked_cell_manager.cpp" />
+    <ClCompile Include="..\src\format_manager.cpp" />
+    <ClCompile Include="..\src\object_registry.cpp" />
+    <ClCompile Include="..\src\a1conversion.cpp" />
+    <ClCompile Include="..\src\locale.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\scoped_neutral_locale_enforcer.cpp" />
+    <ClCompile Include="..\src\clipboard.cpp" />
+    <ClCompile Include="..\src\function_entry.cpp" />
+    <ClCompile Include="..\src\function_parameters.cpp" />
+    <ClCompile Include="..\src\function_registry.cpp" />
+    <ClCompile Include="..\src\sparse_range.cpp" />
+    <ClCompile Include="..\src\named_formula_not_found_exception.cpp" />
+    <ClCompile Include="..\src\active_workbook_has_changes_command.cpp" />
+    <ClCompile Include="..\src\clear_attributes_command.cpp" />
+    <ClCompile Include="..\src\clear_cells_command.cpp" />
+    <ClCompile Include="..\src\clone_worksheet_command.cpp" />
+    <ClCompile Include="..\src\command_chain.cpp" />
+    <ClCompile Include="..\src\copy_fill_range_command.cpp" />
+    <ClCompile Include="..\src\copy_move_range_command.cpp" />
+    <ClCompile Include="..\src\copy_range_command.cpp" />
+    <ClCompile Include="..\src\copy_worksheet_command.cpp" />
+    <ClCompile Include="..\src\create_application_command.cpp" />
+    <ClCompile Include="..\src\create_empty_workbook_command.cpp" />
+    <ClCompile Include="..\src\create_named_formula_command.cpp" />
+    <ClCompile Include="..\src\create_workbook_command.cpp" />
+    <ClCompile Include="..\src\create_worksheet_command.cpp" />
+    <ClCompile Include="..\src\create_worksheet_element_command.cpp" />
+    <ClCompile Include="..\src\deactivate_array_formula_command.cpp" />
+    <ClCompile Include="..\src\delete_cells_command.cpp" />
+    <ClCompile Include="..\src\delete_column_command.cpp" />
+    <ClCompile Include="..\src\delete_row_command.cpp" />
+    <ClCompile Include="..\src\get_all_conditional_formats_command.cpp" />
+    <ClCompile Include="..\src\get_all_named_formulas_command.cpp" />
+    <ClCompile Include="..\src\get_attribute_command.cpp" />
+    <ClCompile Include="..\src\get_border_command.cpp" />
+    <ClCompile Include="..\src\get_cell_lock_list_command.cpp" />
+    <ClCompile Include="..\src\get_conditional_format_command.cpp" />
+    <ClCompile Include="..\src\get_default_column_width_command.cpp" />
+    <ClCompile Include="..\src\get_default_format_command.cpp" />
+    <ClCompile Include="..\src\get_default_row_height_command.cpp" />
+    <ClCompile Include="..\src\get_default_sheet_dimensions_command.cpp" />
+    <ClCompile Include="..\src\get_default_style_command.cpp" />
+    <ClCompile Include="..\src\get_dependents_command.cpp" />
+    <ClCompile Include="..\src\get_formatted_value_command.cpp" />
+    <ClCompile Include="..\src\get_formula_command.cpp" />
+    <ClCompile Include="..\src\get_named_formula_command.cpp" />
+    <ClCompile Include="..\src\get_precedents_command.cpp" />
+    <ClCompile Include="..\src\get_server_query_command.cpp" />
+    <ClCompile Include="..\src\get_server_version_command.cpp" />
+    <ClCompile Include="..\src\get_sparse_column_width_command.cpp" />
+    <ClCompile Include="..\src\get_sparse_max_cell_height_command.cpp" />
+    <ClCompile Include="..\src\get_sparse_max_cell_width_command.cpp" />
+    <ClCompile Include="..\src\get_sparse_row_height_command.cpp" />
+    <ClCompile Include="..\src\get_style_command.cpp" />
+    <ClCompile Include="..\src\get_used_range_command.cpp" />
+    <ClCompile Include="..\src\get_value_command.cpp" />
+    <ClCompile Include="..\src\get_workbook_version_command.cpp" />
+    <ClCompile Include="..\src\get_worksheet_elements_command.cpp" />
+    <ClCompile Include="..\src\insert_cells_command.cpp" />
+    <ClCompile Include="..\src\insert_column_command.cpp" />
+    <ClCompile Include="..\src\insert_row_command.cpp" />
+    <ClCompile Include="..\src\load_workbook_command.cpp" />
+    <ClCompile Include="..\src\measure_text_command.cpp" />
+    <ClCompile Include="..\src\move_conditional_format_rank_command.cpp" />
+    <ClCompile Include="..\src\move_range_command.cpp" />
+    <ClCompile Include="..\src\move_worksheet_command.cpp" />
+    <ClCompile Include="..\src\paste_range_command.cpp" />
+    <ClCompile Include="..\src\remove_application_command.cpp" />
+    <ClCompile Include="..\src\remove_clone_worksheet_command.cpp" />
+    <ClCompile Include="..\src\remove_conditional_format_command.cpp" />
+    <ClCompile Include="..\src\remove_named_formula_command.cpp" />
+    <ClCompile Include="..\src\remove_workbook_command.cpp" />
+    <ClCompile Include="..\src\remove_worksheet_command.cpp" />
+    <ClCompile Include="..\src\remove_worksheet_element_command.cpp" />
+    <ClCompile Include="..\src\rename_application_command.cpp" />
+    <ClCompile Include="..\src\rename_workbook_command.cpp" />
+    <ClCompile Include="..\src\rename_worksheet_command.cpp" />
+    <ClCompile Include="..\src\save_workbook_command.cpp" />
+    <ClCompile Include="..\src\select_application_command.cpp" />
+    <ClCompile Include="..\src\select_workbook_command.cpp" />
+    <ClCompile Include="..\src\select_worksheet_command.cpp" />
+    <ClCompile Include="..\src\set_array_value_command.cpp" />
+    <ClCompile Include="..\src\set_attribute_command.cpp" />
+    <ClCompile Include="..\src\set_border_command.cpp" />
+    <ClCompile Include="..\src\set_cell_lock_command.cpp" />
+    <ClCompile Include="..\src\set_conditional_format_command.cpp" />
+    <ClCompile Include="..\src\set_default_column_width_command.cpp" />
+    <ClCompile Include="..\src\set_default_format_command.cpp" />
+    <ClCompile Include="..\src\set_default_row_height_command.cpp" />
+    <ClCompile Include="..\src\set_default_style_command.cpp" />
+    <ClCompile Include="..\src\set_format_command.cpp" />
+    <ClCompile Include="..\src\set_style_command.cpp" />
+    <ClCompile Include="..\src\set_value_command.cpp" />
+    <ClCompile Include="..\src\start_new_calculation_command.cpp" />
+    <ClCompile Include="..\src\trigger_extension_module_command.cpp" />
+    <ClCompile Include="..\src\unmerge_cells_command.cpp" />
+    <ClCompile Include="..\src\update_conditional_format_command.cpp" />
+    <ClCompile Include="..\src\update_named_formula_command.cpp" />
+    <ClCompile Include="..\src\update_worksheet_elements_command.cpp" />
+    <ClCompile Include="..\src\get_workbook_variables_command.cpp" />
+    <ClCompile Include="..\src\get_worksheet_variable_command.cpp" />
+    <ClCompile Include="..\src\merge_cells_command.cpp" />
+    <ClCompile Include="..\src\set_cell_dimension_command.cpp" />
+    <ClCompile Include="..\src\set_column_width_command.cpp" />
+    <ClCompile Include="..\src\set_row_height_command.cpp" />
+    <ClCompile Include="..\src\formatter.cpp" />
+    <ClCompile Include="..\src\extension_registry.cpp" />
+    <ClCompile Include="..\src\module_registry.cpp" />
+    <ClCompile Include="..\src\arbitrary_storage.cpp" />
+    <ClCompile Include="..\src\broken_evaluation_dependencies.cpp" />
+    <ClCompile Include="..\src\default_format_serializer.cpp" />
+    <ClCompile Include="..\src\default_format_unserializer.cpp" />
+    <ClCompile Include="..\src\scoped_selection_state.cpp" />
+    <ClCompile Include="..\src\selection_state.cpp" />
+    <ClCompile Include="..\src\session.cpp" />
+    <ClCompile Include="..\src\session_sheet_map.cpp" />
+    <ClCompile Include="..\src\user_return_format.cpp" />
+    <ClCompile Include="..\src\translation_map.cpp" />
+    <ClCompile Include="..\src\translation_table.cpp" />
+    <ClCompile Include="..\src\catalogue_reader.cpp" />
+    <ClCompile Include="..\src\function_table_parser.cpp" />
+    <ClCompile Include="..\src\function_table_readers.cpp" />
+    <ClCompile Include="..\src\function_table_serializer.cpp" />
+    <ClCompile Include="..\src\function_table_writers.cpp" />
+    <ClCompile Include="..\src\worksheet_element.cpp" />
+    <ClCompile Include="..\src\worksheet_element_storage.cpp" />
+    <ClCompile Include="..\src\text_metrics.cpp" />
+    <ClCompile Include="..\src\auto_fill.cpp" />
+    <ClCompile Include="..\src\transaction.cpp" />
+    <ClCompile Include="..\src\transaction_command.cpp" />
+    <ClCompile Include="..\src\transaction_wrapper.cpp" />
+    <ClCompile Include="..\src\allocation_tracking.cpp" />
+    <ClCompile Include="..\src\uuid_adjust.cpp" />
+    <ClCompile Include="..\src\configuration.cpp" />
+    <ClCompile Include="..\src\server_configuration.cpp" />
+    <ClCompile Include="..\src\server_configuration_parser.cpp" />
+    <ClCompile Include="..\src\server_configuration_readers.cpp" />
+    <ClCompile Include="..\src\server_configuration_serializer.cpp" />
+    <ClCompile Include="..\src\server_configuration_writers.cpp" />
+    <ClCompile Include="..\src\filter_registry.cpp" />
+    <ClCompile Include="..\src\main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r018hs\r018hs.ampl" />
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r020hs\r020hs.ampl" />
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r036hs\r036hs.ampl" />
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r039hs\r039hs.ampl" />
+    <None Include="..\..\..\..\..\Users\fhofmann\Documents\My Amplifier Results\r040hs\r040hs.ampl" />
+    <None Include="..\include\wss\generic_point.ipp" />
+    <None Include="..\src\key_value_manager.ipp" />
+    <None Include="..\include\wss\key_value_set.ipp" />
+    <None Include="..\src\value_manager.ipp" />
+    <None Include="..\include\wss\allocation.ipp" />
+    <None Include="..\etc\config.xml" />
+    <CustomBuildStep Include="..\xml\locale\de_DE\function_table.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\xml\locale\en_US\function_table.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\xml\locale\fr_FR\function_table.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <None Include="..\include\wss\version.hpp.tpl" />
+    <None Include="C:\Users\fhofmann\Documents\My Amplifier Results\r059hs\r059hs.ampl" />
+    <None Include="C:\Users\fhofmann\Documents\My Amplifier Results\r060hs\r060hs.ampl" />
+    <None Include="C:\Users\fhofmann\Documents\My Amplifier Results\r061hs\r061hs.ampl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="wss.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <xsd2cpp Include="..\xml\schema\function_table.xsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\src</sourcedir>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\src</sourcedir>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectDir)..\src</sourcedir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\src</sourcedir>
+    </xsd2cpp>
+    <xsd2cpp Include="..\xml\schema\server_configuration.xsd">
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\src</sourcedir>
+      <settingsfile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\xml\schema\settings.txt</settingsfile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\src</sourcedir>
+      <settingsfile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\xml\schema\xsd2cpp_settings.conf</settingsfile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(SolutionDir)..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='test_suite_server|Win32'">$(ProjectDir)..\src</sourcedir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\src</sourcedir>
+      <SubType>Designer</SubType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </xsd2cpp>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="xsd2cpp.targets" />
+  </ImportGroup>
+</Project>

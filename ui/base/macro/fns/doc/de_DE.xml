@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translation_table xmlns="http://www.jedox.com/jedox/wss" lang="de_DE">
+  <groups>
+    <group id="LOOKUP_REFERENCE" name="Lookup &amp; Reference">
+      <translation>Matrix</translation>
+    </group>
+  </groups>
+  <function name="HYPERLINK" category="LOOKUP_REFERENCE">
+    <translation>HYPERLINK</translation>
+    <description>
+    <parameters>
+        <parameter name="Hyperlink_Ziel" type="text">
+          <![CDATA[Hyperlink_Ziel ist das Ziel des Hyperlinks mit dem relativen Pfad im Datei-Manager, bestehend aus /GRUPPE/HIERARCHIE/GESAMTER_DOKUMENTENPFAD. Um den Link z.B. in Frame2 eines Framesets zu öffnen, schreiben Sie hinter den Dateinamen \"#Frame2\".<br>
+          Beispiele:<br>
+        	\"/Jedox/Financials/Accounting/Demo.wss\" - Hyperlink zur Datei Demo.wss in der Gruppe \"Jedox\", der Hierarchie \"Financials\" und dem Ordner \"Accounting\".<br>
+        	\"/Jedox/Financials/Accounting/Demo.wss#Frame2\" - gleicher Hyperlink wie oben. Der Zusatz öffnet den Link in Frame2 des benutzten Framesets.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]Tabellenblatt2\" - Hyperlink öffnet die Datei Demo.wss und aktiviert die Zelle A1 auf dem Tabellenblatt2.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]'Jahr 2009'!A2:B3\" - Hyperlink öffnet die Datei Demo.wss und aktiviert den Bereich A2:B3 auf dem  Tabellenblatt 'Jahr 2009'. (Tabellenblattnamen mit Leerstellen werden in einfache Anführungszeichen gesetzt).<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]A2\" - Hyperlink öffnet die Datei Demo.wss und aktiviert die Zelle A2 auf dem ersten Tabellenblatt.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]Januar\" - Hyperlink öffnet die Datei Demo.wss und aktiviert den mit \"Januar\" bezeichneten Bereich.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]Arbeitsblatt2!Mai\" - Hyperlink öffnet die Datei Demo.wss und aktiviert den mit \"Mai\" bezeichneten Bereich auf Arbeitsblatt2.<br>
+			\"/Jedox/Financials/Documentation/Manual.pdf\" - Hyperlink zur Datei Manual.pdf in der Gruppe \"Jedox\", der Hierarchie \"Financials\" und dem Ordner \"Documentation\".<br>
+			\"http://www.google.com/\" - Hyperlink zur URL.<br>
+			A5 or $A$5 - Benutzt den Eintrag einer anderen Zelle auf dem Arbeitsblatt als Hyperlink_Ziel.<br><br>
+			\"SELF\" or \"self\" - Link nach A1 des aktuellen Tabellenblatts in der aktuellen Arbeitsmappe.<br>
+			\"[SELF]Tabellenblatt2!A5\" or \"[self]Tabellenblatt2!A5\" - Link nach A5 von Tabellenblatt2 der aktuellen Arbeitsmappe.]]>
+        </parameter>
+        <parameter name="Freundlicher_Name" type="text">
+          <![CDATA[Freundlicher_Name ist der Text, der in der Zelle angezeigt wird.<br>
+          Beispiele:<br>
+			\"Ein Hyperlinktext\" - normaler Text.<br>
+			B5 or $B$5 - der Zelleintrag der angegebenen Zelle wird als Freundlicher_Name angezeigt.<br>
+			VERKETTEN(B2,C2) - das Ergebnis einer Funktion wird als Freundlicher_Name angezeigt.]]>
+        </parameter>
+        <parameter name="Bildschirm_Tipp" type="text">
+          <![CDATA[Bildschirm_Tipp ist ein Hyperlink Hinweis.<br>
+          Beispiele:<br>
+          		\"Ein Hyperlinktext\" - normaler Text.<br>
+			C5 or $C$5 - der Zelleintrag der angegebenen Zelle wird als Bildschirm_Tipp angezeigt.<br>
+			VERKETTEN(B3,C3) - das Ergebnis einer Funktion wird als Bildschirm_Tipp angezeigt.]]>
+        </parameter>
+        <sequence from="1" to="13">
+          <parameter name="Quelle" type="text">
+            <![CDATA[Quelle1, Quelle2, ... sind Verweise auf die Quellen der zu transferierenden Daten.<br>
+            Beispiele:<br>
+            B7 - Es wird der Eintrag der Zelle B7 vom aktiven Tabellenblatt genommen.<br>
+			A2:B3 - Es werden die Einträge des Bereiches A2:B3 vom aktiven Tabellenblatt genommen.<br>
+			Tabelle2!A2:B3 - Die Einträge des Bereiches A2:B3 vom Tabellenblatt \"Tabelle2\" werden genommen.<br>
+			Einkauf32 - Die Einträge des benannten Bereiches \"Einkauf32\" des aktiven Tabellenblatts werden genommen.<br>
+			Tabelle2!Einkauf32 - Die Einträge des benannten Bereiches \"Einkauf32\" des Tabellenblattes \"Tabelle2\" werden genommen.<br>
+			@var1 - Der Inhalt der Variable \"var1\" wird genommen.<br>
+			\"Einkauf32\" - Der Text -Einkauf32- wird als konstanter Wert genommen.<br>
+			{\"Wert1\",\"Wert2\",\"Wert3\"} - Es wird diese Liste konstanter Werte genommen.]]>
+          </parameter>
+          <parameter name="Ziel" type="text">
+            <![CDATA[Ziel1, Ziel2, ... sind Verweise zu den Zielzellen der zu transferierenden Daten.<br>
+            Beispiele:<br>
+            \"B7\" - Zielzelle ist B7 auf dem aktiven Arbeitsblatt.<br>
+			\"A2:B3\" - Zielbereich ist A2:B3 auf dem aktiven Arbeitsblatt.<br>
+			\"Tabelle2!A2:B3\" - Zielbereich ist A2:B3 auf Arbeitsblatt \"Tabelle2\".<br>
+			\"Quartal1\" - Zielbereich ist der Bereich mit dem Namen \"Quartal1\" auf dem aktiven Arbeitsblatt.<br>
+			\"Tabellenblatt2!Quartal4\" - Zielbereich ist der Bereich mit dem Namen \"Quartal4\" auf dem Tabellenbblatt2.<br>
+			\"@var1\" - Setzt die Variable \"var1\".<br><br>
+			anwendbar nur für URL Hyperlink Ziele<br>
+			\"Bestimmter Text\" - Konstanter Wert.<br>
+			{\"value1\",\"value2\",\"value3\"} - Liste von konstanten Werten.]]>
+          </parameter>
+        </sequence>
+      </parameters>
+      <syntax>
+        <![CDATA[HYPERLINK(Hyperlink_Adresse;Freundlicher_Name;Bildschirm_Tipp;Quelle1;Ziel1[;Quelle2;Ziel2;...])]]>
+      </syntax>
+      <short>
+        <![CDATA[Erstellt einen Link oder einen Datentransfer.]]>
+      </short>
+      <long>
+        <![CDATA[Erstellt einen Link oder einen Datentransfer.]]>
+      </long>
+    </description>
+    <comment>
+      <![CDATA[some text for the translator]]>
+    </comment>
+  </function>
+</translation_table>

@@ -1,0 +1,21 @@
+
+<!--setDataGap - Sets the symbol width by specifying the gap ratio between adjacent symbols.-->
+<setDataGap applicable="false" type="method" skip="true">
+  <args>
+<!--The gap between two adjacent symbols as the portion of the space between the midpoints of the elements. The gap must be in the range 0 - 1. A value of 0 (the default) means there is no gap between two adjacent symbols.-->
+    <arg name="gap" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDataGap>
+
+<!-- MLADEN .. DORADA .. Chart.SeriesCollection(1).MarkerSize -->
+<!--setDataWidth - Sets the symbol width by specifying the pixel width of the symbols.-->
+<setDataWidth type="method">
+  <args>
+<!--The width of the symbols in pixels.-->
+    <arg name="width" default="8" mandatory="true">
+      <!--<map path="Chart.SeriesCollection(1).MarkerSize">&adapter_UnitConvertor_pointToPixel;</map>-->
+    </arg>
+  </args>
+</setDataWidth>

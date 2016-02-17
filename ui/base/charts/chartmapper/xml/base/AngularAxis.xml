@@ -1,0 +1,167 @@
+
+<!--addLabel - Adds an extra label on the axis.-->
+<addLabel applicable="false" type="method" skip="true">
+  <args>
+<!--The position on the axis to add the label.-->
+    <arg name="pos" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The text label to add.-->
+    <arg name="label" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</addLabel>
+
+<!--addZone - Adds an angular zone to the polar chart.-->
+<addZone applicable="false" type="method" skip="true">
+  <args>
+<!--The data value that marks the start angular position of the zone.-->
+    <arg name="startValue" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The data value that marks the end angular position of the zone.-->
+    <arg name="endValue" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The starting radius of the zone in pixels.-->
+    <arg name="startRadius" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The ending radius of the zone in pixels.-->
+    <arg name="endRadius" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The fill color of the zone.-->
+    <arg name="fillColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The edge color of the zone. The default is the same as the fill color.-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</addZone>
+
+<!--addZone2 - Adds an angular zone to the polar chart.-->
+<addZone2 applicable="false" type="method" skip="true">
+  <args>
+<!--The data value that marks the start angular position of the zone.-->
+    <arg name="startValue" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The data value that marks the end angular position of the zone.-->
+    <arg name="endValue" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The fill color of the zone.-->
+    <arg name="fillColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The edge color of the zone. The default is the same as the fill color.-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</addZone2>
+
+<!-- MLADEN .. Koliko sam vidio da Excel automatski podesava udaljenost, nema opcije nigjde da se moze setovati striktna udaljenost. -->
+<!--setLabelGap - Sets the distance between the axis labels and the axis.-->
+<setLabelGap applicable="false" type="method" skip="true">
+  <args>
+<!--The distance between the axis label and axis in pixels.-->
+    <arg name="d" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelGap>
+
+<!--setLabels - Sets the text labels to be used on the axis.-->
+<var_setLabels type="eval" result="TextBox" init="setLabels">
+  <args>
+<!--An array of strings containing the text of the labels.-->
+    <arg name="text" default="" mandatory="true"/>
+  </args>
+
+  <evaladapter class="LookupValue" method="getLabelsRadar"/>
+</var_setLabels>
+
+<!--setLabels2 - Sets the numeric labels to be used on the axis.-->
+<var_setLabels2 applicable="false" type="function" skip="true" result="TextBox" init="setLabels2">
+  <args>
+<!--An array of numbers to be used as the axis labels.-->
+    <arg name="labels" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A format string to specified how to format the labels into human readable form. Please refer to Axis.setLabelFormat for the syntax of the format string. An empty string means the format will be automatically determined.-->
+    <arg name="formatString">
+      <map path=""/>
+    </arg>
+  </args>
+</var_setLabels2>
+
+<!--setLabelStyle - Sets the font style used to for the axis labels.-->
+<var_setLabelStyle type="function" result="TextBox" init="setLabelStyle">
+  <args>
+<!--The font used to draw the labels.-->
+    <arg name="font" default="bold">
+      <map path="Chart.RadarGroups(1).RadarAxisLabels.Font.Name">&adapter_FormatConvertor_fontFileName;</map>
+    </arg>
+<!--The font size used to draw the labels in points.-->
+    <arg name="fontSize" default="10">
+      <map path="Chart.RadarGroups(1).RadarAxisLabels.Font.Size"/>
+    </arg>
+<!--The color used to draw the labels.-->
+    <arg name="fontColor" default="TextColor">
+      <map path="Chart.RadarGroups(1).RadarAxisLabels.Font.Color">
+      	<adapter class="FormatConvertor" method="RGBExcelToCD"/>
+      </map>
+    </arg>
+<!--The rotation angle of the labels.-->
+    <arg name="fontAngle" default="0">
+      <map path="Chart.RadarGroups(1).RadarAxisLabels.Orientation">
+      	<adapter class="FormatConvertor" method="getTickLabelAngle"/>
+      </map>
+    </arg>
+  </args>
+</var_setLabelStyle>
+
+<!--setLinearScale - Sets the axis to use the given linear scale.-->
+<setLinearScale applicable="false" type="method" skip="true">
+  <args>
+<!--The lower bound of the axis.-->
+    <arg name="lowerLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The upper bound of the axis.-->
+    <arg name="upperLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--Adds major ticks to the axis, where the major ticks are separated by majorTickInc in value. Each major tick will have an associated text label for the value if the axis at the tick. The default value of 0 means no major tick is used.-->
+    <arg name="majorTickInc" default="0">
+      <map path=""/>
+    </arg>
+<!--Adds minor ticks to the axis, where the minor ticks are separated by minorTickInc in value. The default value of 0 means no minor tick is used.-->
+    <arg name="minorTickInc" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</setLinearScale>
+
+<!--setLinearScale2 - Sets the axis to use the given linear scale and the given labels.-->
+<setLinearScale2 applicable="false" type="method" skip="true">
+  <args>
+<!--The lower bound of the axis.-->
+    <arg name="lowerLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The upper bound of the axis.-->
+    <arg name="upperLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of text strings to be used as the labels on the axis. ChartDirector will distribute the labels evenly on the axis.-->
+    <arg name="labels" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLinearScale2>

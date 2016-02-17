@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://schemas.openxmlformats.org/spreadsheetml/2006/main" elementFormDefault="qualified" xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CT_vt_value">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="vt_empty" type="xs:string" />
+        <xs:element name="vt_bool" type="xs:boolean" />
+        <xs:element name="vt_number" type="xs:double" />
+        <xs:element name="vt_string" type="xs:string" />
+        <xs:element name="vt_error" type="xs:short" />
+        <xs:element name="vt_array" type="CT_vt_array" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_vt_array">
+    <xs:sequence>
+      <xs:element name="vt_value" type="CT_vt_value" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_named_formula">
+    <xs:sequence>
+      <xs:element name="vt_value" type="CT_vt_value" minOccurs="1" maxOccurs="1" />
+      <xs:element name="bounded_point" type="CT_bounded_point" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="comment" type="xs:string" />
+    <xs:attribute name="scope" type="xs:boolean" />
+    <xs:attribute name="wb_name" type="xs:string" />
+    <xs:attribute name="ws_name" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="CT_bounded_point">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="row" type="xs:long" />
+    <xs:attribute name="col" type="xs:long" />
+  </xs:complexType>
+  <xs:complexType name="CT_version">
+    <xs:sequence>
+      <xs:element name="major" type="xs:short" minOccurs="1" maxOccurs="1" />
+      <xs:element name="minor" type="xs:short" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_attribute">
+    <xs:sequence />
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="value" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="CT_attributes">
+    <xs:sequence>
+      <xs:element name="attribute" type="CT_attribute" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_cell_attribute">
+    <xs:sequence>
+      <xs:element name="attributes" type="CT_attributes" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="row" type="xs:unsignedLong" />
+    <xs:attribute name="col" type="xs:unsignedLong" />
+  </xs:complexType>
+  <xs:complexType name="CT_cell_attributes">
+    <xs:sequence>
+      <xs:element name="cell_attribute" type="CT_cell_attribute" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_wse_property">
+    <xs:sequence>
+      <xs:element name="vt_value" type="CT_vt_value" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="key" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="CT_wse_properties">
+    <xs:sequence>
+      <xs:element name="wse_property" type="CT_wse_property" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_worksheet_element">
+    <xs:sequence>
+      <xs:element name="wse_properties" type="CT_wse_properties" minOccurs="1" maxOccurs="1" />
+      <xs:element name="wse_named_formula" type="CT_named_formula" minOccurs="0" maxOccurs="1" />
+      <xs:element name="wse_target_named_formula" type="CT_named_formula"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="wse_location_named_formula" type="CT_named_formula" minOccurs="0" maxOccurs="1" />
+      <xs:element name="wse_id" type="CT_wse_id" minOccurs="1" maxOccurs="1" />
+      <xs:element name="wse_type" type="CT_wse_type" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="wse_scope" type="xs:boolean" default="false" />
+    <xs:attribute name="wse_use_locale" type="xs:boolean" default="false" />
+  </xs:complexType>
+  <xs:complexType name="CT_worksheet_elements">
+    <xs:sequence>
+      <xs:element name="worksheet_element" type="CT_worksheet_element" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_variable">
+    <xs:sequence>
+      <xs:element name="value" type="CT_vt_value" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="key" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="CT_variables">
+    <xs:sequence>
+      <xs:element name="variable" type="CT_variable" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CT_extended_data">
+    <xs:sequence>
+      <xs:element name="version" type="CT_version" minOccurs="1" maxOccurs="1" />
+      <xs:element name="worksheet_elements" type="CT_worksheet_elements" minOccurs="1" maxOccurs="1" />
+      <xs:element name="cell_attributes" type="CT_cell_attributes" minOccurs="1" maxOccurs="1" />
+      <xs:element name="variables" type="CT_variables" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="extended_data" type="CT_extended_data">
+  </xs:element>
+  <xs:complexType name="CT_wse_id">
+    <xs:sequence />
+    <xs:attribute name="value" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="CT_wse_type">
+    <xs:sequence />
+    <xs:attribute name="value" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

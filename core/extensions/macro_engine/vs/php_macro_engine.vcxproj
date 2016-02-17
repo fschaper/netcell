@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile_suite_server|Win32">
+      <Configuration>profile_suite_server</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>macro_engine</ProjectName>
+    <ProjectGuid>{030025B0-4399-4102-9A84-6BCAC221C289}</ProjectGuid>
+    <RootNamespace>php_macro_engine</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\..\..\server\vs\xsd2cpp.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\extension\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)_build\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 /Zm120 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\extlibs\atomic\include;..\..\..\server\include;..\..\..\extlibs\boost\include;..\..\..\extlibs\php5.2.13\include\Windows;..\..\..\extlibs\php5.2.13\include\Windows\main;..\..\..\extlibs\php5.2.13\include\Windows\TSRM;..\..\..\extlibs\php5.2.13\include\Windows\Zend;..\..\..\extlibs\xsd2cpp\include;..\..\..\extlibs\icu\include;..\..\..\extlibs\xerces\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PHP_MACRO_ENGINE_EXPORTS;ZEND_WIN32;PHP_WIN32;TSRM=1;_USE_32BIT_TIME_T=1;ZEND_DEBUG=1;ZTS=1;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core_d.lib;xerces-c_3D.lib;php5ts_debug.lib;icuucd.lib;icuind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_d.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\php5.2.13\lib\Windows\i386;..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;..\..\..\extlibs\icu\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>macro_engine.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>$(TargetDir)$(TargetName)_d.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40copy ..\xml\macro_engine_config.xml $(SolutionDir)$(Configuration)\
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\xerces\bin\Windows\i386\*.dll  $(SolutionDir)$(Configuration)
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\php5.2.13\bin\Windows\i386\*.dll $(SolutionDir)$(Configuration)
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\php5.2.13\lib\Windows\i386\*.dll $(SolutionDir)$(Configuration)
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\php5.2.13\bin\Windows\i386\extensions\*.dll $(SolutionDir)$(Configuration)\php_extensions\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">
+    <PreBuildEvent>
+      <Command>$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 /Zm120 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\extlibs\atomic\include;..\..\..\server\include;..\..\..\extlibs\boost\include;..\..\..\extlibs\php5.2.13\include\Windows;..\..\..\extlibs\php5.2.13\include\Windows\main;..\..\..\extlibs\php5.2.13\include\Windows\TSRM;..\..\..\extlibs\php5.2.13\include\Windows\Zend;..\..\..\extlibs\xsd2cpp\include;..\..\..\extlibs\icu\include;..\..\..\extlibs\xerces\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZTS;WIN32;_NDEBUG;_WINDOWS;_USRDLL;PHP_MACRO_ENGINE_EXPORTS;ZEND_WIN32;ZEND_DEBUG=0;PHP_WIN32;TSRM=1;_USE_32BIT_TIME_T=1;ZTS=1;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompiled_header.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;xerces-c_3.lib;php5ts.lib;icuuc.lib;icuin.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\php5.2.13\lib\Windows\i386;..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;..\..\..\extlibs\icu\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>macro_engine.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>$(TargetDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40copy ..\xml\macro_engine_config.xml $(SolutionDir)$(Configuration)\
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\xerces\bin\Windows\i386\*.dll  $(SolutionDir)$(Configuration)
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\php5.2.13\bin\Windows\i386\*.dll $(SolutionDir)$(Configuration)
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\php5.2.13\lib\Windows\i386\*.dll $(SolutionDir)$(Configuration)
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\php5.2.13\bin\Windows\i386\extensions\*.dll $(SolutionDir)$(Configuration)\php_extensions\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>"$(ProjectDir)..\..\..\extlibs\astyle\bin\windows\i386\astyle" --options=$(ProjectDir)..\..\..\extlibs\astyle\share\default_options.conf $(ProjectDir)..\src\*.cpp $(ProjectDir)..\src\*.hpp $(ProjectDir)..\src\*.ipp</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalOptions>/wd4275 /wd4251 /Zm120 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\..\extlibs\atomic\include;..\..\..\server\include;..\..\..\extlibs\boost\include;..\..\..\extlibs\php5.2.13\include\Windows;..\..\..\extlibs\php5.2.13\include\Windows\main;..\..\..\extlibs\php5.2.13\include\Windows\TSRM;..\..\..\extlibs\php5.2.13\include\Windows\Zend;..\..\..\extlibs\xsd2cpp\include;..\..\..\extlibs\icu\include;..\..\..\extlibs\xerces\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ZTS;WIN32;NDEBUG;_NDEBUG;_WINDOWS;_USRDLL;PHP_MACRO_ENGINE_EXPORTS;ZEND_WIN32;ZEND_DEBUG=0;PHP_WIN32;TSRM=1;_USE_32BIT_TIME_T=1;ZTS=1;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OmitFramePointers>true</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>core.lib;xerces-c_3.lib;php5ts.lib;icuuc.lib;icuin.lib;libtcmalloc_minimal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\extlibs\php5.2.13\lib\Windows\i386;..\..\..\extlibs\boost\lib\Windows\i386;$(SolutionDir)$(Configuration);..\..\..\extlibs\perftools\lib\windows\i386;..\..\..\extlibs\xerces\lib\Windows\i386;..\..\..\extlibs\icu\lib\Windows\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>macro_engine.def</ModuleDefinitionFile>
+      <ForceSymbolReferences>__tcmalloc;%(ForceSymbolReferences)</ForceSymbolReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StripPrivateSymbols>$(TargetDir)stiped_$(TargetName).pdb</StripPrivateSymbols>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40copy ..\xml\macro_engine_config.xml $(SolutionDir)$(Configuration)\
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\xerces\bin\Windows\i386\*.dll  $(SolutionDir)$(Configuration)
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\php5.2.13\bin\Windows\i386\*.dll $(SolutionDir)$(Configuration)
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\php5.2.13\lib\Windows\i386\*.dll $(SolutionDir)$(Configuration)
+%40xcopy /D /Y /E $(SolutionDir)..\extlibs\php5.2.13\bin\Windows\i386\extensions\*.dll $(SolutionDir)$(Configuration)\php_extensions\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="macro_engine.def" />
+    <CustomBuildStep Include="..\xml\macro_engine_config.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <None Include="..\xml\schema\macro_engine_config.xsx">
+      <DependentUpon>macro_engine_config.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\precompiled_header.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\macro_engine_config.cpp" />
+    <ClCompile Include="..\src\macro_engine_config_parser.cpp" />
+    <ClCompile Include="..\src\macro_engine_config_readers.cpp" />
+    <ClCompile Include="..\src\macro_engine_config_serializer.cpp" />
+    <ClCompile Include="..\src\macro_engine_config_writers.cpp" />
+    <ClCompile Include="..\src\session_handler.cpp" />
+    <ClCompile Include="..\src\array_input_converter.cpp" />
+    <ClCompile Include="..\src\array_return_converter.cpp" />
+    <ClCompile Include="..\src\logging.cpp" />
+    <ClCompile Include="..\src\value_converter.cpp" />
+    <ClCompile Include="..\src\variant_error.cpp" />
+    <ClCompile Include="..\src\wss2php_loglevel.cpp" />
+    <ClCompile Include="..\src\duplicate_handler_exception.cpp" />
+    <ClCompile Include="..\src\extension_init.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+    </ClCompile>
+    <ClCompile Include="..\src\php_sapi.cpp" />
+    <ClCompile Include="..\src\application.cpp" />
+    <ClCompile Include="..\src\arginfo.cpp" />
+    <ClCompile Include="..\src\attribute.cpp" />
+    <ClCompile Include="..\src\column.cpp" />
+    <ClCompile Include="..\src\element.cpp" />
+    <ClCompile Include="..\src\elements.cpp" />
+    <ClCompile Include="..\src\global.cpp" />
+    <ClCompile Include="..\src\module.cpp" />
+    <ClCompile Include="..\src\name.cpp" />
+    <ClCompile Include="..\src\names.cpp" />
+    <ClCompile Include="..\src\range.cpp" />
+    <ClCompile Include="..\src\row.cpp" />
+    <ClCompile Include="..\src\workbook.cpp" />
+    <ClCompile Include="..\src\workbooks.cpp" />
+    <ClCompile Include="..\src\worksheet.cpp" />
+    <ClCompile Include="..\src\worksheets.cpp" />
+    <ClCompile Include="..\src\wss_exception.cpp" />
+    <ClCompile Include="..\src\php_file_callback_task.cpp" />
+    <ClCompile Include="..\src\php_function_redirection_registry.cpp" />
+    <ClCompile Include="..\src\php_function_registry.cpp" />
+    <ClCompile Include="..\src\php_internal_function_callback_task.cpp" />
+    <ClCompile Include="..\src\php_redirected_spreadsheet_function.cpp" />
+    <ClCompile Include="..\src\php_spreadsheet_file_function_wrapper.cpp" />
+    <ClCompile Include="..\src\php_spreadsheet_internal_function_wrapper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\macro_engine_config.hpp" />
+    <ClInclude Include="..\src\macro_engine_config_literals.hpp" />
+    <ClInclude Include="..\src\macro_engine_config_parser.hpp" />
+    <ClInclude Include="..\src\macro_engine_config_readers.hpp" />
+    <ClInclude Include="..\src\macro_engine_config_serializer.hpp" />
+    <ClInclude Include="..\src\macro_engine_config_writers.hpp" />
+    <ClInclude Include="..\src\i_task.hpp" />
+    <ClInclude Include="..\src\php_includes.hpp" />
+    <ClInclude Include="..\src\php_sapi.hpp" />
+    <ClInclude Include="..\src\version_info.hpp" />
+    <ClInclude Include="..\src\session_handler.hpp" />
+    <ClInclude Include="..\src\array_input_converter.hpp" />
+    <ClInclude Include="..\src\array_return_converter.hpp" />
+    <ClInclude Include="..\src\logging.hpp" />
+    <ClInclude Include="..\src\value_converter.hpp" />
+    <ClInclude Include="..\src\wss2php_loglevel.hpp" />
+    <ClInclude Include="..\src\duplicate_handler_exception.hpp" />
+    <ClInclude Include="..\src\i_php_function_wrapper.hpp" />
+    <ClInclude Include="..\src\php_file_callback_task.hpp" />
+    <ClInclude Include="..\src\php_function_redirection_registry.hpp" />
+    <ClInclude Include="..\src\php_function_registry.hpp" />
+    <ClInclude Include="..\src\php_internal_function_callback_task.hpp" />
+    <ClInclude Include="..\src\php_redirected_spreadsheet_function.hpp" />
+    <ClInclude Include="..\src\php_spreadsheet_file_function_wrapper.hpp" />
+    <ClInclude Include="..\src\php_spreadsheet_internal_function_wrapper.hpp" />
+    <ClInclude Include="..\src\precompiled_header.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <xsd2cpp Include="..\xml\schema\macro_engine_config.xsd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">true</ExcludedFromBuild>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\..\..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\src</sourcedir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\src</sourcedir>
+      <settingsfile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\xml\schema\settings.txt</settingsfile>
+      <settingsfile Condition="'$(Configuration)|$(Platform)'=='profile_suite_server|Win32'">$(ProjectDir)..\xml\schema\settings.txt</settingsfile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <xsdbinary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\..\..\extlibs\xsd2cpp\bin\windows\i386\xsd2cpp.exe</xsdbinary>
+      <schemadir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\xml\schema</schemadir>
+      <sourcedir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\src</sourcedir>
+      <SubType>Designer</SubType>
+    </xsd2cpp>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\server\vs\wss.vcxproj">
+      <Project>{949cfc6b-e44f-4b9e-8229-84c00a33866f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\..\..\server\vs\xsd2cpp.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,284 @@
+  <args>
+<!--The width of the chart in pixels.-->
+	<arg name="width" default="600" mandatory="true">
+		<map path="Chart.ChartArea.Width">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+	</arg>
+<!--The height of the chart in pixels.-->
+	<arg name="height" default="400" mandatory="true">
+		<map path="Chart.ChartArea.Height">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+	</arg>
+<!--The background color of the chart.-->
+    <arg name="bgColor" default="BackgroundColor">
+      <!--<map path=""/>-->
+    </arg>
+<!--The edge color of the chart.-->
+    <arg name="edgeColor" default="Transparent">
+      <!--<map path=""/>-->
+    </arg>
+<!--The 3D border width. For positive values, the border will appear raised. For negative values, the border will appear depressed. A zero value means the border will appear flat.-->
+    <arg name="raisedEffect" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+&BaseChart;
+
+<!--sector - Retrieves the Sector object representing a single sector in the pie chart.-->
+<var_sector applicable="false" type="function" result="Sector" init="sector" skip="true">
+  <args>
+<!--The sector number of the sector to retrieve, starting from 0. The first sector is 0. The nth sector is (n-1).-->
+    <arg name="sectorNo" default="0" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</var_sector>
+
+<!--set3D - Adds 3D effects to the pie.-->
+<set3D type="method">
+  <args>
+<!--The 3D depth of the pie in pixels. -1 means the depth is automatically determined.-->
+    <arg name="depth" default="0">
+      <map path="Chart.Pie3DGroup">
+      	<adapter class="UnConventional" method="getDefault3DDepth" static="true"/>
+      </map>
+    </arg>
+<!--The 3D view angle in degrees. Must be 0 - 90 for standard 3D mode, and 0 - 360 in shadow 3D mode. -1 means the angle is automatically determined.-->
+    <arg name="angle" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+<!--Flag to indicate whether the pie is in standard 3D or shadow 3D mode. A true (non-zero) value means shadow 3D mode. A false (zero) value means standard 3D mode.-->
+    <arg name="shadowMode" default="false">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</set3D>
+
+<!--set3D2 - Adds 3D effects to the pie, where each sector can have a different 3D depth.-->
+<set3D2 applicable="false" type="method" skip="true">
+  <args>
+<!--An array of integers representing the 3D depths for the sectors.-->
+    <arg name="depths" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The 3D view angle in degrees. Must be 0 - 90 for standard 3D mode, and 0 - 360 in shadow 3D mode. -1 means the angle is automatically determined.-->
+    <arg name="angle" default="45">
+      <map path=""/>
+    </arg>
+<!--Flag to indicate whether the pie is in standard 3D or shadow 3D mode. A true (non-zero) value means shadow 3D mode. A false (zero) value means standard 3D mode.-->
+    <arg name="shadowMode" default="false">
+      <map path=""/>
+    </arg>
+  </args>
+</set3D2>
+
+<!--setData - Sets the data used to draw the pie chart.-->
+<setData type="eval" init="setData">
+  <args>
+<!--An array of numbers representing the data points.-->
+    <arg name="data" default="[Empty_Array]" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--An array of text strings representing the labels of the sectors. An empty array means no sector label.-->
+    <arg name="labels" default="[Empty_Array]">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <!--<evaladapter class="LookupValue" method="getDataSetsPie"/>-->
+  <evaladapter class="LookupValue" method="addPieDataSet"/>
+</setData>
+
+<!--setDonutSize - Sets the position and size of the donut in the donut chart.-->
+<setDonutSize type="method">
+  <args>
+<!--The x coordinate of the donut center.-->
+    <arg name="x" default="100" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getPieCenterX"/>
+      </map>
+    </arg>
+<!--The y coordinate of the donut center.-->
+    <arg name="y" default="100" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getPieCenterY"/>
+      </map>
+    </arg>
+<!--The inner radius of the donut.-->
+    <arg name="r" default="10" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getPieInnerRadius"/>
+      </map>
+    </arg>
+<!--The outer radius of the donut.-->
+    <arg name="r2" default="100" mandatory="true">
+      <map path="">
+      	<superadapter class="FormatConvertor" method="getPieRadius"/>
+      </map>
+    </arg>
+  </args>
+</setDonutSize>
+
+<!--setExplode - Explode a sector from the pie.-->
+<setExplode applicable="false" type="eval" init="setExplode" skip="true">
+  <args>
+<!--The sector number of the sector to be exploded from the pie, starting from 0. The first sector is 0. The nth sector is (n - 1).-->
+    <arg name="sectorNo" default="0" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The explosion distance in pixels. -1 means the distance is automatically determined.-->
+    <arg name="distance" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <!--<evaladapter class="LookupValue" method="setExplodeParts" />-->
+</setExplode>
+
+<!--setExplodeGroup - Explode a group of sectors from the pie.-->
+<setExplodeGroup applicable="false" type="method" skip="true">
+  <args>
+<!--The sector number of the first sector in the sector group to be exploded. The first sector is 0. The nth sector is (n - 1).-->
+    <arg name="startSector" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The sector number of the last sector in the sector group to be exploded. The first sector is 0. The nth sector is (n - 1).-->
+    <arg name="endSector" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The explosion distance in pixels. -1 means the distance is automatically determined.-->
+    <arg name="distance" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setExplodeGroup>
+
+<!--setJoinLine - Sets the color and width of the join lines used to connect the sector labels to the sector perimeter.-->
+<setJoinLine applicable="false" type="method" skip="true">
+  <args>
+<!--The color of the line that joins the sector perimeter with the sector label.-->
+    <arg name="joinLineColor" default="0x000000" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The line width of the join line.-->
+    <arg name="joinLineWidth" default="1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setJoinLine>
+
+<!-- MLADEN .. DORADA .. Chart.SeriesCollection(1).DataLabels(1).Separator, ShowCategoryName, ShowPercentage, ShowSeriesName, ShowValue -->
+<!--setLabelFormat - Sets the format of the all sector labels.-->
+<setLabelFormat type="method" skip="true">
+  <args>
+<!--The format string.-->
+    <arg name="formatString" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelFormat>
+
+<!--setLabelLayout - Sets the layout method and location of the sector labels.-->
+<setLabelLayout type="method">
+  <args>
+<!--Specify the layout method. Must be one of the predefined constants CircleLayout or SideLayout.-->
+    <arg name="layoutMethod" default="CircleLayout" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--For circular layout, it is the distance between the sector perimeter and the sector label. A negative value (but not -1) means the sector label will be drawn in the interior of the sector.
+For side layout, it is the distance between the pie perimeter and the left or right edges of the invisible containing rectangle (equal to the width of the rectangle minus the pie diameter and then divided by 2).
+In either case, -1 means the distance is automatically determined.-->
+    <arg name="pos" default="8">
+      <!--<map path=""/>-->
+    </arg>
+<!--This parameter applies only to side label layout. It controls the top bound of the labels (the minimum y coordinate), thereby limiting the extent that the labels can be shifted up to avoid overlapping. This parameter is typically used avoid the labels from moving up too much and overlap with other chart objects (such as the chart title).-->
+    <arg name="topBound" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+<!--This parameter applies only to side label layout. It controls the bottom bound of the labels (the maximum y coordinate), thereby limiting the extent which the labels can be shifted down to avoid overlapping. This parameter is typically used to avoid the labels from moving down too much and overlap with other chart objects.-->
+    <arg name="bottomBound" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setLabelLayout>
+
+<!--setLabelPos - Sets the circular label layout method, and configure the join lines used to connect the sector labels to the sector perimeter.-->
+<setLabelPos type="method" skip="true">
+  <args>
+<!--The distance between the sector perimeter and the sector label. A negative value means the sector label will be drawn in the interior of the sector.-->
+    <arg name="pos" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color of the line that joins the sector perimeter with the sector label. The default is Transparent. The join line is ignored if the sector label is inside the sector.-->
+    <arg name="joinLineColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelPos>
+
+<!--setLabelStyle - Sets the style used to draw all sector labels.-->
+<var_setLabelStyle type="function" result="TextBox" init="setLabelStyle" skip="true">
+  <args>
+<!--The font used to draw the sector labels.-->
+    <arg name="font" default="CALIBRIB.TTF">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The font size in points.-->
+    <arg name="fontSize" default="8">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The text color for the sector labels.-->
+    <arg name="fontColor" default="TextColor">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+</var_setLabelStyle>
+
+<!--setLineColor - Sets the sector edge color and join line color.-->
+<setLineColor type="method" skip="true">
+  <args>
+<!--The colors for the edges of the sectors. By default, the edge color is SameAsMainColor, which means the edge color is the same as the fill color of the sector, and the sector will appear borderless.-->
+    <arg name="edgeColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color of the line that join the sector perimeter with the sector label. By default, for circular label layout, the join line color is Transparent. For side label layout, the join line color is SameAsMainColor.-->
+    <arg name="joinLineColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setLineColor>
+
+<!--setPieSize - Sets the position and size of the pie in the pie chart.-->
+<setPieSize applicable="false" type="method" skip="true">
+  <args>
+<!--The x coordinate of the pie center.-->
+    <arg name="x" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The y coordinate of the pie center.-->
+    <arg name="y" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The radius of the pie.-->
+    <arg name="r" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setPieSize>
+
+<!--setStartAngle - Sets the angle of the first sector in the pie and the layout direction for the sectors.-->
+<setStartAngle type="method">
+  <args>
+<!--The angle to start drawing the first sector in degrees. The angle is measured from the upward pointing direction in the clockwise direction.-->
+    <arg name="startAngle" mandatory="true">
+      <map path="Chart.Rotation"/>
+    </arg>
+<!--Flag to control the layout direction of the sectors. A true (non-zero) value means clockwise. A false (zero) value means anti-clockwise.-->
+    <arg name="clockWise" default="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setStartAngle>

@@ -1,0 +1,384 @@
+/*
+ * @brief css
+ *
+ * @file main.css
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Andrej Vrhovac <andrej.vrhovac@develabs.com>
+ *
+ * \version
+ * SVN: $Id: main.css 4840 2011-04-13 13:21:45Z srdjanv $
+ *
+ */
+/** sprite: common-sprite; sprite-image: url('/ui/common/res/img/sprites/common-sprite.png'); */
+
+/* ########## */
+/* SAFARI FIX */
+/* ########## */
+
+.ext-strict .ext-webkit .x-small-editor .x-form-text {
+    height: 18px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.ext-webkit .x-form-field-wrap .x-form-trigger{
+    position:static;
+    top:auto;
+    vertical-align:top;
+}
+
+.ext-webkit .ux-icon-combo-input{
+    position:static;
+    top:auto;
+    vertical-align:top;
+}
+
+.ext-strict .ext-webkit .x-form-textarea {
+    height: 60px !important;
+}
+/* *** work in progress! */
+/*
+iframe::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+*/
+/*
+	Constant List Editor
+*/
+.cleDataViewSelect .x-view-selected
+{
+	background: #D9E8FB;
+}
+
+/*
+Code Mirror Line Numbering
+*/
+.CodeMirror-line-numbers
+{
+	width: 2.2em;
+	color: #aaa;
+	background-color: #eee;
+	text-align: right;
+	padding-right: .3em;
+	font-size: 10pt;
+	font-family: monospace;
+	padding-top: .4em;
+}
+
+/* Button width fix */
+.stdButtons .x-btn button {
+	min-width: 75px;
+	}
+
+.stdButtonsSmall .x-btn button {
+	min-width: 35px;
+	}
+
+
+	/*
+	filetype icons
+*/
+
+.w3s_csv {
+	background-image:url(/ui/studio/res/img/filetypes/csv.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_doc {
+	background-image:url(/ui/studio/res/img/filetypes/doc.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_gif {
+	background-image:url(/ui/studio/res/img/filetypes/gif.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_html {
+	background-image:url(/ui/studio/res/img/filetypes/html.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_htm {
+	background-image:url(/ui/studio/res/img/filetypes/html.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_jpg {
+	background-image:url(/ui/studio/res/img/filetypes/jpg.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_pdf {
+	background-image:url(/ui/studio/res/img/filetypes/pdf.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_png {
+	background-image:url(/ui/studio/res/img/filetypes/png.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_pps {
+	background-image:url(/ui/studio/res/img/filetypes/pps.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_ppt {
+	background-image:url(/ui/studio/res/img/filetypes/ppt.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_rar {
+	background-image:url(/ui/studio/res/img/filetypes/rar.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_rtf {
+	background-image:url(/ui/studio/res/img/filetypes/rtf.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_txt {
+	background-image:url(/ui/studio/res/img/filetypes/txt.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_xls {
+	background-image:url(/ui/studio/res/img/filetypes/xls.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_xlsx {
+	background-image:url(/ui/studio/res/img/filetypes/xlsx.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_zip {
+	background-image:url(/ui/studio/res/img/filetypes/zip.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_unknown {
+	background-image:url(/ui/studio/res/img/filetypes/unknown.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_unknown32 {
+	background-image:url(/ui/studio/res/img/filetypes/unknown32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_hyperlink {
+	background-image:url(/ui/studio/res/img/filetypes/hyperlink.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_rhyperlink {
+	background-image:url(/ui/studio/res/img/filetypes/hyperlink.png) !important; /** sprite-ref: common-sprite; */
+}
+
+/* file types 32px icons */
+
+.w3s_csv32 {
+	background-image:url(/ui/studio/res/img/filetypes/csv_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_doc32 {
+	background-image:url(/ui/studio/res/img/filetypes/doc_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_gif32 {
+	background-image:url(/ui/studio/res/img/filetypes/gif_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_htm32 {
+	background-image:url(/ui/studio/res/img/filetypes/html_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_html32 {
+	background-image:url(/ui/studio/res/img/filetypes/html_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_jpg32 {
+	background-image:url(/ui/studio/res/img/filetypes/jpg_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_pdf32 {
+	background-image:url(/ui/studio/res/img/filetypes/pdf_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_png32 {
+	background-image:url(/ui/studio/res/img/filetypes/png_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_pps32 {
+	background-image:url(/ui/studio/res/img/filetypes/pps_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_ppt32 {
+	background-image:url(/ui/studio/res/img/filetypes/ppt_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_rar32 {
+	background-image:url(/ui/studio/res/img/filetypes/rar_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_rtf32 {
+	background-image:url(/ui/studio/res/img/filetypes/rtf_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_txt32 {
+	background-image:url(/ui/studio/res/img/filetypes/txt_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_xls32 {
+	background-image:url(/ui/studio/res/img/filetypes/xls_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_xlsx32 {
+	background-image:url(/ui/studio/res/img/filetypes/xlsx_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_zip32 {
+	background-image:url(/ui/studio/res/img/filetypes/zip_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_unknown32 {
+	background-image:url(/ui/studio/res/img/filetypes/unknown_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_hyperlink32 {
+	background-image:url(/ui/studio/res/img/filetypes/hyperlink_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_rhyperlink32 {
+	background-image:url(/ui/studio/res/img/filetypes/hyperlink_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.folder-icon {
+    background-image:url(/ui/studio/res/img/wt/folder.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.folder-icon32 {
+    background-image:url(/ui/studio/res/img/wt/folder_32.png) !important; /** sprite-ref: common-sprite; */
+    width: 32px; height: 32px;
+}
+
+.new-pivot-icon {
+    background-image:url(/ui/studio/res/img/wt/ico_new_pivot_16.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.new-pivot-icon32 {
+    background-image:url(/ui/studio/res/img/wt/ico_new_pivot_32.png) !important; /** sprite-ref: common-sprite; */
+    width: 32px; height: 32px;
+}
+
+.workbook-icon {
+	 background-image:url(/ui/studio/res/img/wt/workbook.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.workbook-icon32 {
+	 background-image:url(/ui/studio/res/img/wt/workbook_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+
+.w3s_folder {
+	background-image:url(/ui/studio/res/img/wt/folder.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_folder32 {
+	background-image:url(/ui/studio/res/img/wt/folder_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+.w3s_rfolder32 {
+	background-image:url(/ui/studio/res/img/wt/folder_32.png) !important; /** sprite-ref: common-sprite; */
+	width: 32px; height: 32px;
+}
+
+.w3s_workbook {
+	background-image:url(/ui/studio/res/img/wt/workbook.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_workbook32 {
+	 background-image:url(/ui/studio/res/img/wt/workbook_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+.w3s_template32 {
+	 background-image:url(/ui/studio/res/img/wt/workbook_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+.w3s_workbook_as {
+	background-image:url(/ui/studio/res/img/wt/workbook_as.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_workbook_as32 {
+	 background-image:url(/ui/studio/res/img/wt/workbook_as_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+.w3s_spreadsheet {
+	background-image:url(/ui/studio/res/img/wt/workbook.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_spreadsheet32 {
+	 background-image:url(/ui/studio/res/img/wt/workbook_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+.w3s_frameset {
+	background-image:url(/ui/studio/res/img/wt/frameset.png) !important; /** sprite-ref: common-sprite; */
+}
+
+.w3s_frameset32 {
+	 background-image:url(/ui/studio/res/img/wt/frameset_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+.w3s_rframeset32 {
+	 background-image:url(/ui/studio/res/img/wt/frameset_32.png) !important; /** sprite-ref: common-sprite; */
+	 width: 32px; height: 32px;
+}
+
+.w3s_ahview {
+	background-image:url(/ui/studio/res/img/filetypes/pivot.png) !important; /** sprite-ref: studio-sprite; */
+}
+
+.w3s_ahview32 {
+	background-image:url(/ui/studio/res/img/filetypes/pivot_32.png) !important; /** sprite-ref: studio-sprite; */
+	width: 32px; height: 32px;
+}

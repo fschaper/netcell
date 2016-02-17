@@ -1,0 +1,115 @@
+<!--AngularMeter - Creates a new AngularMeter object.-->
+<args>
+<!--The width of the chart in pixels.-->
+    <arg name="width" default="300" mandatory="true">
+		<map path="Chart.ChartArea.Width">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+    </arg>
+<!--The height of the chart in pixels.-->
+    <arg name="height" default="300" mandatory="true">
+		<map path="Chart.ChartArea.Height">
+			<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+		</map>
+    </arg>
+<!--The background color of the chart.-->
+    <arg name="bgColor" default="BackgroundColor">
+		<!-- <map path="Chart.ChartArea.Fill.BackColor.RGB">
+			<adapter class="FormatConvertor" method="hexColor" static="true"/>
+		</map> -->
+    </arg>
+<!--The edge color of the chart.-->
+    <arg name="edgeColor" default="Transparent">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The 3D border width. For positive values, the border will appear raised. For negative values, the border will appear depressed. A zero value means the border will appear flat.-->
+    <arg name="raisedEffect" default="0">
+      <!-- <map path=""/> -->
+    </arg>
+</args>
+
+&BaseMeter;
+
+<!-- <map path="Chart.PlotArea.InsideTop"> -->
+<!-- <adapter class="UnitConvertor" method="pointToPixel" static="true"/> -->
+<!--setMeter - Sets the orientation and position of the meter plot area.-->
+<setMeter type="method">
+  <args>
+<!--The x-coordinate of the top-left corner of the meter plot area.-->
+    <arg name="leftX" default="10" mandatory="true">
+      <map path="Chart.PlotArea.InsideLeft">
+		<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+	  </map>
+    </arg>
+<!--The y-coordinate of the top-left corner of the meter plot area.-->
+    <arg name="topY" default="50" mandatory="true">
+      <map path="">
+		<superadapter class="FormatConvertor" method="getLinearMeterTopY"/>
+	  </map>
+    </arg>
+<!--The horizontal width of the meter plot area.-->
+    <arg name="width" default="280" mandatory="true">
+      <map path="Chart.PlotArea.InsideWidth">
+		<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+	  </map>
+    </arg>
+<!--The vertical height of the meter plot area.-->
+    <arg name="height" default="30" mandatory="true">
+      <map path="Chart.PlotArea.InsideHeight">
+		<adapter class="UnitConvertor" method="pointToPixel" static="true"/>
+	  </map>
+    </arg>
+<!--The position of the meter scale. The scale should be on one of the 4 sides of the plot area border, specified by Left, Top, Right and Bottom.-->
+    <arg name="axisPos" default="Left">
+      <map path="Chart.ChartType">
+		<adapter class="UnConventional" method="getLineAxisPos" static="true"/>
+	  </map>
+    </arg>
+<!--By default, if the meter is horizontal, the meter scale will run from left to right. If the meter is vertical, the meter scale will run from bottom to top. If this argument is set to true (non-zero), the meter scale will be reversed.-->
+    <arg name="isReversed" default="false">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+</setMeter>
+
+<!--addZone - Adds a zone to the meter.-->
+<var_addZone type="eval" result="TextBox" init="addZone">
+  <args>
+<!--The start value (the lower bound) for the zone.-->
+    <arg name="startValue" default="0" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The end value (the upper bound) for the zone.-->
+    <arg name="endValue" default="100" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The color of the zone.-->
+    <arg name="color" default="0x99ff99" mandatory="true">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The text to be put at the center of the zone.-->
+    <arg name="label" default="" string="true">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="addZones"/>
+</var_addZone>
+
+<!--setRail - Sets the position, width and color of the pointer rail.-->
+<setRail type="method" skip="true">
+  <args>
+<!--The color of the pointer rail.-->
+    <arg name="railColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The line width of the the pointer rail in pixels.-->
+    <arg name="railWidth" default="2">
+      <map path=""/>
+    </arg>
+<!--The gap between the pointer rail and the plot area in pixels. A negative value will mean the pointer rail may move within the plot area.-->
+    <arg name="railOffset" default="6">
+      <map path=""/>
+    </arg>
+  </args>
+</setRail>

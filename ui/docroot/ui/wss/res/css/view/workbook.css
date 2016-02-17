@@ -1,0 +1,215 @@
+/*
+ * \brief CSS classes for workbook
+ *
+ * \file workbook.css
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Predrag Malicevic <predrag.malicevic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: workbook.css 4776 2011-03-28 14:25:45Z predragm $
+ *
+ */
+
+div.bookOC
+{
+	position: relative;
+}
+
+div.sheetsOC
+{
+	position: relative;
+	overflow: hidden;
+	z-index: 100;
+}
+
+div.sheetOC
+{
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+div.paneOC
+{
+	position: absolute;
+	overflow: hidden;
+	z-index: 100;
+}
+
+div.paneIC
+{
+	position: absolute;
+	overflow: visible;
+	width: 30000px;
+	height: 1400000px;
+	background-color: #ffffff;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+}
+
+div.gridRow
+{
+	position: absolute;
+	height: 16px;
+}
+
+div.gridCell
+{
+	position: absolute;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: right;
+	height: 100%;
+	border: 1px solid transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	padding: 2px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	white-space: pre;
+	z-index: 1;
+	cursor: url(/ui/wss/res/img/xlcross.cur), default;
+	#cursor: url(/ui/wss/res/img/xlcross.cur), default;
+}
+
+div.gridCellUnlocked
+{
+	border-bottom: #dadada 1px solid;
+	border-right: #dadada 1px solid;
+	border-top: #000000 1px solid;
+	border-left: #000000 1px solid;
+	cursor: url(/ui/wss/res/img/cursors/hand.cur) 5 0, default;
+	#cursor: url(/ui/wss/res/img/cursors/hand.cur), default;
+}
+
+textarea.inputField {
+	border: #7EADD9 2px solid;
+	padding: 2px 0px 0px 1px;
+}
+
+img.gridScrollImg
+{
+	float: left;
+}
+
+div#gridBRSpacer
+{
+	width: 16px;
+	height: 17px;
+	float: right;
+}
+
+div.hsOC
+{
+	float: right;
+	height: 17px;
+	background-image: url(/ui/wss/res/img/scrollbar/hor_scroller_bg.png);
+	background-repeat: repeat-x;
+	overflow: hidden;
+}
+
+div.hs1OC
+{
+	border-left: 1px solid #000000;
+}
+
+img.hscroll_left
+{
+	position: relative;
+	float: left;
+}
+
+div.hscroll_bg
+{
+	position: relative;
+	float: left;
+	height: 17px;
+}
+
+div.hscroll_slider
+{
+	position: relative;
+	float: left;
+}
+
+img.hscroll_right
+{
+	position: relative;
+	float: right;
+}
+
+div.vsOC
+{
+	position: absolute;
+	right: 0px;
+	width: 17px;
+	background-image: url(/ui/wss/res/img/scrollbar/vert_scroller_bg.png);
+	background-repeat: repeat-y;
+	overflow: hidden;
+}
+
+div.vs1OC
+{
+	border-top: 1px solid #000000;
+}
+
+img.vscroll_up
+{
+	position: relative;
+	float: left;
+}
+
+div.vscroll_bg
+{
+	position: relative;
+	float: left;
+	width: 17px;
+}
+
+div.vscroll_slider
+{
+	position: relative;
+	float: left;
+}
+
+img.vscroll_down
+{
+	position: relative;
+	float: right;
+}
+
+.x-window-maximized .x-window-bc
+{
+	height: 0px !important;
+}

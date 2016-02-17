@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{778e161a-abb1-492d-8eae-f8c4877db1b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\schema">
+      <UniqueIdentifier>{b8477116-2eb5-4271-b993-d9b4d315972e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\configuration">
+      <UniqueIdentifier>{27695f5b-b09f-4a1f-810d-a20b6aae142b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\configuration\implementation">
+      <UniqueIdentifier>{e685e141-3086-4899-afbe-02edfb2bee16}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AJPConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AJPServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BackendHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CCmdHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ExampleHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HandleDispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\precompiled_header.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SnapshotManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\backend_config_writers.cpp">
+      <Filter>Source Files\configuration\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\backend_config_parser.cpp">
+      <Filter>Source Files\configuration\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\backend_config_readers.cpp">
+      <Filter>Source Files\configuration\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\backend_config_serializer.cpp">
+      <Filter>Source Files\configuration\implementation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ui_backend.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\xml\ui_backend_config.xml">
+      <Filter>xml</Filter>
+    </None>
+    <None Include="..\xml\schema\ui_backend_config.xsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\AJPConnection.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\AJPServer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\BackendHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CCmdHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CommandFunctors.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\debug_defines.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\error_codes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ExampleHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HandleDispatcher.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\JSONSerializer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\logging.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\precompiled_header.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SnapshotManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui_backend.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\version_info.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\backend_config_writers.hpp">
+      <Filter>Source Files\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\backend_config_literals.hpp">
+      <Filter>Source Files\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\backend_config_parser.hpp">
+      <Filter>Source Files\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\backend_config_readers.hpp">
+      <Filter>Source Files\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\backend_config_serializer.hpp">
+      <Filter>Source Files\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\backend_config.hpp">
+      <Filter>Source Files\configuration</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ui_backend.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xsd Include="..\xml\schema\ui_backend_config.xsd">
+      <Filter>xml\schema</Filter>
+    </Xsd>
+  </ItemGroup>
+</Project>

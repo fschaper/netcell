@@ -1,0 +1,39 @@
+	<!--addScatterLayer - Adds a scatter chart layer to the XYChart.-->
+	<xlXYScatter type="eval" result="ScatterLayer" init="addScatterLayer">
+	  <args>
+	<!--An array of numbers representing the x values of the data points. If no explicit x coordinates are used in the chart (eg. using an enumerated x-axis), an empty array may be used for this argument.-->
+	    <arg name="xData" default="" mandatory="true">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--An array of numbers representing the y values of the data points.-->
+	    <arg name="yData" default="" mandatory="true">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--The name of the data set. The name will be used in the legend box, if one is available. An empty string means the data set has no name.-->
+	    <arg name="name" default="">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--One of the predefined symbol constants to specify the symbol to use. (See Shape Specification for available built-in shapes.)-->
+	    <arg name="symbol" default="DiamondShape">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--The width and height of the symbol in pixels.-->
+	    <arg name="symbolSize" default="9">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--The color used to fill the symbol. -1 means that the color is automatically selected from the palette.-->
+	    <arg name="fillColor" default="-1">
+	      <!--<map path=""/>-->
+	    </arg>
+	<!--The edge color used to draw the edge of the symbol. The default value of -1 means using LineColor as the edge color.-->
+	    <arg name="edgeColor" default="-1">
+	      <!--<map path=""/>-->
+	    </arg>
+	  </args>
+
+	  <evaladapter class="LookupValue" method="addScatterLayer"/>
+
+	  &LineLayer;
+	</xlXYScatter>
+
+	&packPlotArea;

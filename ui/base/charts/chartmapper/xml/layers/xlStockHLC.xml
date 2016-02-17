@@ -1,0 +1,20 @@
+	<!-- addHLOCLayer -->
+	<xlStockHLC type="eval" result="HLOCLayer" init="addHLOCLayer">
+
+		<evaladapter class="LookupValue" method="addOHLCLayer"/>
+
+		&BaseBoxLayer;
+		&Layer;
+
+		<!--setLineWidth - Sets the default line width of lines when drawing data sets on the layer.-->
+		<setLineWidth type="method">
+		  <args>
+		<!--The width of the line in pixels.-->
+		    <arg name="w" default="2" mandatory="true">
+		    	<!--<map path=""/>-->
+		    </arg>
+		  </args>
+		</setLineWidth>
+	</xlStockHLC>
+
+	&packPlotArea;

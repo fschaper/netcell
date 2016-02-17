@@ -1,0 +1,100 @@
+
+<!--setColor - Sets the fill color, edge color and join line color of the sector.-->
+<setColor applicable="false" type="method" skip="true">
+  <args>
+<!--The color of the sector.-->
+    <arg name="color" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The edge color of the sector. -1 means the color is unchanged.-->
+    <arg name="edgeColor" default="-1">
+      <map path=""/>
+    </arg>
+<!--The color of the line that join the sector perimeter with the sector label. -1 means the color is unchanged.-->
+    <arg name="joinLineColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setColor>
+
+<!--setExplode - Explode the sector.-->
+<setExplode applicable="false" type="method" skip="true">
+  <args>
+<!--The explosion distance in pixels. -1 means the distance is automatically determined.-->
+    <arg name="distance" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setExplode>
+
+<!--setJoinLine - Sets the color and width of the join line used to connect the sector label to the sector perimeter.-->
+<setJoinLine applicable="false" type="method" skip="true">
+  <args>
+<!--The color of the line that joins the sector perimeter with the sector label.-->
+    <arg name="joinLineColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The line width of the join line.-->
+    <arg name="joinLineWidth" default="1">
+      <map path=""/>
+    </arg>
+  </args>
+</setJoinLine>
+
+<!--setLabelFormat - Sets the format of the sector label.-->
+<setLabelFormat applicable="false" type="method" skip="true">
+  <args>
+<!--The format string. See PieChart.setLabelFormat for details.-->
+    <arg name="formatString" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelFormat>
+
+<!--setLabelLayout - Sets the layout method and location of the sector label.-->
+<setLabelLayout applicable="false" type="method" skip="true">
+  <args>
+<!--Specify the layout method. Must be one of the predefined constants CircleLayout or SideLayout.-->
+    <arg name="layoutMethod" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--For circular layout, it is the distance between the sector perimeter and the sector label. A negative value (but not -1) means the sector label will be drawn in the interior of the sector.
+For side layout, it is the distance between the pie perimeter and the left or right edges of the invisible containing rectangle (equal to the width of the rectangle minus the pie diameter and then divided by 2).
+In either case, -1 means the distance is automatically determined.-->
+    <arg name="pos" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelLayout>
+
+<!--setLabelPos - Sets the circular label layout method, and configure the join lines used to connect the sector label to the sector perimeter.-->
+<setLabelPos applicable="false" type="method" skip="true">
+  <args>
+<!--The distance between the sector perimeter and the sector label. A negative value means the sector label will be drawn in the interior of the sector.-->
+    <arg name="pos" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color of the line that joins the sector perimeter with the sector label. The default is Transparent. The join line is ignored if the sector label is inside the sector.-->
+    <arg name="joinLineColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelPos>
+
+<!--setLabelStyle - Sets the style used to draw the sector label.-->
+<var_setLabelStyle applicable="false" type="function" skip="true" result="TextBox" init="setLabelStyle">
+  <args>
+<!--The font used to draw the sector label.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size in points.-->
+    <arg name="fontSize" default="8">
+      <map path=""/>
+    </arg>
+<!--The text color for the sector label.-->
+    <arg name="fontColor" default="TextColor">
+      <map path=""/>
+    </arg>
+  </args>
+</var_setLabelStyle>

@@ -1,0 +1,7 @@
+	<!--addSplineLayer - Adds a spline layer to the XYChart.-->
+	<xlXYScatterSmooth type="function" result="SplineLayer" init="addSplineLayer">
+
+	  &LineLayer;
+	</xlXYScatterSmooth>
+
+	&packPlotArea;

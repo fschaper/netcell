@@ -1,0 +1,9 @@
+element userdata
+{
+	element var
+	{
+		element name { text },
+		element val { text }
+	}*
+
+}

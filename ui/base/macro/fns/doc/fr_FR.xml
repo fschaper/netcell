@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translation_table xmlns="http://www.jedox.com/jedox/wss" lang="fr_FR">
+  <groups>
+    <group id="LOOKUP_REFERENCE" name="Lookup &amp; Reference">
+      <translation>Recherche &amp; Matrices</translation>
+    </group>
+  </groups>
+  <function name="HYPERLINK" category="LOOKUP_REFERENCE">
+    <translation>HYPERLIEN</translation>
+    <description>
+      <parameters>
+        <parameter name="Lien_cible" type="text">
+          <![CDATA[Lien_cible est la cible du lien hypertexte avec un chemin relatif dans le gestion des fichiers, composé de /GROUPE/HIERARCHIE/CHEMIN_COMPLÈTE_AU_FICHIER. Pour ouvrir le lien par exemple dans Frame2 d'un frameset, veuillez ecrire \"#Frame2\" derrière le nom du fichier. <br>
+          Exemples:<br>
+        	\"/Jedox/Financials/Accounting/Demo.wss\" - Le lien hypertexte vers le fichier Demo.wss dans le groupe \"Jedox\", la hiérarchie \"Financials\", et le dossier \"Accounting\".<br>
+        	\"/Jedox/Financials/Accounting/Demo.wss#Frame2\" - Le même lien que ci-dessus. L'ajout ouvre le lien dans Frame2 d’un frameset utilisé.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]Feuille2\" -  Le lien hypertexte ouvre le fichier Demo.wss et sélect la cellule A1 de la Feuille2.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]'Année 2009'!A2:B3\" -  Le lien hypertexte ouvre le fichier Demo.wss et sélect la plage A2:B3 sur la feuille 'Année 2009' (Les noms des feuilles avec des espaces sont délimités par des apostrophes).<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]A2\" - Le lien hypertexte ouvre le fichier Demo.wss et sélect la cellule A2 sur la première feuille.<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]Janvier\" - Le lien hypertexte ouvre le fichier Demo.wss et sélect la plage avec le nom \"Janvier\".<br>
+			\"[/Jedox/Financials/Accounting/Demo.wss]Feuille2!Mai\" - Le lien hypertexte ouvre le fichier Demo.wss et sélect la plage avec le nom \"Mai\" sur Feuille2.<br>
+			\"/Jedox/Financials/Documentation/Manuel.pdf\" - Le lien hypertexte vers le PDF document Manuel.pdf dans le groupe \"Jedox\", la hiérarchie \"Financials\", et le dossier \"Documentation\".<br>
+			\"http://www.google.com/\" - Le lien hypertexte vers URL.<br>
+			A5 or $A$5 - Utilise l'entrée dans une autre cellule dans la feuille de Lien_cible.<br><br>
+			\"SELF\" or \"self\" - Lien vers A1 sur la feuille sélectionnez dans le classeur en cours.<br>
+			\"[SELF]Feuille2!A5\" or \"[self]Feuille2!A5\" - Lien vers A5 sur la Feuille2 dans le classeur en cours.]]>
+        </parameter>
+        <parameter name="Nom_convivial" type="text">
+          <![CDATA[Nom_convivial est le texte qui apparaît dans la cellule.<br>
+          Exemples:<br>
+			\"Texte lien hypertexte\" - Texte normal.<br>
+			B5 or $B$5 - L'entrée de la cellule B5 est affiché comme nom_convivial.<br>
+			CONCATENER(B2,C2) - Le résultat d'une fonction est affiché comme nom_convivial.]]>
+        </parameter>
+        <parameter name="Astuce_écran" type="text">
+          <![CDATA[Astuce_écran est un lien hypertexte note.<br>
+          Exemples:<br>
+          	\"Texte lien hypertexte\" - Texte normal.<br>
+			C5 or $C$5 - L'entrée de la cellule C5 est affiché comme Astuce_écran.<br>
+			CONCATENER(B3,C3) - Le résultat d'une fonction est affiché comme Astuce_écran.]]>
+        </parameter>
+        <sequence from="1" to="13">
+          <parameter name="source" type="text">
+            <![CDATA[Source1, source2, ... sont des références à des sources de données à transférer.<br>
+            Exemples:<br>
+            B7 - L'entrée de la cellule B7 sur la feuille active sera prise.<br>
+			A2:B3 - Les entrées de la plage A2:B3 sur la feuille active seront prises.<br>
+			Feuille2!A2:B3 - Les entrées de la plage A2:B3 sur \"Feuille2\" seront prises.<br>
+			Achat32 - Les entrées dans la zone désignée \"Achat32\" de la feuille active seront prises.<br>
+			Feuille2!Achat32 - Les entrées dans la zone désignée \"Achat32\" de la feuille \"Feuille2\" seront prises.<br>
+			@var1 - Le contenu de la variable \"var1\" sera prise.<br>
+			\"Achat32\" - Le texte \"Achat32\" est considéré comme une valeur constante.<br>
+			{\"value1\",\"value2\",\"value3\"} - liste de valeurs constantes.]]>
+          </parameter>
+          <parameter name="destination" type="text">
+            <![CDATA[Destination1, destination2, ... sont des références des destinations de données à transférer.<br>
+            Exemples:<br>
+            \"B7\" - La cellule cible est B7 sur la feuille active.<br>
+			\"A2:B3\" - \"A2:B3\" sur la feuille active est la plage cible.<br>
+			\"Feuille2!A2:B3\" - \"A2:B3\" sur \"Feuille2\" est la plage cible.<br>
+			\"Trimestre1\" - La plage cible est la plage avec le nom de \"Trimestre1\" sur la feuille active.<br>
+			\"Feuille2!Trimestre3\" - La plage cible est la plage avec le nom de \"Trimestre3\" sur \"Feuille2\".<br>
+			\"@var1\" - Définit la variable \"var1\".<br><br>
+			S'applique uniquement aux  URL cibles lien-hypertextes<br>
+			\"Texte spécifique\" - constant value.<br>
+			{\"value1\",\"value2\",\"value3\"} - liste de valeurs constantes.]]>
+          </parameter>
+        </sequence>
+      </parameters>
+      <syntax>
+        <![CDATA[HYPERLINK(Adresse_lien_hypertexte,Nom_convivial,Astuce_écran,source1,destination1[,source2,destination2,...])]]>
+      </syntax>
+      <short>
+        <![CDATA[Crée un lien hypertexte ou un transfert de données.]]>
+      </short>
+      <long>
+        <![CDATA[Crée un lien hypertexte ou un transfert de données.]]>
+  	  </long>
+    </description>
+    <comment><![CDATA[some text for the translator]]></comment>
+  </function>
+</translation_table>

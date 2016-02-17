@@ -1,0 +1,28 @@
+<!-- Positioning of PlotArea including size of Axis labels and title -->
+<packPlotArea type="method">
+  <args>
+	<arg name="leftX" default="0" mandatory="true">
+		<map path="Chart.PlotArea.InsideLeft">
+			<superadapter class="UnConventional" method="getPlotAreaLeftX"/>
+		</map>
+	</arg>
+	<arg name="topY" default="0" mandatory="true">
+		<map path="Chart.PlotArea.InsideTop">
+			<superadapter class="UnConventional" method="getPlotAreaTopY"/>
+		</map>
+	</arg>
+	<arg name="rightX" default="0" mandatory="true">
+		<map path="Chart.PlotArea.Width">
+			<superadapter class="UnConventional" method="getPlotAreaRightX"/>
+		</map>
+	</arg>
+	<arg name="bottomY" default="0" mandatory="true">
+		<map path="Chart.PlotArea.Height">
+			<superadapter class="UnConventional" method="getPlotAreaBottomY"/>
+		</map>
+	</arg>
+
+	<arg name="minWidth" default="0" />
+	<arg name="minHeight" default="0" />
+  </args>
+</packPlotArea>

@@ -1,0 +1,18 @@
+"; code should be as short as possible, including only consonants",
+; code,component
+btn,Ext.Button
+cmb,Ext.form.ComboBox
+chk,Ext.form.Checkbox
+rd,Ext.form.Radio
+wnd,Ext.Window
+tbp,Ext.TabPanel
+tlb,Ext.Toolbar
+grd,Ext.grid.GridPanel
+dv,Ext.DataView
+tbp,Ext.TabPanel
+mn,Ext.menu.Menu
+spn,Ext.ux.form.SpinnerField
+tx,Ext.form.TextArea
+tr,Ext.tree.TreePanel
+tfl,Ext.form.TriggerField
+pnl,Ext.Panel

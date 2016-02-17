@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+	<element>mon</element>
+	<element>tue</element>
+	<element>wed</element>
+	<element>thu</element>
+	<element>fri</element>
+	<element>sat</element>
+	<element>sun</element>
+</autofill_list>

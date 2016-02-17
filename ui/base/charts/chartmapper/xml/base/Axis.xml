@@ -1,0 +1,649 @@
+<!--addLabel - Adds an extra label on the axis.-->
+<addLabel applicable="false" type="method" skip="true">
+  <args>
+<!--The position on the axis to add the label.-->
+    <arg name="pos" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The text label to add.-->
+    <arg name="label" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</addLabel>
+
+<!--addMark - Adds a mark line to the chart.-->
+<var_addMark applicable="false" type="function" skip="true" result="Mark" init="addMark">
+  <args>
+<!--The value on the axis to draw the mark line.-->
+    <arg name="value" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color of the mark line.-->
+    <arg name="lineColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The text label for the mark line. An empty string means there is no text label. By default, the text label and the tick on the axis will be drawn using the same color as the mark line. You can modify the colors by using the Mark.setMarkColor method.-->
+    <arg name="text">
+      <map path=""/>
+    </arg>
+<!--The font used to draw the text label.-->
+    <arg name="font">
+      <map path=""/>
+    </arg>
+<!--The font size used to draw the text label in points.-->
+    <arg name="fontSize" default="8">
+      <map path=""/>
+    </arg>
+  </args>
+</var_addMark>
+
+<!--addZone - Adds a zone to the chart.-->
+<addZone applicable="false" type="method" skip="true">
+  <args>
+<!--The start value (the lower bound) for the zone.-->
+    <arg name="startValue" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The end value (the upper bound) for the zone.-->
+    <arg name="endValue" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color of the zone.-->
+    <arg name="color" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</addZone>
+
+<!--copyAxis - Copies the scale and labels from another axis.-->
+<copyAxis applicable="false" type="method" skip="true">
+  <args>
+<!--The axis to copy from.-->
+    <arg name="axis" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</copyAxis>
+
+<!--setAutoScale - Sets the margins at the two ends of the axis during auto-scaling, and whether to start the axis from zero.-->
+<setAutoScale type="method">
+  <args>
+<!--The top portion of the axis that no data point should fall into. For example, a value of 0.2 means no data value will fall within the top 20% of the axis. The topExtension must be between 0 to 1.-->
+    <arg name="topExtension" default="0.1">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The bottom portion of the axis that no data point should fall into. For example, a value of 0.2 means no data value will fall within the bottom 20% of the axis. The bottomExtension must be between 0 to 1.-->
+    <arg name="bottomExtension" default="0.1">
+      <!-- <map path=""/> -->
+    </arg>
+<!--The tendency of ChartDirector to include zero in the axis during auto-scaling. The value must be between 0 and 1. A large value encourages ChartDirector to start the axis from zero. A value of 1 means the axis always includes the zero point. A value of 0 means there is no preference for the zero point during auto-scaling.-->
+    <arg name="zeroAffinity" default="0.8">
+      <!-- <map path=""/> -->
+    </arg>
+  </args>
+</setAutoScale>
+
+<!--setColors - Sets the colors of the axis itself, axis label, axis title and axis ticks.-->
+<setColors type="method">
+  <args>
+<!--The color of the axis itself.-->
+    <arg name="axisColor" default="0x868686" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The color of the axis labels.-->
+    <arg name="labelColor" default="TextColor">
+      <!--<map path=""/>-->
+    </arg>
+<!--The color of the axis title. -1 means the axis title color is the same as the axis label color.-->
+    <arg name="titleColor" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+<!--The color of the axis ticks. -1 means the axis ticks color is the same as the axis color.-->
+    <arg name="tickColor" default="-1">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setColors>
+
+<!--setDateScale - Sets the axis to use the given date scale.-->
+<setDateScale applicable="false" type="method" skip="true">
+  <args>
+<!--The lower bound of the axis, representing using one of the ChartDirector supported date format.-->
+    <arg name="lowerLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The upper bound of the axis, representing using one of the ChartDirector supported date format.-->
+    <arg name="upperLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--Adds major ticks to the axis, where the major ticks are separated by majorTickInc seconds. Each major tick will have an associated text label for the value if the axis at the tick.
+The value 30 * 86400 will be assume to mean one month (which actually contains a variable number of seconds), and 60 * 86400 will be assumed to mean 2 months and so on. The value 360 * 86400 therefore means 12 months, or 1 year.
+The default value of 0 means the major ticks will be automatically determined. In this case, the lowerLimit and upperLimit may be automatically adjusted to align with the ticks.
+Use NoValue to disable major ticks.-->
+    <arg name="majorTickInc" default="0">
+      <map path=""/>
+    </arg>
+<!--Adds minor ticks to the x-axis, where the minor ticks are separated by minorTickInc seconds.
+The value 30 * 86400 will be assume to mean one month (which actually contains a variable number of seconds), and 60 * 86400 will be assumed to mean 2 months and so on. The value 360 * 86400 therefore means 12 months, or 1 year.
+The default value of 0 means no minor tick is used.-->
+    <arg name="minorTickInc" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</setDateScale>
+
+<!--setDateScale2 - Sets the axis to use the given date scale and the given labels.-->
+<setDateScale2 applicable="false" type="method" skip="true">
+  <args>
+<!--The lower bound of the axis, representing using one of the ChartDirector supported date format.-->
+    <arg name="lowerLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The upper bound of the axis, representing using one of the ChartDirector supported date format.-->
+    <arg name="upperLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of text strings to be used as the labels on the axis. ChartDirector will distribute the labels evenly on the axis. By default, all labels are associated with major ticks. These can be modified by using '-' or '~' as the first character. Please refer to Axis.setLabels for details.-->
+    <arg name="labels" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setDateScale2>
+
+<!--setDateScale3 - Sets the axis to use date auto-scale.-->
+<setDateScale3 applicable="false" type="method" skip="true">
+  <args>
+<!--The format used for the labels on the axis. Please refer to Axis.setLabelFormat for the syntax of the format string. An empty string means the format will be automatically determined.-->
+    <arg name="formatString">
+      <map path=""/>
+    </arg>
+  </args>
+</setDateScale3>
+
+<!--setFormatCondition - Specifies the condition that subsequent Axis.setLabelFormat and Axis.setMultiFormat will become applicable.-->
+<setFormatCondition applicable="false" type="method" skip="true">
+  <args>
+<!--The type of condition to test. Must be one of the condition types in the above table. This text string is case sensitive.-->
+    <arg name="condition" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The operand for condition types that need an operand.-->
+    <arg name="operand" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</setFormatCondition>
+
+<!--setIndent - Specifies if the axis should be "indented" or not.-->
+<setIndent applicable="false" type="method" skip="true">
+  <args>
+<!--A true (non-zero) value sets the axis to indented mode. A false (zero) value sets the axis to non-indented mode.-->
+    <arg name="indent" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setIndent>
+
+<!--setLabelFormat - Sets the format for numeric or date/time axis labels.-->
+<setLabelFormat type="method" skip="true">
+  <args>
+<!--The format string.-->
+    <arg name="formatString" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelFormat>
+
+<!--setLabelGap - Sets the distance between the axis labels and the ticks on the axis.-->
+<setLabelGap type="method">
+  <args>
+<!--The distance between the axis label and the tick in pixels.-->
+    <arg name="d" default="10" mandatory="true">
+		<map refcontext="Chart.XAxis" path="Chart.XAxis">
+			<superadapter class="UnConventional" method="axis_getLabelGap"/>
+		</map>
+		<map refcontext="Chart.YAxis" path="Chart.YAxis">
+			<superadapter class="UnConventional" method="axis_getLabelGap"/>
+		</map>
+    </arg>
+  </args>
+</setLabelGap>
+
+<!--setLabelOffset - Shifts the axis labels from its default position along the axis.-->
+<setLabelOffset applicable="false" type="method" skip="true">
+  <args>
+<!--The distance to shift the labels along the axis as a value on the axis scale.-->
+    <arg name="offset" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelOffset>
+
+<!--setLabels - Sets the text labels to be used on the axis.-->
+<var_setLabels type="eval" result="TextBox" init="setLabels">
+  <args>
+<!--An array of strings containing the text of the labels.-->
+	<arg name="text" default="" mandatory="true">
+		<!--<map path=""/>-->
+	</arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="getXAxisLabels" />
+</var_setLabels>
+
+<!--setLabels2 - Sets the numeric/date/time labels to be used on the axis.-->
+<var_setLabels2 applicable="false" type="function" skip="true" result="TextBox" init="setLabels2">
+  <args>
+<!--An array of numbers/dates to be used as the axis labels.-->
+    <arg name="labels" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A format string to specified how to format the labels into human readable form. Please refer to Axis.setLabelFormat for the syntax of the format string. An empty string means the format will be automatically determined.-->
+    <arg name="formatString">
+      <map path=""/>
+    </arg>
+  </args>
+</var_setLabels2>
+
+<!--setLabelStep - Shows a regularly spaced subset of the axis labels on the axis.-->
+<setLabelStep type="method" skip="true">
+  <args>
+<!--The spacing between visible labels (major ticks). For example, a value of 10 means displaying 1 label for every 10 labels.-->
+    <arg name="majorTickStep" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--For labels that are not displayed, ChartDirector can optionally put a minor tick in its place. The argument specifies the spacing between minor ticks. For example, a value of 5 means displaying 1 minor tick for every 5 labels. The default value of 0 means no minor tick is used.-->
+    <arg name="minorTickStep" default="0">
+      <map path=""/>
+    </arg>
+<!--The offset used for selecting the labels. For example, if majorTickStep is set to 10, by default, ChartDirector will select the labels with index 0, 10, 20, 30 and so on. If the majorTickOffset argument is set to 3, then ChartDirector will select labels with index 3, 13, 23, 33 and so on.-->
+    <arg name="majorTickOffset" default="0">
+      <map path=""/>
+    </arg>
+<!--The offset used for selecting minor tick points. The usage is the same as the majorTickOffset argument, except it applies to minor tick points. The default is to use the same value as majorTickOffset.-->
+    <arg name="minorTickOffset" default="-7fffffff">
+      <map path=""/>
+    </arg>
+  </args>
+</setLabelStep>
+
+<!--setLabelStyle - Sets the font style used to for the axis labels.-->
+<var_setLabelStyle type="function" result="TextBox" init="setLabelStyle">
+  <args>
+<!--The font used to draw the labels.-->
+    <arg name="font" default="Calibri">
+        <map refcontext="Chart.XAxis" path="Chart.Axes(1).TickLabels.Font.Name">&adapter_FormatConvertor_fontFileName;</map>
+		<map refcontext="Chart.YAxis" path="Chart.Axes(2).TickLabels.Font.Name">&adapter_FormatConvertor_fontFileName;</map>
+    </arg>
+<!--The font size used to draw the labels in points.-->
+    <arg name="fontSize" default="8">
+        <map refcontext="Chart.XAxis" path="Chart.Axes(1).TickLabels.Font.Size"></map>
+		<map refcontext="Chart.YAxis" path="Chart.Axes(2).TickLabels.Font.Size"></map>
+    </arg>
+<!--The color used to draw the labels.-->
+    <arg name="fontColor" default="TextColor">
+        <map refcontext="Chart.XAxis" path="Chart.Axes(1).TickLabels.Font.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+		<map refcontext="Chart.YAxis" path="Chart.Axes(2).TickLabels.Font.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+    </arg>
+<!--The rotation angle of the labels.-->
+    <arg name="fontAngle" default="45">
+		<map refcontext="Chart.XAxis" path="Chart.Axes(1).TickLabels.Orientation"><adapter class="FormatConvertor" method="getTickLabelAngle" static="true"/></map>
+		<map refcontext="Chart.YAxis" path="Chart.Axes(2).TickLabels.Orientation"><adapter class="FormatConvertor" method="getTickLabelAngle" static="true"/></map>
+    </arg>
+  </args>
+</var_setLabelStyle>
+
+<!--setLinearScale - Sets the axis to use the given linear scale.-->
+<setLinearScale type="eval" init="setLinearScale">
+  <args>
+<!--The lower bound of the axis.-->
+    <arg name="lowerLimit" default="0" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--The upper bound of the axis.-->
+    <arg name="upperLimit" default="100" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+<!--Adds major ticks to the axis, where the major ticks are separated by majorTickInc in value. Each major tick will have an associated text label for the value if the axis at the tick.
+The default value of 0 means the major ticks will be automatically determined. In this case, the lowerLimit and upperLimit may be automatically adjusted to align with the ticks.
+Use NoValue to disable major ticks.-->
+    <arg name="majorTickInc" default="0">
+      <!--<map path=""/>-->
+    </arg>
+<!--Adds minor ticks to the axis, where the minor ticks are separated by minorTickInc in value. The default value of 0 means no minor tick is used.-->
+    <arg name="minorTickInc" default="0">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+
+  <evaladapter class="LookupValue" method="axis_setLinearScale" />
+</setLinearScale>
+
+<!--setLinearScale2 - Sets the axis to use the given linear scale and the given labels.-->
+<setLinearScale2 applicable="false" type="method" skip="true">
+  <args>
+<!--The lower bound of the axis.-->
+    <arg name="lowerLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The upper bound of the axis.-->
+    <arg name="upperLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of text strings to be used as the labels on the axis. ChartDirector will distribute the labels evenly on the axis. By default, all labels are associated with major ticks. These can be modified by using '-' or '~' as the first character. Please refer to Axis.setLabels for details.-->
+    <arg name="labels" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLinearScale2>
+
+<!--setLinearScale3 - Sets the axis to use linear auto-scale.-->
+<setLinearScale3 applicable="false" type="method" skip="true">
+  <args>
+<!--The format used for the labels on the axis. Please refer to Axis.setLabelFormat for the syntax of the format string. An empty string means the format will be automatically determined.-->
+    <arg name="formatString">
+      <map path=""/>
+    </arg>
+  </args>
+</setLinearScale3>
+
+<!--setLogScale - Sets the axis to use the given logarithmic scale.-->
+<setLogScale applicable="false" type="method" skip="true">
+  <args>
+<!--The lower bound of the axis.-->
+    <arg name="lowerLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The upper bound of the axis.-->
+    <arg name="upperLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--Adds major ticks to the axis, where the major ticks are separated by majorTickInc in ratio. For example, a value of 10 means each tick will be 10 times the value of the previous tick. Each major tick will have an associated text label for the value if the axis at the tick.
+The special predefined constant LogTick ( = 1.6e308) means the tick increment will be using the non-regular ratio 1, 2, 5, 10, 20, 50, 100, ....
+The default value of 0 means the major ticks will be automatically determined. In this case, the lowerLimit and upperLimit may be automatically adjusted to align with the ticks.
+Use NoValue to disable major ticks.-->
+    <arg name="majorTickInc" default="0">
+      <map path=""/>
+    </arg>
+<!--Adds minor ticks to the axis, where the minor ticks are separated by minorTickInc in ratio.
+The special constant LogTick means the tick increment will be using the non- regular ratio 1, 2, 5, 10, 20, 50, 100, ....
+The default value of 0 means no minor tick is used.-->
+    <arg name="minorTickInc" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</setLogScale>
+
+<!--setLogScale2 - Sets the axis to use the given logarithmic scale and the given labels.-->
+<setLogScale2 applicable="false" type="method" skip="true">
+  <args>
+<!--The lower bound of the axis.-->
+    <arg name="lowerLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The upper bound of the axis.-->
+    <arg name="upperLimit" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--An array of text strings to be used as the labels on the axis. ChartDirector will distribute the labels evenly on the axis. By default, all labels are associated with major ticks. These can be modified by using '-' or '~' as the first character. Please refer to Axis.setLabels for details.-->
+    <arg name="labels" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setLogScale2>
+
+<!--setLogScale3 - Sets the axis to use logarithmic auto-scale.-->
+<setLogScale3 applicable="false" type="method" skip="true">
+  <args>
+<!--The format used for the labels on the axis. Please refer to Axis.setLabelFormat for the syntax of the format string. An empty string means the format will be automatically determined.-->
+    <arg name="formatString">
+      <map path=""/>
+    </arg>
+  </args>
+</setLogScale3>
+
+<!--setMargin - Reserve margins at the ends of the axis.-->
+<setMargin applicable="false" type="method" skip="true">
+  <args>
+<!--The margin reserved at the top end (or right end for horizontal axis) of the axis in pixels.-->
+    <arg name="topMargin" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The margin reserved at the bottom end (or left end for horizontal axis) of the axis in pixels.-->
+    <arg name="bottomMargin" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</setMargin>
+
+<!--setMinTickInc - Sets the minimum distance between two ticks on the axis for auto-scaled axis.-->
+<setMinTickInc type="method" skip="true">
+  <args>
+<!--The minimum distance between two ticks on the axis as a data value.-->
+    <arg name="inc" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setMinTickInc>
+
+<!--setMultiFormat - Sets multiple formats for numeric or date/time axis labels.-->
+<setMultiFormat applicable="false" type="method" skip="true">
+  <args>
+<!--The filter that defines the first kind of labels.-->
+    <arg name="filter1" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The format string for the first kind of labels.-->
+    <arg name="format1" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The filter that defines the second kind of labels.-->
+    <arg name="filter2" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The format string for the second kind of labels.-->
+    <arg name="format2" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The number of label positions that are claimed by one label. If a label occupies more than 1 position, ChartDirector will not put labels on nearby positions, even if they meet the filter criteria.-->
+    <arg name="labelSpan" default="1">
+      <map path=""/>
+    </arg>
+<!--If set to true, the first label will be promoted to a higher filter category in the multi-format list.-->
+    <arg name="promoteFirst" default="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setMultiFormat>
+
+<!--setMultiFormat2 - Adds one filter and format string to the multi-format lists.-->
+<setMultiFormat2 applicable="false" type="method" skip="true">
+  <args>
+<!--The filter that defines a subset of labels.-->
+    <arg name="filterId" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The format string for formatting the subset defined by the above filter.-->
+    <arg name="formatString" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The number of label positions that are claimed by one label. If a label occupies more than 1 position, ChartDirector will not put labels on nearby positions, even if they meet the filter criteria.-->
+    <arg name="labelSpan" default="1">
+      <map path=""/>
+    </arg>
+<!--If set to true, the first label will be promoted to a higher filter category in the multi-format list.-->
+    <arg name="promoteFirst" default="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setMultiFormat2>
+
+<!--setReverse - Reverse the axis.-->
+<setReverse type="method" skip="true">
+  <args>
+<!--A true (non-zero) value means the axis is reversed. A false (zero) value means the axis is not reversed.-->
+    <arg name="b" default="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setReverse>
+
+<!--setRounding - Controls whether to round the ends of the axis to align with tick positions.-->
+<setRounding type="method" skip="true">
+  <args>
+<!--A true (non-zero) value means the lesser end of the axis should be rounded to align with tick positions. A false (zero) value means no rounding.-->
+    <arg name="roundMin" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--A true (non-zero) value means the greater end of the axis should be rounded to align with tick positions. A false (zero) value means no rounding.-->
+    <arg name="roundMax" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setRounding>
+
+<!--setTickColor - Sets the colors of the axis ticks.-->
+<setTickColor type="method" skip="true">
+  <args>
+<!--The color of the major ticks.-->
+    <arg name="majorTickColor" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The color of the major ticks. -1 means the color is the same as majorTickColor.-->
+    <arg name="minorTickColor" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setTickColor>
+
+<!--setTickDensity - Sets the density of the axis ticks.-->
+<setTickDensity type="method" skip="true">
+  <args>
+<!--Specify the desired distance between two major ticks in pixels.-->
+    <arg name="majorTickSpacing" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--Specify the desired distance between two minor ticks in pixels. -1 means minor ticks are not used.-->
+    <arg name="minorTickSpacing" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setTickDensity>
+
+<!--setTickLength - Sets the length of the axis ticks.-->
+<setTickLength type="method">
+  <args>
+<!--The length of the major ticks in pixels. The length of the minor ticks will automatically be set to half the length of the major ticks.-->
+    <arg name="majorTickLen" default="0" mandatory="true">
+      <!--<map path=""/>-->
+    </arg>
+  </args>
+</setTickLength>
+
+<!--setTickLength2 - Sets the length of the major and minor axis ticks.-->
+<setTickLength2 type="method" skip="true">
+  <args>
+<!--The length of the major ticks in pixels.-->
+    <arg name="majorTickLen" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The length of the minor ticks in pixels.-->
+    <arg name="minorTickLen" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setTickLength2>
+
+<!--setTickOffset - Shifts the position of the ticks along the axis.-->
+<setTickOffset applicable="false" type="method" skip="true">
+  <args>
+<!--The distance to shift the ticks along the axis as a value on the axis scale.-->
+    <arg name="offset" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setTickOffset>
+
+<!--setTickWidth - Sets the width of the axis ticks.-->
+<setTickWidth type="method" skip="true">
+  <args>
+<!--The width of the major ticks in pixels.-->
+    <arg name="majorTickWidth" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The width of the minor ticks in pixels. -1 means the width is the same as majorTickWidth.-->
+    <arg name="minorTickWidth" default="-1">
+      <map path=""/>
+    </arg>
+  </args>
+</setTickWidth>
+
+<!--setTitle - Adds a title to the axis.-->
+<var_setTitle type="function" result="TextBox" init="setTitle">
+  <args>
+<!--The title text.-->
+    <arg name="text" mandatory="true" default="Axis Title">
+    	<map refcontext="Chart.XAxis" path="Chart.Axes(1).AxisTitle.Caption"><adapter class="FormatConvertor" method="escapedText" static="true"/></map>
+    	<map refcontext="Chart.YAxis" path="Chart.Axes(2).AxisTitle.Caption"><adapter class="FormatConvertor" method="escapedText" static="true"/></map>
+      <!--<map path=""/>-->
+    </arg>
+<!--The font used to draw the title. If no font is specified, the default is "bold".-->
+    <arg name="font" default="Calibri">
+        <map refcontext="Chart.XAxis" path="Chart.Axes(1).TickLabels.Font.Name">&adapter_FormatConvertor_fontFileName;</map>
+		<map refcontext="Chart.YAxis" path="Chart.Axes(2).TickLabels.Font.Name">&adapter_FormatConvertor_fontFileName;</map>
+    </arg>
+<!--The size of the font in points.-->
+    <arg name="fontSize" default="8">
+        <map refcontext="Chart.XAxis" path="Chart.Axes(1).TickLabels.Font.Size"></map>
+		<map refcontext="Chart.YAxis" path="Chart.Axes(2).TickLabels.Font.Size"></map>
+    </arg>
+<!--The color used to draw the title text.-->
+    <arg name="fontColor" default="TextColor">
+        <map refcontext="Chart.XAxis" path="Chart.Axes(1).TickLabels.Font.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+		<map refcontext="Chart.YAxis" path="Chart.Axes(2).TickLabels.Font.Color"><adapter class="FormatConvertor" method="RGBExcelToCD" static="true"/></map>
+    </arg>
+  </args>
+</var_setTitle>
+
+<!--setTitlePos - Sets the position of the axis title relative to the axis.-->
+<setTitlePos type="method" skip="true">
+  <args>
+<!--The position of the title relative to the axis.-->
+    <arg name="alignment" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The distance between the axis title and the axis in pixels.-->
+    <arg name="titleGap" default="3">
+      <map path=""/>
+    </arg>
+  </args>
+</setTitlePos>
+
+<!--setWidth - Sets the line width of the axis.-->
+<setWidth type="method" skip="true">
+  <args>
+<!--The line width of the axis in pixels.-->
+    <arg name="width" mandatory="true">
+      <map path=""/>
+    </arg>
+  </args>
+</setWidth>
+
+<!--syncAxis - Synchronizes this axis with another axis using a linear formula.-->
+<syncAxis applicable="false" type="method" skip="true">
+  <args>
+<!--The axis to synchronize to.-->
+    <arg name="axis" mandatory="true">
+      <map path=""/>
+    </arg>
+<!--The slope for synchronizing this axis to the other axis.-->
+    <arg name="slope" default="1">
+      <map path=""/>
+    </arg>
+<!--The intercept parameter for synchronizing this axis to the other axis.-->
+    <arg name="intercept" default="0">
+      <map path=""/>
+    </arg>
+  </args>
+</syncAxis>

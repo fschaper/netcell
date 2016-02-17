@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+	<element>Assets</element>
+    <element>Fixed assets</element>
+    <element>Intangible assets</element>
+    <element>Tangible assets</element>
+    <element>Current assets</element>
+    <element>Receivables and other assets</element>
+    <element>Demands from supplies and services</element>
+    <element>Other demands</element>
+    <element>Cash balance, credit balance with bank</element>
+    <element>Accruals</element>
+    <element>Liabilities</element>
+    <element>Equity capital</element>
+    <element>Issued capital</element>
+    <element>Loss carried forward</element>
+    <element>Annual surplus</element>
+    <element>Provisions</element>
+    <element>Other Provisions</element>
+    <element>Liabilities</element>
+    <element>Liabilities to banks</element>
+    <element>Liabilities for goods and services</element>
+    <element>Liabilities to affiliated companies</element>
+    <element>of which to shareholders</element>
+    <element>Other liabilities</element>
+    <element>of which taxes</element>
+    <element>of which relating to social security</element>
+    <element>Deferred</element>
+</autofill_list>

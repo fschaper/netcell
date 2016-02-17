@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="algorithm">
+      <UniqueIdentifier>{8ef3bf3d-41fa-48a1-985b-c6c4f3004681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\implementation">
+      <UniqueIdentifier>{6419f3b0-b59e-48bc-9091-9ec651e58fd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{89e648f1-e4dd-4a70-8a1c-06dc2aef0e1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\access">
+      <UniqueIdentifier>{3c87f6d3-f3b4-48dc-ab5e-fb0b86600525}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\access\implementation">
+      <UniqueIdentifier>{7ecf159f-a138-4f81-a3b1-cee7c8111786}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{e001666f-4e45-4cbe-99e3-10b188535324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface\implementation">
+      <UniqueIdentifier>{911d122e-2d09-4f8a-acde-156873e0929e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reverse_format">
+      <UniqueIdentifier>{2c6fe3ee-d193-4d91-a6e6-30a1154e5bfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reverse_format\implementation">
+      <UniqueIdentifier>{08efa022-0e30-4d11-ab93-f69106dd0cd5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\cell_format_cache.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell_format_exception.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell_format_grammar.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CellFormatMessagePool.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CellFormatParser.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CellFormatParseTree.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CellFormatParseTreeConverter.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CellFormatPostParser.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CellFormatPrinter.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CellFormatProcessor.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CellValue.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\checked_number_cast.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Color.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Condition.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ControlTokens.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Exception.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ExceptionFactory.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FormatException.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FormatSection.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FormatSections.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FormattedCell.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FormatToken.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FormatTokens.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FormatTokenVisitor.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Fraction.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\i18n.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\I18nException.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MessagePool.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\parsed_cell_format.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ParseTree.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ParseTreeImpl.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SerialDateTime.hpp">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format_engine.hpp">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell_format_data_writers.hpp">
+      <Filter>xml\access</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell_format_data.hpp">
+      <Filter>xml\access</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell_format_data_literals.hpp">
+      <Filter>xml\access</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell_format_data_parser.hpp">
+      <Filter>xml\access</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell_format_data_readers.hpp">
+      <Filter>xml\access</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cell_format_data_serializer.hpp">
+      <Filter>xml\access</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\value_extractor.hpp">
+      <Filter>reverse_format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\base_extractor.hpp">
+      <Filter>reverse_format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\date_extractor.hpp">
+      <Filter>reverse_format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\date_time_extractor.hpp">
+      <Filter>reverse_format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\number_extractor.hpp">
+      <Filter>reverse_format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\reverse_format.hpp">
+      <Filter>reverse_format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\time_extractor.hpp">
+      <Filter>reverse_format</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\cell_format_cache.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cell_format_exception.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cell_format_grammar.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CellFormatMessagePool.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CellFormatParser.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CellFormatParseTree.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CellFormatParseTreeConverter.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CellFormatPostParser.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CellFormatPrinter.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CellFormatProcessor.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CellValue.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Exception.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ExceptionFactory.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FormatSection.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FormatSections.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FormattedCell.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FormatToken.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FormatTokens.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Fraction.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\i18n.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MessagePool.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\parsed_cell_format.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParseTree.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SerialDateTime.cpp">
+      <Filter>algorithm\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\format_engine.cpp">
+      <Filter>interface\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\cell_format_data_writers.cpp">
+      <Filter>xml\access\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cell_format_data.cpp">
+      <Filter>xml\access\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cell_format_data_parser.cpp">
+      <Filter>xml\access\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cell_format_data_readers.cpp">
+      <Filter>xml\access\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cell_format_data_serializer.cpp">
+      <Filter>xml\access\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\value_extractor.cpp">
+      <Filter>reverse_format\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\base_extractor.cpp">
+      <Filter>reverse_format\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\date_extractor.cpp">
+      <Filter>reverse_format\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\date_time_extractor.cpp">
+      <Filter>reverse_format\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\number_extractor.cpp">
+      <Filter>reverse_format\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\reverse_format.cpp">
+      <Filter>reverse_format\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\time_extractor.cpp">
+      <Filter>reverse_format\implementation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cell_format.def" />
+  </ItemGroup>
+</Project>

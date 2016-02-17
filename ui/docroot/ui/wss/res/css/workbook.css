@@ -1,0 +1,392 @@
+/*
+ * \brief CSS classes for workbook
+ *
+ * \file workbook.css
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Predrag Malicevic <predrag.malicevic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: workbook.css 4776 2011-03-28 14:25:45Z predragm $
+ *
+ */
+
+div.gridSelectAll
+{
+	position: relative;
+	float: left;
+	height: 19px;
+	width: 41px;
+	background-color: #E4ECF7;
+	z-index: 200;
+	border-color: #9FB7CF;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	cursor: url(/ui/wss/res/img/xlcross.cur) 5 5, default;
+	#cursor: url(/ui/wss/res/img/xlcross.cur), default;
+	background: transparent url(/ui/wss/res/img/workspace/grid_col_hdr.png) repeat-x scroll 0pt 0%;
+	overflow: hidden;
+}
+
+div.gridColHdrsOC
+{
+	position: absolute;
+	overflow: hidden;
+	width: inherit;
+	height: 20px;
+	z-index: 200;
+	top: 0px;
+}
+
+div.gridColHdrsIC
+{
+	position: absolute;
+	overflow: visible;
+	width: 30000px;
+	height: 20px;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+div.gridColHdr
+{
+	position: absolute;
+	height: 15px;
+	border-color: #9FB7CF;
+	border-style: solid;
+	border-width: 0px 0px 1px 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	padding: 2px;
+	background-color: #E4ECF7;
+	text-align: center;
+	cursor: url(/ui/wss/res/img/down.cur) 15 18, default;
+	#cursor: url(/ui/wss/res/img/down.cur), default;
+	/*cursor: crosshair; #### THIS WORKS - Safari issue */
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	background: transparent url(/ui/wss/res/img/workspace/grid_col_hdr.png) repeat-x scroll 0pt 0%;
+	overflow: hidden;
+}
+
+div.gridColHdrsIC div.colActive
+{
+	background-color: #ffc06f;
+}
+
+div.gridRowHdrsOC
+{
+	position: absolute;
+	overflow: hidden;
+	width: 42px;
+	height: inherit;
+	z-index: 200;
+	left: 0px;
+}
+
+div.gridRowHdrsIC
+{
+	position: absolute;
+	overflow: visible;
+	width: 42px;
+	height: 1400000px;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+div.gridRowHdr
+{
+	position: absolute;
+	width: 37px;
+	border-color: #9FB7CF;
+	border-style: solid;
+	border-width: 1px 1px 0px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	padding: 2px;
+	background-color: #E4ECF7;
+	text-align: center;
+	cursor: url(/ui/wss/res/img/right.cur) 10 4, default;
+	#cursor: url(/ui/wss/res/img/right.cur), default;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	overflow: hidden;
+}
+
+div.gridRowHdrsIC div.rowActive
+{
+	background-color: #ffc06f;
+}
+
+div.bookOC
+{
+	position: relative;
+}
+
+div.sheetsOC
+{
+	position: relative;
+	overflow: hidden;
+	z-index: 100;
+}
+
+div.sheetOC
+{
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+div.paneOC
+{
+	position: absolute;
+	overflow: hidden;
+	z-index: 100;
+}
+
+div.paneIC
+{
+	position: absolute;
+	overflow: visible;
+	width: 30000px;
+	height: 1400000px;
+	background-color: #FFFFFF;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	cursor: url(/ui/wss/res/img/xlcross.cur) 5 5, default;
+	#cursor: url(/ui/wss/res/img/xlcross.cur), default;
+}
+
+div.gridColSep
+{
+	position: absolute;
+	background-color: #D1D8E5;
+	width: 0px;
+	height: 1400000px;
+	border-left: 1px solid #D1D8E5;
+}
+
+div.gridRow
+{
+	position: absolute;
+	overflow: visible;
+	width: 30000px;
+	border-top: 1px solid #D1D8E5;
+}
+
+div.gridCell
+{
+	position: absolute;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: right;
+	height: 100%;
+	top: -1px;
+	border: 1px solid transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	padding: 2px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	white-space: pre;
+	z-index: 1;
+	cursor: url(/ui/wss/res/img/xlcross.cur), default;
+}
+
+img.gridScrollImg_el_top
+{
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/vert_scroller_element_top.png);
+}
+
+img.gridScrollImg_el_vfill
+{
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/vert_scroller_element_fill.png);
+}
+
+img.gridScrollImg_el_vcenter
+{
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/vert_scroller_element_center.png);
+}
+
+img.gridScrollImg_el_bottom
+{
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/vert_scroller_element_bottom.png);
+}
+
+img.gridScrollImg_el_left
+{
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/hor_scroller_element_left.png);
+}
+
+img.gridScrollImg_el_right
+{
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/hor_scroller_element_right.png);
+}
+
+img.gridScrollImg_el_hfill
+{
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/hor_scroller_element_fill.png);
+}
+
+img.gridScrollImg_el_hcenter
+{
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/hor_scroller_element_center.png);
+}
+
+/* *** */
+
+.gridScrollImg_el_top {
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/vert_scroller_element_top.png);
+}
+
+div#gridBRSpacer
+{
+	width: 16px;
+	height: 17px;
+	float: right;
+}
+
+div.hsOC
+{
+	float: right;
+	height: 17px;
+	background-image: url(/ui/wss/res/img/scrollbar/hor_scroller_bg.png);
+	background-repeat: repeat-x;
+	overflow: hidden;
+}
+
+div.hs1OC
+{
+	border-left: 1px solid #000000;
+}
+
+div.hscroll
+{
+	width: inherit;
+}
+
+img.hscroll_left
+{
+	position: relative;
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/hor_scroller_left.png);
+}
+
+div.hscroll_bg
+{
+	position: relative;
+	float: left;
+	height: 17px;
+}
+
+div.hscroll_slider
+{
+	position: relative;
+	float: left;
+}
+
+img.hscroll_right
+{
+	position: relative;
+	float: right;
+	background-image: url(/ui/wss/res/img/scrollbar/hor_scroller_right.png);
+}
+
+div.vsOC
+{
+	position: absolute;
+	right: 0px;
+	width: 17px;
+	background-image: url(/ui/wss/res/img/scrollbar/vert_scroller_bg.png);
+	background-repeat: repeat-y;
+	overflow: hidden;
+}
+
+div.vs1OC
+{
+	border-top: 1px solid #000000;
+}
+
+div.vscroll
+{
+	height: inherit;
+}
+
+img.vscroll_up
+{
+	position: relative;
+	float: left;
+	background-image: url(/ui/wss/res/img/scrollbar/vert_scroller_up.png);
+}
+
+div.vscroll_bg
+{
+	position: relative;
+	float: left;
+	width: 17px;
+}
+
+div.vscroll_slider
+{
+	position: relative;
+	float: left;
+}
+
+img.vscroll_down
+{
+	position: relative;
+	float: right;
+	background-image: url(/ui/wss/res/img/scrollbar/vert_scroller_down.png);
+}
+
+div.mergedCell
+{
+	background-color: #ffffff;
+	border: 1px solid #D1D8E5;
+}
+
+.x-window-maximized .x-window-bc
+{
+	height: 0px !important;
+}

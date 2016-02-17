@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autofill_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="list.xsd">
+  <element>Actif</element>
+  <element>Actif immobilisé</element>
+  <element>Immobilisations incorporelles</element>
+  <element>Immobilisations corporelles</element>
+  <element>Actif circulant</element>
+  <element>Dettes actives et autres immobilisations incorporelles</element>
+  <element>Dettes actives de livraisons et de prestations</element>
+  <element>Autres dettes actives</element>
+  <element>Encaisse, avoirs dans des instituts de crédit</element>
+  <element>Compte de régularisation</element>
+  <element>Passif</element>
+  <element>Capital propre</element>
+  <element>Capital souscrit</element>
+  <element>Report à nouveau</element>
+  <element>Bénéfice</element>
+  <element>Provisions</element>
+  <element>Autres provisions</element>
+  <element>Dettes</element>
+  <element>Dettes auprès d’instituts de crédit</element>
+  <element>Dettes de livraisons et de prestations</element>
+  <element>Dettes envers des entreprises liées</element>
+  <element>dont sociétaires</element>
+  <element>Autres dettes</element>
+  <element>dont impôts</element>
+  <element>dont dans le cadre de la protection sociale</element>
+  <element>Comptes de régularisation actifs</element>
+</autofill_list>

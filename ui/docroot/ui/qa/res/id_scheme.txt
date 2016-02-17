@@ -1,0 +1,6 @@
+<container id>_<component id>_<component type>
+w|s[A-Z][a-zA-Z0-9]+_[a-z][a-zA-Z0-9]+_(btn|cmb|chk|rd|...)
+
+Examples:
+wInsChart_ok_btn
+wFmtCells_locked_chk

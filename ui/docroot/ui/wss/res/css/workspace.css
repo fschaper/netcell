@@ -1,0 +1,126 @@
+/*
+ * @brief ajax
+ *
+ * @file Group.js
+ *
+ * Copyright (C) 2006-2009 Jedox AG
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License (Version 2) as published
+ * by the Free Software Foundation at http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * You may obtain a copy of the License at
+ *
+ * <a href="http://www.jedox.com/license_palo_bi_suite.txt">
+ *   http://www.jedox.com/license_palo_bi_suite.txt
+ * </a>
+ *
+ * If you are developing and distributing open source applications under the
+ * GPL License, then you are free to use Palo under the GPL License.  For OEMs,
+ * ISVs, and VARs who distribute Palo with their products, and do not license
+ * and distribute their source code under the GPL, Jedox provides a flexible
+ * OEM Commercial License.
+ *
+ * \author
+ * Srdjan Vukadinovic <srdjan.vukadinovic@develabs.com>
+ *
+ * \version
+ * SVN: $Id: workspace.css 4196 2010-10-26 22:40:22Z predragm $
+ *
+ */
+/** sprite: wss-ws-sprite; sprite-image: url('/ui/wss/res/img/sprites/wss-ws-sprite.png'); */
+div#workspace
+{
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.icon_delete {
+  background-image: url(/ui/wss/res/img/context_menu/ico_delete.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_hl_target_tab {
+  background-image: url(/ui/wss/res/img/bar/ico_hl_target_tab.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_hl_target_win {
+  background-image: url(/ui/wss/res/img/bar/ico_hl_target_win.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_hl_open {
+  background-image: url(/ui/wss/res/img/bar/ico_hl_open.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_hl_insert {
+  background-image: url(/ui/wss/res/img/bar/ico_hl_insert.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_hl_remove {
+  background-image: url(/ui/wss/res/img/bar/ico_hl_remove.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+/* *** */
+
+.ico_ins_row {
+  background-image: url(/ui/wss/res/img/bar/ico_ins_row.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_ins_column {
+  background-image: url(/ui/wss/res/img/bar/ico_ins_column.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_del_row {
+  background-image: url(/ui/wss/res/img/bar/ico_del_row.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_del_column {
+  background-image: url(/ui/wss/res/img/bar/ico_del_column.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+/* *** */
+
+.hb_switch_dir{
+	background-image: url(/ui/wss/res/img/context_menu/hb_switch_dir.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.hb_edit_list{
+	background-image: url(/ui/wss/res/img/context_menu/hb_edit_list.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.hb_properties {
+	 background-image: url(/ui/wss/res/img/context_menu/hb_properties.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.hb_ctrl_list{
+	background-image: url(/ui/wss/res/img/context_menu/hb_edit_list.png) !important; /** sprite-ref: wss-ws-sprite; */
+
+}
+
+/* *** */
+
+.ico_bring_to_front {
+	background-image: url(/ui/wss/res/img/context_menu/ico_bring_to_front.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_bring_forward {
+	background-image: url(/ui/wss/res/img/context_menu/ico_bring_forward.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_send_to_back {
+	background-image: url(/ui/wss/res/img/context_menu/ico_send_to_back.png) !important; /** sprite-ref: wss-ws-sprite; */
+}
+
+.ico_send_backward {
+	background-image: url(/ui/wss/res/img/context_menu/ico_send_backward.png) !important; /** sprite-ref: wss-ws-sprite; */
+}

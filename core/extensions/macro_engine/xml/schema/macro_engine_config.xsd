@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.jedox.com/jedox/wss" xmlns="http://www.jedox.com/jedox/wss" xmlns:NS="http://www.jedox.com/jedox/wss" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:complexType name="extension_type">
+    <xs:attribute name="extension_file" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="include_path_type">
+    <xs:attribute name="path" type="xs:string" use="required" />
+    <xs:attribute name="relative" type="xs:boolean" use="required" />
+  </xs:complexType>
+  <xs:complexType name="function_type">
+    <xs:attribute name="spreadsheet_function" type="xs:string" use="required" />
+    <xs:attribute name="php_file" type="xs:string" use="required" />
+    <xs:attribute name="php_function" type="xs:string" use="required" />
+    <xs:attribute name="arguments_count" type="xs:positiveInteger" use="required" />
+    <xs:attribute name="always_recalc" type="xs:boolean" use="required" />
+    <xs:attribute name="view_independent_calculation" type="xs:boolean" use="optional" default="false" />
+  </xs:complexType>
+  <xs:simpleType name="loglevel_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="debug" />
+      <xs:enumeration value="info" />
+      <xs:enumeration value="notice" />
+      <xs:enumeration value="warning" />
+      <xs:enumeration value="error" />
+      <xs:enumeration value="critical" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="php_macro_engine_config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="php_extensions" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="extensions" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="extension" type="extension_type" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="directory" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="php_files" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="include_paths" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="include_path" type="include_path_type" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="directory" type="xs:string" use="required" />
+            <xs:attribute name="temp_directory" type="xs:string" default="C:\\WINDOWS\\Temp" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="functions" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="function" type="function_type" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="loglevel" type="loglevel_type" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ini_directives" minOccurs="0" maxOccurs="1" type="xs:string" />
+        <xs:element name="general_settings" type="CT_general_settings" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CT_general_settings">
+    <xs:sequence>
+      <xs:element name="console_echo" type="xs:boolean" default ="false"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
